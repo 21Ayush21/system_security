@@ -1,0 +1,1434 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "hhyo_Archery",
+    "size": 0,
+    "start_time": "2025-11-27 21:47:48",
+    "end_time": "2025-11-27 21:47:50",
+    "cost_time": 2.0881472
+  },
+  "id": "57811811326492672",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811811326492673",
+      "direct": true,
+      "paths": [
+        "hhyo_Archery\\dev-requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pytest",
+          "language": "Python",
+          "id": "57811811326492676",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\dev-requirements.txt\\[pytest:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytest-django",
+          "language": "Python",
+          "id": "57811811326492677",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\dev-requirements.txt\\[pytest-django:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pytest-mock",
+          "language": "Python",
+          "id": "57811811326492678",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\dev-requirements.txt\\[pytest-mock:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytest-cov",
+          "language": "Python",
+          "id": "57811811326492679",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\dev-requirements.txt\\[pytest-cov:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "codecov",
+          "language": "Python",
+          "id": "57811811326492680",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\dev-requirements.txt\\[codecov:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Command Injection",
+              "id": "XMIRROR-E5B77528-81ABAB2B",
+              "cwe_id": "CWE-78",
+              "description": "## Overview\n[codecov](https://pypi.org/project/codecov) is a Python report uploader for Codecov.\n\nAffected versions of this package are vulnerable to Command Injection caused by `shell` being defined as `TRUE` in the command line.\n## Remediation\nUpgrade `codecov` to version 2.0.17 or higher.\n## References\n- [GitHub Commit](https://github.com/codecov/codecov-python/commit/f2c93c7893847e50639416c1bc2e38cb375825d8)\n- [GitHub PR](https://github.com/codecov/codecov-python/pull/234)\n",
+              "suggestion": "## Remediation\nUpgrade `codecov` to version 2.0.17 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-04-01",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "codecov 参数注入漏洞",
+              "id": "XMIRROR-E5B7140E-B0145695",
+              "cve_id": "CVE-2019-10800",
+              "cnnvd_id": "CNNVD-202207-1234",
+              "cwe_id": "CWE-88",
+              "description": "codecov是codecov开源的一种专用代码覆盖解决方案。\r\ncodecov 2.0.16之前的版本存在安全漏洞，该漏洞源于在向popen方法提供gcov参数之前没有对其进行清理",
+              "suggestion": "## Remediation\nUpgrade `codecov` to version 2.0.16 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-02-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "flake8",
+          "language": "Python",
+          "id": "57811811326492681",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\dev-requirements.txt\\[flake8:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 2
+    },
+    {
+      "language": "Python",
+      "id": "57811811326492674",
+      "direct": true,
+      "paths": [
+        "hhyo_Archery\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "Django",
+          "version": "4.1.13",
+          "language": "Python",
+          "id": "57811811326492682",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[Django:4.1.13]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14E50895",
+              "cve_id": "CVE-2024-27351",
+              "cnnvd_id": "CNNVD-202403-338",
+              "cwe_id": "CWE-1333",
+              "description": "\u003cp\u003eDjango是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。 Django 5.0版本，4.2版本，3.2版本存在安全漏洞，该漏洞源于Truncator.words函数和truncatewords_html过滤器存在拒绝服务（DOS）漏洞。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `django` to version 3.2.25, 4.2.11, 5.0.3 or higher.\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-03-04",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14ED0D95",
+              "cve_id": "CVE-2024-41990",
+              "cnnvd_id": "CNNVD-202408-481",
+              "cwe_id": "CWE-130",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango 5.0到5.0.8之前版本和4.2到4.2.15之前版本存在安全漏洞，该漏洞源于urlize和urlizetrunc模板过滤器可能会通过具有特定字符序列的超大输入遭受潜在的拒绝服务攻击。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.15, 5.0.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14EDAE95",
+              "cve_id": "CVE-2024-41991",
+              "cnnvd_id": "CNNVD-202408-480",
+              "cwe_id": "CWE-1284 CWE-130",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango 5.0到5.0.8之前版本和4.2到4.2.15之前版本存在安全漏洞，该漏洞源于urlize和urlizetrunc模板过滤器以及AdminURLFieldWidget小部件可能会通过包含大量Unicode字符的某些输入遭受潜在的拒绝服务攻击。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.15, 5.0.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django SQL注入漏洞",
+              "id": "XMIRROR-E5B714EF-14ED7195",
+              "cve_id": "CVE-2024-42005",
+              "cnnvd_id": "CNNVD-202408-479",
+              "cwe_id": "CWE-89",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango 5.0到5.0.8之前版本和4.2到4.2.15之前版本存在SQL注入漏洞，该漏洞源于当使用带有JSONField的模型的QuerySet.values和values_list方法时，通过精心构造的JSON对象键作为传递的*arg，可能会受到SQL注入攻击。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.15, 5.0.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-06",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14ED2195",
+              "cve_id": "CVE-2024-41989",
+              "cnnvd_id": "CNNVD-202408-529",
+              "cwe_id": "CWE-400",
+              "description": "\u003cp\u003eDjango是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。 Django 5.0到5.0.8之前版本和4.2到4.2.15之前版本存在安全漏洞，该漏洞源于当给出一个以科学计数法表示的数字的字符串表示形式且指数较大时floatformat模板过滤器会消耗大量内存。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `django` to version 4.2.15, 5.0.8 or higher.\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-08-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14BA6895",
+              "cve_id": "CVE-2024-39330",
+              "cnnvd_id": "CNNVD-202407-1027",
+              "cwe_id": "CWE-22",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango 5.0版本至5.0.7之前版本、4.2版本至4.2.14之前版本存在安全漏洞，该漏洞源于允许在save()调用期间通过某些输入进行目录遍历。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.14, 5.0.7 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-07-10",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Django 拒绝服务漏洞",
+              "id": "XMIRROR-E5B714EF-144C8C95",
+              "cve_id": "CVE-2024-38875",
+              "cnnvd_id": "CNNVD-202407-1029",
+              "cwe_id": "CWE-130",
+              "description": "该漏洞存在于Django框架中，影响了Django 4.2版本（截至4.2.14之前）和5.0版本（截至5.0.7之前）。漏洞允许远程攻击者通过向`urlize`和`urlizetrunc`函数提供包含大量括号的输入，执行拒绝服务攻击和用户枚举。",
+              "suggestion": "\u003cp\u003e立即升级到修复此漏洞的最新Django版本。若暂时无法升级，可以通过限制`urlize`和`urlizetrunc`函数的输入长度来临时缓解此问题。长期解决方案是关注Django官方安全更新，并对代码进行定期安全审计。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-07-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14085395",
+              "cve_id": "CVE-2024-39614",
+              "cnnvd_id": "CNNVD-202407-1026",
+              "cwe_id": "CWE-130",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango 5.0.7之前版本和4.2.14之前版本存在安全漏洞，该漏洞源于get_supported_language_variant()在与包含特定字符的超长字符串一起使用时会遭受拒绝服务攻击。受影响版本如下:5.1版本、5.0版本、4.2版本。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.14, 5.0.7 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-07-10",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14BA9795",
+              "cve_id": "CVE-2024-39329",
+              "cnnvd_id": "CNNVD-202407-1028",
+              "cwe_id": "CWE-208",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango 5.0版本至5.0.7之前版本、4.2版本至4.2.14之前版本存在安全漏洞，该漏洞源于django.contrib.auth.backends.ModelBackend.authenticate()方法允许远程攻击者通过定时攻击枚举用户。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.14, 5.0.7 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-07-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django urlize函数拒绝服务漏洞",
+              "id": "XMIRROR-E5B714EF-14A44695",
+              "cve_id": "CVE-2024-45230",
+              "cnnvd_id": "CNNVD-202410-726",
+              "cwe_id": "CWE-120",
+              "description": "\u003cp\u003eDjango 是一个流行的 Python Web 框架，用于高效构建 Web 应用。`urlize` 是 Django 提供的一个实用工具函数，位于 `django.utils.html` 模块中，主要功能是将字符串中可以解释为 URL 的部分自动转换为超链接（HTML 的  标签）。漏洞的根因在于 `urlize` 函数在处理特定重复字符序列（例如 `.;`）时，算法的复杂度未优化，引发性能退化。当输入字符串包含大量重复的特定格式字符时，`urlize` 函数的运行时间会呈指数增长，从而导致拒绝服务（DoS）场景。攻击者可以通过恶意构造的字符串触发此漏洞，例如以下代码：`from django.utils.html import urlize; malicious_input = .; * 100000; urlize(malicious_input)`，结果会使服务器资源耗尽，导致服务不可用。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e1. 升级至最新版本的 Django，其中已修复了 `urlize` 函数的性能问题； 2. 添加输入验证逻辑，限制字符长度及输入内容的格式，避免处理过大的字符串； 3. 采用更高效的字符串处理算法，优化正则表达式的使用，减少字符遍历操作的次数； 4. 针对标点符号序列添加限制，设置合理的处理范围，防止系统资源被恶意消耗。开发过程中，建议遵循安全编程规范，定期更新和审核第三方组件，确保类似漏洞不再出现。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-09-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-1465D395",
+              "cve_id": "CVE-2024-24680",
+              "cnnvd_id": "CNNVD-202402-528",
+              "cwe_id": "CWE-400",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango存在安全漏洞。攻击者利用该漏洞导致系统拒绝服务。以下版本受到影响：3.2版本至3.2.24之前版本、4.2版本至4.2.10之前版本、5.0版本至5.0.2之前版本。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 3.2.24, 4.2.10, 5.0.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-06",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14A48F95",
+              "cve_id": "CVE-2024-45231",
+              "cnnvd_id": "CNNVD-202410-725",
+              "cwe_id": "CWE-203",
+              "description": "Django是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。\r\nDjango v5.1.1版本、v5.0.9版本和v4.2.16版本存在安全漏洞。攻击者利用该漏洞通过发送密码重置请求来枚举用户电子邮件地址。",
+              "suggestion": "## Remediation\nUpgrade `django` to version 4.2.16, 5.0.9, 5.1.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-09-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 框架 SQL 注入漏洞 (FilteredRelation)",
+              "id": "XMIRROR-E5B714FA-64EBC295",
+              "cve_id": "CVE-2025-57833",
+              "cnnvd_id": "CNNVD-202509-236",
+              "cwe_id": "CWE-89",
+              "description": "\u003cp\u003eDjango 是一个流行的 Python Web 开发框架，提供了高效的 ORM（对象关系映射）功能以简化数据库操作。FilteredRelation 是 Django ORM 中的一种功能，用于在查询中定义过滤关联关系。此漏洞（CVE-2025-57833）涉及 FilteredRelation 的列别名处理，因未对输入的列别名进行充分验证而导致攻击者能够通过构造恶意输入绕过列别名的安全校验，从而实现 SQL 注入攻击。攻击者可以利用该漏洞，通过在 QuerySet.annotate() 或 QuerySet.alias() 方法中传递特制的字典（通过 **kwargs 进行字典展开），插入任意 SQL 命令。此漏洞影响 Django 4.2.24 之前版本、5.1.12 之前版本和 5.2.6 之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议将 Django 框架升级至以下版本或更高版本：4.2.24、5.1.12 和 5.2.6。此外，可通过限制用户输入并加强输入校验来缓解风险。长期建议包括：定期进行安全审计、使用参数化查询以避免 SQL 注入并强化编码规范。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-09-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 安全漏洞",
+              "id": "XMIRROR-E5B714FA-9A174595",
+              "cve_id": "CVE-2025-26699",
+              "cnnvd_id": "CNNVD-202503-819",
+              "cwe_id": "CWE-770",
+              "description": "\u003cp\u003eDjango是Django基金会的一套基于Python语言的开源Web应用框架。该框架包括面向对象的映射器、视图系统、模板系统等。 Django 5.1.7、5.0.13和4.2.20之前版本存在安全漏洞，该漏洞源于django.utils.text.wrap方法和wordwrap模板过滤器在处理非常长的字符串时可能导致拒绝服务攻击。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `django` to version 4.2.20, 5.0.13, 5.1.7 or higher.\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-03-06",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Django 日志注入漏洞",
+              "id": "XMIRROR-E5B714FA-9A815695",
+              "cve_id": "CVE-2025-48432",
+              "cnnvd_id": "CNNVD-202506-414",
+              "cwe_id": "CWE-117",
+              "description": "\u003cp\u003eDjango 是一个流行的基于 Python 的 Web 应用框架，提供快捷方便的开发方式和整洁的设计准则。此漏洞存在于 Django 版本 5.2（早于 5.2.2）、5.1（早于 5.1.10）和 4.2（早于 4.2.22）中。其原因是内部 HTTP 响应日志记录未对 request.path 进行必要的转义，从而允许远程攻击者通过精心设计的 URL 来操纵日志输出。当日志在终端中查看或由外部系统处理时，可能导致日志注入或伪造。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e升级 Django 到版本 4.2.22、5.1.10、5.2.2 或更高版本。建议在日志中增加对输入进行适当转义的措施。长期而言，提高代码审计水平，并确保日志输出的安全性。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-06-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Django 框架拒绝服务漏洞",
+              "id": "XMIRROR-E5B714FA-64715795",
+              "cve_id": "CVE-2025-64458",
+              "cnnvd_id": "CNNVD-202511-413",
+              "cwe_id": "CWE-407",
+              "description": "Django 是一个流行的 Python Web 框架，广泛用于开发高效和可扩展的 Web 应用程序。这一漏洞主要影响 Django 框架的 5.1 版本（低于 5.1.14）、4.2 版本（低于 4.2.26）和 5.2 版本（低于 5.2.8）。漏洞的根本原因是 Windows 平台上 Python 的 NFKC 字符归一化功能在处理大量 Unicode 字符时性能较差，导致 `django.http.HttpResponseRedirect`、`django.http.HttpResponsePermanentRedirect` 和 `django.shortcuts.redirect` 方法可能因处理特定构造的输入而受到拒绝服务攻击的影响。攻击者可以利用包含大量 Unicode 字符的输入消耗服务器资源，从而导致服务中断。另外，早期不受支持的 Django 版本（如 5.0.x、4.1.x 和 3.2.x）也可能受到此问题的影响，但尚未经过系统评估。",
+              "suggestion": "1. 将 Django 框架升级至以下版本或更高版本：5.1.14、4.2.26 或 5.2.8。\n2. 如果无法立即升级，可以通过限制输入中 Unicode 字符的数量或应用输入过滤规则来缓解此问题。\n3. 配置 Web 应用防火墙（WAF），阻止可能包含大量 Unicode 字符的请求。\n4. 长期建议：进行代码审查，确保对所有用户输入进行有效的长度和格式校验，以提高整体安全性。",
+              "attack_type": "远程",
+              "release_date": "2025-11-05",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 16
+        },
+        {
+          "name": "mysqlclient",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811811326492683",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[mysqlclient:2.*]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "version": "2.31.0",
+          "language": "Python",
+          "id": "57811811326492684",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[requests:2.31.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "simplejson",
+          "version": "3.17.2",
+          "language": "Python",
+          "id": "57811811326492685",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[simplejson:3.17.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "mybatis_mapper2sql",
+          "version": "0.1.9",
+          "language": "Python",
+          "id": "57811811326492686",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[mybatis_mapper2sql:0.1.9]"
+          ]
+        },
+        {
+          "name": "django-auth-ldap",
+          "version": "4.1.0",
+          "language": "Python",
+          "id": "57811811326492687",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-auth-ldap:4.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "python-dateutil",
+          "version": "2.8.1",
+          "language": "Python",
+          "id": "57811811326492688",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[python-dateutil:2.8.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pymongo",
+          "version": "4.6.3",
+          "language": "Python",
+          "id": "57811811326492689",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pymongo:4.6.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "psycopg2-binary",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811811326492690",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[psycopg2-binary:2.*]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "pymysql",
+          "version": "0.9.3",
+          "language": "Python",
+          "id": "57811811326492691",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pymysql:0.9.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyMySQL JSON输入 SQL注入",
+              "id": "XMIRROR-E5B714EF-14506095",
+              "cve_id": "CVE-2024-36039",
+              "cnnvd_id": "CNNVD-202405-3860",
+              "cwe_id": "CWE-89",
+              "description": "当PyMySQL 1.1.0及以下版本与未受信任的JSON输入一起使用时，由于escape_dict未能对键进行转义，导致存在SQL注入漏洞。攻击者通过构造恶意的JSON输入，可以在数据库层面执行任意SQL命令。",
+              "suggestion": "用户应立即升级到最新版本的PyMySQL。如果无法立即升级，可以通过以下方法进行临时修复：1. 确保使用PyMySQL处理的所有JSON输入都来自可信来源。2. 应用适当的输入验证机制，过滤掉恶意的JSON输入。3. 限制数据库账号权限，降低被攻击时的潜在风险。",
+              "attack_type": "远程",
+              "release_date": "2024-05-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "mysql-replication",
+          "version": "0.22",
+          "language": "Python",
+          "id": "57811811326492692",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[mysql-replication:0.22]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "django-q",
+          "version": "1.3.9",
+          "language": "Python",
+          "id": "57811811326492693",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-q:1.3.9]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "django-redis",
+          "version": "5.2.0",
+          "language": "Python",
+          "id": "57811811326492694",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-redis:5.2.0]"
+          ]
+        },
+        {
+          "name": "redis",
+          "version": "3.5.3",
+          "language": "Python",
+          "id": "57811811326492695",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[redis:3.5.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "redis-py 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88CAAF95",
+              "cve_id": "CVE-2023-28858",
+              "cnnvd_id": "CNNVD-202303-2146",
+              "cwe_id": "CWE-193",
+              "description": "redis-py是基于Python的redis接口库。\r\nredis-py 4.5.3之前版本存在安全漏洞。攻击者利用该漏洞可以将响应数据发送到客户端。",
+              "suggestion": "请尽快升级至安全版本",
+              "attack_type": "远程",
+              "release_date": "2023-03-24",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "pyodbc",
+          "version": "4.*",
+          "language": "Python",
+          "id": "57811811326492696",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pyodbc:4.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "gunicorn",
+          "version": "22.0.0",
+          "language": "Python",
+          "id": "57811811326492697",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[gunicorn:22.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Gunicorn HTTP Request Smuggling Vulnerability",
+              "id": "XMIRROR-E5B70F5F-802AEE95",
+              "cve_id": "CVE-2024-6827",
+              "cnnvd_id": "CNNVD-202503-2317",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python Web服务器网关接口（WSGI）HTTP服务器。Gunicorn版本21.2.0未能正确验证'Transfer-Encoding'头的值，导致在RFC标准中规定的默认回退方法为'Content-Length'，使其易受TE.CL请求夹带攻击。攻击者可以通过构造特定的HTTP请求来利用此漏洞，造成缓存中毒、数据泄露、会话操纵、SSRF、XSS、DoS、数据完整性损害、安全绕过、信息泄漏和业务逻辑滥用等问题。",
+              "suggestion": "应立即升级到Gunicorn的23.0.0或更高版本，以修复此安全漏洞。如果不能立即升级，建议对流量进行严格监控和过滤，并限制对受影响服务的访问。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "pyecharts",
+          "version": "2.0.4",
+          "language": "Python",
+          "id": "57811811326492698",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pyecharts:2.0.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "aliyun-python-sdk-rds",
+          "version": "2.1.1",
+          "language": "Python",
+          "id": "57811811326492699",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[aliyun-python-sdk-rds:2.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "cx-Oracle",
+          "version": "7.3.0",
+          "language": "Python",
+          "id": "57811811326492700",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[cx-Oracle:7.3.0]"
+          ]
+        },
+        {
+          "name": "supervisor",
+          "version": "4.1.0",
+          "language": "Python",
+          "id": "57811811326492701",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[supervisor:4.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause-Modification"
+            }
+          ]
+        },
+        {
+          "name": "phoenixdb",
+          "version": "1.2.1",
+          "language": "Python",
+          "id": "57811811326492702",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[phoenixdb:1.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "django-mirage-field",
+          "version": "1.4.0",
+          "language": "Python",
+          "id": "57811811326492703",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-mirage-field:1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "schema-sync",
+          "version": "0.9.7",
+          "language": "Python",
+          "id": "57811811326492704",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[schema-sync:0.9.7]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "parsedatetime",
+          "version": "2.4",
+          "language": "Python",
+          "id": "57811811326492705",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[parsedatetime:2.4]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sshtunnel",
+          "version": "0.1.5",
+          "language": "Python",
+          "id": "57811811326492706",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[sshtunnel:0.1.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pycryptodome",
+          "version": "3.19.1",
+          "language": "Python",
+          "id": "57811811326492707",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pycryptodome:3.19.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyodps",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811811326492708",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pyodps:0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "numpy",
+          "version": "1.*",
+          "language": "Python",
+          "id": "57811811326492709",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[numpy:1.*]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "NumPy 代码问题漏洞",
+              "id": "XMIRROR-E5B70FD6-972C5395",
+              "cve_id": "CVE-2019-6446",
+              "cnnvd_id": "CNNVD-201901-600",
+              "cwe_id": "CWE-502",
+              "description": "\u003cp\u003eNumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。 NumPy 1.16.0 版本及之前版本存在代码问题漏洞，该漏洞源于不安全地使用 pickle 模块。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2019-01-16",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "NumPy 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-ED70AB95",
+              "cve_id": "CVE-2021-33430",
+              "cnnvd_id": "CNNVD-202112-1480",
+              "cnvd_id": "CNVD-2021-101679",
+              "cwe_id": "CWE-120",
+              "description": "NumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.9版本存在缓冲区错误漏洞，该漏洞源于在ctor .c的 PyArray_NewFromDescr_int函数中缺少对于数组长度的限制，导致缓冲区溢出漏洞，当从Python代码指定大维度(超过32)的数组时，这可能会让恶意用户导致拒绝服务。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/numpy/numpy/pull/18989\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "NumPy 代码问题漏洞",
+              "id": "XMIRROR-E5B71412-ED451B95",
+              "cve_id": "CVE-2021-41495",
+              "cnnvd_id": "CNNVD-202112-1488",
+              "cnvd_id": "CNVD-2021-101681",
+              "cwe_id": "CWE-476",
+              "description": "NumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.19存在代码问题漏洞，该漏洞源于。numpy存在空指针解引用漏洞。在软件中的PyArray_DescrNew函数中，由于缺少返回值验证，导致了空指针解引用漏洞、这允许攻击者可利用该漏洞通过重复创建排序数组来进行DoS攻击。",
+              "suggestion": "通用方案： 目前厂商暂未发布修复措施解决此安全问题，建议使用此软件的用户随时关注厂商主页或参考网址以获取解决办法： https://github.com/numpy/numpy\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "NumPy 安全漏洞",
+              "id": "XMIRROR-E5B71412-EDCCA895",
+              "cve_id": "CVE-2021-34141",
+              "cnnvd_id": "CNNVD-202112-1481",
+              "cnvd_id": "CNVD-2021-101680",
+              "cwe_id": "CWE-697",
+              "description": "NumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.9存在安全漏洞，该漏洞源于软件中不完整的字符串比较。它允许攻击者可利用该漏洞通过构造特定的字符串对象来破坏api。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/numpy/numpy/pull/19539\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "NumPy 安全漏洞",
+              "id": "XMIRROR-E5B70F18-48C63895",
+              "cve_id": "CVE-2014-1858",
+              "cnnvd_id": "CNNVD-201406-484",
+              "cnvd_id": "CNVD-2014-01188",
+              "cwe_id": "CWE-20",
+              "description": "NumPy是一个Python科学计算包，它支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.8.1之前的版本中的f2py的__init__.py文件存在安全漏洞。本地攻击者可通过对临时文件实施符号链接攻击利用该漏洞覆盖任意文件。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://www.numpy.org/\n",
+              "attack_type": "本地",
+              "release_date": "2014-02-05",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Numpy 安全漏洞",
+              "id": "XMIRROR-E5B7669E-3A6A9295",
+              "cve_id": "CVE-2017-12852",
+              "cnnvd_id": "CNNVD-201708-591",
+              "cnvd_id": "CNVD-2017-28629",
+              "cwe_id": "CWE-835",
+              "description": "NumPy是一个Python科学计算包，它支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\r\nNumpy 1.13.1及之前的版本中的‘numpy.pad’函数存在安全漏洞，该漏洞源于程序缺少输入验证。攻击者可利用该漏洞造成拒绝服务（无限循环）。",
+              "suggestion": "厂商尚未提供漏洞修复方案，请关注厂商主页更新：\r\nhttps://pypi.python.org/pypi/numpy",
+              "attack_type": "远程",
+              "release_date": "2017-08-15",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "NumPy 安全漏洞",
+              "id": "XMIRROR-E5B70F18-48C6F395",
+              "cve_id": "CVE-2014-1859",
+              "cnnvd_id": "CNNVD-201406-485",
+              "cnvd_id": "CNVD-2014-00955",
+              "cwe_id": "CWE-59",
+              "description": "NumPy是一个Python科学计算包，它支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\n\r\nNumPy 1.8.1之前的版本中的core/tests/test_memmap.py、core/tests/test_multiarray.py、f2py/f2py2e.py和lib/tests/test_io.py文件存在安全漏洞。本地攻击者可通过对临时文件实施符号链接攻击利用该漏洞覆盖任意文件。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://www.oschina.net/p/numpy\n",
+              "attack_type": "本地",
+              "release_date": "2014-02-05",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 7
+        },
+        {
+          "name": "pandas",
+          "version": "1.*",
+          "language": "Python",
+          "id": "57811811326492710",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pandas:1.*]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "pandas 代码问题漏洞",
+              "id": "XMIRROR-E5B71403-473F9395",
+              "cve_id": "CVE-2020-13091",
+              "cnnvd_id": "CNNVD-202005-833",
+              "cnvd_id": "CNVD-2020-33500",
+              "cwe_id": "CWE-502",
+              "description": "pandas是一款基于Python语言的开源数据分析和处理工具。\r\npandas 1.0.3及之前版本中存在代码问题漏洞。攻击者可利用该漏洞执行命令。",
+              "suggestion": "通用方案： 厂商尚未提供漏洞修复方案，请关注厂商主页更新： https://pandas.pydata.org/\n",
+              "attack_type": "远程",
+              "release_date": "2020-05-15",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "pandas 本地文件包含漏洞",
+              "id": "XMIRROR-E5F5415F-804AD31D",
+              "description": "\u003cp\u003epandas 是一个流行的 Python 数据分析库，提供高效的数据操作和分析工具。该库中的 read_xml 函数存在本地文件包含 (LFI) 漏洞，因为其 path_or_buffer 参数未经过严格的路径验证，攻击者可以通过提供恶意文件路径访问任意文件。这可通过调用 get_handle 函数实现，该函数在没有验证路径的情况下打开文件，从而导致敏感文件的泄露，比如 /etc/passwd 和 /etc/shadow。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e对 path_or_buffer 参数进行严格的输入验证，确保只允许访问受信任的文件路径。应限制访问特定目录或文件类型。对于已知的读取功能，例如 read_xml 和 read_csv，应确保所读取的文件类型符合预期。此外，建议尽快升级到修复该漏洞的新版本或应用相应的补丁。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "clickhouse-driver",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811811326492711",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[clickhouse-driver:0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "clickhouse-driver 缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B71403-AF1FAE95",
+              "cve_id": "CVE-2020-26759",
+              "cnnvd_id": "CNNVD-202101-357",
+              "cwe_id": "CWE-120",
+              "description": "clickhouse-driver 0.1.5 版本之前存在一个漏洞，该漏洞允许恶意的 clickhouse 服务器通过构造的服务器响应触发客户端崩溃或执行任意代码。这是由于缓冲区溢出引起的。",
+              "suggestion": "\u003cp\u003e建议将 clickhouse-driver 升级到 0.1.5 或更高版本，以修复该缓冲区溢出问题。同时，可以考虑在网络层面实施保护措施，如使用防火墙或网络入侵检测系统（NIDS）来过滤和阻止恶意的 ClickHouse 服务器响应。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2021-01-06",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "djangorestframework",
+          "version": "3.13.1",
+          "language": "Python",
+          "id": "57811811326492712",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[djangorestframework:3.13.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Django REST Framework存在xss漏洞",
+              "id": "XMIRROR-E5B714EF-1480B795",
+              "cve_id": "CVE-2024-21520",
+              "cnnvd_id": "CNNVD-202406-2869",
+              "cwe_id": "CWE-79",
+              "description": "\u003cp\u003eDjango REST Framework (DRF) 是一个用于构建 Web API 的流行框架。版本 3.15.2 之前的版本存在跨站脚本（XSS）漏洞。问题出现在 `break_long_headers` 模板过滤器中，该过滤器用于将长标头拆分并使用 \u003c/p\u003e\u003cp\u003e 标签连接，但在此过程中没有对用户输入进行适当的转义或清理。攻击者可以通过注入恶意脚本，将其植入 HTTP 请求头中，当浏览器渲染页面时，脚本会在用户浏览器中执行。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e尽快将 Django REST Framework 升级至 3.15.2 或更高版本，以修复此问题。在未能立即升级的情况下，可以临时限制用户输入中的不可信数据，确保所有输入数据在传回客户端之前进行适当的清理和转义。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-06-25",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "djangorestframework-simplejwt",
+          "version": "5.2.0",
+          "language": "Python",
+          "id": "57811811326492713",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[djangorestframework-simplejwt:5.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Insufficient Session Expiration",
+              "id": "XMIRROR-E5B77528-5CB1802B",
+              "cwe_id": "CWE-613",
+              "description": "## Overview\n[djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt) is an A minimal JSON Web Token authentication plugin for Django REST Framework\n\nAffected versions of this package are vulnerable to Insufficient Session Expiration due to access tokens not expiring.\n## Remediation\nUpgrade `djangorestframework-simplejwt` to version 5.2.2 or higher.\n## References\n- [GitHub Commit](https://github.com/jazzband/djangorestframework-simplejwt/commit/6c03c4ea547ce973b16614247cc46cb41bb7223b)\n- [GitHub PR](https://github.com/jazzband/djangorestframework-simplejwt/pull/629)\n- [GitHub Release](https://github.com/jazzband/djangorestframework-simplejwt/releases/tag/v5.2.2)\n",
+              "suggestion": "## Remediation\nUpgrade `djangorestframework-simplejwt` to version 5.2.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-11-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Simple JWT 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14B7B695",
+              "cve_id": "CVE-2024-22513",
+              "cnnvd_id": "CNNVD-202403-1533",
+              "cwe_id": "CWE-306",
+              "description": "Simple JWT是Jazzband开源的一个用于 Django REST Framework 的 JSON Web Token 身份验证插件。\r\nSimple JWT 5.3.1版本及之前版本存在安全漏洞，该漏洞源于缺少通过 for_user 方法进行的用户验证检查。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `djangorestframework-simplejwt` to version 5.5.1 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-03-16",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "django-filter",
+          "version": "21.1",
+          "language": "Python",
+          "id": "57811811326492714",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-filter:21.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "drf-spectacular",
+          "version": "0.22.0",
+          "language": "Python",
+          "id": "57811811326492715",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[drf-spectacular:0.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyotp",
+          "version": "2.6.0",
+          "language": "Python",
+          "id": "57811811326492716",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pyotp:2.6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pillow",
+          "version": "10.3.0",
+          "language": "Python",
+          "id": "57811811326492717",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pillow:10.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Secret-Labs-2011"
+            }
+          ]
+        },
+        {
+          "name": "qrcode",
+          "version": "7.3.1",
+          "language": "Python",
+          "id": "57811811326492718",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[qrcode:7.3.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "django-environ",
+          "version": "0.8.1",
+          "language": "Python",
+          "id": "57811811326492719",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-environ:0.8.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "alibabacloud_dysmsapi20170525",
+          "version": "2.0.9",
+          "language": "Python",
+          "id": "57811811326492720",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[alibabacloud_dysmsapi20170525:2.0.9]"
+          ]
+        },
+        {
+          "name": "tencentcloud-sdk-python",
+          "version": "3.0.656",
+          "language": "Python",
+          "id": "57811811326492721",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[tencentcloud-sdk-python:3.0.656]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "mozilla-django-oidc",
+          "version": "3.0.0",
+          "language": "Python",
+          "id": "57811811326492722",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[mozilla-django-oidc:3.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MPL-2.0"
+            }
+          ]
+        },
+        {
+          "name": "django-auth-dingding",
+          "version": "0.0.3",
+          "language": "Python",
+          "id": "57811811326492723",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-auth-dingding:0.0.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "django-cas-ng",
+          "version": "4.3.0",
+          "language": "Python",
+          "id": "57811811326492724",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django-cas-ng:4.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "cassandra-driver",
+          "language": "Python",
+          "id": "57811811326492725",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[cassandra-driver:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "httpx",
+          "language": "Python",
+          "id": "57811811326492726",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[httpx:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Improper Input Validation",
+              "id": "XMIRROR-E5B77528-1350312B",
+              "cwe_id": "CWE-20",
+              "description": "## Overview\n[httpx](https://pypi.org/project/httpx) is a The next generation HTTP client.\n\nAffected versions of this package are vulnerable to Improper Input Validation due to improper implementation of `httpx.URL().copy_with`, that causes `httpx.Client` and `httpx.Proxy` to parse wrong URL. Exploiting this vulnerability leads to blacklist bypass.\r\n\r\n## PoC:\r\n\r\n**httpx.Client**\r\n\r\n```python\r\nuser_input_from_http_request = 'http:////admin-dashboard/secret'\r\nu = httpx.URL(user_input_from_http_request)\r\nassert u.host.lower() != 'admin-dashboard'\r\nresp = httpx.Client(base_url=u).get('/') # SSRF to http://admin-dashboard/secret\r\nprint(resp.text) # sensitive data leak\r\n```\r\n\r\n**httpx.Proxy**\r\n\r\n```python\r\nuser_input_from_http_request = 'http://x@//internal-proxy:8082/'\r\nu = httpx.URL(user_input_from_http_request)\r\nassert u.host.lower() != 'internal-proxy'\r\n# httpx.Proxy(u).url.netloc == b'internal-proxy:8082'\r\nresp = httpx.Client(proxies=u).get('/') # will request via http proxy at internal-proxy:8082\r\n```\n## Remediation\nUpgrade `httpx` to version 0.23.0 or higher.\n## References\n- [GitHub Commit](https://github.com/encode/httpx/pull/2185/commits/e3c495a32c63d8aa7f1bcf3b7b27ee1a0ff428e1)\n- [GitHub Issue](https://github.com/encode/httpx/issues/2184)\n- [GitHub PR](https://github.com/encode/httpx/pull/2185)\n",
+              "suggestion": "## Remediation\nUpgrade `httpx` to version 0.23.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-05-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Encode OSS httpx 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-EDB23695",
+              "cve_id": "CVE-2021-41945",
+              "cnnvd_id": "CNNVD-202204-4567",
+              "cwe_id": "CWE-20",
+              "description": "Encode OSS httpx是英国Encode OSS公司的一个功能齐全的 HTTP 客户端。提供同步和异步 API，支持 HTTP/1.1 和 HTTP/2。\r\nEncode OSS httpx 1.0.0 版本及其之前版本存在输入验证错误漏洞，该漏洞源于httpx.URL和httpx.Client和httpx.URL.copy_with的函数输入验证不当。",
+              "suggestion": "## Remediation\nUpgrade `httpx` to version 0.23.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-04-28",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "OpenAI",
+          "language": "Python",
+          "id": "57811811326492727",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[OpenAI:]"
+          ]
+        },
+        {
+          "name": "elasticsearch",
+          "version": "8.14.0",
+          "language": "Python",
+          "id": "57811811326492728",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[elasticsearch:8.14.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "opensearch_py",
+          "version": "2.6.0",
+          "language": "Python",
+          "id": "57811811326492729",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[opensearch_py:2.6.0]"
+          ]
+        },
+        {
+          "name": "django_storages",
+          "version": "1.14.6",
+          "language": "Python",
+          "id": "57811811326492730",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[django_storages:1.14.6]"
+          ]
+        },
+        {
+          "name": "boto3",
+          "language": "Python",
+          "id": "57811811326492731",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[boto3:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Information Exposure",
+              "id": "XMIRROR-E5B77528-3EFFB22B",
+              "cwe_id": "CWE-200",
+              "description": "## Overview\n[`boto3`](https://pypi.python.org/pypi/boto3) is the AWS SDK for Python.\n\nAffected versions of this package are vulnerable to Information Exposure due to logging all of the bytes uploaded when the logger is set to the `INFO` level.\n\n## Remediation\nUpgrade `boto3` to version 1.4.5 or higher.\n\n## References\n- [GitHub Issue](https://github.com/boto/boto3/issues/1017)\n- [GitHub Commit](https://github.com/boto/boto3/commit/5a4396a4e0d1b337c081cb4095e5255da915198e)",
+              "suggestion": "## Remediation\nUpgrade `boto3` to version 1.4.5 or higher.\n",
+              "attack_type": "本地",
+              "release_date": "2017-03-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "azure_storage_blob",
+          "version": "12.26.0",
+          "language": "Python",
+          "id": "57811811326492732",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[azure_storage_blob:12.26.0]"
+          ]
+        },
+        {
+          "name": "openpyxl",
+          "version": "3.1.5",
+          "language": "Python",
+          "id": "57811811326492733",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[openpyxl:3.1.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "parameterized",
+          "language": "Python",
+          "id": "57811811326492734",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[parameterized:]"
+          ],
+          "licenses": [
+            {
+              "name": "FreeBSD"
+            }
+          ]
+        },
+        {
+          "name": "pymemcache",
+          "version": "4.0.0",
+          "language": "Python",
+          "id": "57811811326492735",
+          "direct": true,
+          "paths": [
+            "hhyo_Archery\\requirements.txt\\[pymemcache:4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 38
+    },
+    {
+      "id": "57811811326492675",
+      "direct": true,
+      "paths": [
+        "hhyo_Archery\\src\\script\\rule.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 40
+}

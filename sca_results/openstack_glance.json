@@ -1,0 +1,1891 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openstack_glance",
+    "size": 0,
+    "start_time": "2025-11-27 21:55:36",
+    "end_time": "2025-11-27 21:55:41",
+    "cost_time": 4.723473
+  },
+  "id": "57811826747146240",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811826747146241",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "sphinx",
+          "version": "\u003e=2.0.0,!=2.1.0",
+          "language": "Python",
+          "id": "57811826747146359",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[sphinx:\u003e=2.0.0,!=2.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "os-api-ref",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811826747146360",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[os-api-ref:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "openstackdocstheme",
+          "version": "\u003e=2.2.1",
+          "language": "Python",
+          "id": "57811826747146361",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[openstackdocstheme:\u003e=2.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "reno",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811826747146362",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[reno:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinxcontrib-apidoc",
+          "version": "\u003e=0.2.0",
+          "language": "Python",
+          "id": "57811826747146363",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[sphinxcontrib-apidoc:\u003e=0.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "whereto",
+          "version": "\u003e=0.3.0",
+          "language": "Python",
+          "id": "57811826747146364",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[whereto:\u003e=0.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "xattr",
+          "version": "\u003e=0.9.2",
+          "language": "Python",
+          "id": "57811826747146365",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\doc\\requirements.txt\\[xattr:\u003e=0.9.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811826747146242",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pbr",
+          "version": "\u003e=3.1.1",
+          "language": "Python",
+          "id": "57811826747146366",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[pbr:\u003e=3.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "defusedxml",
+          "version": "\u003e=0.7.1",
+          "language": "Python",
+          "id": "57811826747146367",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[defusedxml:\u003e=0.7.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        },
+        {
+          "name": "SQLAlchemy",
+          "version": "\u003e=1.3.14",
+          "language": "Python",
+          "id": "57811826747146368",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[SQLAlchemy:\u003e=1.3.14]"
+          ]
+        },
+        {
+          "name": "eventlet",
+          "version": "\u003e=0.33.3",
+          "language": "Python",
+          "id": "57811826747146369",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[eventlet:\u003e=0.33.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 环境问题漏洞",
+              "id": "XMIRROR-E5B714FA-64663A95",
+              "cve_id": "CVE-2025-58068",
+              "cnnvd_id": "CNNVD-202508-3484",
+              "cwe_id": "CWE-444",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.40.3之前版本存在环境问题漏洞，该漏洞源于HTTP请求夹带处理不当，可能导致前端安全控制绕过。",
+              "suggestion": "## Remediation\nUpgrade `eventlet` to version 0.40.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-08-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "PasteDeploy",
+          "version": "\u003e=1.5.0",
+          "language": "Python",
+          "id": "57811826747146370",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[PasteDeploy:\u003e=1.5.0]"
+          ]
+        },
+        {
+          "name": "Routes",
+          "version": "\u003e=2.3.1",
+          "language": "Python",
+          "id": "57811826747146371",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[Routes:\u003e=2.3.1]"
+          ]
+        },
+        {
+          "name": "WebOb",
+          "version": "\u003e=1.8.1",
+          "language": "Python",
+          "id": "57811826747146372",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[WebOb:\u003e=1.8.1]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "WebOb 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14E1B695",
+              "cve_id": "CVE-2024-42353",
+              "cnnvd_id": "CNNVD-202408-1345",
+              "cwe_id": "CWE-601",
+              "description": "WebOb是Pylons开源的一个 WSGI 请求和响应对象。\r\nWebOb 1.8.8之前版本存在安全漏洞，该漏洞源于存在打开重定向。",
+              "suggestion": "## Remediation\nUpgrade `WebOb` to version 1.8.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-14",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "alembic",
+          "version": "\u003e=0.9.6",
+          "language": "Python",
+          "id": "57811826747146373",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[alembic:\u003e=0.9.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "httplib2",
+          "version": "\u003e=0.9.1",
+          "language": "Python",
+          "id": "57811826747146374",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[httplib2:\u003e=0.9.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "httplib2 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-91771195",
+              "cve_id": "CVE-2021-21240",
+              "cnnvd_id": "CNNVD-202102-595",
+              "cwe_id": "CWE-400",
+              "description": "httplib2是一款HTTP客户端库。\r\nhttplib2 0.19.0之前的版本中存在安全漏洞，该漏洞源于在 www-authenticate 报头中响应长串 xa0 字符可能会导致httpplib2客户端访问该服务器时拒绝服务。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-08",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "CRLF Injection",
+              "id": "XMIRROR-E5B77528-81848F2B",
+              "cwe_id": "CWE-93",
+              "description": "## Overview\n[httplib2](https://github.com/httplib2/httplib2) is a small HTTP client library for Python.\n\nAffected versions of this package are vulnerable to CRLF Injection. It allows `%xx` quote of space, CR, LF characters in the URI.\n## Remediation\nUpgrade `httplib2` to version 0.18.0 or higher.\n## References\n- [GitHub Commit](https://github.com/httplib2/httplib2/commit/a1457cc31f3206cf691d11d2bf34e98865873e9e)\n",
+              "suggestion": "## Remediation\nUpgrade `httplib2` to version 0.18.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-06-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "httplib2 注入漏洞",
+              "id": "XMIRROR-E5B71403-4701E095",
+              "cve_id": "CVE-2020-11078",
+              "cnnvd_id": "CNNVD-202005-1097",
+              "cnvd_id": "CNVD-2021-37699",
+              "cwe_id": "CWE-93 CWE-74",
+              "description": "httplib2是一款HTTP客户端库。\r\nhttplib2 0.18.0之前版本中存在注入漏洞。攻击者可通过控制的uri（httplib2.Http.request()）未转义部分利用该漏洞更改请求标头和正文，并将其他隐藏请求发送到同一服务器。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/httplib2/httplib2/security/advisories/GHSA-gg84-qgv9-w4pq\n",
+              "attack_type": "远程",
+              "release_date": "2020-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-httplib2 SSL凭证安全绕过漏洞",
+              "id": "XMIRROR-E5B70FC1-14DB2195",
+              "cve_id": "CVE-2013-2037",
+              "cnnvd_id": "CNNVD-201305-065",
+              "cwe_id": "CWE-20",
+              "description": "httplib2 0.7.2及之前的版本和0.8及之前的版本中存在安全漏洞，该漏洞源于程序在完成初始化连接后，没有验证主题的Common Name或X.509证书的中subjectAltname字段的域名是否与服务器主机名匹配。攻击者可借助任意有效的证书利用该漏洞实施中间人攻击，欺骗SSL服务器。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://code.google.com/p/httplib2/issues/detail?id=282\n",
+              "attack_type": "远程",
+              "release_date": "2012-02-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "oslo.config",
+          "version": "\u003e=8.1.0",
+          "language": "Python",
+          "id": "57811826747146375",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.config:\u003e=8.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.concurrency",
+          "version": "\u003e=4.5.1",
+          "language": "Python",
+          "id": "57811826747146376",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.concurrency:\u003e=4.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.context",
+          "version": "\u003e=2.22.0",
+          "language": "Python",
+          "id": "57811826747146377",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.context:\u003e=2.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.upgradecheck",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811826747146378",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.upgradecheck:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.utils",
+          "version": "\u003e=7.4.0",
+          "language": "Python",
+          "id": "57811826747146379",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.utils:\u003e=7.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "stevedore",
+          "version": "!=3.0.0,\u003e=1.20.0",
+          "language": "Python",
+          "id": "57811826747146380",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[stevedore:!=3.0.0,\u003e=1.20.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "futurist",
+          "version": "\u003e=1.2.0",
+          "language": "Python",
+          "id": "57811826747146381",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[futurist:\u003e=1.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "taskflow",
+          "version": "\u003e=4.0.0",
+          "language": "Python",
+          "id": "57811826747146382",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[taskflow:\u003e=4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "keystoneauth1",
+          "version": "\u003e=3.4.0",
+          "language": "Python",
+          "id": "57811826747146383",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[keystoneauth1:\u003e=3.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "keystonemiddleware",
+          "version": "\u003e=5.1.0",
+          "language": "Python",
+          "id": "57811826747146384",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[keystonemiddleware:\u003e=5.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "WSME",
+          "version": "\u003e=0.8.0",
+          "language": "Python",
+          "id": "57811826747146385",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[WSME:\u003e=0.8.0]"
+          ]
+        },
+        {
+          "name": "PrettyTable",
+          "version": "\u003e=0.7.1",
+          "language": "Python",
+          "id": "57811826747146386",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[PrettyTable:\u003e=0.7.1]"
+          ]
+        },
+        {
+          "name": "Paste",
+          "version": "\u003e=2.0.2",
+          "language": "Python",
+          "id": "57811826747146387",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[Paste:\u003e=2.0.2]"
+          ]
+        },
+        {
+          "name": "jsonschema",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811826747146388",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[jsonschema:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "python-keystoneclient",
+          "version": "\u003e=3.8.0",
+          "language": "Python",
+          "id": "57811826747146389",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[python-keystoneclient:\u003e=3.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.db",
+          "version": "\u003e=5.0.0",
+          "language": "Python",
+          "id": "57811826747146390",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.db:\u003e=5.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.i18n",
+          "version": "\u003e=5.0.0",
+          "language": "Python",
+          "id": "57811826747146391",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.i18n:\u003e=5.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.limit",
+          "version": "\u003e=1.6.0",
+          "language": "Python",
+          "id": "57811826747146392",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.limit:\u003e=1.6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.log",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826747146393",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.log:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.messaging",
+          "version": "\u003e=5.29.0,!=9.0.0",
+          "language": "Python",
+          "id": "57811826747146394",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.messaging:\u003e=5.29.0,!=9.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.middleware",
+          "version": "\u003e=3.31.0",
+          "language": "Python",
+          "id": "57811826747146395",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.middleware:\u003e=3.31.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.reports",
+          "version": "\u003e=1.18.0",
+          "language": "Python",
+          "id": "57811826747146396",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.reports:\u003e=1.18.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.policy",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826747146397",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[oslo.policy:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "retrying",
+          "version": "!=1.3.0,\u003e=1.2.3",
+          "language": "Python",
+          "id": "57811826747146398",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[retrying:!=1.3.0,\u003e=1.2.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "osprofiler",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811826747146399",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[osprofiler:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "glance-store",
+          "version": "\u003e=4.9.0",
+          "language": "Python",
+          "id": "57811826747146400",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[glance-store:\u003e=4.9.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "debtcollector",
+          "version": "\u003e=1.19.0",
+          "language": "Python",
+          "id": "57811826747146401",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[debtcollector:\u003e=1.19.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "\u003e=2.6.1",
+          "language": "Python",
+          "id": "57811826747146402",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[cryptography:\u003e=2.6.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A334695",
+              "cve_id": "CVE-2023-0286",
+              "cnnvd_id": "CNNVD-202302-524",
+              "cwe_id": "CWE-843",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。存在安全漏洞，源于内存释放后重用。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "cryptography 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-886E1995",
+              "cve_id": "CVE-2023-23931",
+              "cnnvd_id": "CNNVD-202302-523",
+              "cwe_id": "CWE-754",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\ncryptography 存在代码问题漏洞。目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "目前官方已发布安全修复版本，受影响用户可以更新到安全版本:\n cryptography \u003e= 39.0.1",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-8EF13161",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-06-03",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "pyca/cryptography's wheels include vulnerable OpenSSL",
+              "id": "XMIRROR-C9431C71-B357FAB7",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-08-02",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-609F7E1F",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 2.5-41.0.3 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230908.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-09-22",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-AF95EA95",
+              "cve_id": "CVE-2020-36242",
+              "cnnvd_id": "CNNVD-202102-574",
+              "cwe_id": "CWE-190 CWE-787",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography package before 3.3.2 for Python 存在输入验证错误漏洞，该漏洞源于导致整数溢出和缓冲区溢出。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F5B-1DBEED95",
+              "cve_id": "CVE-2022-3996",
+              "cnnvd_id": "CNNVD-202212-2982",
+              "cwe_id": "CWE-667",
+              "description": "OpenSSL是一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库，支持多种加密算法。如果X.509证书包含格式错误的策略约束并且启用了策略处理，系统将递归地获取两次写锁，导致在某些操作系统上进程挂起，进而造成拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本3.0.8或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2022-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A956395",
+              "cve_id": "CVE-2023-3817",
+              "cnnvd_id": "CNNVD-202307-2314",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，常用于车云通信中对传输协议的加解密。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL在部分版本中存在使用DH_check等函数检查DH参数时耗时较长的漏洞，导致拒绝服务。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-07-31",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9AB00D95",
+              "cve_id": "CVE-2023-3446",
+              "cnnvd_id": "CNNVD-202307-1681",
+              "cwe_id": "CWE-606 CWE-1333",
+              "description": "OpenSSL是一个开源的安全套接层和安全传输层协议的通用加密库，支持多种加密算法。在某些版本的OpenSSL中，DH_check()、DH_check_ex()或EVP_PKEY_param_check()函数在处理过大的DH密钥或参数时可能导致应用程序变得非常缓慢，造成拒绝服务。",
+              "suggestion": "建议将OpenSSL升级到版本1.1.1d-150200.11.72.1或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-07-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 授权问题漏洞",
+              "id": "XMIRROR-E5B70F55-9A258F95",
+              "cve_id": "CVE-2023-2975",
+              "cnnvd_id": "CNNVD-202307-1295",
+              "cwe_id": "CWE-354 CWE-287",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL存在授权问题漏洞，该漏洞源于密码实现存在错误，AES-SIV忽略空的关联数据条目，导致允许对多个关联的进行身份验证数据条目进行加密。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 41.0.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F55-9A790895",
+              "cve_id": "CVE-2023-4807",
+              "cnnvd_id": "CNNVD-202309-665",
+              "cwe_id": "CWE-440",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。 OpenSSL 1.1.1 至 1.1.1v版本、3.0.0 至 3.0.10 版本以及 3.1.0 至 3.1.2版本存在安全漏洞，该漏洞源于POLY1305 MAC（消息身份验证代码）包含一个错误，当在支持 AVX512-IFMA 指令的较新 X86_64 处理器上运行时，可能会破坏 Windows 64 平台上的应用程序内部状态。",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `openssl` to version 1.1.1w, 3.0.11, 3.1.3 or higher.\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2023-09-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-808F9F95",
+              "cve_id": "CVE-2024-4603",
+              "cnnvd_id": "CNNVD-202405-2902",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL 3.0 和 3.1 版本存在安全漏洞，该漏洞源于使用函数 EVP_PKEY_param_check()、EVP_PKEY_public_check() 检查 DSA 公钥或 DSA 参数检查的键或参数，可能会导致拒绝服务。",
+              "suggestion": "## Remediation\nA fix was pushed into the `master` branch but not yet published.",
+              "attack_type": "远程",
+              "release_date": "2024-05-16",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 20
+        },
+        {
+          "name": "cursive",
+          "version": "\u003e=0.2.1",
+          "language": "Python",
+          "id": "57811826747146403",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[cursive:\u003e=0.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "castellan",
+          "version": "\u003e=0.17.0",
+          "language": "Python",
+          "id": "57811826747146404",
+          "direct": true,
+          "paths": [
+            "openstack_glance\\requirements.txt\\[castellan:\u003e=0.17.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 26
+    },
+    {
+      "language": "Python",
+      "id": "57811826747146243",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\setup.py"
+      ]
+    },
+    {
+      "id": "57811826747146244",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\add-location-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146245",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\cache-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146246",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146247",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146248",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-details-deactivate-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146249",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-import-c-i-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146250",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-import-g-d-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146251",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-import-gd-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146252",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-import-w-d-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146253",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-info-import-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146254",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-member-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146255",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-member-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146256",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-member-details-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146257",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-member-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146258",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-member-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146259",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-members-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146260",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146261",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-tasks-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146262",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146263",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\image-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146264",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\images-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146265",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\locations-list-detail-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146266",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-create-request-simple.json"
+      ]
+    },
+    {
+      "id": "57811826747146267",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146268",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-create-response-simple.json"
+      ]
+    },
+    {
+      "id": "57811826747146269",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146270",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-details-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146271",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-details-with-rt-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146272",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146273",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespace-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146274",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-namespaces-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146275",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-object-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146276",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-object-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146277",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-object-details-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146278",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-object-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146279",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-object-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146280",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-objects-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146281",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-properties-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146282",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-property-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146283",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-property-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146284",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-property-details-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146285",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-property-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146286",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-property-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146287",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-resource-type-assoc-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146288",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-resource-type-assoc-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146289",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-resource-type-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146290",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-resource-types-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146291",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tag-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146292",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tag-details-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146293",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tag-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146294",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tag-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146295",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tags-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146296",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tags-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146297",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\metadef-tags-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146298",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-image-member-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146299",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-image-members-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146300",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-image-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146301",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-images-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146302",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-namespace-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146303",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-namespaces-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146304",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-object-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146305",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-objects-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146306",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-properties-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146307",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-property-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146308",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-resource-type-association-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146309",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-resource-type-associations-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146310",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-tag-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146311",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-metadef-tags-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146312",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-task-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146313",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\schemas-tasks-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146314",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\stores-list-detail-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146315",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\stores-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146316",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\task-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826747146317",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\task-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146318",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\task-show-failure-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146319",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\task-show-processing-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146320",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\task-show-success-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146321",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\tasks-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146322",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\v2\\samples\\usage-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146323",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\api-ref\\source\\versions\\samples\\image-versions-response.json"
+      ]
+    },
+    {
+      "id": "57811826747146324",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\cim-processor-allocation-setting-data.json"
+      ]
+    },
+    {
+      "id": "57811826747146325",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\cim-resource-allocation-setting-data.json"
+      ]
+    },
+    {
+      "id": "57811826747146326",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\cim-storage-allocation-setting-data.json"
+      ]
+    },
+    {
+      "id": "57811826747146327",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\cim-virtual-system-setting-data.json"
+      ]
+    },
+    {
+      "id": "57811826747146328",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-aggr-disk-filter.json"
+      ]
+    },
+    {
+      "id": "57811826747146329",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-aggr-iops-filter.json"
+      ]
+    },
+    {
+      "id": "57811826747146330",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-aggr-num-instances.json"
+      ]
+    },
+    {
+      "id": "57811826747146331",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-cpu-mode.json"
+      ]
+    },
+    {
+      "id": "57811826747146332",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-cpu-pinning.json"
+      ]
+    },
+    {
+      "id": "57811826747146333",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-guest-memory-backing.json"
+      ]
+    },
+    {
+      "id": "57811826747146334",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-guest-shutdown.json"
+      ]
+    },
+    {
+      "id": "57811826747146335",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-host-capabilities.json"
+      ]
+    },
+    {
+      "id": "57811826747146336",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-hypervisor.json"
+      ]
+    },
+    {
+      "id": "57811826747146337",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-instance-data.json"
+      ]
+    },
+    {
+      "id": "57811826747146338",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-libvirt-image.json"
+      ]
+    },
+    {
+      "id": "57811826747146339",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-libvirt.json"
+      ]
+    },
+    {
+      "id": "57811826747146340",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-quota.json"
+      ]
+    },
+    {
+      "id": "57811826747146341",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-randomgen.json"
+      ]
+    },
+    {
+      "id": "57811826747146342",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-vcputopology.json"
+      ]
+    },
+    {
+      "id": "57811826747146343",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-vmware-flavor.json"
+      ]
+    },
+    {
+      "id": "57811826747146344",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-vmware-quota-flavor.json"
+      ]
+    },
+    {
+      "id": "57811826747146345",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-vmware.json"
+      ]
+    },
+    {
+      "id": "57811826747146346",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-vtpm-hw.json"
+      ]
+    },
+    {
+      "id": "57811826747146347",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-vtpm.json"
+      ]
+    },
+    {
+      "id": "57811826747146348",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-watchdog.json"
+      ]
+    },
+    {
+      "id": "57811826747146349",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\compute-xenapi.json"
+      ]
+    },
+    {
+      "id": "57811826747146350",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\glance-common-image-props.json"
+      ]
+    },
+    {
+      "id": "57811826747146351",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\image-signature-verification.json"
+      ]
+    },
+    {
+      "id": "57811826747146352",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\operating-system.json"
+      ]
+    },
+    {
+      "id": "57811826747146353",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\software-databases.json"
+      ]
+    },
+    {
+      "id": "57811826747146354",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\software-runtimes.json"
+      ]
+    },
+    {
+      "id": "57811826747146355",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\software-webservers.json"
+      ]
+    },
+    {
+      "id": "57811826747146356",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\metadefs\\storage-volume-type.json"
+      ]
+    },
+    {
+      "id": "57811826747146357",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\etc\\schema-image.json"
+      ]
+    },
+    {
+      "id": "57811826747146358",
+      "direct": true,
+      "paths": [
+        "openstack_glance\\glance\\tests\\etc\\schema-image.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 30
+}

@@ -1,0 +1,16 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "plone_Plone",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:52",
+    "end_time": "2025-11-27 21:56:54",
+    "cost_time": 1.5001441
+  },
+  "language": "Python",
+  "id": "57811829162737664",
+  "direct": true,
+  "paths": [
+    "plone_Plone\\setup.py"
+  ]
+}

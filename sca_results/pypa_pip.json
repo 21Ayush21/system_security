@@ -1,0 +1,1211 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "pypa_pip",
+    "size": 0,
+    "start_time": "2025-11-27 21:57:03",
+    "end_time": "2025-11-27 21:57:09",
+    "cost_time": 5.2724895
+  },
+  "id": "57811829648326656",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811829648326657",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\backends\\test_backend-0.1.tar.gz\\test_backend-0.1.tar\\test_backend-0.1\\project\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326658",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\indexes\\empty_with_pkg\\simple-1.0.tar.gz\\simple-1.0.tar\\simple-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326659",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\INITools-0.2.tar.gz\\INITools-0.2.tar\\INITools-0.2\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326660",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\backends\\test_backend-0.1.tar.gz\\test_backend-0.1.tar\\test_backend-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326661",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires-0.0.1.tar.gz\\TopoRequires-0.0.1.tar\\TopoRequires-0.0.1\\setup.py"
+      ]
+    },
+    {
+      "id": "57811829648326662",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires-0.0.1.tar.gz\\TopoRequires-0.0.1.tar\\TopoRequires-0.0.1\\TopoRequires.egg-info\\pbr.json"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326663",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires2-0.0.1.tar.gz\\TopoRequires2-0.0.1.tar\\TopoRequires2-0.0.1\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "TopoRequires",
+          "language": "Python",
+          "id": "57811829648326764",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\TopoRequires2-0.0.1.tar.gz\\TopoRequires2-0.0.1.tar\\TopoRequires2-0.0.1\\setup.py\\[TopoRequires:]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811829648326664",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires2-0.0.1.tar.gz\\TopoRequires2-0.0.1.tar\\TopoRequires2-0.0.1\\TopoRequires2.egg-info\\pbr.json"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326665",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires3-0.0.1.tar.gz\\TopoRequires3-0.0.1.tar\\TopoRequires3-0.0.1\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "TopoRequires",
+          "language": "Python",
+          "id": "57811829648326765",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\TopoRequires3-0.0.1.tar.gz\\TopoRequires3-0.0.1.tar\\TopoRequires3-0.0.1\\setup.py\\[TopoRequires:]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811829648326666",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires3-0.0.1.tar.gz\\TopoRequires3-0.0.1.tar\\TopoRequires3-0.0.1\\TopoRequires3.egg-info\\pbr.json"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326667",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\TopoRequires4-0.0.1.tar.gz\\TopoRequires4-0.0.1.tar\\TopoRequires4-0.0.1\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "TopoRequires2',",
+          "version": "'TopoRequires','TopoRequires3",
+          "language": "Python",
+          "id": "57811829648326766",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\TopoRequires4-0.0.1.tar.gz\\TopoRequires4-0.0.1.tar\\TopoRequires4-0.0.1\\setup.py\\[TopoRequires2',:'TopoRequires','TopoRequires3]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326668",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\Upper-1.0.tar.gz\\Upper-1.0.tar\\Upper-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326669",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\Upper-2.0.tar.gz\\Upper-2.0.tar\\Upper-2.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326670",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\argparse-1.2.1.tar.gz\\argparse-1.2.1.tar\\argparse-1.2.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326671",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\broken-0.1.tar.gz\\broken-0.1.tar\\broken-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326672",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\broken-0.2+broken.tar.gz\\broken-0.2+broken.tar\\broken-0.2broken\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326673",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\brokenegginfo-0.1.tar.gz\\brokenegginfo-0.1.tar\\brokenegginfo-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326674",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\distribute-0.7.3.zip\\distribute-0.7.3\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "setuptools\u003e=0.7",
+          "language": "Python",
+          "id": "57811829648326767",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\distribute-0.7.3.zip\\distribute-0.7.3\\setup.py\\[setuptools\u003e=0.7:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326675",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\child-0.1.tar.gz\\child-0.1.tar\\child-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326676",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\parent-0.1.tar.gz\\parent-0.1.tar\\parent-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326677",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep518-3.0.tar.gz\\pep518-3.0.tar\\pep518-3.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326678",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep518_forkbomb-235.tar.gz\\pep518_forkbomb-235.tar\\pep518_forkbomb-235\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326679",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep518_twin_forkbombs_first-234.tar.gz\\pep518_twin_forkbombs_first-234.tar\\pep518_twin_forkbombs_first-234\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326680",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep518_twin_forkbombs_second-238.tar.gz\\pep518_twin_forkbombs_second-238.tar\\pep518_twin_forkbombs_second-238\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326681",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep518_with_extra_and_markers-1.0.tar.gz\\pep518_with_extra_and_markers-1.0.tar\\pep518_with_extra_and_markers-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326682",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pip_test_package-0.1.1.tar.gz\\pip_test_package-0.1.1.tar\\pip-test-package-0.1.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326683",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pip_test_package-0.1.tar.gz\\pip_test_package-0.1.tar\\pip-test-package-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326684",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\require_simple-1.0.tar.gz\\require_simple-1.0.tar\\require_simple-1.0\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "simple\u003e=2.0",
+          "language": "Python",
+          "id": "57811829648326768",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\require_simple-1.0.tar.gz\\require_simple-1.0.tar\\require_simple-1.0\\setup.py\\[simple\u003e=2.0:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326685",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\requiresupper-1.0.tar.gz\\requiresupper-1.0.tar\\requiresupper-1.0\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "upper",
+          "language": "Python",
+          "id": "57811829648326769",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\requiresupper-1.0.tar.gz\\requiresupper-1.0.tar\\requiresupper-1.0\\setup.py\\[upper:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326686",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\simple-1.0.tar.gz\\simple-1.0.tar\\simple-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326687",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\simple-2.0.tar.gz\\simple-2.0.tar\\simple-2.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326688",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\setuptools-0.9.6.tar.gz\\setuptools-0.9.6.tar\\setuptools-0.9.6\\ez_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326689",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\simple-3.0.tar.gz\\simple-3.0.tar\\simple-3.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326690",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\simple2-1.0.tar.gz\\simple2-1.0.tar\\simple2-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326691",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\simple2-2.0.tar.gz\\simple2-2.0.tar\\simple2-2.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326692",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\setuptools-0.9.6.tar.gz\\setuptools-0.9.6.tar\\setuptools-0.9.6\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326693",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\simple2-3.0.tar.gz\\simple2-3.0.tar\\simple2-3.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326694",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\singlemodule-0.0.0.tar.gz\\singlemodule-0.0.0.tar\\singlemodule-0.0.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326695",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\setuptools-0.9.6.tar.gz\\setuptools-0.9.6.tar\\setuptools-0.9.6\\tests\\shlib_test\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326696",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\singlemodule-0.0.1.tar.gz\\singlemodule-0.0.1.tar\\singlemodule-0.0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326697",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\source-1.0.tar.gz\\source-1.0.tar\\source-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326698",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\setuptools-0.9.6.tar.gz\\setuptools-0.9.6.tar\\setuptools-0.9.6\\tests\\test_ez_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326699",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\translationstring-1.1.tar.gz\\translationstring-1.1.tar\\translationstring-1.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326700",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\wheelbroken-0.1.tar.gz\\wheelbroken-0.1.tar\\wheelbroken-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326701",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.10.tar.gz\\virtualenv-1.10.tar\\virtualenv-1.10\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326702",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326703",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.10.tar.gz\\virtualenv-1.10.tar\\virtualenv-1.10\\virtualenv_support\\pip-1.4.tar.gz\\pip-1.4.tar\\pip-1.4\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326704",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\wheelbrokenafter-0.1.tar.gz\\wheelbrokenafter-0.1.tar\\wheelbrokenafter-0.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326705",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages3\\dinner\\Dinner-1.0.tar.gz\\Dinner-1.0.tar\\Dinner-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326706",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.10.tar.gz\\virtualenv-1.10.tar\\virtualenv-1.10\\virtualenv_support\\setuptools-0.9.7.tar.gz\\setuptools-0.9.7.tar\\setuptools-0.9.7\\ez_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326707",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_support\\pip-1.3.1.tar.gz\\pip-1.3.1.tar\\pip-1.3.1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326708",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_support\\distribute-0.6.34.tar.gz\\distribute-0.6.34.tar\\distribute-0.6.34\\distribute_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326709",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\build-project\\build-requirements.in"
+      ],
+      "children": [
+        {
+          "name": "build",
+          "language": "Python",
+          "id": "57811829648326770",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.in\\[build:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "flit-core",
+          "language": "Python",
+          "id": "57811829648326771",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.in\\[flit-core:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326710",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_embedded\\distribute_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326711",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\build-project\\build-requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "build",
+          "version": "1.3.0 \\",
+          "language": "Python",
+          "id": "57811829648326772",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[build:1.3.0 \\]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:698edd0ea270bde950f53aed21f3a0135672206f3911e0176261a31e0e07b397 \\",
+          "language": "Python",
+          "id": "57811829648326773",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:698edd0ea270bde950f53aed21f3a0135672206f3911e0176261a31e0e07b397 \\]"
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:7145f0b5061ba90a1500d60bd1b13ca0a8a4cebdd0cc16ed8adf1c0e739f43b4",
+          "language": "Python",
+          "id": "57811829648326774",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:7145f0b5061ba90a1500d60bd1b13ca0a8a4cebdd0cc16ed8adf1c0e739f43b4]"
+          ]
+        },
+        {
+          "name": "flit-core",
+          "version": "3.12.0 \\",
+          "language": "Python",
+          "id": "57811829648326775",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[flit-core:3.12.0 \\]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:18f63100d6f94385c6ed57a72073443e1a71a4acb4339491615d0f16d6ff01b2 \\",
+          "language": "Python",
+          "id": "57811829648326776",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:18f63100d6f94385c6ed57a72073443e1a71a4acb4339491615d0f16d6ff01b2 \\]"
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c",
+          "language": "Python",
+          "id": "57811829648326777",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c]"
+          ]
+        },
+        {
+          "name": "packaging",
+          "version": "25.0 \\",
+          "language": "Python",
+          "id": "57811829648326778",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[packaging:25.0 \\]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484 \\",
+          "language": "Python",
+          "id": "57811829648326779",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484 \\]"
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f",
+          "language": "Python",
+          "id": "57811829648326780",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f]"
+          ]
+        },
+        {
+          "name": "pyproject-hooks",
+          "version": "1.2.0 \\",
+          "language": "Python",
+          "id": "57811829648326781",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[pyproject-hooks:1.2.0 \\]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:1e859bd5c40fae9448642dd871adf459e5e2084186e8d2c2a79a824c970da1f8 \\",
+          "language": "Python",
+          "id": "57811829648326782",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:1e859bd5c40fae9448642dd871adf459e5e2084186e8d2c2a79a824c970da1f8 \\]"
+          ]
+        },
+        {
+          "name": "--hash",
+          "version": "=sha256:9e5c6bfa8dcc30091c74b0cf803c81fdd29d94f01992a7707bc97babb1141913",
+          "language": "Python",
+          "id": "57811829648326783",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\build-project\\build-requirements.txt\\[--hash:=sha256:9e5c6bfa8dcc30091c74b0cf803c81fdd29d94f01992a7707bc97babb1141913]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326712",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\completion_paths\\requirements.txt"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326713",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages3\\requiredinner\\requiredinner-1.0.tar.gz\\requiredinner-1.0.tar\\requiredinner-1.0\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "dinner",
+          "language": "Python",
+          "id": "57811829648326784",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages3\\requiredinner\\requiredinner-1.0.tar.gz\\requiredinner-1.0.tar\\requiredinner-1.0\\setup.py\\[dinner:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326714",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.10.tar.gz\\virtualenv-1.10.tar\\virtualenv-1.10\\virtualenv_support\\setuptools-0.9.7.tar.gz\\setuptools-0.9.7.tar\\setuptools-0.9.7\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326715",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages3\\dinner\\Dinner-2.0.tar.gz\\Dinner-2.0.tar\\Dinner-2.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326716",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_support\\distribute-0.6.34.tar.gz\\distribute-0.6.34.tar\\distribute-0.6.34\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326717",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_embedded\\ez_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326718",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.10.tar.gz\\virtualenv-1.10.tar\\virtualenv-1.10\\virtualenv_support\\setuptools-0.9.7.tar.gz\\setuptools-0.9.7.tar\\setuptools-0.9.7\\tests\\shlib_test\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326719",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_support\\distribute-0.6.34.tar.gz\\distribute-0.6.34.tar\\distribute-0.6.34\\tests\\shlib_test\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326720",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\BrokenEmitsUTF8\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326721",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.10.tar.gz\\virtualenv-1.10.tar\\virtualenv-1.10\\virtualenv_support\\setuptools-0.9.7.tar.gz\\setuptools-0.9.7.tar\\setuptools-0.9.7\\tests\\test_ez_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326722",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\virtualenv-1.9.1.tar.gz\\virtualenv-1.9.1.tar\\virtualenv-1.9.1\\virtualenv_support\\distribute-0.6.34.tar.gz\\distribute-0.6.34.tar\\distribute-0.6.34\\tests\\test_distribute_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326723",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\FSPkg\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326724",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\HackedEggInfo\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326725",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\LineEndings\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326726",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\LocalEnvironMarker\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326727",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\LocalExtras\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326728",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\LocalExtras-0.0.2\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "simple==1.0",
+          "language": "Python",
+          "id": "57811829648326785",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\LocalExtras-0.0.2\\setup.py\\[simple==1.0:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326729",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\SetupPyLatin1\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326730",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\SetupPyUTF8\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326731",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep517_setup_and_pyproject\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326732",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\pep517_wrapper_buildsys\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326733",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\requires_wheelbroken_upper\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "wheelbroken\",",
+          "version": "\"upper",
+          "language": "Python",
+          "id": "57811829648326786",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\packages\\requires_wheelbroken_upper\\setup.py\\[wheelbroken\",:\"upper]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326734",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\packages\\symlinks\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326735",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\TopoRequires\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326736",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\TopoRequires2\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "TopoRequires",
+          "language": "Python",
+          "id": "57811829648326787",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\src\\TopoRequires2\\setup.py\\[TopoRequires:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326737",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\TopoRequires3\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "TopoRequires",
+          "language": "Python",
+          "id": "57811829648326788",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\src\\TopoRequires3\\setup.py\\[TopoRequires:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326738",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\TopoRequires4\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "TopoRequires2\",",
+          "version": "\"TopoRequires\",\"TopoRequires3",
+          "language": "Python",
+          "id": "57811829648326789",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\src\\TopoRequires4\\setup.py\\[TopoRequires2\",:\"TopoRequires\",\"TopoRequires3]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326739",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\compilewheel\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326740",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\extension\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326741",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep517_setup_and_pyproject\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326742",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep517_setup_only\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326743",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518-3.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326744",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_conflicting_requires\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326745",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_forkbomb-235\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326746",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_invalid_build_system\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326747",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_invalid_requires\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326748",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_missing_requires\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326749",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_twin_forkbombs_first-234\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326750",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_twin_forkbombs_second-238\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326751",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_with_extra_and_markers-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326752",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\pep518_with_namespace_package-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326753",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\prjwithdatafile\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326754",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\requires_capitalized\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "simple==1.0",
+          "language": "Python",
+          "id": "57811829648326790",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\src\\requires_capitalized\\setup.py\\[simple==1.0:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326755",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\requires_requires_capitalized\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "requires_Capitalized==0.1",
+          "language": "Python",
+          "id": "57811829648326791",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\src\\requires_requires_capitalized\\setup.py\\[requires_Capitalized==0.1:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326756",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\requires_simple\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "simple==1.0",
+          "language": "Python",
+          "id": "57811829648326792",
+          "direct": true,
+          "paths": [
+            "pypa_pip\\tests\\data\\src\\requires_simple\\setup.py\\[simple==1.0:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326757",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\requires_simple_extra\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326758",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\setup_error\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326759",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\simple_namespace\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326760",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\simplewheel-1.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326761",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\simplewheel-2.0\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326762",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\singlemodule\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829648326763",
+      "direct": true,
+      "paths": [
+        "pypa_pip\\tests\\data\\src\\withpyproject\\setup.py"
+      ]
+    }
+  ]
+}

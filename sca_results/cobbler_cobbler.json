@@ -1,0 +1,668 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "cobbler_cobbler",
+    "size": 0,
+    "start_time": "2025-11-27 21:31:16",
+    "end_time": "2025-11-27 21:31:18",
+    "cost_time": 2.5090452
+  },
+  "id": "57811778824372224",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811778824372225",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\cobbler\\cobblerd\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811778824372226",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\docs\\requirements.rtd.txt"
+      ],
+      "children": [
+        {
+          "name": "Sphinx",
+          "version": "\u003e4",
+          "language": "Python",
+          "id": "57811778824372233",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[Sphinx:\u003e4]"
+          ]
+        },
+        {
+          "name": "netaddr",
+          "language": "Python",
+          "id": "57811778824372234",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[netaddr:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "Cheetah3",
+          "language": "Python",
+          "id": "57811778824372235",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[Cheetah3:]"
+          ]
+        },
+        {
+          "name": "dnspython",
+          "language": "Python",
+          "id": "57811778824372236",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[dnspython:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "pyyaml",
+          "language": "Python",
+          "id": "57811778824372237",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[pyyaml:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyYAML 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-4782AE95",
+              "cve_id": "CVE-2020-14343",
+              "cnnvd_id": "CNNVD-202102-918",
+              "cwe_id": "CWE-20",
+              "description": "CVE-2020-14343是与Python的第三方库“PyYAML”相关的漏洞，该库用于处理YAML文件。该漏洞的根本原因在于PyYAML库的yaml.load函数会解析未经验证的输入数据。具体来说，当用户使用yaml.load函数并且未明确指定加载器时，PyYAML会默认使用“UnsafeLoader”来解析YAML文件，这会导致任意代码执行的风险。如果攻击者能够控制传递给yaml.load的YAML内容，他们就可以构造一个恶意的YAML文件，其中包含恶意的Python对象。yaml.load在加载这个文件时会执行这些对象的代码，从而导致任意代码执行。这使得攻击者可以在目标系统上执行任意命令，潜在地获得系统的控制权限。",
+              "suggestion": "1. 立即升级PyYAML库到最新版本。2. 在解析YAML文件时，明确使用安全加载器，如yaml.safe_load函数来代替yaml.load函数。3. 对从不受信任来源获取的YAML数据进行严格的输入验证和清理。4. 定期审计代码库，以确认使用了安全的方法处理YAML文件。",
+              "attack_type": "远程",
+              "release_date": "2020-07-26",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Exiv2 整数溢出漏洞",
+              "id": "XMIRROR-E5B7669E-3A103195",
+              "cve_id": "CVE-2017-18342",
+              "cnnvd_id": "CNNVD-201806-1372",
+              "cnvd_id": "CNVD-2019-42857",
+              "cwe_id": "CWE-502",
+              "description": "CVE-2017-18342 是一个影响 Exiv2 库的整数溢出漏洞。Exiv2 是一个用于处理图像元数据的库，在处理 TIFF 图像文件时，由于对用户输入数据的边界检查不充分，可能导致整数溢出。具体来说，该漏洞出现在 readTiffDirectory 函数中，该函数在处理 TIFF 文件中的目录项时，没有正确检查涉及的偏移量和大小。这可能导致超出预期的内存分配，并进一步引发缓冲区溢出，允许攻击者通过构造恶意的 TIFF 文件来利用该漏洞，最终导致任意代码执行。",
+              "suggestion": "立即更新到已经修复该漏洞的 Exiv2 版本。与此同时，尽量避免处理来自不受信任来源的 TIFF 文件。可以通过安全策略限制用户对可疑文件的操作，并进行相关的安全培训教育，提高用户的安全意识。",
+              "attack_type": "远程",
+              "release_date": "2018-06-27",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "distro",
+          "language": "Python",
+          "id": "57811778824372238",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[distro:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinx_rtd_theme",
+          "version": "1.0.0",
+          "language": "Python",
+          "id": "57811778824372239",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[sphinx_rtd_theme:1.0.0]"
+          ]
+        },
+        {
+          "name": "file-magic",
+          "language": "Python",
+          "id": "57811778824372240",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[file-magic:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-Simplified-Darwin"
+            }
+          ]
+        },
+        {
+          "name": "schema",
+          "language": "Python",
+          "id": "57811778824372241",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\docs\\requirements.rtd.txt\\[schema:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 3
+    },
+    {
+      "language": "Python",
+      "id": "57811778824372227",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "requests",
+          "language": "Python",
+          "id": "57811778824372242",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[requests:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C64195",
+              "cve_id": "CVE-2014-1829",
+              "cnnvd_id": "CNNVD-201410-320",
+              "cnvd_id": "CNVD-2014-07159",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Authorization头利用该漏洞获取‘netrc’密码。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://python-requests.org/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FF1AD95",
+              "cve_id": "CVE-2018-18074",
+              "cnnvd_id": "CNNVD-201810-457",
+              "cnvd_id": "CNVD-2018-26002",
+              "cwe_id": "CWE-522",
+              "description": "Requests package for Python是一款基于Python的开源HTTP库。\r\r\nRequests package for Python 2.19.1及之前版本（2018-09-14之前发布）中存在安全漏洞，该漏洞源于程序在接收到从https转换到http的重定向请求（带有相同主机名）时，会将HTTP Authorization包头发送到http URI。远程攻击者可通过嗅探网络利用该漏洞获取凭证。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "attack_type": "远程",
+              "release_date": "2018-10-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3EF9B02B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\r\n[`requests`](https://pypi.python.org/pypi/requests) is a Python HTTP for Humans.\r\n\r\nAffected versions of this package are vulnerable to Denial of Service (DoS) attacks. When sending a digest with an incorrect password, it will retry the request for infinity. An attacker can send many of these requests, causing a denial of service.\r\n\r\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## References\r\n- [GitHub Issue](https://github.com/requests/requests/issues/541)\r\n- [GitHub PR](https://github.com/requests/requests/pull/547)\r\n- [GitHub Commit](https://github.com/requests/requests/pull/547/commits/c3e6c41fc164d4348f8ce197bd0075aff05637af)\r\n",
+              "attack_type": "远程",
+              "release_date": "2012-04-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C62C95",
+              "cve_id": "CVE-2014-1830",
+              "cnnvd_id": "CNNVD-201410-321",
+              "cnvd_id": "CNVD-2014-06355",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Proxy-Authorizatio头利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://github.com/kennethreitz/requests/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-5F34502B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to incorrect password used in conjunction with digest authentication. This can lead to an infinite request retry cycle\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `requests` to version 0.12.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/f3ad56f103e364671504bb0d960a0ed69c2eafbc)\n",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 0.12.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "pyyaml",
+          "language": "Python",
+          "id": "57811778824372243",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[pyyaml:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyYAML 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-4782AE95",
+              "cve_id": "CVE-2020-14343",
+              "cnnvd_id": "CNNVD-202102-918",
+              "cwe_id": "CWE-20",
+              "description": "CVE-2020-14343是与Python的第三方库“PyYAML”相关的漏洞，该库用于处理YAML文件。该漏洞的根本原因在于PyYAML库的yaml.load函数会解析未经验证的输入数据。具体来说，当用户使用yaml.load函数并且未明确指定加载器时，PyYAML会默认使用“UnsafeLoader”来解析YAML文件，这会导致任意代码执行的风险。如果攻击者能够控制传递给yaml.load的YAML内容，他们就可以构造一个恶意的YAML文件，其中包含恶意的Python对象。yaml.load在加载这个文件时会执行这些对象的代码，从而导致任意代码执行。这使得攻击者可以在目标系统上执行任意命令，潜在地获得系统的控制权限。",
+              "suggestion": "1. 立即升级PyYAML库到最新版本。2. 在解析YAML文件时，明确使用安全加载器，如yaml.safe_load函数来代替yaml.load函数。3. 对从不受信任来源获取的YAML数据进行严格的输入验证和清理。4. 定期审计代码库，以确认使用了安全的方法处理YAML文件。",
+              "attack_type": "远程",
+              "release_date": "2020-07-26",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Exiv2 整数溢出漏洞",
+              "id": "XMIRROR-E5B7669E-3A103195",
+              "cve_id": "CVE-2017-18342",
+              "cnnvd_id": "CNNVD-201806-1372",
+              "cnvd_id": "CNVD-2019-42857",
+              "cwe_id": "CWE-502",
+              "description": "CVE-2017-18342 是一个影响 Exiv2 库的整数溢出漏洞。Exiv2 是一个用于处理图像元数据的库，在处理 TIFF 图像文件时，由于对用户输入数据的边界检查不充分，可能导致整数溢出。具体来说，该漏洞出现在 readTiffDirectory 函数中，该函数在处理 TIFF 文件中的目录项时，没有正确检查涉及的偏移量和大小。这可能导致超出预期的内存分配，并进一步引发缓冲区溢出，允许攻击者通过构造恶意的 TIFF 文件来利用该漏洞，最终导致任意代码执行。",
+              "suggestion": "立即更新到已经修复该漏洞的 Exiv2 版本。与此同时，尽量避免处理来自不受信任来源的 TIFF 文件。可以通过安全策略限制用户对可疑文件的操作，并进行相关的安全培训教育，提高用户的安全意识。",
+              "attack_type": "远程",
+              "release_date": "2018-06-27",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "netaddr",
+          "language": "Python",
+          "id": "57811778824372244",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[netaddr:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "Cheetah3",
+          "language": "Python",
+          "id": "57811778824372245",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[Cheetah3:]"
+          ]
+        },
+        {
+          "name": "distro",
+          "language": "Python",
+          "id": "57811778824372246",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[distro:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-ldap",
+          "language": "Python",
+          "id": "57811778824372247",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[python-ldap:]"
+          ],
+          "licenses": [
+            {
+              "name": "unknown"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "ReDoS in LDAP schema parser",
+              "id": "XMIRROR-C9431C71-2682AB31",
+              "cwe_id": "CWE-1333",
+              "description": "https://github.com/python-ldap/python-ldap/issues/424\n\n### Impact\nThe LDAP schema parser of python-ldap 3.3.1 and earlier are vulnerable to a regular expression denial-of-service attack. The issue affects clients that use ``ldap.schema`` package to parse LDAP schema definitions from an untrusted source.\n\n### Patches\nThe upcoming release of python-ldap 3.4.0 will contain a workaround to prevent ReDoS attacks. The schema parser refuses schema definitions with an excessive amount of backslashes.\n\n### Workarounds\nAs a workaround, users can check input for excessive amount of backslashes in schemas. More than a dozen backslashes per line are atypical.\n\n### References\n[CWE-1333](https://cwe.mitre.org/data/definitions/1333.html)\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [python-ldap](https://github.com/python-ldap/python-ldap) tracker\n",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B71412-ED58E595",
+              "cve_id": "CVE-2021-46823",
+              "cnnvd_id": "CNNVD-202206-1978",
+              "cwe_id": "CWE-1333",
+              "description": "python-ldap是python-ldap开源的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.0之前版本存在安全漏洞，该漏洞源于 LDAP 模式解析器中存在正则表达式拒绝服务 (ReDoS) 缺陷。攻击者利用该漏洞通过发送特制的正则表达式输入导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `python-ldap` to version 3.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E7CA95",
+              "cve_id": "CVE-2025-61912",
+              "cnnvd_id": "CNNVD-202510-1398",
+              "cwe_id": "CWE-116 CWE-170",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.dn.escape_dn_chars函数对x00转义不正确，可能导致客户端拒绝服务。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E70895",
+              "cve_id": "CVE-2025-61911",
+              "cnnvd_id": "CNNVD-202510-1400",
+              "cwe_id": "CWE-75 CWE-843",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.filter.escape_filter_chars方法在escape_mode=1模式下未正确处理list或dict类型的assertion_value参数，可能导致LDAP注入攻击。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "dnspython",
+          "language": "Python",
+          "id": "57811778824372248",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[dnspython:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "file-magic",
+          "language": "Python",
+          "id": "57811778824372249",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[file-magic:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-Simplified-Darwin"
+            }
+          ]
+        },
+        {
+          "name": "schema",
+          "language": "Python",
+          "id": "57811778824372250",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[schema:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "systemd-python",
+          "language": "Python",
+          "id": "57811778824372251",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[systemd-python:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "gunicorn",
+          "language": "Python",
+          "id": "57811778824372252",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[gunicorn:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Improper Input Validation",
+              "id": "XMIRROR-E5B77528-42652B2B",
+              "cwe_id": "CWE-20",
+              "description": "## Overview\n[gunicorn](http://gunicorn.org/) is a Python WSGI HTTP Server for UNIX\n\nAffected versions of this package are vulnerable to Improper Input Validation. Gunicorn fails with a 500, instead of a 400, when a request path is a malformed IPv6 address. This is due to no raise 'InvalidRequestLine' exception when the line contains malicious data.\n## Remediation\nUpgrade `gunicorn` to version 19.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/benoitc/gunicorn/commit/b951175c66c353d10127a20a62f61e834829856c)\n- [GitHub Issue](https://github.com/benoitc/gunicorn/issues/1023)\n",
+              "suggestion": "## Remediation\nUpgrade `gunicorn` to version 19.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-04-02",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "HTTP Request Smuggling",
+              "id": "XMIRROR-E5B77528-4820662B",
+              "cwe_id": "CWE-444",
+              "description": "## Overview\n[gunicorn](http://gunicorn.org/) is a Python WSGI HTTP Server for UNIX\n\nAffected versions of this package are vulnerable to HTTP Request Smuggling. It fails to properly process the `Transfer-Encoding` and `Content-Length` headers when both are present in a package request. This allows for conflicting information to be sent regarding the length of the package, which when processed by back-end servers under certain configurations would allow for malicious users to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users.\n## Remediation\nUpgrade `gunicorn` to version 19.10.0, 20.0.1 or higher.\n## References\n- [GitHub Commit](https://github.com/benoitc/gunicorn/commit/c5be1bae5c42b1e600be22d0655fc3ec4e4711cb)\n- [GitHub Issue](https://github.com/benoitc/gunicorn/issues/2176)\n- [GitHub PR](https://github.com/benoitc/gunicorn/pull/2181)\n- [Gunicorn ChangeLog](https://docs.gunicorn.org/en/stable/news.html#id1)\n- [HTTP Request Smuggling Security Blog](https://portswigger.net/web-security/request-smuggling)\n",
+              "suggestion": "## Remediation\nUpgrade `gunicorn` to version 19.10.0, 20.0.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-01-09",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "gunicorn 安全漏洞",
+              "id": "XMIRROR-E5F7537E-85386495",
+              "cve_id": "CVE-2018-1000164",
+              "cnnvd_id": "CNNVD-201804-834",
+              "cnvd_id": "CNVD-2018-10227",
+              "cwe_id": "CWE-93",
+              "description": "gunicorn是一款基于UNIX平台的Python WSGI HTTP服务器软件。\r\n\r\ngunicorn 19.4.5版本中的nicorn/http/wsgi.py文件的‘process_headers’函数存在安全漏洞。攻击者可利用该漏洞造成服务器返回任意的HTTP包头。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/benoitc/gunicorn/issues/1227\n",
+              "attack_type": "远程",
+              "release_date": "2018-04-18",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gunicorn HTTP请求走私漏洞",
+              "id": "XMIRROR-E5B70F5F-800B8A95",
+              "cve_id": "CVE-2024-1135",
+              "cnnvd_id": "CNNVD-202404-2065",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python WSGI HTTP服务器，旨在处理网络请求并提供高性能的Web服务。该组件存在HTTP请求走私漏洞，原因在于对`Transfer-Encoding`标头的验证不当，攻击者可以通过构造包含相互冲突的`Transfer-Encoding`标头的请求，从而绕过安全限制，访问受限的端点。此漏洞的触发条件是用户的网络路径未能过滤无效请求。",
+              "suggestion": "建议立即升级Gunicorn至22.0.0或更高版本，以修复此漏洞。此外，用户应通过防火墙或其他机制限制对受限端点的访问，直至开发出有效修复方案。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gunicorn HTTP Request Smuggling Vulnerability",
+              "id": "XMIRROR-E5B70F5F-802AEE95",
+              "cve_id": "CVE-2024-6827",
+              "cnnvd_id": "CNNVD-202503-2317",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python Web服务器网关接口（WSGI）HTTP服务器。Gunicorn版本21.2.0未能正确验证'Transfer-Encoding'头的值，导致在RFC标准中规定的默认回退方法为'Content-Length'，使其易受TE.CL请求夹带攻击。攻击者可以通过构造特定的HTTP请求来利用此漏洞，造成缓存中毒、数据泄露、会话操纵、SSRF、XSS、DoS、数据完整性损害、安全绕过、信息泄漏和业务逻辑滥用等问题。",
+              "suggestion": "应立即升级到Gunicorn的23.0.0或更高版本，以修复此安全漏洞。如果不能立即升级，建议对流量进行严格监控和过滤，并限制对受影响服务的访问。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 5
+        },
+        {
+          "name": "dataclasses;",
+          "version": "python_version\u003c'3.7",
+          "language": "Python",
+          "id": "57811778824372253",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[dataclasses;:python_version\u003c'3.7]"
+          ]
+        },
+        {
+          "name": "importlib-resources;",
+          "version": "python_version\u003c'3.7",
+          "language": "Python",
+          "id": "57811778824372254",
+          "direct": true,
+          "paths": [
+            "cobbler_cobbler\\setup.py\\[importlib-resources;:python_version\u003c'3.7]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 20
+    },
+    {
+      "id": "57811778824372228",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\.benchmarks\\Linux-CPython-3.11-64bit\\0001_fa663b82919798d9eb623bdd9e021a747b186ddb_20240528_151313_uncommited-changes.json"
+      ]
+    },
+    {
+      "id": "57811778824372229",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\.benchmarks\\Linux-CPython-3.11-64bit\\0002_e431f73ba97f80c7f18bb44f7400905eb795283d_20250523_081136_uncommited-changes.json"
+      ]
+    },
+    {
+      "id": "57811778824372230",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\cobbler\\data\\config\\cobbler\\distro_signatures.json"
+      ]
+    },
+    {
+      "id": "57811778824372231",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\tests\\integration\\data\\test_svc_settings\\expected_settings.json"
+      ]
+    },
+    {
+      "id": "57811778824372232",
+      "direct": true,
+      "paths": [
+        "cobbler_cobbler\\tests\\test_data\\V3_3_7\\collections\\systems\\host.example.org.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 20
+}

@@ -1,0 +1,763 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openstack_swift",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:40",
+    "end_time": "2025-11-27 21:56:42",
+    "cost_time": 1.8183608
+  },
+  "id": "57811828775026688",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811828775026689",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "sphinx",
+          "version": "\u003e=2.0.0,!=2.1.0",
+          "language": "Python",
+          "id": "57811828775026697",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\doc\\requirements.txt\\[sphinx:\u003e=2.0.0,!=2.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "openstackdocstheme",
+          "version": "\u003e=2.2.1",
+          "language": "Python",
+          "id": "57811828775026698",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\doc\\requirements.txt\\[openstackdocstheme:\u003e=2.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "reno",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811828775026699",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\doc\\requirements.txt\\[reno:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-api-ref",
+          "version": "\u003e=1.0.0",
+          "language": "Python",
+          "id": "57811828775026700",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\doc\\requirements.txt\\[os-api-ref:\u003e=1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-keystoneclient",
+          "version": "\u003e=3.19.0",
+          "language": "Python",
+          "id": "57811828775026701",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\doc\\requirements.txt\\[python-keystoneclient:\u003e=3.19.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinxcontrib-svg2pdfconverter",
+          "version": "\u003e=0.1.0",
+          "language": "Python",
+          "id": "57811828775026702",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\doc\\requirements.txt\\[sphinxcontrib-svg2pdfconverter:\u003e=0.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811828775026690",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "eventlet",
+          "version": "\u003e=0.25.0,!=0.34.3",
+          "language": "Python",
+          "id": "57811828775026703",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[eventlet:\u003e=0.25.0,!=0.34.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-91A42695",
+              "cve_id": "CVE-2021-21419",
+              "cnnvd_id": "CNNVD-202105-354",
+              "cwe_id": "CWE-400",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.31.0 之前版本存在资源管理错误漏洞，该漏洞源于一个websocket peer可能会通过发送非常大的websocket帧来耗尽Eventlet端的内存。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/eventlet/eventlet/security/advisories/GHSA-9p9m-jm8w-94p2\n",
+              "attack_type": "远程",
+              "release_date": "2021-05-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Eventlet 环境问题漏洞",
+              "id": "XMIRROR-E5B714FA-64663A95",
+              "cve_id": "CVE-2025-58068",
+              "cnnvd_id": "CNNVD-202508-3484",
+              "cwe_id": "CWE-444",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.40.3之前版本存在环境问题漏洞，该漏洞源于HTTP请求夹带处理不当，可能导致前端安全控制绕过。",
+              "suggestion": "## Remediation\nUpgrade `eventlet` to version 0.40.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-08-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "greenlet",
+          "version": "\u003e=0.4.14",
+          "language": "Python",
+          "id": "57811828775026704",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[greenlet:\u003e=0.4.14]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "PasteDeploy",
+          "version": "\u003e=2.0.0",
+          "language": "Python",
+          "id": "57811828775026705",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[PasteDeploy:\u003e=2.0.0]"
+          ]
+        },
+        {
+          "name": "lxml",
+          "version": "\u003e=4.2.3",
+          "language": "Python",
+          "id": "57811828775026706",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[lxml:\u003e=4.2.3]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "lxml 和 libxml2 代码问题漏洞",
+              "id": "XMIRROR-E5B70F5B-1DE97195",
+              "cve_id": "CVE-2022-2309",
+              "cnnvd_id": "CNNVD-202207-382",
+              "cwe_id": "CWE-476",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。\r\nlxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDADDF95",
+              "cve_id": "CVE-2021-28957",
+              "cnnvd_id": "CNNVD-202103-1229",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Arbitrary File Write",
+              "id": "XMIRROR-E5B77528-E19D382B",
+              "cwe_id": "CWE-22",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Arbitrary File Write. When writing to file paths that contain the URL escape character '%', the file path could wrongly be mangled by URL unescaping and thus write to a different file or directory.\n## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/0245aba002f069a0b157282707bdf77418d1b5be)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-AF96AE95",
+              "cve_id": "CVE-2020-27783",
+              "cnnvd_id": "CNNVD-202011-1920",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nLxml 存在跨站脚本漏洞，该漏洞源于javascript通过noscript和style组合进行转义。以下产品及版本会受到影响：Debian stretch, Debian stretch (security), Debian buster, Debian bullseye, sid; Red Hat Software Collections, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8 , Red Hat OpenStack Platform 10 (Newton), Red Hat OpenStack Platform 13 (Queens)",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://lists.debian.org/debian-lts-announce/2020/11/msg00044.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-11-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714B5-4F4D4595",
+              "cve_id": "CVE-2018-19787",
+              "cnnvd_id": "CNNVD-201812-001",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.2.5之前版本中存在跨站脚本漏洞，该漏洞源于lxml.html.clean模块的lxml/html/clean.py文件没有移除使用转义的javascript: URLs。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "lxml 注入漏洞",
+              "id": "XMIRROR-E5B71412-EDA94895",
+              "cve_id": "CVE-2021-43818",
+              "cnnvd_id": "CNNVD-202112-1050",
+              "cnvd_id": "CNVD-2021-100235",
+              "cwe_id": "CWE-74 CWE-79",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.5之前版本存在注入漏洞，该漏洞源于HTML Cleaner允许某些精心制作的脚本内容以及使用数据URI嵌入的SVG文件中的脚本内容通过。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 6
+        },
+        {
+          "name": "requests",
+          "version": "\u003e=2.14.2",
+          "language": "Python",
+          "id": "57811828775026707",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[requests:\u003e=2.14.2]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FF1AD95",
+              "cve_id": "CVE-2018-18074",
+              "cnnvd_id": "CNNVD-201810-457",
+              "cnvd_id": "CNVD-2018-26002",
+              "cwe_id": "CWE-522",
+              "description": "Requests package for Python是一款基于Python的开源HTTP库。\r\r\nRequests package for Python 2.19.1及之前版本（2018-09-14之前发布）中存在安全漏洞，该漏洞源于程序在接收到从https转换到http的重定向请求（带有相同主机名）时，会将HTTP Authorization包头发送到http URI。远程攻击者可通过嗅探网络利用该漏洞获取凭证。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "attack_type": "远程",
+              "release_date": "2018-10-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "xattr",
+          "version": "\u003e=0.7.2",
+          "language": "Python",
+          "id": "57811828775026708",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[xattr:\u003e=0.7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "PyECLib",
+          "version": "\u003e=1.3.1,!=1.6.2,!=1.6.3",
+          "language": "Python",
+          "id": "57811828775026709",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[PyECLib:\u003e=1.3.1,!=1.6.2,!=1.6.3]"
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "\u003e=2.0.2",
+          "language": "Python",
+          "id": "57811828775026710",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[cryptography:\u003e=2.0.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A334695",
+              "cve_id": "CVE-2023-0286",
+              "cnnvd_id": "CNNVD-202302-524",
+              "cwe_id": "CWE-843",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。存在安全漏洞，源于内存释放后重用。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "cryptography 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-886E1995",
+              "cve_id": "CVE-2023-23931",
+              "cnnvd_id": "CNNVD-202302-523",
+              "cwe_id": "CWE-754",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\ncryptography 存在代码问题漏洞。目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "目前官方已发布安全修复版本，受影响用户可以更新到安全版本:\n cryptography \u003e= 39.0.1",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-8EF13161",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-06-03",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "pyca/cryptography's wheels include vulnerable OpenSSL",
+              "id": "XMIRROR-C9431C71-B357FAB7",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-08-02",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-AF95EA95",
+              "cve_id": "CVE-2020-36242",
+              "cnnvd_id": "CNNVD-202102-574",
+              "cwe_id": "CWE-190 CWE-787",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography package before 3.3.2 for Python 存在输入验证错误漏洞，该漏洞源于导致整数溢出和缓冲区溢出。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F5B-1DBEED95",
+              "cve_id": "CVE-2022-3996",
+              "cnnvd_id": "CNNVD-202212-2982",
+              "cwe_id": "CWE-667",
+              "description": "OpenSSL是一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库，支持多种加密算法。如果X.509证书包含格式错误的策略约束并且启用了策略处理，系统将递归地获取两次写锁，导致在某些操作系统上进程挂起，进而造成拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本3.0.8或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2022-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B714B5-4F1F1B95",
+              "cve_id": "CVE-2018-10903",
+              "cnnvd_id": "CNNVD-201807-1978",
+              "cwe_id": "CWE-20",
+              "description": "python-cryptography是一个基于Python语言的加密标准库。\r\r\npython-cryptography 1.9.0版本至2.3版本（不包括2.3版本）存在安全漏洞，该漏洞源于finalize_with_tag API没有遵守标签的最小长度值的设置。攻击者可通过构造带有较小标签的无效载荷利用该漏洞绕过MAC，泄露密钥。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-07-19",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A956395",
+              "cve_id": "CVE-2023-3817",
+              "cnnvd_id": "CNNVD-202307-2314",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，常用于车云通信中对传输协议的加解密。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL在部分版本中存在使用DH_check等函数检查DH参数时耗时较长的漏洞，导致拒绝服务。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-07-31",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9AB00D95",
+              "cve_id": "CVE-2023-3446",
+              "cnnvd_id": "CNNVD-202307-1681",
+              "cwe_id": "CWE-606 CWE-1333",
+              "description": "OpenSSL是一个开源的安全套接层和安全传输层协议的通用加密库，支持多种加密算法。在某些版本的OpenSSL中，DH_check()、DH_check_ex()或EVP_PKEY_param_check()函数在处理过大的DH密钥或参数时可能导致应用程序变得非常缓慢，造成拒绝服务。",
+              "suggestion": "建议将OpenSSL升级到版本1.1.1d-150200.11.72.1或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-07-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 授权问题漏洞",
+              "id": "XMIRROR-E5B70F55-9A258F95",
+              "cve_id": "CVE-2023-2975",
+              "cnnvd_id": "CNNVD-202307-1295",
+              "cwe_id": "CWE-354 CWE-287",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL存在授权问题漏洞，该漏洞源于密码实现存在错误，AES-SIV忽略空的关联数据条目，导致允许对多个关联的进行身份验证数据条目进行加密。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 41.0.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-808F9F95",
+              "cve_id": "CVE-2024-4603",
+              "cnnvd_id": "CNNVD-202405-2902",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL 3.0 和 3.1 版本存在安全漏洞，该漏洞源于使用函数 EVP_PKEY_param_check()、EVP_PKEY_public_check() 检查 DSA 公钥或 DSA 参数检查的键或参数，可能会导致拒绝服务。",
+              "suggestion": "## Remediation\nA fix was pushed into the `master` branch but not yet published.",
+              "attack_type": "远程",
+              "release_date": "2024-05-16",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 19
+        },
+        {
+          "name": "dnspython",
+          "version": "\u003e=1.15.0",
+          "language": "Python",
+          "id": "57811828775026711",
+          "direct": true,
+          "paths": [
+            "openstack_swift\\requirements.txt\\[dnspython:\u003e=1.15.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 32
+    },
+    {
+      "language": "Python",
+      "id": "57811828775026691",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\setup.py"
+      ]
+    },
+    {
+      "id": "57811828775026692",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\api-ref\\source\\samples\\account-containers-list-response.json"
+      ]
+    },
+    {
+      "id": "57811828775026693",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\api-ref\\source\\samples\\capabilities-list-response.json"
+      ]
+    },
+    {
+      "id": "57811828775026694",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\api-ref\\source\\samples\\endpoints-list-response-headers.json"
+      ]
+    },
+    {
+      "id": "57811828775026695",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\api-ref\\source\\samples\\endpoints-list-response.json"
+      ]
+    },
+    {
+      "id": "57811828775026696",
+      "direct": true,
+      "paths": [
+        "openstack_swift\\api-ref\\source\\samples\\objects-list-response.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 36
+}

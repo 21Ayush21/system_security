@@ -1,0 +1,1937 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openstack_heat",
+    "size": 0,
+    "start_time": "2025-11-27 21:55:41",
+    "end_time": "2025-11-27 21:55:45",
+    "cost_time": 3.4028382
+  },
+  "id": "57811826874941440",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811826874941441",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\contrib\\heat_docker\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "docker",
+          "version": "\u003e=2.4.2",
+          "language": "Python",
+          "id": "57811826874941504",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\contrib\\heat_docker\\requirements.txt\\[docker:\u003e=2.4.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811826874941442",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\contrib\\heat_docker\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811826874941443",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "openstackdocstheme",
+          "version": "\u003e=2.2.1",
+          "language": "Python",
+          "id": "57811826874941505",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\doc\\requirements.txt\\[openstackdocstheme:\u003e=2.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-api-ref",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811826874941506",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\doc\\requirements.txt\\[os-api-ref:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinx",
+          "version": "\u003e=2.0.0",
+          "language": "Python",
+          "id": "57811826874941507",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\doc\\requirements.txt\\[sphinx:\u003e=2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "reno",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811826874941508",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\doc\\requirements.txt\\[reno:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinxcontrib-apidoc",
+          "version": "\u003e=0.2.0",
+          "language": "Python",
+          "id": "57811826874941509",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\doc\\requirements.txt\\[sphinxcontrib-apidoc:\u003e=0.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinxcontrib-httpdomain",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811826874941510",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\doc\\requirements.txt\\[sphinxcontrib-httpdomain:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811826874941444",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pbr",
+          "version": "\u003e=3.1.1",
+          "language": "Python",
+          "id": "57811826874941511",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[pbr:\u003e=3.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "alembic",
+          "version": "\u003e=1.8.0",
+          "language": "Python",
+          "id": "57811826874941512",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[alembic:\u003e=1.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "croniter",
+          "version": "\u003e=0.3.4",
+          "language": "Python",
+          "id": "57811826874941513",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[croniter:\u003e=0.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Buffer Overflow",
+              "id": "XMIRROR-E5B77528-306D712B",
+              "cwe_id": "CWE-120",
+              "description": "## Overview\n[croniter](https://pypi.org/project/croniter) is a croniter provides iteration for datetime object with cron like format\n\nAffected versions of this package are vulnerable to Buffer Overflow when using cron ranges, via the `_expand` method.\n## Remediation\nUpgrade `croniter` to version 1.0.5 or higher.\n## References\n- [GitHub Commit](https://github.com/kiorky/croniter/commit/486204e2d2f20f6fcc8839f1f3fa70e0c2fe0d5c)\n- [PoC](https://blog.healthchecks.io/2023/03/i-found-a-vulnerability-in-croniter/)\n",
+              "suggestion": "## Remediation\nUpgrade `croniter` to version 1.0.5 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-03-08",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "cryptography",
+          "version": "\u003e=2.5",
+          "language": "Python",
+          "id": "57811826874941514",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[cryptography:\u003e=2.5]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A334695",
+              "cve_id": "CVE-2023-0286",
+              "cnnvd_id": "CNNVD-202302-524",
+              "cwe_id": "CWE-843",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。存在安全漏洞，源于内存释放后重用。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "cryptography 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-886E1995",
+              "cve_id": "CVE-2023-23931",
+              "cnnvd_id": "CNNVD-202302-523",
+              "cwe_id": "CWE-754",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\ncryptography 存在代码问题漏洞。目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "目前官方已发布安全修复版本，受影响用户可以更新到安全版本:\n cryptography \u003e= 39.0.1",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-8EF13161",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-06-03",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "pyca/cryptography's wheels include vulnerable OpenSSL",
+              "id": "XMIRROR-C9431C71-B357FAB7",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-08-02",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-609F7E1F",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 2.5-41.0.3 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230908.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-09-22",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-AF95EA95",
+              "cve_id": "CVE-2020-36242",
+              "cnnvd_id": "CNNVD-202102-574",
+              "cwe_id": "CWE-190 CWE-787",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography package before 3.3.2 for Python 存在输入验证错误漏洞，该漏洞源于导致整数溢出和缓冲区溢出。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F5B-1DBEED95",
+              "cve_id": "CVE-2022-3996",
+              "cnnvd_id": "CNNVD-202212-2982",
+              "cwe_id": "CWE-667",
+              "description": "OpenSSL是一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库，支持多种加密算法。如果X.509证书包含格式错误的策略约束并且启用了策略处理，系统将递归地获取两次写锁，导致在某些操作系统上进程挂起，进而造成拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本3.0.8或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2022-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A956395",
+              "cve_id": "CVE-2023-3817",
+              "cnnvd_id": "CNNVD-202307-2314",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，常用于车云通信中对传输协议的加解密。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL在部分版本中存在使用DH_check等函数检查DH参数时耗时较长的漏洞，导致拒绝服务。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-07-31",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9AB00D95",
+              "cve_id": "CVE-2023-3446",
+              "cnnvd_id": "CNNVD-202307-1681",
+              "cwe_id": "CWE-606 CWE-1333",
+              "description": "OpenSSL是一个开源的安全套接层和安全传输层协议的通用加密库，支持多种加密算法。在某些版本的OpenSSL中，DH_check()、DH_check_ex()或EVP_PKEY_param_check()函数在处理过大的DH密钥或参数时可能导致应用程序变得非常缓慢，造成拒绝服务。",
+              "suggestion": "建议将OpenSSL升级到版本1.1.1d-150200.11.72.1或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-07-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 授权问题漏洞",
+              "id": "XMIRROR-E5B70F55-9A258F95",
+              "cve_id": "CVE-2023-2975",
+              "cnnvd_id": "CNNVD-202307-1295",
+              "cwe_id": "CWE-354 CWE-287",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL存在授权问题漏洞，该漏洞源于密码实现存在错误，AES-SIV忽略空的关联数据条目，导致允许对多个关联的进行身份验证数据条目进行加密。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 41.0.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F55-9A790895",
+              "cve_id": "CVE-2023-4807",
+              "cnnvd_id": "CNNVD-202309-665",
+              "cwe_id": "CWE-440",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。 OpenSSL 1.1.1 至 1.1.1v版本、3.0.0 至 3.0.10 版本以及 3.1.0 至 3.1.2版本存在安全漏洞，该漏洞源于POLY1305 MAC（消息身份验证代码）包含一个错误，当在支持 AVX512-IFMA 指令的较新 X86_64 处理器上运行时，可能会破坏 Windows 64 平台上的应用程序内部状态。",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `openssl` to version 1.1.1w, 3.0.11, 3.1.3 or higher.\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2023-09-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-808F9F95",
+              "cve_id": "CVE-2024-4603",
+              "cnnvd_id": "CNNVD-202405-2902",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL 3.0 和 3.1 版本存在安全漏洞，该漏洞源于使用函数 EVP_PKEY_param_check()、EVP_PKEY_public_check() 检查 DSA 公钥或 DSA 参数检查的键或参数，可能会导致拒绝服务。",
+              "suggestion": "## Remediation\nA fix was pushed into the `master` branch but not yet published.",
+              "attack_type": "远程",
+              "release_date": "2024-05-16",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 20
+        },
+        {
+          "name": "keystoneauth1",
+          "version": "\u003e=3.18.0",
+          "language": "Python",
+          "id": "57811826874941515",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[keystoneauth1:\u003e=3.18.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "keystonemiddleware",
+          "version": "\u003e=5.1.0",
+          "language": "Python",
+          "id": "57811826874941516",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[keystonemiddleware:\u003e=5.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "lxml",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826874941517",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[lxml:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "lxml 和 libxml2 代码问题漏洞",
+              "id": "XMIRROR-E5B70F5B-1DE97195",
+              "cve_id": "CVE-2022-2309",
+              "cnnvd_id": "CNNVD-202207-382",
+              "cwe_id": "CWE-476",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。\r\nlxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDADDF95",
+              "cve_id": "CVE-2021-28957",
+              "cnnvd_id": "CNNVD-202103-1229",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-AF96AE95",
+              "cve_id": "CVE-2020-27783",
+              "cnnvd_id": "CNNVD-202011-1920",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nLxml 存在跨站脚本漏洞，该漏洞源于javascript通过noscript和style组合进行转义。以下产品及版本会受到影响：Debian stretch, Debian stretch (security), Debian buster, Debian bullseye, sid; Red Hat Software Collections, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8 , Red Hat OpenStack Platform 10 (Newton), Red Hat OpenStack Platform 13 (Queens)",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://lists.debian.org/debian-lts-announce/2020/11/msg00044.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-11-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "lxml 注入漏洞",
+              "id": "XMIRROR-E5B71412-EDA94895",
+              "cve_id": "CVE-2021-43818",
+              "cnnvd_id": "CNNVD-202112-1050",
+              "cnvd_id": "CNVD-2021-100235",
+              "cwe_id": "CWE-74 CWE-79",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.5之前版本存在注入漏洞，该漏洞源于HTML Cleaner允许某些精心制作的脚本内容以及使用数据URI嵌入的SVG文件中的脚本内容通过。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "netaddr",
+          "version": "\u003e=0.7.18",
+          "language": "Python",
+          "id": "57811826874941518",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[netaddr:\u003e=0.7.18]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "neutron-lib",
+          "version": "\u003e=1.14.0",
+          "language": "Python",
+          "id": "57811826874941519",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[neutron-lib:\u003e=1.14.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "openstacksdk",
+          "version": "\u003e=0.28.0",
+          "language": "Python",
+          "id": "57811826874941520",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[openstacksdk:\u003e=0.28.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-service-types",
+          "version": "\u003e=1.2.0",
+          "language": "Python",
+          "id": "57811826874941521",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[os-service-types:\u003e=1.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.cache",
+          "version": "\u003e=1.26.0",
+          "language": "Python",
+          "id": "57811826874941522",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.cache:\u003e=1.26.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.config",
+          "version": "\u003e=6.8.0",
+          "language": "Python",
+          "id": "57811826874941523",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.config:\u003e=6.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.concurrency",
+          "version": "\u003e=3.26.0",
+          "language": "Python",
+          "id": "57811826874941524",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.concurrency:\u003e=3.26.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.context",
+          "version": "\u003e=2.22.0",
+          "language": "Python",
+          "id": "57811826874941525",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.context:\u003e=2.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.db",
+          "version": "\u003e=6.0.0",
+          "language": "Python",
+          "id": "57811826874941526",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.db:\u003e=6.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.i18n",
+          "version": "\u003e=3.20.0",
+          "language": "Python",
+          "id": "57811826874941527",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.i18n:\u003e=3.20.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.log",
+          "version": "\u003e=4.3.0",
+          "language": "Python",
+          "id": "57811826874941528",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.log:\u003e=4.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.messaging",
+          "version": "\u003e=14.1.0",
+          "language": "Python",
+          "id": "57811826874941529",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.messaging:\u003e=14.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.middleware",
+          "version": "\u003e=3.31.0",
+          "language": "Python",
+          "id": "57811826874941530",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.middleware:\u003e=3.31.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.policy",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826874941531",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.policy:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.reports",
+          "version": "\u003e=1.18.0",
+          "language": "Python",
+          "id": "57811826874941532",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.reports:\u003e=1.18.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.serialization",
+          "version": "\u003e=2.25.0",
+          "language": "Python",
+          "id": "57811826874941533",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.serialization:\u003e=2.25.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.service[threading]",
+          "version": "\u003e=4.2.2",
+          "language": "Python",
+          "id": "57811826874941534",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.service[threading]:\u003e=4.2.2]"
+          ]
+        },
+        {
+          "name": "oslo.upgradecheck",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811826874941535",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.upgradecheck:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.utils",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826874941536",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.utils:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python-Oslo-Utils 日志信息泄露漏洞",
+              "id": "XMIRROR-E5B70F5B-1DFA5D95",
+              "cve_id": "CVE-2022-0718",
+              "cnnvd_id": "CNNVD-202202-1730",
+              "cwe_id": "CWE-522 CWE-532",
+              "description": "Python-Oslo-Utils是OpenStack社区的一个库。用于提供对常见实用程序类型函数的支持，例如编码、异常处理、字符串操作和时间处理。\r\nPython-Oslo-Utils 存在安全漏洞，目前暂无该漏洞信息，请随时关注CNNVD或厂商公告。",
+              "attack_type": "远程",
+              "release_date": "2022-02-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "osprofiler",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811826874941537",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[osprofiler:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.versionedobjects",
+          "version": "\u003e=1.31.2",
+          "language": "Python",
+          "id": "57811826874941538",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[oslo.versionedobjects:\u003e=1.31.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "PasteDeploy",
+          "version": "\u003e=1.5.0",
+          "language": "Python",
+          "id": "57811826874941539",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[PasteDeploy:\u003e=1.5.0]"
+          ]
+        },
+        {
+          "name": "aodhclient",
+          "version": "\u003e=0.9.0",
+          "language": "Python",
+          "id": "57811826874941540",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[aodhclient:\u003e=0.9.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-barbicanclient",
+          "version": "\u003e=4.5.2",
+          "language": "Python",
+          "id": "57811826874941541",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-barbicanclient:\u003e=4.5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-blazarclient",
+          "version": "\u003e=1.0.1",
+          "language": "Python",
+          "id": "57811826874941542",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-blazarclient:\u003e=1.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-cinderclient",
+          "version": "\u003e=3.3.0",
+          "language": "Python",
+          "id": "57811826874941543",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-cinderclient:\u003e=3.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-designateclient",
+          "version": "\u003e=2.7.0",
+          "language": "Python",
+          "id": "57811826874941544",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-designateclient:\u003e=2.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-glanceclient",
+          "version": "\u003e=2.8.0",
+          "language": "Python",
+          "id": "57811826874941545",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-glanceclient:\u003e=2.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-heatclient",
+          "version": "\u003e=1.10.0",
+          "language": "Python",
+          "id": "57811826874941546",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-heatclient:\u003e=1.10.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-ironicclient",
+          "version": "\u003e=2.8.0",
+          "language": "Python",
+          "id": "57811826874941547",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-ironicclient:\u003e=2.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-keystoneclient",
+          "version": "\u003e=3.8.0",
+          "language": "Python",
+          "id": "57811826874941548",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-keystoneclient:\u003e=3.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-magnumclient",
+          "version": "\u003e=2.3.0",
+          "language": "Python",
+          "id": "57811826874941549",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-magnumclient:\u003e=2.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-manilaclient",
+          "version": "\u003e=1.16.0",
+          "language": "Python",
+          "id": "57811826874941550",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-manilaclient:\u003e=1.16.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-mistralclient",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811826874941551",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-mistralclient:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-neutronclient",
+          "version": "\u003e=7.7.0",
+          "language": "Python",
+          "id": "57811826874941552",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-neutronclient:\u003e=7.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-novaclient",
+          "version": "\u003e=9.1.0",
+          "language": "Python",
+          "id": "57811826874941553",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-novaclient:\u003e=9.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-octaviaclient",
+          "version": "\u003e=1.8.0",
+          "language": "Python",
+          "id": "57811826874941554",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-octaviaclient:\u003e=1.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-openstackclient",
+          "version": "\u003e=3.12.0",
+          "language": "Python",
+          "id": "57811826874941555",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-openstackclient:\u003e=3.12.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenStack 不正确的访问规则管理漏洞",
+              "id": "XMIRROR-E5B70F55-9A595195",
+              "cve_id": "CVE-2023-6110",
+              "cnnvd_id": "CNNVD-202401-2308",
+              "cwe_id": "CWE-237",
+              "description": "OpenStack 是一个由美国国家航空航天局（NASA）创建的云平台管理项目，其目的是为企业或个人提供灵活的云计算功能。OpenStack 由多个开源组件组成，被广泛用于构建和管理公共和私有云环境。此漏洞的根本原因是由于在处理用户删除请求时，存在不正确的访问规则管理。当用户试图删除其权限范围之外的访问规则时，系统错误地删除了与其他应用程序凭据无关的现有访问规则。",
+              "suggestion": "升级到最新版本的 OpenStack 以修复此漏洞。对于无法立即更新的系统，建议加强访问控制策略并审查现有系统的访问规则管理流程，确保正确的权限管理。定期进行安全审计以预防类似漏洞。",
+              "attack_type": "远程",
+              "release_date": "2024-01-24",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "python-swiftclient",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811826874941556",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-swiftclient:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-troveclient",
+          "version": "\u003e=2.2.0",
+          "language": "Python",
+          "id": "57811826874941557",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-troveclient:\u003e=2.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-vitrageclient",
+          "version": "\u003e=2.7.0",
+          "language": "Python",
+          "id": "57811826874941558",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-vitrageclient:\u003e=2.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-zaqarclient",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811826874941559",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-zaqarclient:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-zunclient",
+          "version": "\u003e=3.4.0",
+          "language": "Python",
+          "id": "57811826874941560",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[python-zunclient:\u003e=3.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "PyYAML",
+          "version": "\u003e=5.1",
+          "language": "Python",
+          "id": "57811826874941561",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[PyYAML:\u003e=5.1]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyYAML 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-4782AE95",
+              "cve_id": "CVE-2020-14343",
+              "cnnvd_id": "CNNVD-202102-918",
+              "cwe_id": "CWE-20",
+              "description": "CVE-2020-14343是与Python的第三方库“PyYAML”相关的漏洞，该库用于处理YAML文件。该漏洞的根本原因在于PyYAML库的yaml.load函数会解析未经验证的输入数据。具体来说，当用户使用yaml.load函数并且未明确指定加载器时，PyYAML会默认使用“UnsafeLoader”来解析YAML文件，这会导致任意代码执行的风险。如果攻击者能够控制传递给yaml.load的YAML内容，他们就可以构造一个恶意的YAML文件，其中包含恶意的Python对象。yaml.load在加载这个文件时会执行这些对象的代码，从而导致任意代码执行。这使得攻击者可以在目标系统上执行任意命令，潜在地获得系统的控制权限。",
+              "suggestion": "1. 立即升级PyYAML库到最新版本。2. 在解析YAML文件时，明确使用安全加载器，如yaml.safe_load函数来代替yaml.load函数。3. 对从不受信任来源获取的YAML数据进行严格的输入验证和清理。4. 定期审计代码库，以确认使用了安全的方法处理YAML文件。",
+              "attack_type": "远程",
+              "release_date": "2020-07-26",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenEMR 远程代码执行漏洞",
+              "id": "XMIRROR-E5B7140E-B0E55B95",
+              "cve_id": "CVE-2019-20477",
+              "cnnvd_id": "CNNVD-202002-1006",
+              "cwe_id": "CWE-502",
+              "description": "CVE-2019-20477 是一个影响 OpenEMR 的严重漏洞，OpenEMR 是一种开源的电子病历和医疗管理系统。这个漏洞存在于接口的传入数据处理模块中，具体来说，漏洞源于对外部传入的 JSON 数据缺乏充分的验证，导致可以通过特定的 JSON 构造触发远程代码执行 (RCE)。利用这个漏洞的攻击者能够在目标系统上执行任意代码。",
+              "suggestion": "立即对所有传入的 JSON 数据进行严格的验证和过滤，确保任何不受信任的数据都不能直接传递到执行环境中。更新至修复版本，并定期更新安全补丁，采取最小权限原则保护系统，只有经过身份验证的请求才能访问关键接口。",
+              "attack_type": "远程",
+              "release_date": "2020-02-19",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Ansible 反序列化漏洞",
+              "id": "XMIRROR-E5B70FBE-53A6FA95",
+              "cve_id": "CVE-2020-1747",
+              "cnnvd_id": "CNNVD-202003-034",
+              "cnvd_id": "CNVD-2020-16506",
+              "cwe_id": "CWE-20",
+              "description": "CVE-2020-1747 是一个影响 Ansible 模块的漏洞，具体是在 Ansible 库中使用的 urllib3 组件存在一个不安全的序列化漏洞。攻击者可以通过发送精心构造的 YAML 格式数据包来利用此漏洞，从而在目标系统上执行任意代码。漏洞的根本原因是 Ansible 在处理外部输入时，未能正确地验证和过滤输入数据，导致了反序列化漏洞的产生。",
+              "suggestion": "建议用户立即升级至包含补丁的 Ansible 版本，并严格控制对 Ansible 系统的访问权限。此外，开发者应尽量避免直接反序列化未经验证的外部输入，使用安全的序列化方法来降低风险。此外，可关注 Python 安全相关问题，如 PyYAML 的升级和补丁应用。",
+              "attack_type": "远程",
+              "release_date": "2020-03-02",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "requests",
+          "version": "\u003e=2.23.0",
+          "language": "Python",
+          "id": "57811826874941562",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[requests:\u003e=2.23.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "tenacity",
+          "version": "\u003e=6.1.0",
+          "language": "Python",
+          "id": "57811826874941563",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[tenacity:\u003e=6.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tzdata",
+          "version": "\u003e=2022.4",
+          "language": "Python",
+          "id": "57811826874941564",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[tzdata:\u003e=2022.4]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "Routes",
+          "version": "\u003e=2.3.1",
+          "language": "Python",
+          "id": "57811826874941565",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[Routes:\u003e=2.3.1]"
+          ]
+        },
+        {
+          "name": "SQLAlchemy",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811826874941566",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[SQLAlchemy:\u003e=1.4.0]"
+          ]
+        },
+        {
+          "name": "stevedore",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811826874941567",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[stevedore:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "WebOb",
+          "version": "\u003e=1.7.1",
+          "language": "Python",
+          "id": "57811826874941568",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[WebOb:\u003e=1.7.1]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "WebOb 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14E1B695",
+              "cve_id": "CVE-2024-42353",
+              "cnnvd_id": "CNNVD-202408-1345",
+              "cwe_id": "CWE-601",
+              "description": "WebOb是Pylons开源的一个 WSGI 请求和响应对象。\r\nWebOb 1.8.8之前版本存在安全漏洞，该漏洞源于存在打开重定向。",
+              "suggestion": "## Remediation\nUpgrade `WebOb` to version 1.8.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-14",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "yaql",
+          "version": "\u003e=1.1.3",
+          "language": "Python",
+          "id": "57811826874941569",
+          "direct": true,
+          "paths": [
+            "openstack_heat\\requirements.txt\\[yaql:\u003e=1.1.3]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenStack 安全漏洞",
+              "id": "XMIRROR-E5B714EF-145F6195",
+              "cve_id": "CVE-2024-29156",
+              "cnnvd_id": "CNNVD-202403-1613",
+              "cwe_id": "CWE-116",
+              "description": "OpenStack是美国美国国家航空航天局（NASA）的一个云平台管理项目。\r\nOpenStack Murano 16.0.0及之前版本存在安全漏洞，该漏洞源于存在潜在的敏感服务帐户信息泄漏。",
+              "suggestion": "## Remediation\nUpgrade `yaql` to version 3.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-03-18",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 35
+    },
+    {
+      "language": "Python",
+      "id": "57811826874941445",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\setup.py"
+      ]
+    },
+    {
+      "id": "57811826874941446",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\build-info-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941447",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\config-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941448",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\config-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941449",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\config-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941450",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\configs-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941451",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployment-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941452",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployment-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941453",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployment-metadata-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941454",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployment-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941455",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployment-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941456",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployment-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941457",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\deployments-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941458",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\event-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941459",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\events-find-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941460",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\events-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941461",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-metadata-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941462",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-schema-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941463",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941464",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-type-template-hot-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941465",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-type-template-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941466",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-types-list-advanced-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941467",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resource-types-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941468",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\resources-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941469",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\services-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941470",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-abandon-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941471",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-action-cancel-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941472",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-action-cancel-without-rollback-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941473",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-action-check-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941474",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-action-resume-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941475",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-action-suspend-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941476",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-adopt-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941477",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941478",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941479",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-environment-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941480",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-export-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941481",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-files-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941482",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-find-delete-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941483",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-find-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941484",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-output-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941485",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-outputs-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941486",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-preview-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941487",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941488",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-snapshot-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941489",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-snapshot-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941490",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-snapshot-restore-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941491",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-snapshot-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941492",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-snapshots-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941493",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-update-preview-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941494",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941495",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stack-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941496",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\stacks-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941497",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\template-functions-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941498",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\template-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941499",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\template-validate-request.json"
+      ]
+    },
+    {
+      "id": "57811826874941500",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\template-validate-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941501",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\template-versions-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941502",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\api-ref\\source\\v1\\samples\\versions-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826874941503",
+      "direct": true,
+      "paths": [
+        "openstack_heat\\heat\\tests\\policy\\resources.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 39
+}

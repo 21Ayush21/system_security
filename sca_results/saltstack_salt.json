@@ -1,0 +1,71 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "saltstack_salt",
+    "size": 0,
+    "start_time": "2025-11-27 21:57:24",
+    "end_time": "2025-11-27 21:57:27",
+    "cost_time": 2.4305757
+  },
+  "id": "57811830236250112",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811830236250113",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830236250114",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\tests\\pytests\\integration\\ssh\\test_ssh_setup.py"
+      ]
+    },
+    {
+      "id": "57811830236250115",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\.backportrc.json"
+      ]
+    },
+    {
+      "id": "57811830236250116",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\tests\\integration\\files\\file\\base\\modules\\jinja\\osarchmap.json"
+      ]
+    },
+    {
+      "id": "57811830236250117",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\tests\\unit\\files\\endpoints.json"
+      ]
+    },
+    {
+      "id": "57811830236250118",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\tests\\unit\\files\\playbooks\\failed_example.json"
+      ]
+    },
+    {
+      "id": "57811830236250119",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\tests\\unit\\files\\playbooks\\success_example.json"
+      ]
+    },
+    {
+      "id": "57811830236250120",
+      "direct": true,
+      "paths": [
+        "saltstack_salt\\tests\\unit\\files\\playbooks\\success_example_with_skipped.json"
+      ]
+    }
+  ]
+}

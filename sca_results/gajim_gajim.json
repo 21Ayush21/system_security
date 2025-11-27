@@ -1,0 +1,15 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "gajim_gajim",
+    "size": 0,
+    "start_time": "2025-11-27 21:32:26",
+    "end_time": "2025-11-27 21:32:27",
+    "cost_time": 1.5421219000000002
+  },
+  "id": "57811781096505344",
+  "direct": true,
+  "paths": [
+    "gajim_gajim\\flatpak\\app-overrides.json"
+  ]
+}

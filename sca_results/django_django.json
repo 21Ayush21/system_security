@@ -1,0 +1,4852 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "django_django",
+    "size": 0,
+    "start_time": "2025-11-27 21:31:20",
+    "end_time": "2025-11-27 21:32:03",
+    "cost_time": 42.3118579
+  },
+  "id": "57811780265476096",
+  "children": [
+    {
+      "id": "57811780265476097",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\db_fixture_2.default.json.gz\\db_fixture_2.default.json"
+      ]
+    },
+    {
+      "id": "57811780265476098",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture4.json.zip\\fixture4.json"
+      ]
+    },
+    {
+      "id": "57811780265476099",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture5.json.bz2\\fixture5.json"
+      ]
+    },
+    {
+      "id": "57811780265476100",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture5.json.gz\\fixture5.json"
+      ]
+    },
+    {
+      "id": "57811780265476101",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture5.json.zip\\fixture5.json"
+      ]
+    },
+    {
+      "id": "57811780265476102",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\gis_tests\\geoapp\\fixtures\\initial.json.gz\\initial.json"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780265476103",
+      "direct": true,
+      "paths": [
+        "django_django\\docs\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pyenchant",
+          "language": "Python",
+          "id": "57811780265476162",
+          "direct": true,
+          "paths": [
+            "django_django\\docs\\requirements.txt\\[pyenchant:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "Sphinx",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811780265476163",
+          "direct": true,
+          "paths": [
+            "django_django\\docs\\requirements.txt\\[Sphinx:\u003e=4.5.0]"
+          ]
+        },
+        {
+          "name": "sphinxcontrib-spelling",
+          "language": "Python",
+          "id": "57811780265476164",
+          "direct": true,
+          "paths": [
+            "django_django\\docs\\requirements.txt\\[sphinxcontrib-spelling:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "blacken-docs",
+          "language": "Python",
+          "id": "57811780265476165",
+          "direct": true,
+          "paths": [
+            "django_django\\docs\\requirements.txt\\[blacken-docs:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-lint",
+          "language": "Python",
+          "id": "57811780265476166",
+          "direct": true,
+          "paths": [
+            "django_django\\docs\\requirements.txt\\[sphinx-lint:]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780265476104",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\admin_scripts\\custom_templates\\project_template\\additional_dir\\requirements.in"
+      ],
+      "children": [
+        {
+          "name": "Django\u003c4.2",
+          "language": "Python",
+          "id": "57811780265476167",
+          "direct": true,
+          "paths": [
+            "django_django\\tests\\admin_scripts\\custom_templates\\project_template\\additional_dir\\requirements.in\\[Django\u003c4.2:]"
+          ]
+        },
+        {
+          "name": "environs[django]",
+          "language": "Python",
+          "id": "57811780265476168",
+          "direct": true,
+          "paths": [
+            "django_django\\tests\\admin_scripts\\custom_templates\\project_template\\additional_dir\\requirements.in\\[environs[django]:]"
+          ]
+        },
+        {
+          "name": "psycopg2-binary",
+          "language": "Python",
+          "id": "57811780265476169",
+          "direct": true,
+          "paths": [
+            "django_django\\tests\\admin_scripts\\custom_templates\\project_template\\additional_dir\\requirements.in\\[psycopg2-binary:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "django-extensions",
+          "language": "Python",
+          "id": "57811780265476170",
+          "direct": true,
+          "paths": [
+            "django_django\\tests\\admin_scripts\\custom_templates\\project_template\\additional_dir\\requirements.in\\[django-extensions:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780265476105",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\admin_scripts\\custom_templates\\project_template\\additional_dir\\requirements.txt"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780265476106",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\template_tests\\syntax_tests\\test_setup.py"
+      ]
+    },
+    {
+      "name": "Django",
+      "language": "JavaScript",
+      "id": "57811780265476107",
+      "direct": true,
+      "paths": [
+        "django_django\\package.json\\[Django:]"
+      ],
+      "children": [
+        {
+          "name": "eslint",
+          "version": "9.39.1",
+          "language": "JavaScript",
+          "id": "57811780265476171",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "django_django\\package.json\\[Django:]\\[eslint:9.39.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "eslint-visitor-keys",
+              "version": "4.2.1",
+              "language": "JavaScript",
+              "id": "57811780265476177",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[eslint-visitor-keys:4.2.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ]
+            },
+            {
+              "name": "json-stable-stringify-without-jsonify",
+              "version": "1.0.1",
+              "language": "JavaScript",
+              "id": "57811780265476178",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[json-stable-stringify-without-jsonify:1.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "minimatch",
+              "version": "3.1.2",
+              "language": "JavaScript",
+              "id": "57811780265476179",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[minimatch:3.1.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "ISC"
+                }
+              ],
+              "children": [
+                {
+                  "name": "brace-expansion",
+                  "version": "1.1.12",
+                  "language": "JavaScript",
+                  "id": "57811780265476239",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[minimatch:3.1.2]\\[brace-expansion:1.1.12]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "balanced-match",
+                      "version": "1.0.2",
+                      "language": "JavaScript",
+                      "id": "57811780265476317",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[minimatch:3.1.2]\\[brace-expansion:1.1.12]\\[balanced-match:1.0.2]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "concat-map",
+                      "version": "0.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476318",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[minimatch:3.1.2]\\[brace-expansion:1.1.12]\\[concat-map:0.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@eslint/plugin-kit",
+              "version": "0.4.1",
+              "language": "JavaScript",
+              "id": "57811780265476180",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\plugin-kit:0.4.1]"
+              ],
+              "children": [
+                {
+                  "name": "levn",
+                  "version": "0.4.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476240",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\plugin-kit:0.4.1]\\[levn:0.4.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "eslint-scope",
+              "version": "8.4.0",
+              "language": "JavaScript",
+              "id": "57811780265476181",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[eslint-scope:8.4.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "BSD-2-Clause"
+                }
+              ],
+              "children": [
+                {
+                  "name": "estraverse",
+                  "version": "5.3.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476241",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[eslint-scope:8.4.0]\\[estraverse:5.3.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-2-Clause"
+                    }
+                  ]
+                },
+                {
+                  "name": "esrecurse",
+                  "version": "4.3.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476242",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[eslint-scope:8.4.0]\\[esrecurse:4.3.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-2-Clause"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "esutils",
+              "version": "2.0.3",
+              "language": "JavaScript",
+              "id": "57811780265476182",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[esutils:2.0.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "BSD-2-Clause"
+                }
+              ]
+            },
+            {
+              "name": "lodash.merge",
+              "version": "4.6.2",
+              "language": "JavaScript",
+              "id": "57811780265476183",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[lodash.merge:4.6.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "natural-compare",
+              "version": "1.4.0",
+              "language": "JavaScript",
+              "id": "57811780265476184",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[natural-compare:1.4.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "@types/estree",
+              "version": "1.0.8",
+              "language": "JavaScript",
+              "id": "57811780265476185",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@types\\estree:1.0.8]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "@humanwhocodes/retry",
+              "version": "0.4.3",
+              "language": "JavaScript",
+              "id": "57811780265476186",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@humanwhocodes\\retry:0.4.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ]
+            },
+            {
+              "name": "debug",
+              "version": "4.4.3",
+              "language": "JavaScript",
+              "id": "57811780265476187",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[debug:4.4.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "ms",
+                  "version": "2.1.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476243",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[debug:4.4.3]\\[ms:2.1.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "esquery",
+              "version": "1.6.0",
+              "language": "JavaScript",
+              "id": "57811780265476188",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[esquery:1.6.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "BSD-3-Clause"
+                }
+              ]
+            },
+            {
+              "name": "glob-parent",
+              "version": "6.0.2",
+              "language": "JavaScript",
+              "id": "57811780265476189",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[glob-parent:6.0.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "ISC"
+                }
+              ]
+            },
+            {
+              "name": "ignore",
+              "version": "5.3.2",
+              "language": "JavaScript",
+              "id": "57811780265476190",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[ignore:5.3.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "is-glob",
+              "version": "4.0.3",
+              "language": "JavaScript",
+              "id": "57811780265476191",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[is-glob:4.0.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "is-extglob",
+                  "version": "2.1.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476244",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[is-glob:4.0.3]\\[is-extglob:2.1.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@humanwhocodes/module-importer",
+              "version": "1.0.1",
+              "language": "JavaScript",
+              "id": "57811780265476192",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@humanwhocodes\\module-importer:1.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ]
+            },
+            {
+              "name": "find-up",
+              "version": "5.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476193",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[find-up:5.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "path-exists",
+                  "version": "4.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476245",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[find-up:5.0.0]\\[path-exists:4.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "locate-path",
+                  "version": "6.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476246",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[find-up:5.0.0]\\[locate-path:6.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "p-locate",
+                      "version": "5.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476319",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[find-up:5.0.0]\\[locate-path:6.0.0]\\[p-locate:5.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "p-limit",
+                          "version": "3.1.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476374",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[find-up:5.0.0]\\[locate-path:6.0.0]\\[p-locate:5.0.0]\\[p-limit:3.1.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "yocto-queue",
+                              "version": "0.1.0",
+                              "language": "JavaScript",
+                              "id": "57811780265476415",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[find-up:5.0.0]\\[locate-path:6.0.0]\\[p-locate:5.0.0]\\[p-limit:3.1.0]\\[yocto-queue:0.1.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "imurmurhash",
+              "version": "0.1.4",
+              "language": "JavaScript",
+              "id": "57811780265476194",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[imurmurhash:0.1.4]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "file-entry-cache",
+              "version": "8.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476195",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[file-entry-cache:8.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "flat-cache",
+                  "version": "4.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476247",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[file-entry-cache:8.0.0]\\[flat-cache:4.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "flatted",
+                      "version": "3.3.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476320",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[file-entry-cache:8.0.0]\\[flat-cache:4.0.1]\\[flatted:3.3.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "keyv",
+                      "version": "4.5.4",
+                      "language": "JavaScript",
+                      "id": "57811780265476321",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[file-entry-cache:8.0.0]\\[flat-cache:4.0.1]\\[keyv:4.5.4]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "json-buffer",
+                          "version": "3.0.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476375",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[file-entry-cache:8.0.0]\\[flat-cache:4.0.1]\\[keyv:4.5.4]\\[json-buffer:3.0.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@eslint/config-array",
+              "version": "0.21.1",
+              "language": "JavaScript",
+              "id": "57811780265476196",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\config-array:0.21.1]"
+              ],
+              "children": [
+                {
+                  "name": "@eslint/object-schema",
+                  "version": "2.1.7",
+                  "language": "JavaScript",
+                  "id": "57811780265476248",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\config-array:0.21.1]\\[@eslint\\object-schema:2.1.7]"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@eslint/config-helpers",
+              "version": "0.4.2",
+              "language": "JavaScript",
+              "id": "57811780265476197",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\config-helpers:0.4.2]"
+              ]
+            },
+            {
+              "name": "@humanfs/node",
+              "version": "0.16.7",
+              "language": "JavaScript",
+              "id": "57811780265476198",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@humanfs\\node:0.16.7]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "children": [
+                {
+                  "name": "@humanfs/core",
+                  "version": "0.19.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476249",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@humanfs\\node:0.16.7]\\[@humanfs\\core:0.19.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "ajv",
+              "version": "6.12.6",
+              "language": "JavaScript",
+              "id": "57811780265476199",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[ajv:6.12.6]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "fast-json-stable-stringify",
+                  "version": "2.1.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476250",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[ajv:6.12.6]\\[fast-json-stable-stringify:2.1.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "json-schema-traverse",
+                  "version": "0.4.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476251",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[ajv:6.12.6]\\[json-schema-traverse:0.4.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "uri-js",
+                  "version": "4.4.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476252",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[ajv:6.12.6]\\[uri-js:4.4.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-2-Clause"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "punycode",
+                      "version": "2.3.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476322",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[ajv:6.12.6]\\[uri-js:4.4.1]\\[punycode:2.3.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "chalk",
+              "version": "4.1.2",
+              "language": "JavaScript",
+              "id": "57811780265476200",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[chalk:4.1.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "ansi-styles",
+                  "version": "4.3.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476253",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[chalk:4.1.2]\\[ansi-styles:4.3.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "color-convert",
+                      "version": "2.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476323",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[chalk:4.1.2]\\[ansi-styles:4.3.0]\\[color-convert:2.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "color-name",
+                          "version": "1.1.4",
+                          "language": "JavaScript",
+                          "id": "57811780265476376",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[chalk:4.1.2]\\[ansi-styles:4.3.0]\\[color-convert:2.0.1]\\[color-name:1.1.4]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "UNKNOWN"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "supports-color",
+                  "version": "7.2.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476254",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[chalk:4.1.2]\\[supports-color:7.2.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "has-flag",
+                      "version": "4.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476324",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[chalk:4.1.2]\\[supports-color:7.2.0]\\[has-flag:4.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "espree",
+              "version": "10.4.0",
+              "language": "JavaScript",
+              "id": "57811780265476201",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[espree:10.4.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "BSD-2-Clause"
+                }
+              ],
+              "children": [
+                {
+                  "name": "acorn",
+                  "version": "8.15.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476255",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[espree:10.4.0]\\[acorn:8.15.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "acorn-jsx",
+                  "version": "5.3.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476256",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[espree:10.4.0]\\[acorn-jsx:5.3.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "optionator",
+              "version": "0.9.4",
+              "language": "JavaScript",
+              "id": "57811780265476202",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[optionator:0.9.4]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "prelude-ls",
+                  "version": "1.2.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476257",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[optionator:0.9.4]\\[prelude-ls:1.2.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "deep-is",
+                  "version": "0.1.4",
+                  "language": "JavaScript",
+                  "id": "57811780265476258",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[optionator:0.9.4]\\[deep-is:0.1.4]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "word-wrap",
+                  "version": "1.2.5",
+                  "language": "JavaScript",
+                  "id": "57811780265476259",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[optionator:0.9.4]\\[word-wrap:1.2.5]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "type-check",
+                  "version": "0.4.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476260",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[optionator:0.9.4]\\[type-check:0.4.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "fast-levenshtein",
+                  "version": "2.0.6",
+                  "language": "JavaScript",
+                  "id": "57811780265476261",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[optionator:0.9.4]\\[fast-levenshtein:2.0.6]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@eslint-community/eslint-utils",
+              "version": "4.9.0",
+              "language": "JavaScript",
+              "id": "57811780265476203",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint-community\\eslint-utils:4.9.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "eslint-visitor-keys",
+                  "version": "3.4.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476262",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint-community\\eslint-utils:4.9.0]\\[eslint-visitor-keys:3.4.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@eslint-community/regexpp",
+              "version": "4.12.2",
+              "language": "JavaScript",
+              "id": "57811780265476204",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint-community\\regexpp:4.12.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "@eslint/core",
+              "version": "0.17.0",
+              "language": "JavaScript",
+              "id": "57811780265476205",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\core:0.17.0]"
+              ],
+              "children": [
+                {
+                  "name": "@types/json-schema",
+                  "version": "7.0.15",
+                  "language": "JavaScript",
+                  "id": "57811780265476263",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\core:0.17.0]\\[@types\\json-schema:7.0.15]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "@eslint/js",
+              "version": "9.39.1",
+              "language": "JavaScript",
+              "id": "57811780265476206",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\js:9.39.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "cross-spawn",
+              "version": "7.0.6",
+              "language": "JavaScript",
+              "id": "57811780265476207",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[cross-spawn:7.0.6]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "path-key",
+                  "version": "3.1.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476264",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[cross-spawn:7.0.6]\\[path-key:3.1.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "shebang-command",
+                  "version": "2.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476265",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[cross-spawn:7.0.6]\\[shebang-command:2.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "shebang-regex",
+                      "version": "3.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476325",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[cross-spawn:7.0.6]\\[shebang-command:2.0.0]\\[shebang-regex:3.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "which",
+                  "version": "2.0.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476266",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[cross-spawn:7.0.6]\\[which:2.0.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "ISC"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "isexe",
+                      "version": "2.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476326",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[cross-spawn:7.0.6]\\[which:2.0.2]\\[isexe:2.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "fast-deep-equal",
+              "version": "3.1.3",
+              "language": "JavaScript",
+              "id": "57811780265476208",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[fast-deep-equal:3.1.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "@eslint/eslintrc",
+              "version": "3.3.1",
+              "language": "JavaScript",
+              "id": "57811780265476209",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "globals",
+                  "version": "14.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476267",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[globals:14.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "js-yaml",
+                  "version": "4.1.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476268",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[js-yaml:4.1.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "argparse",
+                      "version": "2.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476327",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[js-yaml:4.1.1]\\[argparse:2.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "strip-json-comments",
+                  "version": "3.1.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476269",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[strip-json-comments:3.1.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "import-fresh",
+                  "version": "3.3.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476270",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[import-fresh:3.3.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "resolve-from",
+                      "version": "4.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476328",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[import-fresh:3.3.1]\\[resolve-from:4.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "parent-module",
+                      "version": "1.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476329",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[import-fresh:3.3.1]\\[parent-module:1.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "callsites",
+                          "version": "3.1.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476377",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[@eslint\\eslintrc:3.3.1]\\[import-fresh:3.3.1]\\[parent-module:1.0.1]\\[callsites:3.1.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "escape-string-regexp",
+              "version": "4.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476210",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[eslint:9.39.1]\\[escape-string-regexp:4.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "puppeteer",
+          "version": "24.31.0",
+          "language": "JavaScript",
+          "id": "57811780265476172",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "children": [
+            {
+              "name": "typed-query-selector",
+              "version": "2.12.0",
+              "language": "JavaScript",
+              "id": "57811780265476211",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[typed-query-selector:2.12.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "@puppeteer/browsers",
+              "version": "2.10.13",
+              "language": "JavaScript",
+              "id": "57811780265476212",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "children": [
+                {
+                  "name": "extract-zip",
+                  "version": "2.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476271",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-2-Clause"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "yauzl",
+                      "version": "2.10.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476330",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[yauzl:2.10.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "buffer-crc32",
+                          "version": "0.2.13",
+                          "language": "JavaScript",
+                          "id": "57811780265476378",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[yauzl:2.10.0]\\[buffer-crc32:0.2.13]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "fd-slicer",
+                          "version": "1.1.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476379",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[yauzl:2.10.0]\\[fd-slicer:1.1.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "pend",
+                              "version": "1.2.0",
+                              "language": "JavaScript",
+                              "id": "57811780265476416",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[yauzl:2.10.0]\\[fd-slicer:1.1.0]\\[pend:1.2.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "@types/yauzl",
+                      "version": "2.10.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476331",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[@types\\yauzl:2.10.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "@types/node",
+                          "version": "24.10.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476380",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[@types\\yauzl:2.10.3]\\[@types\\node:24.10.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "undici-types",
+                              "version": "7.16.0",
+                              "language": "JavaScript",
+                              "id": "57811780265476417",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[@types\\yauzl:2.10.3]\\[@types\\node:24.10.1]\\[undici-types:7.16.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "get-stream",
+                      "version": "5.2.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476332",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[extract-zip:2.0.1]\\[get-stream:5.2.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "progress",
+                  "version": "2.0.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476272",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[progress:2.0.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "proxy-agent",
+                  "version": "6.5.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476273",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "https-proxy-agent",
+                      "version": "7.0.6",
+                      "language": "JavaScript",
+                      "id": "57811780265476333",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[https-proxy-agent:7.0.6]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "lru-cache",
+                      "version": "7.18.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476334",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[lru-cache:7.18.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "pac-proxy-agent",
+                      "version": "7.2.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476335",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "pac-resolver",
+                          "version": "7.0.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476381",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "degenerator",
+                              "version": "5.0.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476418",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]\\[degenerator:5.0.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "name": "ast-types",
+                                  "version": "0.13.4",
+                                  "language": "JavaScript",
+                                  "id": "57811780265476435",
+                                  "dev": true,
+                                  "paths": [
+                                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]\\[degenerator:5.0.1]\\[ast-types:0.13.4]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ],
+                                  "children": [
+                                    {
+                                      "name": "tslib",
+                                      "version": "2.8.1",
+                                      "language": "JavaScript",
+                                      "id": "57811780265476440",
+                                      "dev": true,
+                                      "paths": [
+                                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]\\[degenerator:5.0.1]\\[ast-types:0.13.4]\\[tslib:2.8.1]"
+                                      ],
+                                      "licenses": [
+                                        {
+                                          "name": "ISC"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "escodegen",
+                                  "version": "2.1.0",
+                                  "language": "JavaScript",
+                                  "id": "57811780265476436",
+                                  "dev": true,
+                                  "paths": [
+                                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]\\[degenerator:5.0.1]\\[escodegen:2.1.0]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "BSD-2-Clause"
+                                    }
+                                  ],
+                                  "children": [
+                                    {
+                                      "name": "source-map",
+                                      "version": "0.6.1",
+                                      "language": "JavaScript",
+                                      "id": "57811780265476441",
+                                      "dev": true,
+                                      "paths": [
+                                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]\\[degenerator:5.0.1]\\[escodegen:2.1.0]\\[source-map:0.6.1]"
+                                      ],
+                                      "licenses": [
+                                        {
+                                          "name": "BSD-3-Clause"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "netmask",
+                              "version": "2.0.2",
+                              "language": "JavaScript",
+                              "id": "57811780265476419",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[pac-resolver:7.0.1]\\[netmask:2.0.2]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "@tootallnate/quickjs-emscripten",
+                          "version": "0.23.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476382",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[@tootallnate\\quickjs-emscripten:0.23.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "get-uri",
+                          "version": "6.0.5",
+                          "language": "JavaScript",
+                          "id": "57811780265476383",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[get-uri:6.0.5]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "basic-ftp",
+                              "version": "5.0.5",
+                              "language": "JavaScript",
+                              "id": "57811780265476420",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[get-uri:6.0.5]\\[basic-ftp:5.0.5]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "data-uri-to-buffer",
+                              "version": "6.0.2",
+                              "language": "JavaScript",
+                              "id": "57811780265476421",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[pac-proxy-agent:7.2.0]\\[get-uri:6.0.5]\\[data-uri-to-buffer:6.0.2]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "proxy-from-env",
+                      "version": "1.1.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476336",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[proxy-from-env:1.1.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "socks-proxy-agent",
+                      "version": "8.0.5",
+                      "language": "JavaScript",
+                      "id": "57811780265476337",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[socks-proxy-agent:8.0.5]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "socks",
+                          "version": "2.8.7",
+                          "language": "JavaScript",
+                          "id": "57811780265476384",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[socks-proxy-agent:8.0.5]\\[socks:2.8.7]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "ip-address",
+                              "version": "10.1.0",
+                              "language": "JavaScript",
+                              "id": "57811780265476422",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[socks-proxy-agent:8.0.5]\\[socks:2.8.7]\\[ip-address:10.1.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "smart-buffer",
+                              "version": "4.2.0",
+                              "language": "JavaScript",
+                              "id": "57811780265476423",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[socks-proxy-agent:8.0.5]\\[socks:2.8.7]\\[smart-buffer:4.2.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "agent-base",
+                      "version": "7.1.4",
+                      "language": "JavaScript",
+                      "id": "57811780265476338",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[agent-base:7.1.4]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "http-proxy-agent",
+                      "version": "7.0.2",
+                      "language": "JavaScript",
+                      "id": "57811780265476339",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[proxy-agent:6.5.0]\\[http-proxy-agent:7.0.2]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "tar-fs",
+                  "version": "3.1.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476274",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "pump",
+                      "version": "3.0.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476340",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[pump:3.0.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "end-of-stream",
+                          "version": "1.4.5",
+                          "language": "JavaScript",
+                          "id": "57811780265476385",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[pump:3.0.3]\\[end-of-stream:1.4.5]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "tar-stream",
+                      "version": "3.1.7",
+                      "language": "JavaScript",
+                      "id": "57811780265476341",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "b4a",
+                          "version": "1.7.3",
+                          "language": "JavaScript",
+                          "id": "57811780265476386",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]\\[b4a:1.7.3]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "ISC"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "fast-fifo",
+                          "version": "1.3.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476387",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]\\[fast-fifo:1.3.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "streamx",
+                          "version": "2.23.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476388",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]\\[streamx:2.23.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "events-universal",
+                              "version": "1.0.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476424",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]\\[streamx:2.23.0]\\[events-universal:1.0.1]"
+                              ],
+                              "children": [
+                                {
+                                  "name": "bare-events",
+                                  "version": "2.8.2",
+                                  "language": "JavaScript",
+                                  "id": "57811780265476437",
+                                  "dev": true,
+                                  "paths": [
+                                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]\\[streamx:2.23.0]\\[events-universal:1.0.1]\\[bare-events:2.8.2]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "Apache-2.0"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "text-decoder",
+                              "version": "1.2.3",
+                              "language": "JavaScript",
+                              "id": "57811780265476425",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[tar-fs:3.1.1]\\[tar-stream:3.1.7]\\[streamx:2.23.0]\\[text-decoder:1.2.3]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "yargs",
+                  "version": "17.7.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476275",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "cliui",
+                      "version": "8.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476342",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[cliui:8.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "strip-ansi",
+                          "version": "6.0.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476389",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[cliui:8.0.1]\\[strip-ansi:6.0.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "ansi-regex",
+                              "version": "5.0.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476426",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[cliui:8.0.1]\\[strip-ansi:6.0.1]\\[ansi-regex:5.0.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "wrap-ansi",
+                          "version": "7.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476390",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[cliui:8.0.1]\\[wrap-ansi:7.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "escalade",
+                      "version": "3.2.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476343",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[escalade:3.2.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "get-caller-file",
+                      "version": "2.0.5",
+                      "language": "JavaScript",
+                      "id": "57811780265476344",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[get-caller-file:2.0.5]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "require-directory",
+                      "version": "2.1.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476345",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[require-directory:2.1.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "string-width",
+                      "version": "4.2.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476346",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[string-width:4.2.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "emoji-regex",
+                          "version": "8.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476391",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[string-width:4.2.3]\\[emoji-regex:8.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "is-fullwidth-code-point",
+                          "version": "3.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476392",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[string-width:4.2.3]\\[is-fullwidth-code-point:3.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "y18n",
+                      "version": "5.0.8",
+                      "language": "JavaScript",
+                      "id": "57811780265476347",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[y18n:5.0.8]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "yargs-parser",
+                      "version": "21.1.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476348",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[yargs:17.7.2]\\[yargs-parser:21.1.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "semver",
+                  "version": "7.7.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476276",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[@puppeteer\\browsers:2.10.13]\\[semver:7.7.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "ISC"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "chromium-bidi",
+              "version": "11.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476213",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[chromium-bidi:11.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "children": [
+                {
+                  "name": "mitt",
+                  "version": "3.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476277",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[chromium-bidi:11.0.0]\\[mitt:3.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "zod",
+                  "version": "3.25.76",
+                  "language": "JavaScript",
+                  "id": "57811780265476278",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[chromium-bidi:11.0.0]\\[zod:3.25.76]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "cosmiconfig",
+              "version": "9.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476214",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "env-paths",
+                  "version": "2.2.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476279",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[env-paths:2.2.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "parse-json",
+                  "version": "5.2.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476280",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "@babel/code-frame",
+                      "version": "7.27.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476349",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[@babel\\code-frame:7.27.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "@babel/helper-validator-identifier",
+                          "version": "7.28.5",
+                          "language": "JavaScript",
+                          "id": "57811780265476393",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[@babel\\code-frame:7.27.1]\\[@babel\\helper-validator-identifier:7.28.5]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "js-tokens",
+                          "version": "4.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476394",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[@babel\\code-frame:7.27.1]\\[js-tokens:4.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "picocolors",
+                          "version": "1.1.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476395",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[@babel\\code-frame:7.27.1]\\[picocolors:1.1.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "ISC"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "error-ex",
+                      "version": "1.3.4",
+                      "language": "JavaScript",
+                      "id": "57811780265476350",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[error-ex:1.3.4]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "is-arrayish",
+                          "version": "0.2.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476396",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[error-ex:1.3.4]\\[is-arrayish:0.2.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "json-parse-even-better-errors",
+                      "version": "2.3.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476351",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[json-parse-even-better-errors:2.3.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "lines-and-columns",
+                      "version": "1.2.4",
+                      "language": "JavaScript",
+                      "id": "57811780265476352",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[cosmiconfig:9.0.0]\\[parse-json:5.2.0]\\[lines-and-columns:1.2.4]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "devtools-protocol",
+              "version": "0.0.1521046",
+              "language": "JavaScript",
+              "id": "57811780265476215",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[devtools-protocol:0.0.1521046]"
+              ],
+              "licenses": [
+                {
+                  "name": "BSD-3-Clause"
+                }
+              ]
+            },
+            {
+              "name": "puppeteer-core",
+              "version": "24.31.0",
+              "language": "JavaScript",
+              "id": "57811780265476216",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[puppeteer-core:24.31.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "children": [
+                {
+                  "name": "webdriver-bidi-protocol",
+                  "version": "0.3.9",
+                  "language": "JavaScript",
+                  "id": "57811780265476281",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[puppeteer-core:24.31.0]\\[webdriver-bidi-protocol:0.3.9]"
+                  ]
+                },
+                {
+                  "name": "ws",
+                  "version": "8.18.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476282",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[puppeteer:24.31.0]\\[puppeteer-core:24.31.0]\\[ws:8.18.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "grunt",
+          "version": "1.6.1",
+          "language": "JavaScript",
+          "id": "57811780265476173",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "exit",
+              "version": "0.1.2",
+              "language": "JavaScript",
+              "id": "57811780265476217",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[exit:0.1.2]"
+              ]
+            },
+            {
+              "name": "findup-sync",
+              "version": "5.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476218",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "micromatch",
+                  "version": "4.0.8",
+                  "language": "JavaScript",
+                  "id": "57811780265476283",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[micromatch:4.0.8]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "braces",
+                      "version": "3.0.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476353",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[micromatch:4.0.8]\\[braces:3.0.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "fill-range",
+                          "version": "7.1.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476397",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[micromatch:4.0.8]\\[braces:3.0.3]\\[fill-range:7.1.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "to-regex-range",
+                              "version": "5.0.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476427",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[micromatch:4.0.8]\\[braces:3.0.3]\\[fill-range:7.1.1]\\[to-regex-range:5.0.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "name": "is-number",
+                                  "version": "7.0.0",
+                                  "language": "JavaScript",
+                                  "id": "57811780265476438",
+                                  "dev": true,
+                                  "paths": [
+                                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[micromatch:4.0.8]\\[braces:3.0.3]\\[fill-range:7.1.1]\\[to-regex-range:5.0.1]\\[is-number:7.0.0]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "picomatch",
+                      "version": "2.3.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476354",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[micromatch:4.0.8]\\[picomatch:2.3.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "resolve-dir",
+                  "version": "1.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476284",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "expand-tilde",
+                      "version": "2.0.2",
+                      "language": "JavaScript",
+                      "id": "57811780265476355",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]\\[expand-tilde:2.0.2]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "global-modules",
+                      "version": "1.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476356",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]\\[global-modules:1.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "global-prefix",
+                          "version": "1.0.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476398",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]\\[global-modules:1.0.0]\\[global-prefix:1.0.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "ini",
+                              "version": "1.3.8",
+                              "language": "JavaScript",
+                              "id": "57811780265476428",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]\\[global-modules:1.0.0]\\[global-prefix:1.0.2]\\[ini:1.3.8]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "ISC"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "which",
+                              "version": "1.3.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476429",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]\\[global-modules:1.0.0]\\[global-prefix:1.0.2]\\[which:1.3.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "ISC"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "is-windows",
+                          "version": "1.0.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476399",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[resolve-dir:1.0.1]\\[global-modules:1.0.0]\\[is-windows:1.0.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "detect-file",
+                  "version": "1.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476285",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[findup-sync:5.0.0]\\[detect-file:1.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "grunt-cli",
+              "version": "1.4.3",
+              "language": "JavaScript",
+              "id": "57811780265476219",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "nopt",
+                  "version": "4.0.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476286",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[nopt:4.0.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "osenv",
+                      "version": "0.1.5",
+                      "language": "JavaScript",
+                      "id": "57811780265476357",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[nopt:4.0.3]\\[osenv:0.1.5]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "BSD-1-Clause"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "os-homedir",
+                          "version": "1.0.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476400",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[nopt:4.0.3]\\[osenv:0.1.5]\\[os-homedir:1.0.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "os-tmpdir",
+                          "version": "1.0.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476401",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[nopt:4.0.3]\\[osenv:0.1.5]\\[os-tmpdir:1.0.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "v8flags",
+                  "version": "3.2.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476287",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[v8flags:3.2.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "homedir-polyfill",
+                      "version": "1.0.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476358",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[v8flags:3.2.0]\\[homedir-polyfill:1.0.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "parse-passwd",
+                          "version": "1.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476402",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-cli:1.4.3]\\[v8flags:3.2.0]\\[homedir-polyfill:1.0.3]\\[parse-passwd:1.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "grunt-known-options",
+              "version": "2.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476220",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-known-options:2.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "grunt-legacy-util",
+              "version": "2.0.1",
+              "language": "JavaScript",
+              "id": "57811780265476221",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "async",
+                  "version": "3.2.6",
+                  "language": "JavaScript",
+                  "id": "57811780265476288",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[async:3.2.6]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "getobject",
+                  "version": "1.0.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476289",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[getobject:1.0.2]"
+                  ]
+                },
+                {
+                  "name": "hooker",
+                  "version": "0.2.3",
+                  "language": "JavaScript",
+                  "id": "57811780265476290",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[hooker:0.2.3]"
+                  ]
+                },
+                {
+                  "name": "lodash",
+                  "version": "4.17.21",
+                  "language": "JavaScript",
+                  "id": "57811780265476291",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[lodash:4.17.21]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "underscore.string",
+                  "version": "3.3.6",
+                  "language": "JavaScript",
+                  "id": "57811780265476292",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[underscore.string:3.3.6]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "sprintf-js",
+                      "version": "1.1.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476359",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[underscore.string:3.3.6]\\[sprintf-js:1.1.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "BSD-3-Clause"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "util-deprecate",
+                      "version": "1.0.2",
+                      "language": "JavaScript",
+                      "id": "57811780265476360",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-util:2.0.1]\\[underscore.string:3.3.6]\\[util-deprecate:1.0.2]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "js-yaml",
+              "version": "3.14.2",
+              "language": "JavaScript",
+              "id": "57811780265476222",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[js-yaml:3.14.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "argparse",
+                  "version": "1.0.10",
+                  "language": "JavaScript",
+                  "id": "57811780265476293",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[js-yaml:3.14.2]\\[argparse:1.0.10]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "sprintf-js",
+                      "version": "1.0.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476361",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[js-yaml:3.14.2]\\[argparse:1.0.10]\\[sprintf-js:1.0.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "BSD-3-Clause"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "esprima",
+                  "version": "4.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476294",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[js-yaml:3.14.2]\\[esprima:4.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-2-Clause"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "glob",
+              "version": "7.1.7",
+              "language": "JavaScript",
+              "id": "57811780265476223",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]"
+              ],
+              "licenses": [
+                {
+                  "name": "ISC"
+                }
+              ],
+              "children": [
+                {
+                  "name": "fs.realpath",
+                  "version": "1.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476295",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]\\[fs.realpath:1.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "ISC"
+                    }
+                  ]
+                },
+                {
+                  "name": "inflight",
+                  "version": "1.0.6",
+                  "language": "JavaScript",
+                  "id": "57811780265476296",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]\\[inflight:1.0.6]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "ISC"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "wrappy",
+                      "version": "1.0.2",
+                      "language": "JavaScript",
+                      "id": "57811780265476362",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]\\[inflight:1.0.6]\\[wrappy:1.0.2]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "ISC"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "inherits",
+                  "version": "2.0.4",
+                  "language": "JavaScript",
+                  "id": "57811780265476297",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]\\[inherits:2.0.4]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "WTFPL"
+                    }
+                  ]
+                },
+                {
+                  "name": "once",
+                  "version": "1.4.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476298",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]\\[once:1.4.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-1-Clause"
+                    }
+                  ]
+                },
+                {
+                  "name": "path-is-absolute",
+                  "version": "1.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476299",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[glob:7.1.7]\\[path-is-absolute:1.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "grunt-legacy-log",
+              "version": "3.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476224",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-log:3.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "colors",
+                  "version": "1.1.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476300",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-log:3.0.0]\\[colors:1.1.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "grunt-legacy-log-utils",
+                  "version": "2.1.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476301",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[grunt-legacy-log:3.0.0]\\[grunt-legacy-log-utils:2.1.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "iconv-lite",
+              "version": "0.6.3",
+              "language": "JavaScript",
+              "id": "57811780265476225",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[iconv-lite:0.6.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "safer-buffer",
+                  "version": "2.1.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476302",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[iconv-lite:0.6.3]\\[safer-buffer:2.1.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "minimatch",
+              "version": "3.0.8",
+              "language": "JavaScript",
+              "id": "57811780265476226",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[minimatch:3.0.8]"
+              ],
+              "licenses": [
+                {
+                  "name": "ISC"
+                }
+              ]
+            },
+            {
+              "name": "nopt",
+              "version": "3.0.6",
+              "language": "JavaScript",
+              "id": "57811780265476227",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[nopt:3.0.6]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "abbrev",
+                  "version": "1.1.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476303",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[nopt:3.0.6]\\[abbrev:1.1.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "ISC"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "dateformat",
+              "version": "4.6.3",
+              "language": "JavaScript",
+              "id": "57811780265476228",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[dateformat:4.6.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "eventemitter2",
+              "version": "0.4.14",
+              "language": "JavaScript",
+              "id": "57811780265476229",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt:1.6.1]\\[eventemitter2:0.4.14]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "grunt-cli",
+          "version": "1.5.0",
+          "language": "JavaScript",
+          "id": "57811780265476174",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "nopt",
+              "version": "5.0.0",
+              "language": "JavaScript",
+              "id": "57811780265476230",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[nopt:5.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "v8flags",
+              "version": "4.0.1",
+              "language": "JavaScript",
+              "id": "57811780265476231",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[v8flags:4.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "interpret",
+              "version": "1.1.0",
+              "language": "JavaScript",
+              "id": "57811780265476232",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[interpret:1.1.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "liftup",
+              "version": "3.0.1",
+              "language": "JavaScript",
+              "id": "57811780265476233",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "flagged-respawn",
+                  "version": "1.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476304",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[flagged-respawn:1.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "is-plain-object",
+                  "version": "2.0.4",
+                  "language": "JavaScript",
+                  "id": "57811780265476305",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[is-plain-object:2.0.4]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "isobject",
+                      "version": "3.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476363",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[is-plain-object:2.0.4]\\[isobject:3.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "object.map",
+                  "version": "1.0.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476306",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[object.map:1.0.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "for-own",
+                      "version": "1.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476364",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[object.map:1.0.1]\\[for-own:1.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "for-in",
+                          "version": "1.0.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476403",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[object.map:1.0.1]\\[for-own:1.0.0]\\[for-in:1.0.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "make-iterator",
+                      "version": "1.0.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476365",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[object.map:1.0.1]\\[make-iterator:1.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "kind-of",
+                          "version": "6.0.3",
+                          "language": "JavaScript",
+                          "id": "57811780265476404",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[object.map:1.0.1]\\[make-iterator:1.0.1]\\[kind-of:6.0.3]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "rechoir",
+                  "version": "0.7.1",
+                  "language": "JavaScript",
+                  "id": "57811780265476307",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[rechoir:0.7.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "resolve",
+                  "version": "1.22.11",
+                  "language": "JavaScript",
+                  "id": "57811780265476308",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[resolve:1.22.11]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "is-core-module",
+                      "version": "2.16.1",
+                      "language": "JavaScript",
+                      "id": "57811780265476366",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[resolve:1.22.11]\\[is-core-module:2.16.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "hasown",
+                          "version": "2.0.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476405",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[resolve:1.22.11]\\[is-core-module:2.16.1]\\[hasown:2.0.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "function-bind",
+                              "version": "1.1.2",
+                              "language": "JavaScript",
+                              "id": "57811780265476430",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[resolve:1.22.11]\\[is-core-module:2.16.1]\\[hasown:2.0.2]\\[function-bind:1.1.2]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "path-parse",
+                      "version": "1.0.7",
+                      "language": "JavaScript",
+                      "id": "57811780265476367",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[resolve:1.22.11]\\[path-parse:1.0.7]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "supports-preserve-symlinks-flag",
+                      "version": "1.0.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476368",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[resolve:1.22.11]\\[supports-preserve-symlinks-flag:1.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "extend",
+                  "version": "3.0.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476309",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[extend:3.0.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "findup-sync",
+                  "version": "4.0.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476310",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[findup-sync:4.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "fined",
+                  "version": "1.2.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476311",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "object.defaults",
+                      "version": "1.1.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476369",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[object.defaults:1.1.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "array-each",
+                          "version": "1.0.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476406",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[object.defaults:1.1.0]\\[array-each:1.0.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "array-slice",
+                          "version": "1.1.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476407",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[object.defaults:1.1.0]\\[array-slice:1.1.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "object.pick",
+                      "version": "1.3.0",
+                      "language": "JavaScript",
+                      "id": "57811780265476370",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[object.pick:1.3.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "parse-filepath",
+                      "version": "1.0.2",
+                      "language": "JavaScript",
+                      "id": "57811780265476371",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "is-absolute",
+                          "version": "1.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476408",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[is-absolute:1.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "is-relative",
+                              "version": "1.0.0",
+                              "language": "JavaScript",
+                              "id": "57811780265476431",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[is-absolute:1.0.0]\\[is-relative:1.0.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "name": "is-unc-path",
+                                  "version": "1.0.0",
+                                  "language": "JavaScript",
+                                  "id": "57811780265476439",
+                                  "dev": true,
+                                  "paths": [
+                                    "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[is-absolute:1.0.0]\\[is-relative:1.0.0]\\[is-unc-path:1.0.0]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ],
+                                  "children": [
+                                    {
+                                      "name": "unc-path-regex",
+                                      "version": "0.1.2",
+                                      "language": "JavaScript",
+                                      "id": "57811780265476442",
+                                      "dev": true,
+                                      "paths": [
+                                        "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[is-absolute:1.0.0]\\[is-relative:1.0.0]\\[is-unc-path:1.0.0]\\[unc-path-regex:0.1.2]"
+                                      ],
+                                      "licenses": [
+                                        {
+                                          "name": "MIT"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "map-cache",
+                          "version": "0.2.2",
+                          "language": "JavaScript",
+                          "id": "57811780265476409",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[map-cache:0.2.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "path-root",
+                          "version": "0.1.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476410",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[path-root:0.1.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "path-root-regex",
+                              "version": "0.1.2",
+                              "language": "JavaScript",
+                              "id": "57811780265476432",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt-cli:1.5.0]\\[liftup:3.0.1]\\[fined:1.2.0]\\[parse-filepath:1.0.2]\\[path-root:0.1.1]\\[path-root-regex:0.1.2]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "grunt-contrib-qunit",
+          "version": "10.1.1",
+          "language": "JavaScript",
+          "id": "57811780265476175",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "eventemitter2",
+              "version": "6.4.9",
+              "language": "JavaScript",
+              "id": "57811780265476234",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[eventemitter2:6.4.9]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "puppeteer",
+              "version": "22.15.0",
+              "language": "JavaScript",
+              "id": "57811780265476235",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "children": [
+                {
+                  "name": "puppeteer-core",
+                  "version": "22.15.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476312",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[puppeteer-core:22.15.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "chromium-bidi",
+                      "version": "0.6.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476372",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[puppeteer-core:22.15.0]\\[chromium-bidi:0.6.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "urlpattern-polyfill",
+                          "version": "10.0.0",
+                          "language": "JavaScript",
+                          "id": "57811780265476411",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[puppeteer-core:22.15.0]\\[chromium-bidi:0.6.3]\\[urlpattern-polyfill:10.0.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "zod",
+                          "version": "3.23.8",
+                          "language": "JavaScript",
+                          "id": "57811780265476412",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[puppeteer-core:22.15.0]\\[chromium-bidi:0.6.3]\\[zod:3.23.8]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "@puppeteer/browsers",
+                  "version": "2.3.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476313",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[@puppeteer\\browsers:2.3.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "unbzip2-stream",
+                      "version": "1.4.3",
+                      "language": "JavaScript",
+                      "id": "57811780265476373",
+                      "dev": true,
+                      "paths": [
+                        "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[@puppeteer\\browsers:2.3.0]\\[unbzip2-stream:1.4.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "through",
+                          "version": "2.3.8",
+                          "language": "JavaScript",
+                          "id": "57811780265476413",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[@puppeteer\\browsers:2.3.0]\\[unbzip2-stream:1.4.3]\\[through:2.3.8]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "buffer",
+                          "version": "5.7.1",
+                          "language": "JavaScript",
+                          "id": "57811780265476414",
+                          "dev": true,
+                          "paths": [
+                            "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[@puppeteer\\browsers:2.3.0]\\[unbzip2-stream:1.4.3]\\[buffer:5.7.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "ieee754",
+                              "version": "1.2.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476433",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[@puppeteer\\browsers:2.3.0]\\[unbzip2-stream:1.4.3]\\[buffer:5.7.1]\\[ieee754:1.2.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "base64-js",
+                              "version": "1.5.1",
+                              "language": "JavaScript",
+                              "id": "57811780265476434",
+                              "dev": true,
+                              "paths": [
+                                "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[@puppeteer\\browsers:2.3.0]\\[unbzip2-stream:1.4.3]\\[buffer:5.7.1]\\[base64-js:1.5.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "devtools-protocol",
+                  "version": "0.0.1312386",
+                  "language": "JavaScript",
+                  "id": "57811780265476314",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[grunt-contrib-qunit:10.1.1]\\[puppeteer:22.15.0]\\[devtools-protocol:0.0.1312386]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-3-Clause"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "qunit",
+          "version": "2.24.2",
+          "language": "JavaScript",
+          "id": "57811780265476176",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "django_django\\package.json\\[Django:]\\[qunit:2.24.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "commander",
+              "version": "7.2.0",
+              "language": "JavaScript",
+              "id": "57811780265476236",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[qunit:2.24.2]\\[commander:7.2.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "node-watch",
+              "version": "0.7.3",
+              "language": "JavaScript",
+              "id": "57811780265476237",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[qunit:2.24.2]\\[node-watch:0.7.3]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "tiny-glob",
+              "version": "0.2.9",
+              "language": "JavaScript",
+              "id": "57811780265476238",
+              "dev": true,
+              "paths": [
+                "django_django\\package.json\\[Django:]\\[qunit:2.24.2]\\[tiny-glob:0.2.9]"
+              ],
+              "licenses": [
+                {
+                  "name": "ISC"
+                }
+              ],
+              "children": [
+                {
+                  "name": "globalyzer",
+                  "version": "0.1.0",
+                  "language": "JavaScript",
+                  "id": "57811780265476315",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[qunit:2.24.2]\\[tiny-glob:0.2.9]\\[globalyzer:0.1.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "globrex",
+                  "version": "0.1.2",
+                  "language": "JavaScript",
+                  "id": "57811780265476316",
+                  "dev": true,
+                  "paths": [
+                    "django_django\\package.json\\[Django:]\\[qunit:2.24.2]\\[tiny-glob:0.2.9]\\[globrex:0.1.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811780265476108",
+      "direct": true,
+      "paths": [
+        "django_django\\package.json"
+      ]
+    },
+    {
+      "id": "57811780265476109",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\auth_tests\\fixtures\\natural.json"
+      ]
+    },
+    {
+      "id": "57811780265476110",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\auth_tests\\fixtures\\regular.json"
+      ]
+    },
+    {
+      "id": "57811780265476111",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\composite_pk\\fixtures\\tenant.json"
+      ]
+    },
+    {
+      "id": "57811780265476112",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\circular_reference.json"
+      ]
+    },
+    {
+      "id": "57811780265476113",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\circular_reference_natural_key.json"
+      ]
+    },
+    {
+      "id": "57811780265476114",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\db_fixture_1.default.json"
+      ]
+    },
+    {
+      "id": "57811780265476115",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\db_fixture_3.nosuchdb.json"
+      ]
+    },
+    {
+      "id": "57811780265476116",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture1.json"
+      ]
+    },
+    {
+      "id": "57811780265476117",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture2.json"
+      ]
+    },
+    {
+      "id": "57811780265476118",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture6.json"
+      ]
+    },
+    {
+      "id": "57811780265476119",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture8.json"
+      ]
+    },
+    {
+      "id": "57811780265476120",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\fixture_with[special]chars.json"
+      ]
+    },
+    {
+      "id": "57811780265476121",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\forward_reference_fk.json"
+      ]
+    },
+    {
+      "id": "57811780265476122",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\forward_reference_fk_natural_key.json"
+      ]
+    },
+    {
+      "id": "57811780265476123",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\forward_reference_m2m.json"
+      ]
+    },
+    {
+      "id": "57811780265476124",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\forward_reference_m2m_natural_key.json"
+      ]
+    },
+    {
+      "id": "57811780265476125",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\invalid.json"
+      ]
+    },
+    {
+      "id": "57811780265476126",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures\\fixtures\\null_character_in_field_value.json"
+      ]
+    },
+    {
+      "id": "57811780265476127",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_model_package\\fixtures\\model_package_fixture1.json"
+      ]
+    },
+    {
+      "id": "57811780265476128",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_model_package\\fixtures\\model_package_fixture2.json"
+      ]
+    },
+    {
+      "id": "57811780265476129",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\absolute.json"
+      ]
+    },
+    {
+      "id": "57811780265476130",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\big-fixture.json"
+      ]
+    },
+    {
+      "id": "57811780265476131",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\empty.json"
+      ]
+    },
+    {
+      "id": "57811780265476132",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\feature.json"
+      ]
+    },
+    {
+      "id": "57811780265476133",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\forward_ref.json"
+      ]
+    },
+    {
+      "id": "57811780265476134",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\forward_ref_bad_data.json"
+      ]
+    },
+    {
+      "id": "57811780265476135",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\forward_ref_lookup.json"
+      ]
+    },
+    {
+      "id": "57811780265476136",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\m2mtoself.json"
+      ]
+    },
+    {
+      "id": "57811780265476137",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\model-inheritance.json"
+      ]
+    },
+    {
+      "id": "57811780265476138",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\nk-inheritance.json"
+      ]
+    },
+    {
+      "id": "57811780265476139",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\nk_with_foreign_key.json"
+      ]
+    },
+    {
+      "id": "57811780265476140",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\non_natural_1.json"
+      ]
+    },
+    {
+      "id": "57811780265476141",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\path.containing.dots.json"
+      ]
+    },
+    {
+      "id": "57811780265476142",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\sequence.json"
+      ]
+    },
+    {
+      "id": "57811780265476143",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\sequence_extra.json"
+      ]
+    },
+    {
+      "id": "57811780265476144",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\special-article.json"
+      ]
+    },
+    {
+      "id": "57811780265476145",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures\\thingy.json"
+      ]
+    },
+    {
+      "id": "57811780265476146",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures_1\\forward_ref_1.json"
+      ]
+    },
+    {
+      "id": "57811780265476147",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures_1\\inner\\absolute.json"
+      ]
+    },
+    {
+      "id": "57811780265476148",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\fixtures_regress\\fixtures_2\\forward_ref_2.json"
+      ]
+    },
+    {
+      "id": "57811780265476149",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\gis_tests\\data\\geometries.json"
+      ]
+    },
+    {
+      "id": "57811780265476150",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\gis_tests\\distapp\\fixtures\\initial.json"
+      ]
+    },
+    {
+      "id": "57811780265476151",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\gis_tests\\geogapp\\fixtures\\initial.json"
+      ]
+    },
+    {
+      "id": "57811780265476152",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\gis_tests\\relatedapp\\fixtures\\initial.json"
+      ]
+    },
+    {
+      "id": "57811780265476153",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\m2m_through_regress\\fixtures\\m2m_through.json"
+      ]
+    },
+    {
+      "id": "57811780265476154",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\multiple_database\\fixtures\\multidb-common.json"
+      ]
+    },
+    {
+      "id": "57811780265476155",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\multiple_database\\fixtures\\multidb.default.json"
+      ]
+    },
+    {
+      "id": "57811780265476156",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\multiple_database\\fixtures\\multidb.other.json"
+      ]
+    },
+    {
+      "id": "57811780265476157",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\multiple_database\\fixtures\\pets.json"
+      ]
+    },
+    {
+      "id": "57811780265476158",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\proxy_models\\fixtures\\mypeople.json"
+      ]
+    },
+    {
+      "id": "57811780265476159",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\servers\\fixtures\\testdata.json"
+      ]
+    },
+    {
+      "id": "57811780265476160",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\staticfiles_tests\\project\\documents\\staticfiles_v1.json"
+      ]
+    },
+    {
+      "id": "57811780265476161",
+      "direct": true,
+      "paths": [
+        "django_django\\tests\\test_utils\\fixtures\\person.json"
+      ]
+    }
+  ]
+}

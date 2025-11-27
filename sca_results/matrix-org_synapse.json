@@ -1,0 +1,1030 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "matrix-org_synapse",
+    "size": 0,
+    "start_time": "2025-11-27 21:50:04",
+    "end_time": "2025-11-27 21:50:06",
+    "cost_time": 1.8235540000000001
+  },
+  "id": "57811815790018560",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811815790018561",
+      "direct": true,
+      "paths": [
+        "matrix-org_synapse\\tests\\test_utils\\logging_setup.py"
+      ]
+    },
+    {
+      "language": "Rust",
+      "id": "57811815790018562",
+      "direct": true,
+      "paths": [
+        "matrix-org_synapse\\Cargo.lock"
+      ],
+      "children": [
+        {
+          "name": "synapse",
+          "version": "0.1.0",
+          "language": "Rust",
+          "id": "57811815790018567",
+          "direct": true,
+          "paths": [
+            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "anyhow",
+              "version": "1.0.75",
+              "language": "Rust",
+              "id": "57811815790018568",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[anyhow:1.0.75]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "blake2",
+              "version": "0.10.6",
+              "language": "Rust",
+              "id": "57811815790018569",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "digest",
+                  "version": "0.10.5",
+                  "language": "Rust",
+                  "id": "57811815790018579",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "block-buffer",
+                      "version": "0.10.3",
+                      "language": "Rust",
+                      "id": "57811815790018597",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]\\[block-buffer:0.10.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "generic-array",
+                          "version": "0.14.6",
+                          "language": "Rust",
+                          "id": "57811815790018609",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]\\[block-buffer:0.10.3]\\[generic-array:0.14.6]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "version_check",
+                              "version": "0.9.4",
+                              "language": "Rust",
+                              "id": "57811815790018617",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]\\[block-buffer:0.10.3]\\[generic-array:0.14.6]\\[version_check:0.9.4]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "crypto-common",
+                      "version": "0.1.6",
+                      "language": "Rust",
+                      "id": "57811815790018598",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]\\[crypto-common:0.1.6]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "typenum",
+                          "version": "1.15.0",
+                          "language": "Rust",
+                          "id": "57811815790018610",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]\\[crypto-common:0.1.6]\\[typenum:1.15.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "Apache-2.0"
+                            },
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "subtle",
+                      "version": "2.4.1",
+                      "language": "Rust",
+                      "id": "57811815790018599",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[blake2:0.10.6]\\[digest:0.10.5]\\[subtle:2.4.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "BSD-3-Clause"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "hex",
+              "version": "0.4.3",
+              "language": "Rust",
+              "id": "57811815790018570",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[hex:0.4.3]"
+              ]
+            },
+            {
+              "name": "lazy_static",
+              "version": "1.4.0",
+              "language": "Rust",
+              "id": "57811815790018571",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[lazy_static:1.4.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "log",
+              "version": "0.4.20",
+              "language": "Rust",
+              "id": "57811815790018572",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[log:0.4.20]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "pyo3",
+              "version": "0.20.0",
+              "language": "Rust",
+              "id": "57811815790018573",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "children": [
+                {
+                  "name": "cfg-if",
+                  "version": "1.0.0",
+                  "language": "Rust",
+                  "id": "57811815790018580",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[cfg-if:1.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "indoc",
+                  "version": "2.0.4",
+                  "language": "Rust",
+                  "id": "57811815790018581",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[indoc:2.0.4]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "libc",
+                  "version": "0.2.135",
+                  "language": "Rust",
+                  "id": "57811815790018582",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[libc:0.2.135]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "memoffset",
+                  "version": "0.9.0",
+                  "language": "Rust",
+                  "id": "57811815790018583",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[memoffset:0.9.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "autocfg",
+                      "version": "1.1.0",
+                      "language": "Rust",
+                      "id": "57811815790018600",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[memoffset:0.9.0]\\[autocfg:1.1.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "parking_lot",
+                  "version": "0.12.1",
+                  "language": "Rust",
+                  "id": "57811815790018584",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "lock_api",
+                      "version": "0.4.9",
+                      "language": "Rust",
+                      "id": "57811815790018601",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[lock_api:0.4.9]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "scopeguard",
+                          "version": "1.1.0",
+                          "language": "Rust",
+                          "id": "57811815790018611",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[lock_api:0.4.9]\\[scopeguard:1.1.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "Apache-2.0"
+                            },
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "parking_lot_core",
+                      "version": "0.9.3",
+                      "language": "Rust",
+                      "id": "57811815790018602",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "redox_syscall",
+                          "version": "0.2.16",
+                          "language": "Rust",
+                          "id": "57811815790018612",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[redox_syscall:0.2.16]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "bitflags",
+                              "version": "1.3.2",
+                              "language": "Rust",
+                              "id": "57811815790018618",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[redox_syscall:0.2.16]\\[bitflags:1.3.2]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "smallvec",
+                          "version": "1.10.0",
+                          "language": "Rust",
+                          "id": "57811815790018613",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[smallvec:1.10.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "Apache-2.0"
+                            },
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "windows-sys",
+                          "version": "0.36.1",
+                          "language": "Rust",
+                          "id": "57811815790018614",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[windows-sys:0.36.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "Apache-2.0"
+                            },
+                            {
+                              "name": "MIT"
+                            }
+                          ],
+                          "children": [
+                            {
+                              "name": "windows_aarch64_msvc",
+                              "version": "0.36.1",
+                              "language": "Rust",
+                              "id": "57811815790018619",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[windows-sys:0.36.1]\\[windows_aarch64_msvc:0.36.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "windows_i686_gnu",
+                              "version": "0.36.1",
+                              "language": "Rust",
+                              "id": "57811815790018620",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[windows-sys:0.36.1]\\[windows_i686_gnu:0.36.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "windows_i686_msvc",
+                              "version": "0.36.1",
+                              "language": "Rust",
+                              "id": "57811815790018621",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[windows-sys:0.36.1]\\[windows_i686_msvc:0.36.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "windows_x86_64_gnu",
+                              "version": "0.36.1",
+                              "language": "Rust",
+                              "id": "57811815790018622",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[windows-sys:0.36.1]\\[windows_x86_64_gnu:0.36.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "windows_x86_64_msvc",
+                              "version": "0.36.1",
+                              "language": "Rust",
+                              "id": "57811815790018623",
+                              "paths": [
+                                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[parking_lot:0.12.1]\\[parking_lot_core:0.9.3]\\[windows-sys:0.36.1]\\[windows_x86_64_msvc:0.36.1]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "Apache-2.0"
+                                },
+                                {
+                                  "name": "MIT"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "pyo3-build-config",
+                  "version": "0.20.0",
+                  "language": "Rust",
+                  "id": "57811815790018585",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-build-config:0.20.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "once_cell",
+                      "version": "1.15.0",
+                      "language": "Rust",
+                      "id": "57811815790018603",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-build-config:0.20.0]\\[once_cell:1.15.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "target-lexicon",
+                      "version": "0.12.4",
+                      "language": "Rust",
+                      "id": "57811815790018604",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-build-config:0.20.0]\\[target-lexicon:0.12.4]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "LLVM-Exception-to-Apache-2.0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "pyo3-ffi",
+                  "version": "0.20.0",
+                  "language": "Rust",
+                  "id": "57811815790018586",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-ffi:0.20.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    }
+                  ]
+                },
+                {
+                  "name": "pyo3-macros",
+                  "version": "0.20.0",
+                  "language": "Rust",
+                  "id": "57811815790018587",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "proc-macro2",
+                      "version": "1.0.64",
+                      "language": "Rust",
+                      "id": "57811815790018605",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]\\[proc-macro2:1.0.64]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "unicode-ident",
+                          "version": "1.0.5",
+                          "language": "Rust",
+                          "id": "57811815790018615",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]\\[proc-macro2:1.0.64]\\[unicode-ident:1.0.5]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "Apache-2.0"
+                            },
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "pyo3-macros-backend",
+                      "version": "0.20.0",
+                      "language": "Rust",
+                      "id": "57811815790018606",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]\\[pyo3-macros-backend:0.20.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "heck",
+                          "version": "0.4.1",
+                          "language": "Rust",
+                          "id": "57811815790018616",
+                          "paths": [
+                            "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]\\[pyo3-macros-backend:0.20.0]\\[heck:0.4.1]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "Apache-2.0"
+                            },
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "quote",
+                      "version": "1.0.29",
+                      "language": "Rust",
+                      "id": "57811815790018607",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]\\[quote:1.0.29]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "syn",
+                      "version": "2.0.28",
+                      "language": "Rust",
+                      "id": "57811815790018608",
+                      "paths": [
+                        "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[pyo3-macros:0.20.0]\\[syn:2.0.28]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "Apache-2.0"
+                        },
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "unindent",
+                  "version": "0.2.3",
+                  "language": "Rust",
+                  "id": "57811815790018588",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3:0.20.0]\\[unindent:0.2.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pyo3-log",
+              "version": "0.9.0",
+              "language": "Rust",
+              "id": "57811815790018574",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3-log:0.9.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "arc-swap",
+                  "version": "1.5.1",
+                  "language": "Rust",
+                  "id": "57811815790018589",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pyo3-log:0.9.0]\\[arc-swap:1.5.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "pythonize",
+              "version": "0.20.0",
+              "language": "Rust",
+              "id": "57811815790018575",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[pythonize:0.20.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "regex",
+              "version": "1.9.6",
+              "language": "Rust",
+              "id": "57811815790018576",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[regex:1.9.6]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "aho-corasick",
+                  "version": "1.0.2",
+                  "language": "Rust",
+                  "id": "57811815790018590",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[regex:1.9.6]\\[aho-corasick:1.0.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    },
+                    {
+                      "name": "Unlicense"
+                    }
+                  ]
+                },
+                {
+                  "name": "memchr",
+                  "version": "2.6.3",
+                  "language": "Rust",
+                  "id": "57811815790018591",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[regex:1.9.6]\\[memchr:2.6.3]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    },
+                    {
+                      "name": "Unlicense"
+                    }
+                  ]
+                },
+                {
+                  "name": "regex-automata",
+                  "version": "0.3.9",
+                  "language": "Rust",
+                  "id": "57811815790018592",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[regex:1.9.6]\\[regex-automata:0.3.9]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    },
+                    {
+                      "name": "Unlicense"
+                    }
+                  ]
+                },
+                {
+                  "name": "regex-syntax",
+                  "version": "0.7.5",
+                  "language": "Rust",
+                  "id": "57811815790018593",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[regex:1.9.6]\\[regex-syntax:0.7.5]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "serde",
+              "version": "1.0.193",
+              "language": "Rust",
+              "id": "57811815790018577",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[serde:1.0.193]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "serde_derive",
+                  "version": "1.0.193",
+                  "language": "Rust",
+                  "id": "57811815790018594",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[serde:1.0.193]\\[serde_derive:1.0.193]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "serde_json",
+              "version": "1.0.108",
+              "language": "Rust",
+              "id": "57811815790018578",
+              "paths": [
+                "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[serde_json:1.0.108]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                },
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "itoa",
+                  "version": "1.0.4",
+                  "language": "Rust",
+                  "id": "57811815790018595",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[serde_json:1.0.108]\\[itoa:1.0.4]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "ryu",
+                  "version": "1.0.11",
+                  "language": "Rust",
+                  "id": "57811815790018596",
+                  "paths": [
+                    "matrix-org_synapse\\Cargo.lock\\[synapse:0.1.0]\\[serde_json:1.0.108]\\[ryu:1.0.11]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "Apache-2.0"
+                    },
+                    {
+                      "name": "BSL-1.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811815790018563",
+      "direct": true,
+      "paths": [
+        "matrix-org_synapse\\contrib\\grafana\\synapse.json"
+      ]
+    },
+    {
+      "id": "57811815790018564",
+      "direct": true,
+      "paths": [
+        "matrix-org_synapse\\contrib\\lnav\\synapse-log-format.json"
+      ]
+    },
+    {
+      "id": "57811815790018565",
+      "direct": true,
+      "paths": [
+        "matrix-org_synapse\\contrib\\vertobot\\verto-example.json"
+      ]
+    },
+    {
+      "id": "57811815790018566",
+      "direct": true,
+      "paths": [
+        "matrix-org_synapse\\synapse\\res\\providers.json"
+      ]
+    }
+  ]
+}

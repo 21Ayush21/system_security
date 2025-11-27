@@ -1,0 +1,167 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "vyperlang_vyper",
+    "size": 0,
+    "start_time": "2025-11-27 21:59:19",
+    "end_time": "2025-11-27 21:59:21",
+    "cost_time": 1.8003624999999999
+  },
+  "id": "57811833977274368",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811833977274369",
+      "direct": true,
+      "paths": [
+        "vyperlang_vyper\\requirements-docs.txt"
+      ],
+      "children": [
+        {
+          "name": "shibuya",
+          "version": "2024.1.17",
+          "language": "Python",
+          "id": "57811833977274372",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\requirements-docs.txt\\[shibuya:2024.1.17]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx",
+          "version": "7.2.6",
+          "language": "Python",
+          "id": "57811833977274373",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\requirements-docs.txt\\[sphinx:7.2.6]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-copybutton",
+          "version": "0.5.2",
+          "language": "Python",
+          "id": "57811833977274374",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\requirements-docs.txt\\[sphinx-copybutton:0.5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811833977274370",
+      "direct": true,
+      "paths": [
+        "vyperlang_vyper\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "cbor2\u003e=5.4.6,\u003c6",
+          "language": "Python",
+          "id": "57811833977274375",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\setup.py\\[cbor2\u003e=5.4.6,\u003c6:]"
+          ]
+        },
+        {
+          "name": "pycryptodome\u003e=3.5.1,\u003c4",
+          "language": "Python",
+          "id": "57811833977274376",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\setup.py\\[pycryptodome\u003e=3.5.1,\u003c4:]"
+          ]
+        },
+        {
+          "name": "packaging\u003e=23.1",
+          "language": "Python",
+          "id": "57811833977274377",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\setup.py\\[packaging\u003e=23.1:]"
+          ]
+        },
+        {
+          "name": "lark\u003e=1.0.0,\u003c2",
+          "language": "Python",
+          "id": "57811833977274378",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\setup.py\\[lark\u003e=1.0.0,\u003c2:]"
+          ]
+        },
+        {
+          "name": "wheel",
+          "language": "Python",
+          "id": "57811833977274379",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\setup.py\\[wheel:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python 安全漏洞",
+              "id": "XMIRROR-E5B714FC-31AACB95",
+              "cve_id": "CVE-2022-40898",
+              "cnnvd_id": "CNNVD-202212-3795",
+              "cwe_id": "CWE-20",
+              "description": "Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。\r\nPython Packaging Authority (PyPA) Wheel 0.37.1版本及之前版本存在安全漏洞。攻击者利用该漏洞通过控制Wheel cli输入导致拒绝服务。",
+              "suggestion": "目前官方已有可更新版本，建议受影响用户升级至最新版本",
+              "attack_type": "远程",
+              "release_date": "2022-12-22",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "immutables",
+          "language": "Python",
+          "id": "57811833977274380",
+          "direct": true,
+          "paths": [
+            "vyperlang_vyper\\setup.py\\[immutables:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "id": "57811833977274371",
+      "direct": true,
+      "paths": [
+        "vyperlang_vyper\\FUNDING.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 1
+}

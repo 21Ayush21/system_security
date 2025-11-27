@@ -1,0 +1,489 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "jumpserver_jumpserver",
+    "size": 0,
+    "start_time": "2025-11-27 21:49:56",
+    "end_time": "2025-11-27 21:50:00",
+    "cost_time": 3.7887889
+  },
+  "id": "57811815602192384",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811815602192385",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\accounts\\demos\\python\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "requests",
+          "language": "Python",
+          "id": "57811815602192434",
+          "direct": true,
+          "paths": [
+            "jumpserver_jumpserver\\apps\\accounts\\demos\\python\\setup.py\\[requests:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C64195",
+              "cve_id": "CVE-2014-1829",
+              "cnnvd_id": "CNNVD-201410-320",
+              "cnvd_id": "CNVD-2014-07159",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Authorization头利用该漏洞获取‘netrc’密码。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://python-requests.org/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FF1AD95",
+              "cve_id": "CVE-2018-18074",
+              "cnnvd_id": "CNNVD-201810-457",
+              "cnvd_id": "CNVD-2018-26002",
+              "cwe_id": "CWE-522",
+              "description": "Requests package for Python是一款基于Python的开源HTTP库。\r\r\nRequests package for Python 2.19.1及之前版本（2018-09-14之前发布）中存在安全漏洞，该漏洞源于程序在接收到从https转换到http的重定向请求（带有相同主机名）时，会将HTTP Authorization包头发送到http URI。远程攻击者可通过嗅探网络利用该漏洞获取凭证。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "attack_type": "远程",
+              "release_date": "2018-10-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3EF9B02B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\r\n[`requests`](https://pypi.python.org/pypi/requests) is a Python HTTP for Humans.\r\n\r\nAffected versions of this package are vulnerable to Denial of Service (DoS) attacks. When sending a digest with an incorrect password, it will retry the request for infinity. An attacker can send many of these requests, causing a denial of service.\r\n\r\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## References\r\n- [GitHub Issue](https://github.com/requests/requests/issues/541)\r\n- [GitHub PR](https://github.com/requests/requests/pull/547)\r\n- [GitHub Commit](https://github.com/requests/requests/pull/547/commits/c3e6c41fc164d4348f8ce197bd0075aff05637af)\r\n",
+              "attack_type": "远程",
+              "release_date": "2012-04-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C62C95",
+              "cve_id": "CVE-2014-1830",
+              "cnnvd_id": "CNNVD-201410-321",
+              "cnvd_id": "CNVD-2014-06355",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Proxy-Authorizatio头利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://github.com/kennethreitz/requests/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-5F34502B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to incorrect password used in conjunction with digest authentication. This can lead to an infinite request retry cycle\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `requests` to version 0.12.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/f3ad56f103e364671504bb0d960a0ed69c2eafbc)\n",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 0.12.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "httpsig",
+          "language": "Python",
+          "id": "57811815602192435",
+          "direct": true,
+          "paths": [
+            "jumpserver_jumpserver\\apps\\accounts\\demos\\python\\setup.py\\[httpsig:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 8
+    },
+    {
+      "id": "57811815602192386",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\.github\\.github\\issue-spam-config.json"
+      ]
+    },
+    {
+      "id": "57811815602192387",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\en.json"
+      ]
+    },
+    {
+      "id": "57811815602192388",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\es.json"
+      ]
+    },
+    {
+      "id": "57811815602192389",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\ja.json"
+      ]
+    },
+    {
+      "id": "57811815602192390",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\ko.json"
+      ]
+    },
+    {
+      "id": "57811815602192391",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\pt_br.json"
+      ]
+    },
+    {
+      "id": "57811815602192392",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\ru.json"
+      ]
+    },
+    {
+      "id": "57811815602192393",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\vi.json"
+      ]
+    },
+    {
+      "id": "57811815602192394",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\zh.json"
+      ]
+    },
+    {
+      "id": "57811815602192395",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\chen\\zh_hant.json"
+      ]
+    },
+    {
+      "id": "57811815602192396",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\en.json"
+      ]
+    },
+    {
+      "id": "57811815602192397",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\es.json"
+      ]
+    },
+    {
+      "id": "57811815602192398",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\ja.json"
+      ]
+    },
+    {
+      "id": "57811815602192399",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\ko.json"
+      ]
+    },
+    {
+      "id": "57811815602192400",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\pt_br.json"
+      ]
+    },
+    {
+      "id": "57811815602192401",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\ru.json"
+      ]
+    },
+    {
+      "id": "57811815602192402",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\vi.json"
+      ]
+    },
+    {
+      "id": "57811815602192403",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\zh.json"
+      ]
+    },
+    {
+      "id": "57811815602192404",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\koko\\zh_hant.json"
+      ]
+    },
+    {
+      "id": "57811815602192405",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\en.json"
+      ]
+    },
+    {
+      "id": "57811815602192406",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\es.json"
+      ]
+    },
+    {
+      "id": "57811815602192407",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\ja.json"
+      ]
+    },
+    {
+      "id": "57811815602192408",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\ko.json"
+      ]
+    },
+    {
+      "id": "57811815602192409",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\pt_br.json"
+      ]
+    },
+    {
+      "id": "57811815602192410",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\ru.json"
+      ]
+    },
+    {
+      "id": "57811815602192411",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\vi.json"
+      ]
+    },
+    {
+      "id": "57811815602192412",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\zh.json"
+      ]
+    },
+    {
+      "id": "57811815602192413",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lina\\zh_hant.json"
+      ]
+    },
+    {
+      "id": "57811815602192414",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\en.json"
+      ]
+    },
+    {
+      "id": "57811815602192415",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\es.json"
+      ]
+    },
+    {
+      "id": "57811815602192416",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\ja.json"
+      ]
+    },
+    {
+      "id": "57811815602192417",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\ko.json"
+      ]
+    },
+    {
+      "id": "57811815602192418",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\pt_br.json"
+      ]
+    },
+    {
+      "id": "57811815602192419",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\ru.json"
+      ]
+    },
+    {
+      "id": "57811815602192420",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\vi.json"
+      ]
+    },
+    {
+      "id": "57811815602192421",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\zh.json"
+      ]
+    },
+    {
+      "id": "57811815602192422",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\lion\\zh_Hant.json"
+      ]
+    },
+    {
+      "id": "57811815602192423",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\en.json"
+      ]
+    },
+    {
+      "id": "57811815602192424",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\es.json"
+      ]
+    },
+    {
+      "id": "57811815602192425",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\ja.json"
+      ]
+    },
+    {
+      "id": "57811815602192426",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\ko.json"
+      ]
+    },
+    {
+      "id": "57811815602192427",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\pt_br.json"
+      ]
+    },
+    {
+      "id": "57811815602192428",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\ru.json"
+      ]
+    },
+    {
+      "id": "57811815602192429",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\vi.json"
+      ]
+    },
+    {
+      "id": "57811815602192430",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\zh.json"
+      ]
+    },
+    {
+      "id": "57811815602192431",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\i18n\\luna\\zh_hant.json"
+      ]
+    },
+    {
+      "id": "57811815602192432",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\terminal\\applets\\chrome\\extensions\\disable_new_tab_window_menu\\manifest.json"
+      ]
+    },
+    {
+      "id": "57811815602192433",
+      "direct": true,
+      "paths": [
+        "jumpserver_jumpserver\\apps\\terminal\\applets\\chrome\\test_data_example.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 8
+}

@@ -1,0 +1,266 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "web2py_web2py",
+    "size": 0,
+    "start_time": "2025-11-27 21:59:21",
+    "end_time": "2025-11-27 21:59:23",
+    "cost_time": 2.0611794
+  },
+  "id": "57811834049527808",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811834049527809",
+      "direct": true,
+      "paths": [
+        "web2py_web2py\\docs\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "sphinxcontrib-napoleon",
+          "version": "\u003e=0.2.4",
+          "language": "Python",
+          "id": "57811834049527814",
+          "direct": true,
+          "paths": [
+            "web2py_web2py\\docs\\requirements.txt\\[sphinxcontrib-napoleon:\u003e=0.2.4]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811834049527810",
+      "direct": true,
+      "paths": [
+        "web2py_web2py\\requirements.gae.txt"
+      ],
+      "children": [
+        {
+          "name": "gunicorn",
+          "language": "Python",
+          "id": "57811834049527815",
+          "direct": true,
+          "paths": [
+            "web2py_web2py\\requirements.gae.txt\\[gunicorn:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Improper Input Validation",
+              "id": "XMIRROR-E5B77528-42652B2B",
+              "cwe_id": "CWE-20",
+              "description": "## Overview\n[gunicorn](http://gunicorn.org/) is a Python WSGI HTTP Server for UNIX\n\nAffected versions of this package are vulnerable to Improper Input Validation. Gunicorn fails with a 500, instead of a 400, when a request path is a malformed IPv6 address. This is due to no raise 'InvalidRequestLine' exception when the line contains malicious data.\n## Remediation\nUpgrade `gunicorn` to version 19.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/benoitc/gunicorn/commit/b951175c66c353d10127a20a62f61e834829856c)\n- [GitHub Issue](https://github.com/benoitc/gunicorn/issues/1023)\n",
+              "suggestion": "## Remediation\nUpgrade `gunicorn` to version 19.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-04-02",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "HTTP Request Smuggling",
+              "id": "XMIRROR-E5B77528-4820662B",
+              "cwe_id": "CWE-444",
+              "description": "## Overview\n[gunicorn](http://gunicorn.org/) is a Python WSGI HTTP Server for UNIX\n\nAffected versions of this package are vulnerable to HTTP Request Smuggling. It fails to properly process the `Transfer-Encoding` and `Content-Length` headers when both are present in a package request. This allows for conflicting information to be sent regarding the length of the package, which when processed by back-end servers under certain configurations would allow for malicious users to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users.\n## Remediation\nUpgrade `gunicorn` to version 19.10.0, 20.0.1 or higher.\n## References\n- [GitHub Commit](https://github.com/benoitc/gunicorn/commit/c5be1bae5c42b1e600be22d0655fc3ec4e4711cb)\n- [GitHub Issue](https://github.com/benoitc/gunicorn/issues/2176)\n- [GitHub PR](https://github.com/benoitc/gunicorn/pull/2181)\n- [Gunicorn ChangeLog](https://docs.gunicorn.org/en/stable/news.html#id1)\n- [HTTP Request Smuggling Security Blog](https://portswigger.net/web-security/request-smuggling)\n",
+              "suggestion": "## Remediation\nUpgrade `gunicorn` to version 19.10.0, 20.0.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-01-09",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "gunicorn 安全漏洞",
+              "id": "XMIRROR-E5F7537E-85386495",
+              "cve_id": "CVE-2018-1000164",
+              "cnnvd_id": "CNNVD-201804-834",
+              "cnvd_id": "CNVD-2018-10227",
+              "cwe_id": "CWE-93",
+              "description": "gunicorn是一款基于UNIX平台的Python WSGI HTTP服务器软件。\r\n\r\ngunicorn 19.4.5版本中的nicorn/http/wsgi.py文件的‘process_headers’函数存在安全漏洞。攻击者可利用该漏洞造成服务器返回任意的HTTP包头。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/benoitc/gunicorn/issues/1227\n",
+              "attack_type": "远程",
+              "release_date": "2018-04-18",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gunicorn HTTP请求走私漏洞",
+              "id": "XMIRROR-E5B70F5F-800B8A95",
+              "cve_id": "CVE-2024-1135",
+              "cnnvd_id": "CNNVD-202404-2065",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python WSGI HTTP服务器，旨在处理网络请求并提供高性能的Web服务。该组件存在HTTP请求走私漏洞，原因在于对`Transfer-Encoding`标头的验证不当，攻击者可以通过构造包含相互冲突的`Transfer-Encoding`标头的请求，从而绕过安全限制，访问受限的端点。此漏洞的触发条件是用户的网络路径未能过滤无效请求。",
+              "suggestion": "建议立即升级Gunicorn至22.0.0或更高版本，以修复此漏洞。此外，用户应通过防火墙或其他机制限制对受限端点的访问，直至开发出有效修复方案。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gunicorn HTTP Request Smuggling Vulnerability",
+              "id": "XMIRROR-E5B70F5F-802AEE95",
+              "cve_id": "CVE-2024-6827",
+              "cnnvd_id": "CNNVD-202503-2317",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python Web服务器网关接口（WSGI）HTTP服务器。Gunicorn版本21.2.0未能正确验证'Transfer-Encoding'头的值，导致在RFC标准中规定的默认回退方法为'Content-Length'，使其易受TE.CL请求夹带攻击。攻击者可以通过构造特定的HTTP请求来利用此漏洞，造成缓存中毒、数据泄露、会话操纵、SSRF、XSS、DoS、数据完整性损害、安全绕过、信息泄漏和业务逻辑滥用等问题。",
+              "suggestion": "应立即升级到Gunicorn的23.0.0或更高版本，以修复此安全漏洞。如果不能立即升级，建议对流量进行严格监控和过滤，并限制对受影响服务的访问。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 5
+        },
+        {
+          "name": "firebase_admin",
+          "language": "Python",
+          "id": "57811834049527816",
+          "direct": true,
+          "paths": [
+            "web2py_web2py\\requirements.gae.txt\\[firebase_admin:]"
+          ]
+        },
+        {
+          "name": "google-cloud-firestore",
+          "language": "Python",
+          "id": "57811834049527817",
+          "direct": true,
+          "paths": [
+            "web2py_web2py\\requirements.gae.txt\\[google-cloud-firestore:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 5
+    },
+    {
+      "language": "Python",
+      "id": "57811834049527811",
+      "direct": true,
+      "paths": [
+        "web2py_web2py\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "gunicorn",
+          "language": "Python",
+          "id": "57811834049527818",
+          "direct": true,
+          "paths": [
+            "web2py_web2py\\requirements.txt\\[gunicorn:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Improper Input Validation",
+              "id": "XMIRROR-E5B77528-42652B2B",
+              "cwe_id": "CWE-20",
+              "description": "## Overview\n[gunicorn](http://gunicorn.org/) is a Python WSGI HTTP Server for UNIX\n\nAffected versions of this package are vulnerable to Improper Input Validation. Gunicorn fails with a 500, instead of a 400, when a request path is a malformed IPv6 address. This is due to no raise 'InvalidRequestLine' exception when the line contains malicious data.\n## Remediation\nUpgrade `gunicorn` to version 19.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/benoitc/gunicorn/commit/b951175c66c353d10127a20a62f61e834829856c)\n- [GitHub Issue](https://github.com/benoitc/gunicorn/issues/1023)\n",
+              "suggestion": "## Remediation\nUpgrade `gunicorn` to version 19.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-04-02",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "HTTP Request Smuggling",
+              "id": "XMIRROR-E5B77528-4820662B",
+              "cwe_id": "CWE-444",
+              "description": "## Overview\n[gunicorn](http://gunicorn.org/) is a Python WSGI HTTP Server for UNIX\n\nAffected versions of this package are vulnerable to HTTP Request Smuggling. It fails to properly process the `Transfer-Encoding` and `Content-Length` headers when both are present in a package request. This allows for conflicting information to be sent regarding the length of the package, which when processed by back-end servers under certain configurations would allow for malicious users to bypass security controls, gain unauthorized access to sensitive data, and directly compromise other application users.\n## Remediation\nUpgrade `gunicorn` to version 19.10.0, 20.0.1 or higher.\n## References\n- [GitHub Commit](https://github.com/benoitc/gunicorn/commit/c5be1bae5c42b1e600be22d0655fc3ec4e4711cb)\n- [GitHub Issue](https://github.com/benoitc/gunicorn/issues/2176)\n- [GitHub PR](https://github.com/benoitc/gunicorn/pull/2181)\n- [Gunicorn ChangeLog](https://docs.gunicorn.org/en/stable/news.html#id1)\n- [HTTP Request Smuggling Security Blog](https://portswigger.net/web-security/request-smuggling)\n",
+              "suggestion": "## Remediation\nUpgrade `gunicorn` to version 19.10.0, 20.0.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-01-09",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "gunicorn 安全漏洞",
+              "id": "XMIRROR-E5F7537E-85386495",
+              "cve_id": "CVE-2018-1000164",
+              "cnnvd_id": "CNNVD-201804-834",
+              "cnvd_id": "CNVD-2018-10227",
+              "cwe_id": "CWE-93",
+              "description": "gunicorn是一款基于UNIX平台的Python WSGI HTTP服务器软件。\r\n\r\ngunicorn 19.4.5版本中的nicorn/http/wsgi.py文件的‘process_headers’函数存在安全漏洞。攻击者可利用该漏洞造成服务器返回任意的HTTP包头。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/benoitc/gunicorn/issues/1227\n",
+              "attack_type": "远程",
+              "release_date": "2018-04-18",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gunicorn HTTP请求走私漏洞",
+              "id": "XMIRROR-E5B70F5F-800B8A95",
+              "cve_id": "CVE-2024-1135",
+              "cnnvd_id": "CNNVD-202404-2065",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python WSGI HTTP服务器，旨在处理网络请求并提供高性能的Web服务。该组件存在HTTP请求走私漏洞，原因在于对`Transfer-Encoding`标头的验证不当，攻击者可以通过构造包含相互冲突的`Transfer-Encoding`标头的请求，从而绕过安全限制，访问受限的端点。此漏洞的触发条件是用户的网络路径未能过滤无效请求。",
+              "suggestion": "建议立即升级Gunicorn至22.0.0或更高版本，以修复此漏洞。此外，用户应通过防火墙或其他机制限制对受限端点的访问，直至开发出有效修复方案。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gunicorn HTTP Request Smuggling Vulnerability",
+              "id": "XMIRROR-E5B70F5F-802AEE95",
+              "cve_id": "CVE-2024-6827",
+              "cnnvd_id": "CNNVD-202503-2317",
+              "cwe_id": "CWE-444",
+              "description": "Gunicorn是一个开源的Python Web服务器网关接口（WSGI）HTTP服务器。Gunicorn版本21.2.0未能正确验证'Transfer-Encoding'头的值，导致在RFC标准中规定的默认回退方法为'Content-Length'，使其易受TE.CL请求夹带攻击。攻击者可以通过构造特定的HTTP请求来利用此漏洞，造成缓存中毒、数据泄露、会话操纵、SSRF、XSS、DoS、数据完整性损害、安全绕过、信息泄漏和业务逻辑滥用等问题。",
+              "suggestion": "应立即升级到Gunicorn的23.0.0或更高版本，以修复此安全漏洞。如果不能立即升级，建议对流量进行严格监控和过滤，并限制对受影响服务的访问。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 5
+        },
+        {
+          "name": "google-cloud-firestore",
+          "language": "Python",
+          "id": "57811834049527819",
+          "direct": true,
+          "paths": [
+            "web2py_web2py\\requirements.txt\\[google-cloud-firestore:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 5
+    },
+    {
+      "id": "57811834049527812",
+      "direct": true,
+      "paths": [
+        "web2py_web2py\\applications\\examples\\views\\generic.json"
+      ]
+    },
+    {
+      "id": "57811834049527813",
+      "direct": true,
+      "paths": [
+        "web2py_web2py\\applications\\welcome\\views\\generic.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 5
+}

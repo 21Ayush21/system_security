@@ -1,0 +1,1008 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "numpy_numpy",
+    "size": 0,
+    "start_time": "2025-11-27 21:52:53",
+    "end_time": "2025-11-27 21:52:55",
+    "cost_time": 1.9054552999999999
+  },
+  "id": "57811821338558464",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811821338558465",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\numpy\\_core\\tests\\examples\\cython\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558466",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\numpy\\_core\\tests\\examples\\limited_api\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558467",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\all_requirements.txt"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558468",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\build_requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "meson-python",
+          "version": "\u003e=0.13.1",
+          "language": "Python",
+          "id": "57811821338558479",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\build_requirements.txt\\[meson-python:\u003e=0.13.1]"
+          ]
+        },
+        {
+          "name": "Cython",
+          "version": "\u003e=3.0.6",
+          "language": "Python",
+          "id": "57811821338558480",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\build_requirements.txt\\[Cython:\u003e=3.0.6]"
+          ]
+        },
+        {
+          "name": "ninja",
+          "language": "Python",
+          "id": "57811821338558481",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\build_requirements.txt\\[ninja:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "spin",
+          "version": "0.15",
+          "language": "Python",
+          "id": "57811821338558482",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\build_requirements.txt\\[spin:0.15]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            },
+            {
+              "name": "unknown"
+            },
+            {
+              "name": "bsd-new"
+            }
+          ]
+        },
+        {
+          "name": "build",
+          "language": "Python",
+          "id": "57811821338558483",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\build_requirements.txt\\[build:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558469",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\ci32_requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "spin",
+          "version": "0.15",
+          "language": "Python",
+          "id": "57811821338558484",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\ci32_requirements.txt\\[spin:0.15]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            },
+            {
+              "name": "unknown"
+            },
+            {
+              "name": "bsd-new"
+            }
+          ]
+        },
+        {
+          "name": "scipy-openblas32",
+          "version": "0.3.30.0.7",
+          "language": "Python",
+          "id": "57811821338558485",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\ci32_requirements.txt\\[scipy-openblas32:0.3.30.0.7]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558470",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\ci_requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "spin",
+          "version": "0.15",
+          "language": "Python",
+          "id": "57811821338558486",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\ci_requirements.txt\\[spin:0.15]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            },
+            {
+              "name": "unknown"
+            },
+            {
+              "name": "bsd-new"
+            }
+          ]
+        },
+        {
+          "name": "scipy-openblas32",
+          "version": "0.3.30.0.7",
+          "language": "Python",
+          "id": "57811821338558487",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\ci_requirements.txt\\[scipy-openblas32:0.3.30.0.7]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "scipy-openblas64",
+          "version": "0.3.30.0.7",
+          "language": "Python",
+          "id": "57811821338558488",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\ci_requirements.txt\\[scipy-openblas64:0.3.30.0.7]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558471",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\doc_requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "sphinx",
+          "version": "7.2.6",
+          "language": "Python",
+          "id": "57811821338558489",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[sphinx:7.2.6]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "numpydoc",
+          "version": "1.4",
+          "language": "Python",
+          "id": "57811821338558490",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[numpydoc:1.4]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pydata-sphinx-theme",
+          "version": "\u003e=0.15.2",
+          "language": "Python",
+          "id": "57811821338558491",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[pydata-sphinx-theme:\u003e=0.15.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-copybutton",
+          "language": "Python",
+          "id": "57811821338558492",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[sphinx-copybutton:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-design",
+          "language": "Python",
+          "id": "57811821338558493",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[sphinx-design:]"
+          ]
+        },
+        {
+          "name": "scipy",
+          "language": "Python",
+          "id": "57811821338558494",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[scipy:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "SciPy 安全漏洞",
+              "id": "XMIRROR-E5B70FC1-14992695",
+              "cve_id": "CVE-2013-4251",
+              "cnnvd_id": "CNNVD-201310-265",
+              "cwe_id": "CWE-269",
+              "description": "SciPy是SciPy社区的所开发的一个开源的Python算法库和数学、科学、工程计算包，它包含了线性代数、积分、特殊函数等计算模块。\r\nSciPy 0.12.1之前版本中存在安全漏洞。本地攻击者可利用该漏洞以运行‘scipy.weave’组件的用户权限执行任意代码。",
+              "suggestion": "通用方案： 用户可联系供应商获得补丁信息：http://www.scipy.org/\n",
+              "attack_type": "本地",
+              "release_date": "2013-10-17",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "SciPy 资源管理错误漏洞",
+              "id": "XMIRROR-E5B7141B-8885BF95",
+              "cve_id": "CVE-2023-29824",
+              "cnnvd_id": "CNNVD-202307-454",
+              "cwe_id": "CWE-416",
+              "description": "SciPy是Scipy社区的所开发的一个开源的Python算法库和数学、科学、工程计算包，它包含了线性代数、积分、特殊函数等计算模块。\r\nSciPy 1.8.0之前版本存在安全漏洞，该漏洞源于Py_FindObjects()函数存在内存释放后重用问题。",
+              "suggestion": "## Remediation\nUpgrade `SLES:15.4` `python3-scipy-gnu-hpc` to version 1.3.3-150200.5.3.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-07-06",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "SciPy 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88A79C95",
+              "cve_id": "CVE-2023-25399",
+              "cnnvd_id": "CNNVD-202307-200",
+              "cwe_id": "CWE-401",
+              "description": "SciPy是Scipy社区的所开发的一个开源的Python算法库和数学、科学、工程计算包，它包含了线性代数、积分、特殊函数等计算模块。\r\nSciPy 存在安全漏洞，该漏洞源于在Py_FindObjects()函数中存在导致潜在内存泄漏的重新计数问题。",
+              "suggestion": "升级到最新版",
+              "attack_type": "本地",
+              "release_date": "2023-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "matplotlib",
+          "version": "!=3.10.6",
+          "language": "Python",
+          "id": "57811821338558495",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[matplotlib:!=3.10.6]"
+          ]
+        },
+        {
+          "name": "pandas",
+          "language": "Python",
+          "id": "57811821338558496",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[pandas:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "pandas 代码问题漏洞",
+              "id": "XMIRROR-E5B71403-473F9395",
+              "cve_id": "CVE-2020-13091",
+              "cnnvd_id": "CNNVD-202005-833",
+              "cnvd_id": "CNVD-2020-33500",
+              "cwe_id": "CWE-502",
+              "description": "pandas是一款基于Python语言的开源数据分析和处理工具。\r\npandas 1.0.3及之前版本中存在代码问题漏洞。攻击者可利用该漏洞执行命令。",
+              "suggestion": "通用方案： 厂商尚未提供漏洞修复方案，请关注厂商主页更新： https://pandas.pydata.org/\n",
+              "attack_type": "远程",
+              "release_date": "2020-05-15",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "SQL Injection",
+              "id": "XMIRROR-E5B77528-A555642B",
+              "cwe_id": "CWE-89",
+              "description": "## Overview\n[pandas](https://pypi.org/project/pandas/) is a Python package providing data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive.\n\nAffected versions of this package are vulnerable to SQL Injection via `sql.py`, due to improper input sanitization.\n## Remediation\nUpgrade `pandas` to version 0.16.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pandas-dev/pandas/commit/a774ee84485412459f7205cccd87b639022afd07)\n- [GitHub PR](https://github.com/pandas-dev/pandas/pull/8986)\n",
+              "suggestion": "## Remediation\nUpgrade `pandas` to version 0.16.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-09-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pandas命令注入漏洞",
+              "id": "XMIRROR-E5B70F5F-80568695",
+              "cve_id": "CVE-2024-9880",
+              "cnnvd_id": "CNNVD-202503-2441",
+              "cnvd_id": "CNVD-2024-46012",
+              "cwe_id": "CWE-77",
+              "description": "Pandas是一个开源的Python数据分析与处理库，提供高效的数据结构与数据分析工具。此漏洞存在于pandas.DataFrame.query()函数，攻击者可以通过构造恶意查询来执行任意命令。该漏洞源于对用户输入验证不足，特别是在使用'python'引擎时，导致可能的远程命令执行。",
+              "suggestion": "由于当前未提供修复版本，建议密切关注官方更新。同时，应限制对应用程序接口的访问，确保输入验证机制的加强，以预防此类漏洞的发生。可考虑使用参数化查询或其他安全编码实践。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "pandas 本地文件包含漏洞",
+              "id": "XMIRROR-E5F5415F-804AD31D",
+              "description": "\u003cp\u003epandas 是一个流行的 Python 数据分析库，提供高效的数据操作和分析工具。该库中的 read_xml 函数存在本地文件包含 (LFI) 漏洞，因为其 path_or_buffer 参数未经过严格的路径验证，攻击者可以通过提供恶意文件路径访问任意文件。这可通过调用 get_handle 函数实现，该函数在没有验证路径的情况下打开文件，从而导致敏感文件的泄露，比如 /etc/passwd 和 /etc/shadow。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e对 path_or_buffer 参数进行严格的输入验证，确保只允许访问受信任的文件路径。应限制访问特定目录或文件类型。对于已知的读取功能，例如 read_xml 和 read_csv，应确保所读取的文件类型符合预期。此外，建议尽快升级到修复该漏洞的新版本或应用相应的补丁。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "breathe",
+          "version": "\u003e4.33.0",
+          "language": "Python",
+          "id": "57811821338558497",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[breathe:\u003e4.33.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "ipython",
+          "version": "!=8.1.0",
+          "language": "Python",
+          "id": "57811821338558498",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[ipython:!=8.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Interactive Python 操作系统命令注入漏洞",
+              "id": "XMIRROR-E5B7141B-88139895",
+              "cve_id": "CVE-2023-24816",
+              "cnnvd_id": "CNNVD-202302-732",
+              "cwe_id": "CWE-20 CWE-78",
+              "description": "Interactive Python（IPython）是一个用于使用多种编程语言进行交互式计算的命令shell，最初是为Python编程语言开发的。\r\nIPython(Interactive Python) 8.1.0之前版本存在操作系统命令注入漏洞。攻击者利用该漏洞执行命令注入攻击。",
+              "suggestion": "升级到最新版",
+              "attack_type": "本地",
+              "release_date": "2023-02-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "pickleshare",
+          "language": "Python",
+          "id": "57811821338558499",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[pickleshare:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "towncrier",
+          "language": "Python",
+          "id": "57811821338558500",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[towncrier:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "toml",
+          "language": "Python",
+          "id": "57811821338558501",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[toml:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "scipy-doctest",
+          "version": "\u003e=1.8.0",
+          "language": "Python",
+          "id": "57811821338558502",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[scipy-doctest:\u003e=1.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "jupyterlite-sphinx",
+          "version": "\u003e=0.18.0",
+          "language": "Python",
+          "id": "57811821338558503",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[jupyterlite-sphinx:\u003e=0.18.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "jupyterlite-pyodide-kernel",
+          "version": "0.5.2",
+          "language": "Python",
+          "id": "57811821338558504",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\doc_requirements.txt\\[jupyterlite-pyodide-kernel:0.5.2]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 8
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558472",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\linter_requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "cython-lint",
+          "language": "Python",
+          "id": "57811821338558505",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\linter_requirements.txt\\[cython-lint:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "ruff",
+          "version": "0.14.0",
+          "language": "Python",
+          "id": "57811821338558506",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\linter_requirements.txt\\[ruff:0.14.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "GitPython",
+          "version": "\u003e=3.1.30",
+          "language": "Python",
+          "id": "57811821338558507",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\linter_requirements.txt\\[GitPython:\u003e=3.1.30]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "GitPython 代码问题漏洞",
+              "id": "XMIRROR-E5B714EF-14324695",
+              "cve_id": "CVE-2024-22190",
+              "cnnvd_id": "CNNVD-202401-977",
+              "cwe_id": "CWE-426",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.40及之前版本存在代码问题漏洞，该漏洞源于允许攻击者通过不受信任的搜索路径执行任意代码。",
+              "suggestion": "## Remediation\nUpgrade `GitPython` to version 3.1.41 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-01-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "GitPython 安全漏洞",
+              "id": "XMIRROR-E5B7141B-889E4595",
+              "cve_id": "CVE-2023-40267",
+              "cnnvd_id": "CNNVD-202308-1098",
+              "cwe_id": "CWE-94",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.32之前版本存在安全漏洞，该漏洞源于没有阻止clone和clone_from中不安全的non-multi选项。",
+              "suggestion": "目前官方已有可更新版本，建议受影响用户升级至最新版本",
+              "attack_type": "远程",
+              "release_date": "2023-08-11",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "GitPython 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-88477A95",
+              "cve_id": "CVE-2023-40590",
+              "cnnvd_id": "CNNVD-202308-2203",
+              "cwe_id": "CWE-426",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.32及之前版本存在代码问题漏洞，该漏洞源于攻击者可以诱骗用户下载带有恶意git可执行文件的存储库，攻击者可以运行任何任意命令。",
+              "suggestion": "配置方案： 在Windows上，默认使用绝对路径指定git程序，例如C:\\Program Files\\Git\\cmd\\git.EXE（默认的git路径安装）。\u003cbr/\u003e要求用户在Windows系统上设置GIT_PYTHON_GIT_EXECUTABLE环境变量。\u003cbr/\u003e在文档中明确突出这个问题，并建议用户永远不要从不受信任的存储库中运行GitPython，或者将GIT_PYTHON_GIT_EXECUTABLE环境变量设置为绝对路径。\u003cbr/\u003e通过仅查找PATH环境变量来手动解析可执行文件。\n",
+              "attack_type": "本地",
+              "release_date": "2023-08-28",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "GitPython 路径遍历漏洞",
+              "id": "XMIRROR-E5B7141B-7C724C95",
+              "cve_id": "CVE-2023-41040",
+              "cnnvd_id": "CNNVD-202308-2413",
+              "cwe_id": "CWE-22",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.32及之前版本存在路径遍历漏洞，该漏洞源于为了解析一些 git 引用，GitPython 从目录中读取文件.git，在某些情况，GitPython 不会检查该文件是否位于目录之外.git，导致攻击者可以让 GitPython 从系统中读取任何文件。",
+              "suggestion": "参考缓解方案，目前厂商暂未发布补丁来修复此漏洞，建议随时关注厂商主页或联系厂商以获取解决办法。",
+              "attack_type": "本地",
+              "release_date": "2023-08-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558473",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\requirements\\release_requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "urllib3",
+          "language": "Python",
+          "id": "57811821338558508",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\release_requirements.txt\\[urllib3:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Insecure Defaults",
+              "id": "XMIRROR-E5B77528-E19D572B",
+              "cwe_id": "CWE-453",
+              "description": "## Overview\n[urllib3](https://pypi.org/project/urllib3/) is a HTTP library with thread-safe connection pooling, file post, and more.\n\nAffected versions of this package are vulnerable to Insecure Defaults. The default SSL/TLS settings were insecure.\n## Remediation\nUpgrade `urllib3` to version 1.8 or higher.\n## References\n- [GitHub Commit](https://github.com/urllib3/urllib3/commit/2088570a293df42b1623dd74fcff0174d0565af5)\n",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 注入漏洞",
+              "id": "XMIRROR-E5B71403-AF51FD95",
+              "cve_id": "CVE-2020-26137",
+              "cnnvd_id": "CNNVD-202009-1751",
+              "cwe_id": "CWE-74",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3 1.25.9之前版本存在注入漏洞。该漏洞源于可以在putrequest()的第一个参数中插入CR和LF控制字符。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2020-09-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7140E-B0678295",
+              "cve_id": "CVE-2019-11324",
+              "cnnvd_id": "CNNVD-201904-910",
+              "cwe_id": "CWE-295",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3 1.24.2之前版本中存在信任管理问题漏洞。该漏洞源于网络系统或产品中缺乏有效的信任管理机制。攻击者可利用默认密码或者硬编码密码、硬编码证书等攻击受影响组件。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-18",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 注入漏洞",
+              "id": "XMIRROR-E5B7140E-B0D96195",
+              "cve_id": "CVE-2019-11236",
+              "cnnvd_id": "CNNVD-201904-630",
+              "cwe_id": "CWE-93",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3 1.24.1及之前版本版本中存在注入漏洞，该漏洞源于用户输入构造命令、数据结构或记录的操作过程中，网络系统或产品缺乏对用户输入数据的正确验证，未过滤或未正确过滤掉其中的特殊元素，导致系统或产品产生解析或解释方式错误。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2019-04-15",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FA95895",
+              "cve_id": "CVE-2018-20060",
+              "cnnvd_id": "CNNVD-201812-491",
+              "cwe_id": "CWE-288",
+              "description": "urllib3是一个基于Python的HTTP库，它具有线程安全连接池和文件后期支持等功能。\r\r\nurllib3 1.23之前版本中存在安全漏洞，该漏洞源于程序在进行跨源重定向时，没有移除Authorization HTTP报头，导致授权报头中的凭证暴露给其他主机或以明文的形式传输。攻击者可利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-12-11",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-EDD32D95",
+              "cve_id": "CVE-2021-33503",
+              "cnnvd_id": "CNNVD-202106-1204",
+              "cwe_id": "CWE-400",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 Urllib3 存在资源管理错误漏洞，该漏洞源于在鉴权模块的URL中添加@参数导致，攻击者可利用该漏洞引起资源冲突导致拒绝服务。以下产品及型号会受到影响：Urllib3 0.3, 0.3.1, 0.4, 0.4.1, 1.0, 1.0.1, 1.0.2, 1.1, 1.2, 1.2.1, 1.3, 1.4, 1.5, 1.6, 1.7, 1.7.1, 1.8, 1.8.1, 1.8.2, 1.8.3, 1.9, 1.9.1, 1.10, 1.10.1, 1.10.2, 1.10.3, 1.10.4, 1.11, 1.12, 1.13, 1.13.1, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.18.1, 1.19, 1.19.1, 1.20, 1.21, 1.21.1, 1.22, 1.23, 1.24, 1.24.1, 1.24.2, 1.24.3, 1.25, 1.25.1, 1.25.2, 1.25.3, 1.25.4, 1.25.5, 1.25.6, 1.25.7, 1.25.8, 1.25.9, 1.25.10, 1.25.11, 1.26.0, 1.26.1, 1.26.2, 1.26.3, 1.26.4。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2021-06-02",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 信息泄露漏洞",
+              "id": "XMIRROR-E5B7141B-7CD4C795",
+              "cve_id": "CVE-2023-45803",
+              "cnnvd_id": "CNNVD-202310-1359",
+              "cwe_id": "CWE-200",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3存在安全漏洞，该漏洞源于从303状态更改请求方法重定向到GET后不会删除请求正文。受影响的产品和版本：urllib3 2至2.0.6版本，1.26.17及之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `urllib3` to version 1.26.18, 2.0.7 or higher.\u003c/p\u003e",
+              "attack_type": "邻近网络",
+              "release_date": "2023-10-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 输入验证错误漏洞",
+              "id": "XMIRROR-E5B714B5-4F3AD995",
+              "cve_id": "CVE-2018-25091",
+              "cnnvd_id": "CNNVD-202310-1119",
+              "cwe_id": "CWE-601",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3 1.24.2之前版本存在安全漏洞，该漏洞源于允许攻击者获取授权标头中的凭据或以明文形式传输凭据。",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.24.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-10-15",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 信息泄露漏洞(CVE-2023-43804)",
+              "id": "XMIRROR-E5B7141B-7C0D8095",
+              "cve_id": "CVE-2023-43804",
+              "cnnvd_id": "CNNVD-202310-281",
+              "cwe_id": "CWE-200",
+              "description": "\u003cp\u003eurllib3 是一个支持线程安全连接池及文件上传等功能的 HTTP 客户端库。该库不对 `Cookie` HTTP 标头进行特殊处理，用户在发送请求时需自行管理。在未显式禁用重定向的情况下，用户可能会意外地通过 HTTP 重定向将信息泄露至其他源。攻击者可利用此漏洞，获取用户的 Cookie 信息，从而进行账户劫持。受影响的版本包括 1.26.16 及之前版本，以及 2.0.5 之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户立即升级 urllib3 至版本 1.26.17、2.0.6 或更高版本；如无法立即更新，加快禁用 HTTP 重定向，发送请求时使用 `redirects=False`；同时，建议不要在请求中使用 `Cookie` 头。\u003c/p\u003e",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "urllib3 安全漏洞",
+              "id": "XMIRROR-E5B714EF-1458D995",
+              "cve_id": "CVE-2024-37891",
+              "cnnvd_id": "CNNVD-202406-1954",
+              "cwe_id": "CWE-669",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3存在安全漏洞，该漏洞源于跨域重定向期间不会剥离代理授权请求标头。",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.26.19, 2.2.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-06-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 重定向未在 PoolManager 实例化时禁用漏洞",
+              "id": "XMIRROR-E5B714FA-9A3D2195",
+              "cve_id": "CVE-2025-50181",
+              "cnnvd_id": "CNNVD-202506-2561",
+              "cwe_id": "CWE-601",
+              "description": "\u003cp\u003eurllib3 是一个常用的 HTTP 客户端库，广泛用于处理 HTTP 请求和响应，包括重定向和重试机制。此漏洞涉及 urllib3 对重定向和重试的处理机制，其中 `Retry` 对象用于控制两者设置。在实例化 `PoolManager` 时设置 `retries` 参数以尝试禁用重定向，然而由于 `retries` 参数被忽略，导致不能正确禁用重定向。该问题会影响依赖于禁用重定向功能的应用程序，可能因此暴露于服务端请求伪造（SSRF）或开放重定向漏洞中。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e升级到修复版本的 urllib3，以确保 `retries` 参数在 PoolManager 实例化时能够正确禁用重定向。同时，可以在每次请求中使用 `request()` 方法禁用重定向，作为临时缓解方案。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-06-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 11
+        },
+        {
+          "name": "beautifulsoup4",
+          "language": "Python",
+          "id": "57811821338558509",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\release_requirements.txt\\[beautifulsoup4:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pygithub",
+          "language": "Python",
+          "id": "57811821338558510",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\release_requirements.txt\\[pygithub:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "gitpython",
+          "version": "\u003e=3.1.30",
+          "language": "Python",
+          "id": "57811821338558511",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\release_requirements.txt\\[gitpython:\u003e=3.1.30]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "GitPython 代码问题漏洞",
+              "id": "XMIRROR-E5B714EF-14324695",
+              "cve_id": "CVE-2024-22190",
+              "cnnvd_id": "CNNVD-202401-977",
+              "cwe_id": "CWE-426",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.40及之前版本存在代码问题漏洞，该漏洞源于允许攻击者通过不受信任的搜索路径执行任意代码。",
+              "suggestion": "## Remediation\nUpgrade `GitPython` to version 3.1.41 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-01-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "GitPython 安全漏洞",
+              "id": "XMIRROR-E5B7141B-889E4595",
+              "cve_id": "CVE-2023-40267",
+              "cnnvd_id": "CNNVD-202308-1098",
+              "cwe_id": "CWE-94",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.32之前版本存在安全漏洞，该漏洞源于没有阻止clone和clone_from中不安全的non-multi选项。",
+              "suggestion": "目前官方已有可更新版本，建议受影响用户升级至最新版本",
+              "attack_type": "远程",
+              "release_date": "2023-08-11",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "GitPython 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-88477A95",
+              "cve_id": "CVE-2023-40590",
+              "cnnvd_id": "CNNVD-202308-2203",
+              "cwe_id": "CWE-426",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.32及之前版本存在代码问题漏洞，该漏洞源于攻击者可以诱骗用户下载带有恶意git可执行文件的存储库，攻击者可以运行任何任意命令。",
+              "suggestion": "配置方案： 在Windows上，默认使用绝对路径指定git程序，例如C:\\Program Files\\Git\\cmd\\git.EXE（默认的git路径安装）。\u003cbr/\u003e要求用户在Windows系统上设置GIT_PYTHON_GIT_EXECUTABLE环境变量。\u003cbr/\u003e在文档中明确突出这个问题，并建议用户永远不要从不受信任的存储库中运行GitPython，或者将GIT_PYTHON_GIT_EXECUTABLE环境变量设置为绝对路径。\u003cbr/\u003e通过仅查找PATH环境变量来手动解析可执行文件。\n",
+              "attack_type": "本地",
+              "release_date": "2023-08-28",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "GitPython 路径遍历漏洞",
+              "id": "XMIRROR-E5B7141B-7C724C95",
+              "cve_id": "CVE-2023-41040",
+              "cnnvd_id": "CNNVD-202308-2413",
+              "cwe_id": "CWE-22",
+              "description": "GitPython是gitpython-developers开源的一个用于与 Git 存储库交互的 Python 库。\r\nGitPython 3.1.32及之前版本存在路径遍历漏洞，该漏洞源于为了解析一些 git 引用，GitPython 从目录中读取文件.git，在某些情况，GitPython 不会检查该文件是否位于目录之外.git，导致攻击者可以让 GitPython 从系统中读取任何文件。",
+              "suggestion": "参考缓解方案，目前厂商暂未发布补丁来修复此漏洞，建议随时关注厂商主页或联系厂商以获取解决办法。",
+              "attack_type": "本地",
+              "release_date": "2023-08-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "twine",
+          "language": "Python",
+          "id": "57811821338558512",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\release_requirements.txt\\[twine:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Open Redirection",
+              "id": "XMIRROR-E5B77528-3EFF682B",
+              "cwe_id": "CWE-601",
+              "description": "## Overview\n[`twine`](https://pypi.python.org/pypi/twine) is a Collection of utilities for interacting with PyPI.\n\nAffected versions of this package are vulnerable to Open Redirection when uploading a library to pypi.\n\n## References\n- [GitHub Issue](https://github.com/pypa/twine/issues/92)\n- [GitHub PR](https://github.com/pypa/twine/pull/94)\n- [GitHub Commit](https://github.com/pypa/twine/commit/29e85757559154e919c9fe0a7f5803a425628855)\n",
+              "attack_type": "远程",
+              "release_date": "2015-01-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "packaging",
+          "language": "Python",
+          "id": "57811821338558513",
+          "direct": true,
+          "paths": [
+            "numpy_numpy\\requirements\\release_requirements.txt\\[packaging:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 16
+    },
+    {
+      "language": "Python",
+      "id": "57811821338558474",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\tools\\swig\\test\\setup.py"
+      ]
+    },
+    {
+      "id": "57811821338558475",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\.devcontainer\\devcontainer.json"
+      ]
+    },
+    {
+      "id": "57811821338558476",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\benchmarks\\asv.conf.json"
+      ]
+    },
+    {
+      "id": "57811821338558477",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\doc\\source\\jupyter_lite_config.json"
+      ]
+    },
+    {
+      "id": "57811821338558478",
+      "direct": true,
+      "paths": [
+        "numpy_numpy\\doc\\source\\try_examples.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 24
+}

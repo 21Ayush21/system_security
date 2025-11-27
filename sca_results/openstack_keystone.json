@@ -1,0 +1,2877 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openstack_keystone",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:10",
+    "end_time": "2025-11-27 21:56:17",
+    "cost_time": 7.7899567
+  },
+  "id": "57811827934691328",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811827934691329",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "os-api-ref",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811827934724235",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\api-ref\\requirements.txt\\[os-api-ref:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811827934691330",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "openstackdocstheme",
+          "version": "\u003e=2.2.1",
+          "language": "Python",
+          "id": "57811827934724236",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[openstackdocstheme:\u003e=2.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinx",
+          "version": "\u003e=2.0.0,!=2.1.0",
+          "language": "Python",
+          "id": "57811827934724237",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[sphinx:\u003e=2.0.0,!=2.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "sphinxcontrib-apidoc",
+          "version": "\u003e=0.2.0",
+          "language": "Python",
+          "id": "57811827934724238",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[sphinxcontrib-apidoc:\u003e=0.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-feature-classification",
+          "version": "\u003e=0.3.2",
+          "language": "Python",
+          "id": "57811827934724239",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[sphinx-feature-classification:\u003e=0.3.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "reno",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811827934724240",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[reno:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-ldap",
+          "version": "\u003e=3.0.0",
+          "language": "Python",
+          "id": "57811827934724241",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[python-ldap:\u003e=3.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "unknown"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "ReDoS in LDAP schema parser",
+              "id": "XMIRROR-C9431C71-2682AB31",
+              "cwe_id": "CWE-1333",
+              "description": "https://github.com/python-ldap/python-ldap/issues/424\n\n### Impact\nThe LDAP schema parser of python-ldap 3.3.1 and earlier are vulnerable to a regular expression denial-of-service attack. The issue affects clients that use ``ldap.schema`` package to parse LDAP schema definitions from an untrusted source.\n\n### Patches\nThe upcoming release of python-ldap 3.4.0 will contain a workaround to prevent ReDoS attacks. The schema parser refuses schema definitions with an excessive amount of backslashes.\n\n### Workarounds\nAs a workaround, users can check input for excessive amount of backslashes in schemas. More than a dozen backslashes per line are atypical.\n\n### References\n[CWE-1333](https://cwe.mitre.org/data/definitions/1333.html)\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [python-ldap](https://github.com/python-ldap/python-ldap) tracker\n",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B71412-ED58E595",
+              "cve_id": "CVE-2021-46823",
+              "cnnvd_id": "CNNVD-202206-1978",
+              "cwe_id": "CWE-1333",
+              "description": "python-ldap是python-ldap开源的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.0之前版本存在安全漏洞，该漏洞源于 LDAP 模式解析器中存在正则表达式拒绝服务 (ReDoS) 缺陷。攻击者利用该漏洞通过发送特制的正则表达式输入导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `python-ldap` to version 3.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E7CA95",
+              "cve_id": "CVE-2025-61912",
+              "cnnvd_id": "CNNVD-202510-1398",
+              "cwe_id": "CWE-116 CWE-170",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.dn.escape_dn_chars函数对x00转义不正确，可能导致客户端拒绝服务。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E70895",
+              "cve_id": "CVE-2025-61911",
+              "cnnvd_id": "CNNVD-202510-1400",
+              "cwe_id": "CWE-75 CWE-843",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.filter.escape_filter_chars方法在escape_mode=1模式下未正确处理list或dict类型的assertion_value参数，可能导致LDAP注入攻击。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "ldappool",
+          "version": "\u003e=2.0.0",
+          "language": "Python",
+          "id": "57811827934724242",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\doc\\requirements.txt\\[ldappool:\u003e=2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MPL-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 8
+    },
+    {
+      "language": "Python",
+      "id": "57811827934691331",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pbr",
+          "version": "!=2.1.0,\u003e=2.0.0",
+          "language": "Python",
+          "id": "57811827934724243",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[pbr:!=2.1.0,\u003e=2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "WebOb",
+          "version": "\u003e=1.7.1",
+          "language": "Python",
+          "id": "57811827934724244",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[WebOb:\u003e=1.7.1]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "WebOb 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14E1B695",
+              "cve_id": "CVE-2024-42353",
+              "cnnvd_id": "CNNVD-202408-1345",
+              "cwe_id": "CWE-601",
+              "description": "WebOb是Pylons开源的一个 WSGI 请求和响应对象。\r\nWebOb 1.8.8之前版本存在安全漏洞，该漏洞源于存在打开重定向。",
+              "suggestion": "## Remediation\nUpgrade `WebOb` to version 1.8.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-14",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "Flask",
+          "version": "!=0.11,\u003e=1.0.2",
+          "language": "Python",
+          "id": "57811827934724245",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[Flask:!=0.11,\u003e=1.0.2]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Pallets Project Flask 输入验证错误漏洞",
+              "id": "XMIRROR-E5F7537E-854C9895",
+              "cve_id": "CVE-2018-1000656",
+              "cnnvd_id": "CNNVD-201808-601",
+              "cwe_id": "CWE-20",
+              "description": "Pallets Project Flask是Pallets项目的一款轻量级的WSGI（Web服务器网关接口）应用程序框架。\r\nPallets Project flask 0.12.3之前版本中存在输入验证漏洞。攻击者可借助JSON数据利用该漏洞造成拒绝服务（大量内存消耗）。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-08-20",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Flask 安全漏洞",
+              "id": "XMIRROR-E5B7141B-8849DD95",
+              "cve_id": "CVE-2023-30861",
+              "cnnvd_id": "CNNVD-202305-091",
+              "cwe_id": "CWE-539",
+              "description": "Pallets Project Flask是Pallets项目的一款轻量级的WSGI（Web服务器网关接口）应用程序框架。\r\nFlask存在安全漏洞，该漏洞源于用于一个客户端的数据响应可能会被缓存并随后由代理发送给其他客户端。",
+              "suggestion": "更新方案： \u003cp\u003e厂商已发布了漏洞修复程序，请使用此产品的用户尽快更新至安全版本\u003c/p\u003e\u003cp\u003epip更新命令：pip install --upgrade Flask\u003c/p\u003e\n",
+              "attack_type": "远程",
+              "release_date": "2023-05-02",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Pallets Project Flask 资源管理错误漏洞",
+              "id": "XMIRROR-E5F7DA34-70105A95",
+              "cve_id": "CVE-2019-1010083",
+              "cnnvd_id": "CNNVD-201907-994",
+              "cwe_id": "CWE-20",
+              "description": "Pallets Project Flask是Pallets项目的一款轻量级的WSGI（Web服务器网关接口）应用程序框架。\r\nPallets Project Flask 1.0之前版本中存在资源管理错误漏洞。攻击者可借助特制的被编码的JSON输入利用该漏洞造成拒绝服务。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-07-17",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "Flask-RESTful",
+          "version": "\u003e=0.3.5",
+          "language": "Python",
+          "id": "57811827934724246",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[Flask-RESTful:\u003e=0.3.5]"
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "\u003e=2.7",
+          "language": "Python",
+          "id": "57811827934724247",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[cryptography:\u003e=2.7]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A334695",
+              "cve_id": "CVE-2023-0286",
+              "cnnvd_id": "CNNVD-202302-524",
+              "cwe_id": "CWE-843",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。存在安全漏洞，源于内存释放后重用。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "cryptography 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-886E1995",
+              "cve_id": "CVE-2023-23931",
+              "cnnvd_id": "CNNVD-202302-523",
+              "cwe_id": "CWE-754",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\ncryptography 存在代码问题漏洞。目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "目前官方已发布安全修复版本，受影响用户可以更新到安全版本:\n cryptography \u003e= 39.0.1",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-8EF13161",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-06-03",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "pyca/cryptography's wheels include vulnerable OpenSSL",
+              "id": "XMIRROR-C9431C71-B357FAB7",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-08-02",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-609F7E1F",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 2.5-41.0.3 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230908.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-09-22",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-AF95EA95",
+              "cve_id": "CVE-2020-36242",
+              "cnnvd_id": "CNNVD-202102-574",
+              "cwe_id": "CWE-190 CWE-787",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography package before 3.3.2 for Python 存在输入验证错误漏洞，该漏洞源于导致整数溢出和缓冲区溢出。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F5B-1DBEED95",
+              "cve_id": "CVE-2022-3996",
+              "cnnvd_id": "CNNVD-202212-2982",
+              "cwe_id": "CWE-667",
+              "description": "OpenSSL是一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库，支持多种加密算法。如果X.509证书包含格式错误的策略约束并且启用了策略处理，系统将递归地获取两次写锁，导致在某些操作系统上进程挂起，进而造成拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本3.0.8或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2022-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A956395",
+              "cve_id": "CVE-2023-3817",
+              "cnnvd_id": "CNNVD-202307-2314",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，常用于车云通信中对传输协议的加解密。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL在部分版本中存在使用DH_check等函数检查DH参数时耗时较长的漏洞，导致拒绝服务。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-07-31",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9AB00D95",
+              "cve_id": "CVE-2023-3446",
+              "cnnvd_id": "CNNVD-202307-1681",
+              "cwe_id": "CWE-606 CWE-1333",
+              "description": "OpenSSL是一个开源的安全套接层和安全传输层协议的通用加密库，支持多种加密算法。在某些版本的OpenSSL中，DH_check()、DH_check_ex()或EVP_PKEY_param_check()函数在处理过大的DH密钥或参数时可能导致应用程序变得非常缓慢，造成拒绝服务。",
+              "suggestion": "建议将OpenSSL升级到版本1.1.1d-150200.11.72.1或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-07-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 授权问题漏洞",
+              "id": "XMIRROR-E5B70F55-9A258F95",
+              "cve_id": "CVE-2023-2975",
+              "cnnvd_id": "CNNVD-202307-1295",
+              "cwe_id": "CWE-354 CWE-287",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL存在授权问题漏洞，该漏洞源于密码实现存在错误，AES-SIV忽略空的关联数据条目，导致允许对多个关联的进行身份验证数据条目进行加密。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 41.0.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F55-9A790895",
+              "cve_id": "CVE-2023-4807",
+              "cnnvd_id": "CNNVD-202309-665",
+              "cwe_id": "CWE-440",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。 OpenSSL 1.1.1 至 1.1.1v版本、3.0.0 至 3.0.10 版本以及 3.1.0 至 3.1.2版本存在安全漏洞，该漏洞源于POLY1305 MAC（消息身份验证代码）包含一个错误，当在支持 AVX512-IFMA 指令的较新 X86_64 处理器上运行时，可能会破坏 Windows 64 平台上的应用程序内部状态。",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `openssl` to version 1.1.1w, 3.0.11, 3.1.3 or higher.\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2023-09-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-808F9F95",
+              "cve_id": "CVE-2024-4603",
+              "cnnvd_id": "CNNVD-202405-2902",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL 3.0 和 3.1 版本存在安全漏洞，该漏洞源于使用函数 EVP_PKEY_param_check()、EVP_PKEY_public_check() 检查 DSA 公钥或 DSA 参数检查的键或参数，可能会导致拒绝服务。",
+              "suggestion": "## Remediation\nA fix was pushed into the `master` branch but not yet published.",
+              "attack_type": "远程",
+              "release_date": "2024-05-16",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 20
+        },
+        {
+          "name": "SQLAlchemy",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811827934724248",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[SQLAlchemy:\u003e=1.4.0]"
+          ]
+        },
+        {
+          "name": "stevedore",
+          "version": "\u003e=1.20.0",
+          "language": "Python",
+          "id": "57811827934724249",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[stevedore:\u003e=1.20.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-keystoneclient",
+          "version": "\u003e=3.8.0",
+          "language": "Python",
+          "id": "57811827934724250",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[python-keystoneclient:\u003e=3.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "keystonemiddleware",
+          "version": "\u003e=7.0.0",
+          "language": "Python",
+          "id": "57811827934724251",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[keystonemiddleware:\u003e=7.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "bcrypt",
+          "version": "\u003e=3.1.3",
+          "language": "Python",
+          "id": "57811827934724252",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[bcrypt:\u003e=3.1.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.cache",
+          "version": "\u003e=1.26.0",
+          "language": "Python",
+          "id": "57811827934724253",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.cache:\u003e=1.26.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.config",
+          "version": "\u003e=6.8.0",
+          "language": "Python",
+          "id": "57811827934724254",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.config:\u003e=6.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.context",
+          "version": "\u003e=2.22.0",
+          "language": "Python",
+          "id": "57811827934724255",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.context:\u003e=2.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.messaging",
+          "version": "\u003e=5.29.0",
+          "language": "Python",
+          "id": "57811827934724256",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.messaging:\u003e=5.29.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.db",
+          "version": "\u003e=6.0.0",
+          "language": "Python",
+          "id": "57811827934724257",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.db:\u003e=6.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.i18n",
+          "version": "\u003e=3.15.3",
+          "language": "Python",
+          "id": "57811827934724258",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.i18n:\u003e=3.15.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.log",
+          "version": "\u003e=3.44.0",
+          "language": "Python",
+          "id": "57811827934724259",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.log:\u003e=3.44.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.middleware",
+          "version": "\u003e=3.31.0",
+          "language": "Python",
+          "id": "57811827934724260",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.middleware:\u003e=3.31.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.policy",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811827934724261",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.policy:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.serialization",
+          "version": "!=2.19.1,\u003e=2.18.0",
+          "language": "Python",
+          "id": "57811827934724262",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.serialization:!=2.19.1,\u003e=2.18.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.upgradecheck",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811827934724263",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.upgradecheck:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.utils",
+          "version": "\u003e=3.33.0",
+          "language": "Python",
+          "id": "57811827934724264",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oslo.utils:\u003e=3.33.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python-Oslo-Utils 日志信息泄露漏洞",
+              "id": "XMIRROR-E5B70F5B-1DFA5D95",
+              "cve_id": "CVE-2022-0718",
+              "cnnvd_id": "CNNVD-202202-1730",
+              "cwe_id": "CWE-522 CWE-532",
+              "description": "Python-Oslo-Utils是OpenStack社区的一个库。用于提供对常见实用程序类型函数的支持，例如编码、异常处理、字符串操作和时间处理。\r\nPython-Oslo-Utils 存在安全漏洞，目前暂无该漏洞信息，请随时关注CNNVD或厂商公告。",
+              "attack_type": "远程",
+              "release_date": "2022-02-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "oauthlib",
+          "version": "\u003e=0.6.2",
+          "language": "Python",
+          "id": "57811827934724265",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[oauthlib:\u003e=0.6.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Information Exposure",
+              "id": "XMIRROR-E5B77528-3E71462B",
+              "cwe_id": "CWE-534",
+              "description": "## Overview\nAffected versions of [`oauthlib`](https://pypi.python.org/pypi/oauthlib) are vulnerable to Information Exposure Through Debug Log Files which happend because the debug log printed password to the log files.\n\n## Remediation\nUpgrade `oauthlib` to version 0.7.0 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/idan/oauthlib/blob/master/CHANGELOG.rst#070-2014-10-27)\n- [Github Issue](https://github.com/idan/oauthlib/issues/256)\n- [Github Commit](https://github.com/idan/oauthlib/commit/fef1f7987cc6298e744b7d4290e3fc9a9701831b)\n",
+              "suggestion": "## Remediation\nUpgrade `oauthlib` to version 0.7.0 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "pysaml2",
+          "version": "\u003e=5.0.0",
+          "language": "Python",
+          "id": "57811827934724266",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[pysaml2:\u003e=5.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Idpy Pysaml2 数据伪造问题漏洞",
+              "id": "XMIRROR-E5B71412-91770795",
+              "cve_id": "CVE-2021-21238",
+              "cnnvd_id": "CNNVD-202101-1648",
+              "cwe_id": "CWE-347",
+              "description": "Idpy Pysaml2是Idpy社区的一个基于Python的SAML服务器实现。\r\nIdpy PySAML2 before 6.5.0 存在数据伪造问题漏洞，该漏洞源于存在加密签名验证错误漏洞。攻击者可利用该漏洞处理无效的XML文档。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-01-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Idpy Pysaml2 数据伪造问题漏洞",
+              "id": "XMIRROR-E5B71412-9177BB95",
+              "cve_id": "CVE-2021-21239",
+              "cnnvd_id": "CNNVD-202101-1647",
+              "cwe_id": "CWE-347",
+              "description": "Idpy Pysaml2是Idpy社区的一个基于Python的SAML服务器实现。\r\nIdpy PySAML2 before 6.5.0 存在数据伪造问题漏洞，该漏洞源于加密签名验证错误。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-01-21",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "PyJWT",
+          "version": "\u003e=1.6.1",
+          "language": "Python",
+          "id": "57811827934724267",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[PyJWT:\u003e=1.6.1]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python 加密问题漏洞",
+              "id": "XMIRROR-E5B714FC-FEE89795",
+              "cve_id": "CVE-2022-29217",
+              "cnnvd_id": "CNNVD-202205-3341",
+              "cwe_id": "CWE-327",
+              "description": "pyjwt是美国José Padilla个人开发者的一个 Python 库。允许对 JSON Web 令牌（JWT）进行编码和解码。\r\npyjwt 1.5.0 - 2.3.0 版本存在加密问题漏洞，该漏洞源于使用了损坏或有风险的加密算法。远程攻击者利用此漏洞可导致密钥混淆。",
+              "suggestion": "## Remediation\nUpgrade `SLES:15.3` `python3-PyJWT` to version 2.4.0-150200.3.6.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-05-13",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "dogpile.cache",
+          "version": "\u003e=1.0.2",
+          "language": "Python",
+          "id": "57811827934724268",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[dogpile.cache:\u003e=1.0.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "jsonschema",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811827934724269",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[jsonschema:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pycadf",
+          "version": "!=2.0.0,\u003e=1.1.0",
+          "language": "Python",
+          "id": "57811827934724270",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[pycadf:!=2.0.0,\u003e=1.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "msgpack",
+          "version": "\u003e=0.5.0",
+          "language": "Python",
+          "id": "57811827934724271",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[msgpack:\u003e=0.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-9339132B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\n[msgpack](https://pypi.org/project/msgpack/) is a efficient binary serialization format.\n\n\nAffected versions of this package are vulnerable to Denial of Service (DoS)\ndue to an unlimited length of maps.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\n\nUpgrade `msgpack` to version 0.6.0 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/msgpack/msgpack-python/commit/3b80233592674d18c8db7a62fa56504a5a285296)\n\n- [GitHub PR](https://github.com/msgpack/msgpack-python/pull/319)\n",
+              "suggestion": "## Remediation\n\nUpgrade `msgpack` to version 0.6.0 or higher.\n\n",
+              "attack_type": "远程",
+              "release_date": "2019-01-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "osprofiler",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811827934724272",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[osprofiler:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "Werkzeug",
+          "version": "\u003e=0.15.0",
+          "language": "Python",
+          "id": "57811827934724273",
+          "direct": true,
+          "paths": [
+            "openstack_keystone\\requirements.txt\\[Werkzeug:\u003e=0.15.0]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Pallets Werkzeug 安全漏洞",
+              "id": "XMIRROR-E5B7141B-8840C295",
+              "cve_id": "CVE-2023-25577",
+              "cnnvd_id": "CNNVD-202302-1160",
+              "cwe_id": "CWE-770",
+              "description": "Pallets Werkzeug是一款WSGI Web应用程序库。\r\nPallets Werkzeug 2.2.3之前版本存在安全漏洞，该漏洞源于Werkzeug multipart表单数据解析器可以解析无限数量的文件、字节部分，但每个部分都需要 CPU 时间来解析，并且可能会使用更多内存，如果向 `request.data`、`request.form`、`request.files` 或 `request.get_data(parse_form_data=False)` 的端点发出请求，则可能会导致意外的高资源使用率，攻击者利用该漏洞可以导致拒绝服务。",
+              "suggestion": "目前官方已有可更新版本，建议受影响用户升级至最新版本",
+              "attack_type": "远程",
+              "release_date": "2023-02-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Werkzeug 输入验证错误漏洞",
+              "id": "XMIRROR-E5B7141B-886E5F95",
+              "cve_id": "CVE-2023-23934",
+              "cnnvd_id": "CNNVD-202302-1170",
+              "cwe_id": "CWE-20",
+              "description": "Pallets Werkzeug是一款WSGI Web应用程序库。\r\nPallets Werkzeug 2.2.3之前版本存在安全漏洞，该漏洞源于浏览器可能允许看起来像“=value”而不是“key=value”的“无名”cookie。",
+              "attack_type": "邻近网络",
+              "release_date": "2023-02-14",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pallets Werkzeug 环境问题漏洞",
+              "id": "XMIRROR-E5B714FC-FEA46995",
+              "cve_id": "CVE-2022-29361",
+              "cnnvd_id": "CNNVD-202205-4094",
+              "cwe_id": "CWE-444",
+              "description": "Pallets Werkzeug是一款WSGI Web应用程序库。\r\nPallets Werkzeug 2.1.0版本及之前版本存在环境问题漏洞，该漏洞源于不正确解析 HTTP 的请求。攻击者利用该漏洞通过特制的 HTTP 请求执行 HTTP 请求走私。",
+              "attack_type": "远程",
+              "release_date": "2022-05-24",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Pallets Werkzeug 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B7141B-7CCD7795",
+              "cve_id": "CVE-2023-46136",
+              "cnnvd_id": "CNNVD-202310-2005",
+              "cwe_id": "CWE-400 CWE-407 CWE-787",
+              "description": "Pallets Werkzeug是一款WSGI Web应用程序库。\r\nPallets Werkzeug 3.0.1之前版本存在安全漏洞，该漏洞源于允许攻击者通过将精心设计的多部分数据发送导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `werkzeug` to version 2.3.8, 3.0.1 or higher.",
+              "attack_type": "邻近网络",
+              "release_date": "2023-10-24",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pallets Werkzeug任意文件访问漏洞",
+              "id": "XMIRROR-E5B7140E-B0E79495",
+              "cve_id": "CVE-2019-14322",
+              "cnnvd_id": "CNNVD-201907-1413",
+              "cnvd_id": "CNVD-2019-26569",
+              "cwe_id": "CWE-22",
+              "description": "Pallets Werkzeug 是一款WSGI Web应用程序库，提供了用于开发Web应用的工具和功能。在Pallets Werkzeug 0.15.5之前的版本中，SharedDataMiddleware组件存在安全漏洞。该漏洞的根本原因是SharedDataMiddleware错误处理了在Windows路径名称中的驱动程序名（例如：C:）。攻击者可以利用这一漏洞，通过构造特殊请求来访问服务器上的任意文件，导致信息泄露。",
+              "suggestion": "立即升级到Pallets Werkzeug最新版本，确保SharedDataMiddleware处于正确配置状态。建议开发者在编码过程中进行路径处理时考虑操作系统的特性，以避免类似漏洞的出现。",
+              "attack_type": "远程",
+              "release_date": "2019-07-28",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-5F34E02B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to slow multipart parsing for large parts.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `werkzeug` to version 3.0.1 or higher.\n## References\n- [GitHub Commit](https://github.com/pallets/werkzeug/commit/b1916c0c083e0be1c9d887ee2f3d696922bfc5c1)\n",
+              "suggestion": "## Remediation\nUpgrade `werkzeug` to version 3.0.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Werkzeug 安全特征问题漏洞",
+              "id": "XMIRROR-E5B7140E-B0DFBA95",
+              "cve_id": "CVE-2019-14806",
+              "cnnvd_id": "CNNVD-201908-618",
+              "cnvd_id": "CNVD-2020-16826",
+              "cwe_id": "CWE-331",
+              "description": "Pallets Werkzeug是一款WSGI Web应用程序库。\r\nPallets Werkzeug 0.15.3之前版本中存在安全漏洞，该漏洞源于Docker容器中调试程序PIN码随机不充分。目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246\n",
+              "attack_type": "远程",
+              "release_date": "2019-08-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Werkzeug 路径名使用不当和 CSRF 保护不当导致远程命令执行",
+              "id": "XMIRROR-E5B714EF-145C7195",
+              "cve_id": "CVE-2024-34069",
+              "cnnvd_id": "CNNVD-202405-1428",
+              "cwe_id": "CWE-352",
+              "description": "Werkzeug is a comprehensive WSGI web application library. The debugger in affected versions of Werkzeug can allow an attacker to execute code on a developer's machine under some circumstances. This requires the attacker to get the developer to interact with a domain and subdomain they control, and enter the debugger PIN, but if they are successful it allows access to the debugger even if it is only running on localhost. This also requires the attacker to guess a URL in the developer's application that will trigger the debugger. This vulnerability is fixed in 3.0.3.",
+              "suggestion": "## Remediation\nUpgrade `werkzeug` to version 3.0.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-05-06",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Werkzeug路径遍历漏洞",
+              "id": "XMIRROR-E5B714EF-EA1A0F95",
+              "cve_id": "CVE-2024-49766",
+              "cnnvd_id": "CNNVD-202410-2920",
+              "cwe_id": "CWE-22",
+              "description": "Werkzeug 是 Pallets 开发的一个开源全面的WSGI Web应用程序库。在Werkzeug 3.0.6之前的版本中，存在一个路径遍历漏洞。该漏洞的根本原因是，当在Windows系统上且Python版本小于3.11时，os.path.isabs函数无法正确检测UNC路径。这可能导致Werkzeug的safe_join函数生成不安全的路径，从而允许潜在的非预期数据访问。",
+              "suggestion": "建议及时将Werkzeug库升级到3.0.6或更高版本。此外，应确认使用的Python版本为3.11或更高，以确保安全。如果无法立即升级，可以进行代码审查和修改，确保路径操作的安全性。",
+              "attack_type": "远程",
+              "release_date": "2024-10-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Werkzeug拒绝服务漏洞",
+              "id": "XMIRROR-E5B714EF-EA1AE595",
+              "cve_id": "CVE-2024-49767",
+              "cnnvd_id": "CNNVD-202410-2923",
+              "cwe_id": "CWE-400 CWE-770",
+              "description": "Werkzeug 是一个由 Pallets 开源的全面的 WSGI web 应用程序库，旨在为开发人员提供简单、灵活的工具来搭建 Web 应用程序。在 Werkzeug 3.0.6 之前的版本中，当解析 multipart/form-data 请求时存在拒绝服务漏洞。攻击者可以通过构建特制的请求来耗尽服务器资源，从而导致服务无法响应。",
+              "suggestion": "建议立即升级到最新版本的 Werkzeug，以修复该漏洞。如果暂时无法升级，可以考虑限制 multipart/form-data 请求的大小，并使用 Web 应用防火墙（WAF）来检测和过滤异常请求。为了防止类似问题，开发中应注意处理用户输入和异常情况。",
+              "attack_type": "远程",
+              "release_date": "2024-10-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 10
+        }
+      ],
+      "indirect_vulnerabilities": 40
+    },
+    {
+      "language": "Python",
+      "id": "57811827934691332",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\setup.py"
+      ]
+    },
+    {
+      "id": "57811827934691333",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v2-ext\\samples\\OS-KSEC2\\authenticate-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691334",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v2-ext\\samples\\OS-KSEC2\\authenticate-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691335",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v2-ext\\samples\\OS-KSEC2\\credentials-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691336",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v2-ext\\samples\\OS-KSEC2\\credentialswithec2-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691337",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v2-ext\\samples\\OS-KSEC2\\ec2Credentials-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691338",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v2-ext\\samples\\OS-KSEC2\\ec2Credentials-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691339",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\access-rule-get-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691340",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\access-rules-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691341",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\application-credential-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691342",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\application-credential-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691343",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\application-credential-get-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691344",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\application-credential-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691345",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-application-credential-id-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691346",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-application-credential-name-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691347",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-application-credential-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691348",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-explicit-unscoped-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691349",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-explicit-unscoped-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691350",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-project-scoped-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691351",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-system-scoped-request-with-domain.json"
+      ]
+    },
+    {
+      "id": "57811827934691352",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-unscoped-request-with-domain.json"
+      ]
+    },
+    {
+      "id": "57811827934691353",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-unscoped-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691354",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-password-unscoped-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691355",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-token-explicit-unscoped-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691356",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-token-scoped-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691357",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-token-scoped-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691358",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-token-unscoped-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691359",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\auth-token-unscoped-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691360",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\create-role-inferences-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691361",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\credential-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691362",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\credential-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691363",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\credential-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691364",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\credential-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691365",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\credential-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691366",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\credentials-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691367",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691368",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691369",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-default-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691370",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-default-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691371",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-option-default-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691372",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-option-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691373",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-option-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691374",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-option-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691375",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691376",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691377",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-group-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691378",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691379",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691380",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-config-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691381",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691382",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691383",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-group-roles-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691384",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-group-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691385",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691386",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-specific-role-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691387",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691388",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691389",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domain-user-roles-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691390",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\domains-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691391",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\endpoint-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691392",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\endpoint-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691393",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\endpoint-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691394",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\endpoint-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691395",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\endpoint-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691396",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\endpoints-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691397",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\get-available-domain-scopes-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691398",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\get-available-project-scopes-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691399",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\get-available-system-scopes-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691400",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\get-role-inferences-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691401",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\get-service-catalog-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691402",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691403",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691404",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-roles-domain-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691405",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691406",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691407",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691408",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\group-users-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691409",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\groups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691410",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\identity-version-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691411",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\identity-versions-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691412",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limit-flat-model-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691413",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limit-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691414",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limits-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691415",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limits-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691416",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limits-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691417",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limits-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691418",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\limits-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691419",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\list-implied-roles-for-role-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691420",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\list-system-roles-for-group-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691421",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\list-system-roles-for-user-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691422",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\policies-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691423",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\policy-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691424",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\policy-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691425",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\policy-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934691426",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\policy-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934691427",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\policy-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724096",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-create-domain-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724097",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724098",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724099",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-enable-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724100",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-group-roles-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724101",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-show-parents-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724102",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724103",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-show-subtree-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724104",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-tags-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724105",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-tags-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724106",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-tags-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724107",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724108",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724109",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\project-user-roles-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724110",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\projects-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724111",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\region-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724112",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\region-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724113",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\region-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724114",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\region-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724115",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\region-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724116",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\regions-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724117",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\registered-limit-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724118",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\registered-limits-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724119",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\registered-limits-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724120",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\registered-limits-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724121",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\registered-limits-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724122",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\registered-limits-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724123",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-assignments-effective-list-include-names-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724124",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-assignments-effective-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724125",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-assignments-list-include-subtree-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724126",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-assignments-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724127",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724128",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724129",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-inferences-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724130",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724131",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724132",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\role-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724133",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\roles-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724134",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\service-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724135",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\service-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724136",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\service-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724137",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\service-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724138",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\service-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724139",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\services-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724140",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724141",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724142",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-groups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724143",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-password-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724144",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-projects-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724145",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-roles-domain-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724146",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724147",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724148",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\user-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724149",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\admin\\users-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724150",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\domain-id-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724151",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\domain-id-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724152",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\domain-name-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724153",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\domain-name-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724154",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\project-id-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724155",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\project-id-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724156",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\project-id-totp.json"
+      ]
+    },
+    {
+      "id": "57811827934724157",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\project-name-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724158",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\project-name-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724159",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\system-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724160",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\requests\\system-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724161",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\auth-receipt-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724162",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\domain-scoped-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724163",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\domain-scoped-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724164",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\project-scoped-password-totp.json"
+      ]
+    },
+    {
+      "id": "57811827934724165",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\project-scoped-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724166",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\project-scoped-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724167",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\system-scoped-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724168",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\system-scoped-token.json"
+      ]
+    },
+    {
+      "id": "57811827934724169",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3\\samples\\auth\\responses\\unscoped-password.json"
+      ]
+    },
+    {
+      "id": "57811827934724170",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\assertion\\samples\\ecp-saml-assertion-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724171",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\assertion\\samples\\saml-assertion-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724172",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\auth\\samples\\scoped-token-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724173",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\auth\\samples\\scoped-token-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724174",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\auth\\samples\\unscoped-token-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724175",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\add-protocol-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724176",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\add-protocol-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724177",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\get-protocol-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724178",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\get-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724179",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\list-protocol-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724180",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724181",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\register-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724182",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\register-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724183",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\update-protocol-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724184",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\update-protocol-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724185",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724186",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\identity-provider\\samples\\update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724187",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\mapping\\samples\\create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724188",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\mapping\\samples\\create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724189",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\mapping\\samples\\get-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724190",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\mapping\\samples\\list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724191",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\mapping\\samples\\update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724192",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\mapping\\samples\\update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724193",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\projects-domains\\samples\\domain-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724194",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\projects-domains\\samples\\project-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724195",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\service-provider\\samples\\get-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724196",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\service-provider\\samples\\list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724197",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\service-provider\\samples\\register-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724198",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\service-provider\\samples\\register-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724199",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\service-provider\\samples\\update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724200",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\federation\\service-provider\\samples\\update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724201",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-ENDPOINT-POLICY\\policy-endpoint-associations-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724202",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-ENDPOINT-POLICY\\policy-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724203",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\create-endpoint-group-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724204",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\endpoint-group-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724205",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\endpoint-groups-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724206",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\endpoint-project-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724207",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\list-associations-by-endpoint-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724208",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\list-associations-by-project-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724209",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\list-service-endpoints.json"
+      ]
+    },
+    {
+      "id": "57811827934724210",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\update-endpoint-group-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724211",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-EP-FILTER\\update-endpoint-group-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724212",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\access-token-role-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724213",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\access-token-roles-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724214",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\access-token-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724215",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\access-tokens-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724216",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\authorize-request-token-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724217",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\authorize-request-token-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724218",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\consumer-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724219",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\consumer-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724220",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\consumer-show-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724221",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\consumer-update-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724222",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\consumer-update-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724223",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH1\\consumers-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724224",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-OAUTH2\\token-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724225",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-REVOKE\\list-revoke-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724226",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-auth-redelegated-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724227",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-auth-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724228",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-auth-trust-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724229",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-create-request.json"
+      ]
+    },
+    {
+      "id": "57811827934724230",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-create-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724231",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-get-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724232",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-get-role-delegated-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724233",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-list-response.json"
+      ]
+    },
+    {
+      "id": "57811827934724234",
+      "direct": true,
+      "paths": [
+        "openstack_keystone\\api-ref\\source\\v3-ext\\samples\\OS-TRUST\\trust-list-roles-delegated-response.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 48
+}

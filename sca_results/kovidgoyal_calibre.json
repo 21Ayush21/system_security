@@ -1,0 +1,99 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "kovidgoyal_calibre",
+    "size": 0,
+    "start_time": "2025-11-27 21:50:00",
+    "end_time": "2025-11-27 21:50:04",
+    "cost_time": 3.4320731
+  },
+  "id": "57811815713832960",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811815713832961",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811815713832962",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\src\\calibre\\gui2\\convert\\page_setup.py"
+      ]
+    },
+    {
+      "id": "57811815713832963",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\bypy\\sources.json"
+      ]
+    },
+    {
+      "id": "57811815713832964",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\dictionaries\\online-catalog.json"
+      ]
+    },
+    {
+      "id": "57811815713832965",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\editor-help\\css.json"
+      ]
+    },
+    {
+      "id": "57811815713832966",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\editor-help\\html.json"
+      ]
+    },
+    {
+      "id": "57811815713832967",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\editor-help\\mathml.json"
+      ]
+    },
+    {
+      "id": "57811815713832968",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\editor-help\\opf2.json"
+      ]
+    },
+    {
+      "id": "57811815713832969",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\editor-help\\opf3.json"
+      ]
+    },
+    {
+      "id": "57811815713832970",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\resources\\editor-help\\svg.json"
+      ]
+    },
+    {
+      "id": "57811815713832971",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\setup\\extensions.json"
+      ]
+    },
+    {
+      "id": "57811815713832972",
+      "direct": true,
+      "paths": [
+        "kovidgoyal_calibre\\src\\calibre\\headless\\headless.json"
+      ]
+    }
+  ]
+}

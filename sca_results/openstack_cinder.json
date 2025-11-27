@@ -1,0 +1,4823 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openstack_cinder",
+    "size": 0,
+    "start_time": "2025-11-27 21:55:26",
+    "end_time": "2025-11-27 21:55:36",
+    "cost_time": 9.9110157
+  },
+  "id": "57811826580553728",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811826580553729",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "openstackdocstheme",
+          "version": "\u003e=2.2.7",
+          "language": "Python",
+          "id": "57811826580554157",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[openstackdocstheme:\u003e=2.2.7]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "reno",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811826580554158",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[reno:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinx",
+          "version": "\u003e=3.5.1",
+          "language": "Python",
+          "id": "57811826580554159",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[sphinx:\u003e=3.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "Pygments",
+          "version": "\u003e=2.6.1",
+          "language": "Python",
+          "id": "57811826580554160",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[Pygments:\u003e=2.6.1]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Red Hat Ansible Automation 安全漏洞",
+              "id": "XMIRROR-E5B71412-91764695",
+              "cve_id": "CVE-2021-20270",
+              "cnnvd_id": "CNNVD-202103-691",
+              "cnvd_id": "CNVD-2021-22851",
+              "cwe_id": "CWE-835",
+              "description": "Red Hat Ansible Automation是  （Red Hat）开源的一个应用软件。提供一个自动化基础架构的各个方面，从服务器和网络设备到操作系统，应用程序和安全性。\r\nRed Hat Ansible Automation 存在安全漏洞，该漏洞源于无限循环可能导致DoS。",
+              "suggestion": "通用方案： 厂商未提供漏洞修复方案，请关注厂商主页更新：,https://pygments.org/docs/\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Matthäus G. Chajdas pygments 安全漏洞",
+              "id": "XMIRROR-E5B71412-ED67FB95",
+              "cve_id": "CVE-2021-27291",
+              "cnnvd_id": "CNNVD-202103-1079",
+              "cwe_id": "CWE-1333",
+              "description": "Matthäus G. Chajdas pygments是  （Matthäus G. Chajdas）开源的一个应用软件。提供通用语法突出显示工具功能。\r\npygments 1.1+ 存在安全漏洞，攻击者可利用该漏洞可以导致拒绝服务。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/pygments/pygments/commit/2e7e8c4a7b318f4032493773732754e418279a14\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-17",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Matthäus G. Chajdas pygments 代码问题漏洞",
+              "id": "XMIRROR-E5B714FC-31AAB095",
+              "cve_id": "CVE-2022-40896",
+              "cnnvd_id": "CNNVD-202307-1683",
+              "cwe_id": "CWE-434",
+              "description": "Matthäus G. Chajdas pygments是 Matthäus G. Chajdas开源的一个应用软件。提供通用语法突出显示工具功能。\r\npygments 2.15.0及之前版本存在安全漏洞，该漏洞源于pygments/lexers/smithy.py存在正则表达式拒绝服务（ReDoS）漏洞。",
+              "suggestion": "将Pygments升级至2.15.0或更高版本",
+              "attack_type": "本地",
+              "release_date": "2023-07-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "os-api-ref",
+          "version": "\u003e=2.1.0",
+          "language": "Python",
+          "id": "57811826580554161",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[os-api-ref:\u003e=2.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sphinxcontrib-apidoc",
+          "version": "\u003e=0.3.0",
+          "language": "Python",
+          "id": "57811826580554162",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[sphinxcontrib-apidoc:\u003e=0.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-feature-classification",
+          "version": "\u003e=1.1.0",
+          "language": "Python",
+          "id": "57811826580554163",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[sphinx-feature-classification:\u003e=1.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "whereto",
+          "version": "\u003e=0.4.0",
+          "language": "Python",
+          "id": "57811826580554164",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\doc\\requirements.txt\\[whereto:\u003e=0.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 3
+    },
+    {
+      "language": "Python",
+      "id": "57811826580553730",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\driver-requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "python-3parclient",
+          "version": "\u003e=4.2.10",
+          "language": "Python",
+          "id": "57811826580554165",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[python-3parclient:\u003e=4.2.10]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "krest",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811826580554166",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[krest:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "distro",
+          "language": "Python",
+          "id": "57811826580554167",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[distro:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "py-pure-client",
+          "version": "\u003e=1.47.0",
+          "language": "Python",
+          "id": "57811826580554168",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[py-pure-client:\u003e=1.47.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-2-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyOpenSSL",
+          "version": "\u003e=1.0.0",
+          "language": "Python",
+          "id": "57811826580554169",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[pyOpenSSL:\u003e=1.0.0]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python Cryptographic Authority pyopenssl 安全漏洞",
+              "id": "XMIRROR-E5F7537E-8516AE95",
+              "cve_id": "CVE-2018-1000807",
+              "cnnvd_id": "CNNVD-201810-249",
+              "cwe_id": "CWE-416",
+              "description": "Python Cryptographic Authority pyopenssl是一款基于Python的OpenSSL库。\r\n\r\nPython Cryptographic Authority pyopenssl 17.5.0之前版本中对X509对象的处理方法存在释放后重用漏洞。远程攻击者可利用该漏洞造成拒绝服务或执行代码。",
+              "attack_type": "远程",
+              "release_date": "2018-10-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Python Cryptographic Authority pyopenssl 安全漏洞",
+              "id": "XMIRROR-E5F7537E-8516C095",
+              "cve_id": "CVE-2018-1000808",
+              "cnnvd_id": "CNNVD-201810-250",
+              "cwe_id": "CWE-404",
+              "description": "Python Cryptographic Authority pyopenssl是一款基于Python的OpenSSL库。\r\n\r\nPython Cryptographic Authority pyopenssl 17.5.0之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。",
+              "suggestion": "## Remediation\r\nUpgrade `pyopenssl` to version 17.5.0 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2018-10-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "python-lefthandclient",
+          "version": "\u003e=2.0.0",
+          "language": "Python",
+          "id": "57811826580554170",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[python-lefthandclient:\u003e=2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pywbem",
+          "version": "\u003e=0.7.0",
+          "language": "Python",
+          "id": "57811826580554171",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[pywbem:\u003e=0.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.1-only"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyWBEM 输入验证漏洞",
+              "id": "XMIRROR-E5B70FC1-14C86895",
+              "cve_id": "CVE-2013-6418",
+              "cnnvd_id": "CNNVD-201405-050",
+              "cnvd_id": "CNVD-2013-15564",
+              "cwe_id": "CWE-20",
+              "description": "PyWBEM是一个基于Python的WBEM客户端。\r\nPyWBEM 0.7及之前的版本中存在安全漏洞，该漏洞源于当使用WBEM CIM-XML协议时，程序没有正确处理HTTPS连接。攻击者可通过实施中间人攻击利用该漏洞欺骗连接。",
+              "suggestion": "通用方案： 目前没有详细解决方案提供： http://pywbem.sourceforge.net/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-09",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyWBEM 输入验证漏洞",
+              "id": "XMIRROR-E5B70FC1-14C88295",
+              "cve_id": "CVE-2013-6444",
+              "cnnvd_id": "CNNVD-201405-051",
+              "cnvd_id": "CNVD-2013-15565",
+              "cwe_id": "CWE-20",
+              "description": "PyWBEM是一个基于Python的WBEM客户端。\r\nPyWBEM 0.7及之前的版本中存在安全漏洞，该漏洞源于程序没有验证服务器主机名是否与X.509证书的域名匹配。攻击者可借助任意有效的证书利用该漏洞实施中间人攻击欺骗SSL服务器。",
+              "suggestion": "通用方案： 目前没有详细解决方案提供： http://pywbem.sourceforge.net/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "pyxcli",
+          "version": "\u003e=1.1.5",
+          "language": "Python",
+          "id": "57811826580554172",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[pyxcli:\u003e=1.1.5]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "rados",
+          "language": "Python",
+          "id": "57811826580554173",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[rados:]"
+          ]
+        },
+        {
+          "name": "rbd",
+          "language": "Python",
+          "id": "57811826580554174",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[rbd:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "rbd-iscsi-client",
+          "language": "Python",
+          "id": "57811826580554175",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[rbd-iscsi-client:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "storops",
+          "version": "\u003e=1.2.3",
+          "language": "Python",
+          "id": "57811826580554176",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[storops:\u003e=1.2.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "infinisdk",
+          "language": "Python",
+          "id": "57811826580554177",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[infinisdk:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "capacity",
+          "language": "Python",
+          "id": "57811826580554178",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[capacity:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "infi.dtypes.wwn",
+          "language": "Python",
+          "id": "57811826580554179",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[infi.dtypes.wwn:]"
+          ],
+          "licenses": [
+            {
+              "name": "PSF-2.0"
+            }
+          ]
+        },
+        {
+          "name": "infi.dtypes.iqn",
+          "language": "Python",
+          "id": "57811826580554180",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[infi.dtypes.iqn:]"
+          ],
+          "licenses": [
+            {
+              "name": "PSF-2.0"
+            }
+          ]
+        },
+        {
+          "name": "storpool",
+          "version": "\u003e=7.1.0",
+          "language": "Python",
+          "id": "57811826580554181",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[storpool:\u003e=7.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "storpool.spopenstack",
+          "version": "\u003e=2.2.1",
+          "language": "Python",
+          "id": "57811826580554182",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[storpool.spopenstack:\u003e=2.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "dfs_sdk",
+          "version": "\u003e=1.2.25",
+          "language": "Python",
+          "id": "57811826580554183",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[dfs_sdk:\u003e=1.2.25]"
+          ]
+        },
+        {
+          "name": "websocket-client",
+          "version": "\u003e=1.3.2",
+          "language": "Python",
+          "id": "57811826580554184",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[websocket-client:\u003e=1.3.2]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "python-linstor",
+          "version": "\u003e=1.7.0",
+          "language": "Python",
+          "id": "57811826580554185",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[python-linstor:\u003e=1.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "psutil",
+          "version": "\u003e=5.7.2",
+          "language": "Python",
+          "id": "57811826580554186",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\driver-requirements.txt\\[psutil:\u003e=5.7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811826580553731",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pbr",
+          "version": "\u003e=5.8.0",
+          "language": "Python",
+          "id": "57811826580554187",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[pbr:\u003e=5.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "decorator",
+          "version": "\u003e=4.4.2",
+          "language": "Python",
+          "id": "57811826580554188",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[decorator:\u003e=4.4.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "eventlet",
+          "version": "\u003e=0.30.1,!=0.32.0",
+          "language": "Python",
+          "id": "57811826580554189",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[eventlet:\u003e=0.30.1,!=0.32.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-91A42695",
+              "cve_id": "CVE-2021-21419",
+              "cnnvd_id": "CNNVD-202105-354",
+              "cwe_id": "CWE-400",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.31.0 之前版本存在资源管理错误漏洞，该漏洞源于一个websocket peer可能会通过发送非常大的websocket帧来耗尽Eventlet端的内存。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/eventlet/eventlet/security/advisories/GHSA-9p9m-jm8w-94p2\n",
+              "attack_type": "远程",
+              "release_date": "2021-05-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Eventlet 环境问题漏洞",
+              "id": "XMIRROR-E5B714FA-64663A95",
+              "cve_id": "CVE-2025-58068",
+              "cnnvd_id": "CNNVD-202508-3484",
+              "cwe_id": "CWE-444",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.40.3之前版本存在环境问题漏洞，该漏洞源于HTTP请求夹带处理不当，可能导致前端安全控制绕过。",
+              "suggestion": "## Remediation\nUpgrade `eventlet` to version 0.40.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-08-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "greenlet",
+          "version": "\u003e=0.4.16",
+          "language": "Python",
+          "id": "57811826580554190",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[greenlet:\u003e=0.4.16]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "iso8601",
+          "version": "\u003e=0.1.12",
+          "language": "Python",
+          "id": "57811826580554191",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[iso8601:\u003e=0.1.12]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "jsonschema",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811826580554192",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[jsonschema:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "keystoneauth1",
+          "version": "\u003e=4.2.1",
+          "language": "Python",
+          "id": "57811826580554193",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[keystoneauth1:\u003e=4.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "keystonemiddleware",
+          "version": "\u003e=9.1.0",
+          "language": "Python",
+          "id": "57811826580554194",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[keystonemiddleware:\u003e=9.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "lxml",
+          "version": "\u003e=4.5.2",
+          "language": "Python",
+          "id": "57811826580554195",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[lxml:\u003e=4.5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "lxml 和 libxml2 代码问题漏洞",
+              "id": "XMIRROR-E5B70F5B-1DE97195",
+              "cve_id": "CVE-2022-2309",
+              "cnnvd_id": "CNNVD-202207-382",
+              "cwe_id": "CWE-476",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。\r\nlxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDADDF95",
+              "cve_id": "CVE-2021-28957",
+              "cnnvd_id": "CNNVD-202103-1229",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-AF96AE95",
+              "cve_id": "CVE-2020-27783",
+              "cnnvd_id": "CNNVD-202011-1920",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nLxml 存在跨站脚本漏洞，该漏洞源于javascript通过noscript和style组合进行转义。以下产品及版本会受到影响：Debian stretch, Debian stretch (security), Debian buster, Debian bullseye, sid; Red Hat Software Collections, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8 , Red Hat OpenStack Platform 10 (Newton), Red Hat OpenStack Platform 13 (Queens)",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://lists.debian.org/debian-lts-announce/2020/11/msg00044.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-11-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "lxml 注入漏洞",
+              "id": "XMIRROR-E5B71412-EDA94895",
+              "cve_id": "CVE-2021-43818",
+              "cnnvd_id": "CNNVD-202112-1050",
+              "cnvd_id": "CNVD-2021-100235",
+              "cwe_id": "CWE-74 CWE-79",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.5之前版本存在注入漏洞，该漏洞源于HTML Cleaner允许某些精心制作的脚本内容以及使用数据URI嵌入的SVG文件中的脚本内容通过。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "oslo.config",
+          "version": "\u003e=8.3.2",
+          "language": "Python",
+          "id": "57811826580554196",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.config:\u003e=8.3.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.concurrency",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826580554197",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.concurrency:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.context",
+          "version": "\u003e=3.4.0",
+          "language": "Python",
+          "id": "57811826580554198",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.context:\u003e=3.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.db",
+          "version": "\u003e=11.0.0",
+          "language": "Python",
+          "id": "57811826580554199",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.db:\u003e=11.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.log",
+          "version": "\u003e=4.6.1",
+          "language": "Python",
+          "id": "57811826580554200",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.log:\u003e=4.6.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.messaging",
+          "version": "\u003e=14.6.0",
+          "language": "Python",
+          "id": "57811826580554201",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.messaging:\u003e=14.6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.middleware",
+          "version": "\u003e=4.1.1",
+          "language": "Python",
+          "id": "57811826580554202",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.middleware:\u003e=4.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.policy",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826580554203",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.policy:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.privsep",
+          "version": "\u003e=2.6.2",
+          "language": "Python",
+          "id": "57811826580554204",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.privsep:\u003e=2.6.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.reports",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811826580554205",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.reports:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.rootwrap",
+          "version": "\u003e=6.2.0",
+          "language": "Python",
+          "id": "57811826580554206",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.rootwrap:\u003e=6.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.serialization",
+          "version": "\u003e=4.2.0",
+          "language": "Python",
+          "id": "57811826580554207",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.serialization:\u003e=4.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.service",
+          "version": "\u003e=2.8.0",
+          "language": "Python",
+          "id": "57811826580554208",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.service:\u003e=2.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.upgradecheck",
+          "version": "\u003e=1.1.1",
+          "language": "Python",
+          "id": "57811826580554209",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.upgradecheck:\u003e=1.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.utils",
+          "version": "\u003e=6.0.0",
+          "language": "Python",
+          "id": "57811826580554210",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.utils:\u003e=6.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.versionedobjects",
+          "version": "\u003e=2.4.0",
+          "language": "Python",
+          "id": "57811826580554211",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.versionedobjects:\u003e=2.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "osprofiler",
+          "version": "\u003e=3.4.0",
+          "language": "Python",
+          "id": "57811826580554212",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[osprofiler:\u003e=3.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "packaging",
+          "version": "\u003e=20.4",
+          "language": "Python",
+          "id": "57811826580554213",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[packaging:\u003e=20.4]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "paramiko",
+          "version": "\u003e=2.7.2",
+          "language": "Python",
+          "id": "57811826580554214",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[paramiko:\u003e=2.7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Paramiko 竞争条件问题漏洞",
+              "id": "XMIRROR-E5B714FC-FEB15195",
+              "cve_id": "CVE-2022-24302",
+              "cnnvd_id": "CNNVD-202203-1604",
+              "cwe_id": "CWE-362",
+              "description": "Paramiko是一个 SSHv2 协议的纯 Python 实现。提供客户端和服务器功能。\r\nParamiko 2.10.1之前版本 存在安全漏洞，该漏洞源于write_private_key_file函数中的竞争条件（creation and chmod之间）允许未经授权的信息泄露。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2022-03-17",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "Paste",
+          "version": "\u003e=3.4.3",
+          "language": "Python",
+          "id": "57811826580554215",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[Paste:\u003e=3.4.3]"
+          ]
+        },
+        {
+          "name": "PasteDeploy",
+          "version": "\u003e=2.1.0",
+          "language": "Python",
+          "id": "57811826580554216",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[PasteDeploy:\u003e=2.1.0]"
+          ]
+        },
+        {
+          "name": "pyparsing",
+          "version": "\u003e=2.4.7",
+          "language": "Python",
+          "id": "57811826580554217",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[pyparsing:\u003e=2.4.7]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "python-barbicanclient",
+          "version": "\u003e=5.0.1",
+          "language": "Python",
+          "id": "57811826580554218",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[python-barbicanclient:\u003e=5.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-glanceclient",
+          "version": "\u003e=3.2.2",
+          "language": "Python",
+          "id": "57811826580554219",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[python-glanceclient:\u003e=3.2.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-keystoneclient",
+          "version": "\u003e=4.1.1",
+          "language": "Python",
+          "id": "57811826580554220",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[python-keystoneclient:\u003e=4.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-novaclient",
+          "version": "\u003e=18.2.0",
+          "language": "Python",
+          "id": "57811826580554221",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[python-novaclient:\u003e=18.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-swiftclient",
+          "version": "\u003e=3.10.1",
+          "language": "Python",
+          "id": "57811826580554222",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[python-swiftclient:\u003e=3.10.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "version": "\u003e=2.25.1",
+          "language": "Python",
+          "id": "57811826580554223",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[requests:\u003e=2.25.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "Routes",
+          "version": "\u003e=2.4.1",
+          "language": "Python",
+          "id": "57811826580554224",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[Routes:\u003e=2.4.1]"
+          ]
+        },
+        {
+          "name": "taskflow",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811826580554225",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[taskflow:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "rtslib-fb",
+          "version": "\u003e=2.1.74",
+          "language": "Python",
+          "id": "57811826580554226",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[rtslib-fb:\u003e=2.1.74]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "SQLAlchemy",
+          "version": "\u003e=1.4.23",
+          "language": "Python",
+          "id": "57811826580554227",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[SQLAlchemy:\u003e=1.4.23]"
+          ]
+        },
+        {
+          "name": "stevedore",
+          "version": "\u003e=3.2.2",
+          "language": "Python",
+          "id": "57811826580554228",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[stevedore:\u003e=3.2.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tabulate",
+          "version": "\u003e=0.8.7",
+          "language": "Python",
+          "id": "57811826580554229",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[tabulate:\u003e=0.8.7]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "tenacity",
+          "version": "\u003e=6.3.1",
+          "language": "Python",
+          "id": "57811826580554230",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[tenacity:\u003e=6.3.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "WebOb",
+          "version": "\u003e=1.8.6",
+          "language": "Python",
+          "id": "57811826580554231",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[WebOb:\u003e=1.8.6]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "WebOb 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14E1B695",
+              "cve_id": "CVE-2024-42353",
+              "cnnvd_id": "CNNVD-202408-1345",
+              "cwe_id": "CWE-601",
+              "description": "WebOb是Pylons开源的一个 WSGI 请求和响应对象。\r\nWebOb 1.8.8之前版本存在安全漏洞，该漏洞源于存在打开重定向。",
+              "suggestion": "## Remediation\nUpgrade `WebOb` to version 1.8.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-14",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "oslo.i18n",
+          "version": "\u003e=5.1.0",
+          "language": "Python",
+          "id": "57811826580554232",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.i18n:\u003e=5.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.vmware",
+          "version": "\u003e=3.10.0",
+          "language": "Python",
+          "id": "57811826580554233",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[oslo.vmware:\u003e=3.10.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-brick",
+          "version": "\u003e=6.10.0",
+          "language": "Python",
+          "id": "57811826580554234",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[os-brick:\u003e=6.10.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-win",
+          "version": "\u003e=5.5.0",
+          "language": "Python",
+          "id": "57811826580554235",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[os-win:\u003e=5.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tooz",
+          "version": "\u003e=2.8.0",
+          "language": "Python",
+          "id": "57811826580554236",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[tooz:\u003e=2.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "google-api-python-client",
+          "version": "\u003e=1.11.0",
+          "language": "Python",
+          "id": "57811826580554237",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[google-api-python-client:\u003e=1.11.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "castellan",
+          "version": "\u003e=3.7.0",
+          "language": "Python",
+          "id": "57811826580554238",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[castellan:\u003e=3.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "\u003e=3.1",
+          "language": "Python",
+          "id": "57811826580554239",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[cryptography:\u003e=3.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A334695",
+              "cve_id": "CVE-2023-0286",
+              "cnnvd_id": "CNNVD-202302-524",
+              "cwe_id": "CWE-843",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。存在安全漏洞，源于内存释放后重用。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "cryptography 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-886E1995",
+              "cve_id": "CVE-2023-23931",
+              "cnnvd_id": "CNNVD-202302-523",
+              "cwe_id": "CWE-754",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\ncryptography 存在代码问题漏洞。目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "目前官方已发布安全修复版本，受影响用户可以更新到安全版本:\n cryptography \u003e= 39.0.1",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-8EF13161",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.5-40.0.2 are vulnerable to a security issue. More details about the vulnerability itself can be found in https://www.openssl.org/news/secadv/20230530.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-06-03",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "pyca/cryptography's wheels include vulnerable OpenSSL",
+              "id": "XMIRROR-C9431C71-B357FAB7",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 0.8-41.0.2 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230731.txt, https://www.openssl.org/news/secadv/20230719.txt, and https://www.openssl.org/news/secadv/20230714.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-08-02",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "Vulnerable OpenSSL included in cryptography wheels",
+              "id": "XMIRROR-C9431C71-609F7E1F",
+              "description": "pyca/cryptography's wheels include a statically linked copy of OpenSSL. The versions of OpenSSL included in cryptography 2.5-41.0.3 are vulnerable to several security issues. More details about the vulnerabilities themselves can be found in https://www.openssl.org/news/secadv/20230908.txt.\n\nIf you are building cryptography source (\"sdist\") then you are responsible for upgrading your copy of OpenSSL. Only users installing from wheels built by the cryptography project (i.e., those distributed on PyPI) need to update their cryptography versions.",
+              "release_date": "2023-09-22",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-AF95EA95",
+              "cve_id": "CVE-2020-36242",
+              "cnnvd_id": "CNNVD-202102-574",
+              "cwe_id": "CWE-190 CWE-787",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography package before 3.3.2 for Python 存在输入验证错误漏洞，该漏洞源于导致整数溢出和缓冲区溢出。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python cryptography 代码问题漏洞",
+              "id": "XMIRROR-E5B7141B-7CC7EE95",
+              "cve_id": "CVE-2023-49083",
+              "cnnvd_id": "CNNVD-202311-2230",
+              "cwe_id": "CWE-476",
+              "description": "Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。\r\nPython cryptography 3.1到 41.0.6版本存在代码问题漏洞，该漏洞源于加载 PKCS7 证书时可能会导致空指针取消引用和段错误。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 41.0.6 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-29",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F5B-1DBEED95",
+              "cve_id": "CVE-2022-3996",
+              "cnnvd_id": "CNNVD-202212-2982",
+              "cwe_id": "CWE-667",
+              "description": "OpenSSL是一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库，支持多种加密算法。如果X.509证书包含格式错误的策略约束并且启用了策略处理，系统将递归地获取两次写锁，导致在某些操作系统上进程挂起，进而造成拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本3.0.8或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2022-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A956395",
+              "cve_id": "CVE-2023-3817",
+              "cnnvd_id": "CNNVD-202307-2314",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，常用于车云通信中对传输协议的加解密。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。OpenSSL在部分版本中存在使用DH_check等函数检查DH参数时耗时较长的漏洞，导致拒绝服务。",
+              "suggestion": "升级软件至无漏洞的更高版本，或打补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-07-31",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9AB00D95",
+              "cve_id": "CVE-2023-3446",
+              "cnnvd_id": "CNNVD-202307-1681",
+              "cwe_id": "CWE-606 CWE-1333",
+              "description": "OpenSSL是一个开源的安全套接层和安全传输层协议的通用加密库，支持多种加密算法。在某些版本的OpenSSL中，DH_check()、DH_check_ex()或EVP_PKEY_param_check()函数在处理过大的DH密钥或参数时可能导致应用程序变得非常缓慢，造成拒绝服务。",
+              "suggestion": "建议将OpenSSL升级到版本1.1.1d-150200.11.72.1或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-07-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 授权问题漏洞",
+              "id": "XMIRROR-E5B70F55-9A258F95",
+              "cve_id": "CVE-2023-2975",
+              "cnnvd_id": "CNNVD-202307-1295",
+              "cwe_id": "CWE-354 CWE-287",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL存在授权问题漏洞，该漏洞源于密码实现存在错误，AES-SIV忽略空的关联数据条目，导致允许对多个关联的进行身份验证数据条目进行加密。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 41.0.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F55-9A790895",
+              "cve_id": "CVE-2023-4807",
+              "cnnvd_id": "CNNVD-202309-665",
+              "cwe_id": "CWE-440",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。 OpenSSL 1.1.1 至 1.1.1v版本、3.0.0 至 3.0.10 版本以及 3.1.0 至 3.1.2版本存在安全漏洞，该漏洞源于POLY1305 MAC（消息身份验证代码）包含一个错误，当在支持 AVX512-IFMA 指令的较新 X86_64 处理器上运行时，可能会破坏 Windows 64 平台上的应用程序内部状态。",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `openssl` to version 1.1.1w, 3.0.11, 3.1.3 or higher.\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2023-09-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-808F9F95",
+              "cve_id": "CVE-2024-4603",
+              "cnnvd_id": "CNNVD-202405-2902",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL 3.0 和 3.1 版本存在安全漏洞，该漏洞源于使用函数 EVP_PKEY_param_check()、EVP_PKEY_public_check() 检查 DSA 公钥或 DSA 参数检查的键或参数，可能会导致拒绝服务。",
+              "suggestion": "## Remediation\nA fix was pushed into the `master` branch but not yet published.",
+              "attack_type": "远程",
+              "release_date": "2024-05-16",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 21
+        },
+        {
+          "name": "cursive",
+          "version": "\u003e=0.2.2",
+          "language": "Python",
+          "id": "57811826580554240",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[cursive:\u003e=0.2.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "zstd",
+          "version": "\u003e=1.4.5.1",
+          "language": "Python",
+          "id": "57811826580554241",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[zstd:\u003e=1.4.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Zstandard 资源管理错误漏洞",
+              "id": "XMIRROR-E5B70F5B-1D02B895",
+              "cve_id": "CVE-2022-4899",
+              "cnnvd_id": "CNNVD-202303-2716",
+              "cwe_id": "CWE-400",
+              "description": "Facebook Zstandard是美国Facebook公司的一种开源的无损数据压缩算法。\r\nZstandard存在安全漏洞，该漏洞源于util.c 中存在缓冲区溢出。",
+              "suggestion": "## Remediation\nUpgrade `facebook/zstd` to version 1.5.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-03-31",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "boto3",
+          "version": "\u003e=1.18.49",
+          "language": "Python",
+          "id": "57811826580554242",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[boto3:\u003e=1.18.49]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "distro",
+          "version": "\u003e=1.8.0",
+          "language": "Python",
+          "id": "57811826580554243",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[distro:\u003e=1.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tzdata",
+          "version": "\u003e=2022.4",
+          "language": "Python",
+          "id": "57811826580554244",
+          "direct": true,
+          "paths": [
+            "openstack_cinder\\requirements.txt\\[tzdata:\u003e=2022.4]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 33
+    },
+    {
+      "language": "Python",
+      "id": "57811826580553732",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\setup.py"
+      ]
+    },
+    {
+      "id": "57811826580553733",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\availability-zone-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553734",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backend-capabilities-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553735",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553736",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553737",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-force-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553738",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-record-export-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553739",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-record-import-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553740",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-record-import-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553741",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-reset-status-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553742",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-restore-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553743",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-restore-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553744",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553745",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553746",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553747",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\cgsnapshots-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553748",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\cgsnapshots-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553749",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\cgsnapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553750",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\cgsnapshots-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553751",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\cgsnapshots-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553752",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-group-create-from-src-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553753",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-group-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553754",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-group-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553755",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-group-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553756",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-group-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553757",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-group-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553758",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-groups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553759",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\consistency-groups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553760",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\encryption-type-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553761",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\encryption-type-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553762",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\encryption-type-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553763",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\encryption-type-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553764",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\encryption-type-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553765",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\extensions-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553766",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\host-attach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553767",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\hosts-get-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553768",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\hosts-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553769",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\image-metadata-show-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553770",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\image-metadata-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553771",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\limits-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553772",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\pools-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553773",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553774",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553775",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553776",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553777",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-unset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553778",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553779",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553780",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\qos_show_response.json"
+      ]
+    },
+    {
+      "id": "57811826580553781",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quota-classes-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553782",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quota-classes-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553783",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quota-classes-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553784",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quotas-show-defaults-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553785",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quotas-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553786",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quotas-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553787",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quotas-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553788",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quotas-user-show-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553789",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\quotas-user-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553790",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553791",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553792",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-metadata-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553793",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-metadata-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553794",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-metadata-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553795",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-metadata-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553796",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-metadata-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553797",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553798",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-status-reset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553799",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553800",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshot-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553801",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553802",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\snapshots-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553803",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\user-quotas-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553804",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\user-quotas-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553805",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\user-quotas-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553806",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\version-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553807",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\versions-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553808",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-attach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553809",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-bootable-status-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553810",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553811",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553812",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-detach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553813",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-extend-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553814",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-force-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553815",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-force-detach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553816",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-image-metadata-set-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553817",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-image-metadata-unset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553818",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-image-metadata-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553819",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-manage-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553820",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-manage-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553821",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553822",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553823",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-show-key-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553824",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553825",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-update-key-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553826",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-update-key-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553827",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553828",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-metadata-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553829",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-os-migrate_volume-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553830",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-os-migrate_volume_completion-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553831",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-os-retype-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553832",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553833",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-status-reset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553834",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfer-accept-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553835",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfer-accept-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553836",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfer-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553837",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfer-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553838",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfer-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553839",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfers-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553840",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-transfers-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553841",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-access-add-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553842",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-access-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553843",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-access-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553844",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553845",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-show-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553846",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553847",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-type-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553848",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-types-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553849",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-unmanage-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553850",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553851",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553852",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553853",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v2\\samples\\volumes-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553854",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-complete.json"
+      ]
+    },
+    {
+      "id": "57811826580553855",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553856",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553857",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553858",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553859",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553860",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553861",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\attachment-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553862",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\availability-zone-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553863",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backend-capabilities-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553864",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-force-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553865",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-record-export-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553866",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-record-import-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553867",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-record-import-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553868",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-reset-status-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553869",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-restore-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553870",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backup-restore-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553871",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\backup-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553872",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553873",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553874",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553875",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553876",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.18\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553877",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.18\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553878",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.18\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553879",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.18\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553880",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.43\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553881",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.43\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553882",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.43\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553883",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.43\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553884",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.45\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553885",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.45\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553886",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.45\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553887",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.45\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553888",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.56\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553889",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.56\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553890",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.56\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553891",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.56\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553892",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.9\\backup-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553893",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.9\\backup-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553894",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.9\\backup-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553895",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.9\\backup-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553896",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.9\\backups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553897",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups\\v3.9\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553898",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\backups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553899",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\cgsnapshots-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553900",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\cgsnapshots-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553901",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\cgsnapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553902",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\cgsnapshots-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553903",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\cgsnapshots-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553904",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\cluster-disable-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553905",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\cluster-disable-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553906",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\cluster-enable-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553907",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\cluster-enable-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553908",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\cluster-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553909",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\clusters-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553910",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\clusters\\v3.7\\clusters-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553911",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-group-create-from-src-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553912",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-group-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553913",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-group-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553914",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-group-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553915",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-group-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553916",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-group-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553917",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-groups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553918",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\consistency-groups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553919",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\extensions\\extensions-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553920",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\get-default-type-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553921",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\get-default-types-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553922",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-create-from-src-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553923",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-create-from-src-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553924",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553925",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553926",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553927",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-replication-disable.json"
+      ]
+    },
+    {
+      "id": "57811826580553928",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-replication-enable.json"
+      ]
+    },
+    {
+      "id": "57811826580553929",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-replication-failover.json"
+      ]
+    },
+    {
+      "id": "57811826580553930",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-replication-list-targets.json"
+      ]
+    },
+    {
+      "id": "57811826580553931",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-replication-target.json"
+      ]
+    },
+    {
+      "id": "57811826580553932",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-reset-status-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553933",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553934",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-snapshot-reset-status-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553935",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-snapshots-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553936",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-snapshots-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553937",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-snapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553938",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-snapshots-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553939",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-snapshots-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553940",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553941",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-default-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553942",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553943",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-specs-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553944",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-specs-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553945",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-specs-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553946",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-specs-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553947",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-specs-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553948",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-specs-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553949",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-type-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553950",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-types-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553951",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\group-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553952",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\groups-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553953",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\groups-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553954",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\host-attach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553955",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\hosts-get-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553956",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\hosts-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553957",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\image-metadata-show-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553958",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\image-metadata-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553959",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\limits\\limits-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553960",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\messages-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553961",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\messages-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553962",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\pools-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553963",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553964",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553965",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553966",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553967",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-unset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553968",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553969",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553970",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\qos\\qos_show_response.json"
+      ]
+    },
+    {
+      "id": "57811826580553971",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota-classes-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553972",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota-classes-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553973",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota-classes-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553974",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_classes\\quota-classes-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553975",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_classes\\quota-classes-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553976",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_classes\\quota-classes-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553977",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_sets\\quotas-show-defaults-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553978",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_sets\\quotas-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553979",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_sets\\quotas-show-usage-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553980",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_sets\\quotas-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553981",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\quota_sets\\quotas-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553982",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\resource-filters-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553983",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-disable-log-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553984",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-disable-log-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553985",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-disable-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553986",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-disable-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553987",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-enable-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553988",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-enable-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553989",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-failover-host-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553990",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-freeze-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553991",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-get-log-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553992",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-get-log-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553993",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553994",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-set-log-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553995",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\services-thaw-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553996",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\set-default-type-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553997",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\set-default-type-response.json"
+      ]
+    },
+    {
+      "id": "57811826580553998",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot-force-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580553999",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot-manage-list-detail-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554000",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot-manage-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554001",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot-status-reset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554002",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot-status-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554003",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot_manage_extensions\\snapshot-manage-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554004",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshot_manage_extensions\\snapshot-manage-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554005",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554006",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554007",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554008",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554009",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-show-key-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554010",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554011",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-update-key-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554012",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-update-key-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554013",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554014",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-metadata-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554015",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554016",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554017",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshot-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554018",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554019",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\snapshots-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554020",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.14\\snapshot-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554021",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.14\\snapshot-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554022",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.14\\snapshot-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554023",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.14\\snapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554024",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.41\\snapshot-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554025",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.41\\snapshot-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554026",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.41\\snapshot-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554027",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.41\\snapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554028",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.65\\snapshot-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554029",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.65\\snapshot-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554030",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.65\\snapshot-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554031",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\snapshots\\v3.65\\snapshots-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554032",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\user-quotas-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554033",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\user-quotas-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554034",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\user-quotas-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554035",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\versions\\version-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554036",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\versions\\versions-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554037",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-attach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554038",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-begin-detaching-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554039",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-bootable-status-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554040",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-detach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554041",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-extend-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554042",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-force-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554043",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-force-detach-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554044",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-image-metadata-set-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554045",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-image-metadata-unset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554046",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-image-metadata-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554047",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-initialize-connection-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554048",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-manage-list-detail-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554049",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-manage-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554050",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-manage-request-cluster.json"
+      ]
+    },
+    {
+      "id": "57811826580554051",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-os-extend_volume_completion-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554052",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-os-migrate_volume-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554053",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-os-migrate_volume_completion-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554054",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-os-reimage-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554055",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-os-retype-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554056",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-readonly-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554057",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-reserve-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554058",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-revert-to-snapshot-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554059",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-roll-detaching-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554060",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-status-reset-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554061",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-terminate-connection-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554062",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-type-access-delete-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554063",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-unmanage-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554064",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume-unreserve-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554065",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_actions\\volume-upload-to-image-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554066",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_actions\\volume-upload-to-image-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554067",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_manage_extensions\\volume-manage-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554068",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_manage_extensions\\volume-manage-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554069",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfer-accept-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554070",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfer-accept-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554071",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfer-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554072",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfer-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554073",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfer-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554074",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfers-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554075",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfer\\volume-transfers-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554076",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\v3.55\\volume-transfers-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554077",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\v3.55\\volume-transfers-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554078",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\v3.55\\volume-transfers-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554079",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\v3.57\\volume-transfers-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554080",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\v3.57\\volume-transfers-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554081",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\v3.57\\volume-transfers-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554082",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\volume-transfers-accept-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554083",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_transfers\\volume-transfers-accept-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554084",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\encryption-type-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554085",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\encryption-type-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554086",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\encryption-type-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554087",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\encryption-type-specific-specs-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554088",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\encryption-type-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554089",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\encryption-type-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554090",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-access-add-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554091",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-access-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554092",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-all-extra-specs-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554093",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554094",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554095",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-default-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554096",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-extra-specs-create-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554097",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-extra-specs-create-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554098",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554099",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-specific-extra-specs-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554100",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-specific-extra-specs-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554101",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-specific-extra-specs-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554102",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554103",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-type-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554104",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volume_type\\volume-types-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554105",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.13\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554106",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.13\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554107",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.13\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554108",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.13\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554109",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.21\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554110",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.21\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554111",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.21\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554112",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.21\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554113",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.48\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554114",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.48\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554115",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.48\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554116",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.48\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554117",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.61\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554118",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.61\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554119",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.61\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554120",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.61\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554121",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.63\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554122",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.63\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554123",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.63\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554124",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.63\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554125",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.65\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554126",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.65\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554127",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.65\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554128",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.65\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554129",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.69\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554130",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.69\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554131",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.69\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554132",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\v3.69\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554133",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554134",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554135",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-create-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554136",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-create-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554137",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-show-key-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554138",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554139",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-update-key-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554140",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-update-key-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554141",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554142",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-metadata-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554143",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-show-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554144",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-update-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554145",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volume-update-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554146",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volumes-list-detailed-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554147",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volumes-list-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554148",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\volumes\\volumes-list-summary-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554149",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\worker-cleanup-request.json"
+      ]
+    },
+    {
+      "id": "57811826580554150",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\api-ref\\source\\v3\\samples\\worker-cleanup-response.json"
+      ]
+    },
+    {
+      "id": "57811826580554151",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\cinder\\tests\\unit\\volume\\drivers\\dell_emc\\powerflex\\mockup\\query_sdc_by_id_response.json"
+      ]
+    },
+    {
+      "id": "57811826580554152",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\cinder\\tests\\unit\\volume\\drivers\\dell_emc\\powerflex\\mockup\\query_sdc_instances_response.json"
+      ]
+    },
+    {
+      "id": "57811826580554153",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\cinder\\tests\\unit\\volume\\drivers\\dell_emc\\powerflex\\mockup\\query_sdc_volumes_response.json"
+      ]
+    },
+    {
+      "id": "57811826580554154",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\cinder\\tests\\unit\\volume\\drivers\\solidfire\\scaled_iops_invalid_data.json"
+      ]
+    },
+    {
+      "id": "57811826580554155",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\cinder\\tests\\unit\\volume\\drivers\\solidfire\\scaled_iops_test_data.json"
+      ]
+    },
+    {
+      "id": "57811826580554156",
+      "direct": true,
+      "paths": [
+        "openstack_cinder\\etc\\cinder\\resource_filters.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 40
+}

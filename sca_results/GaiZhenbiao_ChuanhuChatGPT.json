@@ -1,0 +1,2200 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "GaiZhenbiao_ChuanhuChatGPT",
+    "size": 0,
+    "start_time": "2025-11-27 21:32:23",
+    "end_time": "2025-11-27 21:32:25",
+    "cost_time": 2.5339459
+  },
+  "id": "57811781013766144",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811781013766145",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "gradio",
+          "version": "4.29.0",
+          "language": "Python",
+          "id": "57811781013766162",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[gradio:4.29.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Gradio 本地文件包含漏洞",
+              "id": "XMIRROR-E5B70F5F-80ACA895",
+              "cve_id": "CVE-2024-4941",
+              "cnnvd_id": "CNNVD-202406-551",
+              "cwe_id": "CWE-22",
+              "description": "Gradio 是一个开源 Python 库，用于通过友好的 Web 界面演示机器学习模型。Gradio 4.25 版本中存在输入验证错误漏洞，该漏洞源于 `gradio/components/json_component.py` 的 `postprocess` 函数，由于路径验证不当，攻击者可以发送恶意的 JSON 对象，其中包含 `path` 键，进而读取远程系统上的文件，导致信息泄露。",
+              "suggestion": "立即将 Gradio 升级到 4.31.3 版本或更高版本，以修复此漏洞，并定期检查和更新所使用的依赖组件，防止类似漏洞的产生。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio 开放重定向漏洞",
+              "id": "XMIRROR-E5B70F5F-80AC5895",
+              "cve_id": "CVE-2024-4940",
+              "cnnvd_id": "CNNVD-202406-2573",
+              "cwe_id": "CWE-601",
+              "description": "Gradio是一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。此库存在输入验证错误漏洞，该漏洞源于开放重定向的安全问题。攻击者可以通过构造恶意的 URL，将用户重定向到任意网站，从而进行网络钓鱼攻击、跨站脚本攻击 (XSS) 等。利用此漏洞，攻击者能够根据响应中的 'Location' 头或 '文件不允许' 错误判断内部网络中开放端口的状态，从而逐步扫描内部网络。",
+              "suggestion": "建议用户更新到 Gradio 的最新版本，避免使用不受信任的链接和 URL。如果无法立即更新，应限制对相关功能的访问，确保严格的输入验证措施，并实施浏览器安全策略。",
+              "attack_type": "远程",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "gradio中的服务器端请求伪造(SSRF)漏洞",
+              "id": "XMIRROR-E5B70F5F-8046E395",
+              "cve_id": "CVE-2024-4325",
+              "cnnvd_id": "CNNVD-202406-556",
+              "cwe_id": "CWE-918",
+              "description": "Gradio 是一个开源的 Python 库，旨在通过友好的 Web 界面简化机器学习模型的演示。该漏洞存在于 Gradio 4.21.0 版本的 `/queue/join` 端点和 `save_url_to_cache` 函数中。由于对用户输入的 `path` 参数未进行充分的验证，攻方可以通过发送特制请求实现对内部网络或 AWS 元数据端点的未授权访问。",
+              "suggestion": "建议立即升级 Gradio 到版本 5.0.0b1 或更高版本。针对无法立即升级的情况，可以在服务器上实施网络访问控制，限制对 `/queue/join` 端点的访问，以降低风险。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio缺乏对下载的FRP客户端的完整性检查",
+              "id": "XMIRROR-E5B714EF-149C1995",
+              "cve_id": "CVE-2024-47867",
+              "cnnvd_id": "CNNVD-202410-1100",
+              "cwe_id": "CWE-345",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在数据伪造问题漏洞，该漏洞源于如果攻击者获得下载 FRP 客户端的远程 URL 的访问权限，他们可以在不被发现的情况下修改二进制文件，因为 Gradio 服务器不会验证文件的校验和或签名。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 4,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gradio 在 /queue/join 路径参数中存在 SSRF 漏洞",
+              "id": "XMIRROR-E5B714EF-14E6C895",
+              "cve_id": "CVE-2024-47167",
+              "cnnvd_id": "CNNVD-202410-1106",
+              "cwe_id": "CWE-918",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在安全漏洞，该漏洞源于Gradio 的 `async_save_url_to_cache` 函数允许攻击者强制 Gradio 服务器向用户控制的 URL 发送 HTTP 请求。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio在update_root_in_config中的竞态条件可能导致用户流量重定向",
+              "id": "XMIRROR-E5B714EF-149C5F95",
+              "cve_id": "CVE-2024-47870",
+              "cnnvd_id": "CNNVD-202410-1095",
+              "cwe_id": "CWE-362",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在竞争条件问题漏洞，该漏洞源于攻击者利用该漏洞可以将用户流量重定向到恶意服务器。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio的CORS来源验证在请求包含cookie时未执行",
+              "id": "XMIRROR-E5B714EF-14566F95",
+              "cve_id": "CVE-2024-47084",
+              "cnnvd_id": "CNNVD-202410-1108",
+              "cwe_id": "CWE-285",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在授权问题漏洞，该漏洞源于攻击者利用该漏洞可以向本地 Gradio 服务器发出未经授权的请求。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 4.44.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio 服务器存在通过上传 HTML、JS 或 SVG 文件导致的跨站脚本（XSS）漏洞",
+              "id": "XMIRROR-E5B714EF-149CBF95",
+              "cve_id": "CVE-2024-47872",
+              "cnnvd_id": "CNNVD-202410-1092",
+              "cwe_id": "CWE-79",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在跨站脚本漏洞，该漏洞源于经过身份验证的用户可以上传包含恶意脚本的文件，例如 HTML、JavaScript 或 SVG 文件。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio 在比较哈希时执行非恒定时间比较",
+              "id": "XMIRROR-E5B714EF-149C5B95",
+              "cve_id": "CVE-2024-47869",
+              "cnnvd_id": "CNNVD-202410-1097",
+              "cwe_id": "CWE-203",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在安全漏洞，该漏洞源于比较不是在恒定时间内完成的，攻击者可以通过测量不同请求的响应时间来逐字节推断正确的哈希值，从而利用这一点。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 4.44.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio的`enable_monitoring`标志设置为`False`时未能禁用监控",
+              "id": "XMIRROR-E5B714EF-14E6B095",
+              "cve_id": "CVE-2024-47168",
+              "cnnvd_id": "CNNVD-202410-1103",
+              "cwe_id": "CWE-670",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在安全漏洞，该漏洞源于即使在监控被禁用的情况下，攻击者或未经授权的用户仍然可以通过直接请求 /monitoring 端点来访问监控仪表板。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 4.44.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio的`is_in_or_equal`函数可能被绕过",
+              "id": "XMIRROR-E5B714EF-14E68295",
+              "cve_id": "CVE-2024-47164",
+              "cnnvd_id": "CNNVD-202410-1109",
+              "cwe_id": "CWE-22",
+              "description": "\u003cp\u003eGradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。 Gradio存在路径遍历漏洞，该漏洞源于is_in_or_equal函数旨在检查文件是否位于给定目录中，可以使用某些使用`..`序列操纵文件路径来绕过该函数。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `gradio` to version 5.0.0 or higher.\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 4,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gradio 存在多个组件后处理步骤允许任意文件泄露",
+              "id": "XMIRROR-E5B714EF-149CBE95",
+              "cve_id": "CVE-2024-47868",
+              "cnnvd_id": "CNNVD-202410-1098",
+              "cwe_id": "CWE-200 CWE-22",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在信息泄露漏洞，该漏洞源于攻击者利用该漏洞可以通过制作绕过预期输入限制的请求来利用这些组件。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gradio 在 FRP 客户端和服务器之间使用不安全的通信",
+              "id": "XMIRROR-E5B714EF-149C8A95",
+              "cve_id": "CVE-2024-47871",
+              "cnnvd_id": "CNNVD-202410-1091",
+              "cwe_id": "CWE-311",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在安全漏洞，该漏洞源于HTTPS 未在连接上强制执行。攻击者利用该漏洞可以拦截和读取上传到 Gradio 服务器的文件，以及修改客户端和服务器之间发送的响应或数据。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gradio接受空origin的CORS验证漏洞",
+              "id": "XMIRROR-E5B714EF-14E6F695",
+              "cve_id": "CVE-2024-47165",
+              "cnnvd_id": "CNNVD-202410-1107",
+              "cwe_id": "CWE-285",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在授权问题漏洞，该漏洞源于当 Gradio 服务器在本地部署时，`localhost_aliases` 变量包含“null”作为有效来源。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio在`/custom_component`中存在一级读取路径遍历漏洞",
+              "id": "XMIRROR-E5B714EF-14E65395",
+              "cve_id": "CVE-2024-47166",
+              "cnnvd_id": "CNNVD-202410-1110",
+              "cwe_id": "CWE-22",
+              "description": "Gradio是Hugging Face开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio存在路径遍历漏洞，该漏洞源于攻击者利用该漏洞可以通过操纵请求中的文件路径来访问和泄露自定义 Gradio 组件的源代码。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 4.44.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-10-10",
+              "security_level_id": 4,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "gradio 服务器端请求伪造漏洞",
+              "id": "XMIRROR-E5B714EF-14929295",
+              "cve_id": "CVE-2024-48052",
+              "cnnvd_id": "CNNVD-202411-344",
+              "cwe_id": "CWE-918",
+              "description": "Gradio 是一个用于通过友好的Web界面展示和分享机器学习模型的开源Python库，能够简化数据科学家和开发者演示他们模型的过程。在版本4.42.0的Gradio中，其gr.DownloadButton函数中存在服务器端请求伪造（SSRF）漏洞。攻击者可能利用该漏洞通过该功能发送精心构造的请求，从而导致服务器执行未授权的外部请求。",
+              "suggestion": "建议立即升级Gradio至最新版本以修复该漏洞。作为临时解决方案，可以对外部请求的目标进行严格的限制和校验。为防止类似漏洞，将来应加强代码审查和测试流程，尤其是在使用外部请求功能时。",
+              "attack_type": "远程",
+              "release_date": "2024-11-04",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Gradio易受任意文件删除漏洞影响",
+              "id": "XMIRROR-E5B714EF-DDFE7C95",
+              "cve_id": "CVE-2024-10648",
+              "cnnvd_id": "CNNVD-202503-2197",
+              "cwe_id": "CWE-29",
+              "description": "Gradio 是一个开源的 Python 库，旨在通过友好的 Web 界面演示机器学习模型。受影响的版本为 git 98cbcae。该漏洞源于 Gradio Audio 组件的路径遍历漏洞，攻击者能够控制音频文件格式，导致任意文件内容被删除。当存档文件被精心构造时，恶意的文件名可以遍历到提取目录之外，覆盖其他重要文件，例如配置文件或可执行文件，从而导致更为严重的影响。攻击者可以通过在 zip 文件中包含恶意路径名来利用此漏洞。",
+              "suggestion": "建议开发者对 Gradio 进行代码审查，特别是处理文件路径的部分，以确保未使用不安全的路径处理方式。尽量避免用户输入影响文件路径的情况，并降低路径遍历攻击的可能性。在没有固定版本的情况下，管理者应定期检查并增强服务的安全性。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio Blocked Path ACL绕过漏洞",
+              "id": "XMIRROR-E5B714FA-AE9CF795",
+              "cve_id": "CVE-2025-23042",
+              "cnnvd_id": "CNNVD-202501-2043",
+              "cwe_id": "CWE-285",
+              "description": "Gradio是Gradio开源的一个开源 Python 库，是通过友好的 Web 界面演示机器学习模型的方法。\r\nGradio 5.6.0之前版本存在授权问题漏洞，该漏洞源于对文件的路径验证逻辑缺乏规范化。攻击者利用该漏洞可以通过更改被阻止的文件或目录路径的字母大小写，绕过Gradio的文件路径访问控制列表（ACL）。",
+              "suggestion": "## Remediation\nUpgrade `gradio` to version 5.11.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-01-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Gradio文件上传过程中的拒绝服务（DoS）漏洞",
+              "id": "XMIRROR-E5B70F5F-8082AB95",
+              "cve_id": "CVE-2024-8966",
+              "cnnvd_id": "CNNVD-202503-2402",
+              "cwe_id": "CWE-770",
+              "description": "Gradio 是一个开源的 Python 库，用于通过友好的 Web 界面展示训练好的机器学习模型。在其文件上传过程中，存在一个拒绝服务（DoS）漏洞。攻击者可以在 multipart 边界的结尾添加大量字符，导致系统不断处理每个字符并发出警告。这可能导致 Gradio 在长时间内无法访问，从而中断服务，造成显著的停机时间。",
+              "suggestion": "与 Gradio 团队沟通，了解最新版本升级情况，尽快切换到最新版本以解决此问题。如果无法立即升级，请采用其他临时措施，比如限制文件上传的大小或者监控异常流量以阻止潜在的拒绝服务攻击。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio中的开放重定向漏洞允许恶意重定向",
+              "id": "XMIRROR-E5B70F5F-80E8E995",
+              "cve_id": "CVE-2024-8021",
+              "cnnvd_id": "CNNVD-202503-2360",
+              "cwe_id": "CWE-601",
+              "description": "Gradio是一个开源的Python库，旨在通过友好的Web界面来演示机器学习模型。该库的最新版本存在开放重定向漏洞，允许攻击者通过URL编码的方式将用户重定向到恶意网站。此漏洞的根本原因在于Gradio在处理重定向请求时未能对外部URL进行足够的验证。攻击者可以通过发送特制请求，导致服务器返回302重定向到攻击者控制的网站。",
+              "suggestion": "建议立即更新到Gradio的最新版本以修复此漏洞。同时，应用配置措施限制可能的重定向目标，仅允许可信的内部URL。此外，进行安全编码实践，以防止类似的开放重定向漏洞在未来再次出现。",
+              "attack_type": "远程",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio在Windows操作系统中的路径遍历漏洞",
+              "id": "XMIRROR-E5B714EF-DD77A495",
+              "cve_id": "CVE-2024-12217",
+              "cnnvd_id": "CNNVD-202503-2274",
+              "cwe_id": "CWE-22",
+              "description": "Gradio 是一个开源的 Python 库，旨在以友好的 Web 界面演示机器学习模型。该库在版本 git 67e4044 中存在一个路径遍历漏洞，其根本原因在于 blocked_path 功能的实现缺陷。具体来说，尽管该应用程序能正确阻止对类似 'C:/tmp/secret.txt' 的路径访问，但在使用 NTFS 备用数据流（ADS）语法时，例如 'C:/tmp/secret.txt::$DATA'，却未能阻止访问。这一缺陷可能导致未授权用户读取被阻止的文件路径。",
+              "suggestion": "建议立刻升级到 Gradio 的最新版本（当前修复版本为 5.22.0），并关注相关的安全通告。如果暂时无法升级，请考虑使用访问控制来限制对敏感文件或目录的访问，确保系统的其他部分是安全的。",
+              "attack_type": "远程",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio易受通过特制Zip炸弹实现的拒绝服务（DoS）攻击",
+              "id": "XMIRROR-E5B714EF-DDFEB295",
+              "cve_id": "CVE-2024-10569",
+              "cnnvd_id": "CNNVD-202503-2192",
+              "cwe_id": "CWE-475",
+              "description": "Gradio 是一个开源的 Python 库，旨在通过友好的 Web 界面演示机器学习模型。受影响的版本为 git 98cbcae，在 dataframe 组件中存在安全漏洞。该漏洞源于组件使用 pd.read_csv 处理输入值，允许上传压缩文件。攻击者可以利用此漏洞，通过上传恶意构造的 zip 炸弹，导致服务器崩溃和拒绝服务（DoS）。",
+              "suggestion": "目前没有固定版本的 Gradio 可用于修复此漏洞。建议用户限制对输入的压缩文件的处理，并密切关注后续的版本更新和补丁发布。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "文件上传功能中的拒绝服务（DoS）漏洞",
+              "id": "XMIRROR-E5B70F8A-9E434595",
+              "cve_id": "CVE-2025-0187",
+              "cnnvd_id": "CNNVD-202503-2458",
+              "cwe_id": "CWE-400",
+              "description": "Gradio 是一个开源的 Python 库，旨在通过友好的 Web 界面演示机器学习模型。Gradio 版本 0.39.1 存在一个资源管理错误漏洞，该漏洞源于文件上传功能在处理带有大文件名的表单数据时的不当处理。攻击者可以通过发送包含过大文件名的 payload，使得服务器变得不响应，从而导致合法用户无法访问该服务。",
+              "suggestion": "建议立即将 Gradio 升级至版本 0.39.2 或更高版本以修复该漏洞。如果不便于立即升级，可以考虑对文件上传请求进行限制，例如设置文件名的最大长度。此外，可进行安全代码审查，确保在处理用户输入时采用适当的验证和清理措施，以防止类似的资源管理错误漏洞再次出现。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Gradio 允许通过路径操作进行未经授权的文件复制",
+              "id": "XMIRROR-E5B714FA-9A866395",
+              "cve_id": "CVE-2025-48889",
+              "cnnvd_id": "CNNVD-202505-4136",
+              "cwe_id": "CWE-434",
+              "description": "Gradio的标记功能存在任意文件复制漏洞，攻击者可以绕过身份验证，复制服务器文件系统中的任何可读文件。攻击者不能读取复制的文件，但可以通过复制大型文件（如/dev/urandom）填满磁盘空间，导致服务拒绝。",
+              "suggestion": "对文件路径进行严格验证，确保只能复制被允许的文件，建议尽快升级到修复版本。",
+              "attack_type": "远程",
+              "release_date": "2025-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 24
+        },
+        {
+          "name": "gradio_client",
+          "version": "0.16.1",
+          "language": "Python",
+          "id": "57811781013766163",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[gradio_client:0.16.1]"
+          ]
+        },
+        {
+          "name": "primp",
+          "version": "0.5.5",
+          "language": "Python",
+          "id": "57811781013766164",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[primp:0.5.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pypinyin",
+          "language": "Python",
+          "id": "57811781013766165",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[pypinyin:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "tiktoken",
+          "language": "Python",
+          "id": "57811781013766166",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[tiktoken:]"
+          ]
+        },
+        {
+          "name": "socksio",
+          "language": "Python",
+          "id": "57811781013766167",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[socksio:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "tqdm",
+          "language": "Python",
+          "id": "57811781013766168",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[tqdm:]"
+          ],
+          "licenses": [
+            {
+              "name": "MPL-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "tqdm 安全漏洞",
+              "id": "XMIRROR-E5B7668D-7D248C95",
+              "cve_id": "CVE-2016-10075",
+              "cnnvd_id": "CNNVD-201612-805",
+              "cnvd_id": "CNVD-2017-00061",
+              "cwe_id": "CWE-17",
+              "description": "tqdm是一个快速、可扩展的Python进度条，它支持在Python长循环中添加一个进度提示信息。\r\ntqdm 4.4.1版本和4.10版本中的tqdm._version模块存在安全漏洞。本地攻击者可利用该漏洞执行任意代码。",
+              "suggestion": "通用方案： 目前没有详细的解决方案提供： https://pypi.python.org/pypi/tqdm\n",
+              "attack_type": "本地",
+              "release_date": "2016-12-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "tqdm 安全漏洞",
+              "id": "XMIRROR-E5B714EF-145C7A95",
+              "cve_id": "CVE-2024-34062",
+              "cnnvd_id": "CNNVD-202405-1229",
+              "cwe_id": "CWE-74",
+              "description": "tqdm是tqdm开源的一个用于 Python 和 CLI 的快速、可扩展的进度条。\r\ntqdm 4.66.3之前版本存在安全漏洞，该漏洞源于任何可选的非布尔 CLI 参数都可以通过 python 的 eval传递，允许任意代码执行。",
+              "suggestion": "## Remediation\nUpgrade `tqdm` to version 4.66.3 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-03",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "colorama",
+          "language": "Python",
+          "id": "57811781013766169",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[colorama:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "googlesearch-python",
+          "language": "Python",
+          "id": "57811781013766170",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[googlesearch-python:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "Pygments",
+          "language": "Python",
+          "id": "57811781013766171",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[Pygments:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Matthäus G. Chajdas pygments 代码问题漏洞",
+              "id": "XMIRROR-E5B714FC-31AAB095",
+              "cve_id": "CVE-2022-40896",
+              "cnnvd_id": "CNNVD-202307-1683",
+              "cwe_id": "CWE-434",
+              "description": "Matthäus G. Chajdas pygments是 Matthäus G. Chajdas开源的一个应用软件。提供通用语法突出显示工具功能。\r\npygments 2.15.0及之前版本存在安全漏洞，该漏洞源于pygments/lexers/smithy.py存在正则表达式拒绝服务（ReDoS）漏洞。",
+              "suggestion": "将Pygments升级至2.15.0或更高版本",
+              "attack_type": "本地",
+              "release_date": "2023-07-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "openai",
+          "version": "1.16.2",
+          "language": "Python",
+          "id": "57811781013766172",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[openai:1.16.2]"
+          ]
+        },
+        {
+          "name": "langchain",
+          "version": "0.1.14",
+          "language": "Python",
+          "id": "57811781013766173",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[langchain:0.1.14]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "langchain-community.retrievers.web_research.WebResearchRetriever 中的服务器端请求伪造漏洞",
+              "id": "XMIRROR-E5B70F5F-802FF295",
+              "cve_id": "CVE-2024-3095",
+              "cnnvd_id": "CNNVD-202406-502",
+              "cwe_id": "CWE-918",
+              "description": "\u003cp\u003eLangChain 是一个通过可组合性构建应用程序的框架。该框架中的 Web Research Retriever 组件存在服务器端请求伪造 (SSRF) 漏洞。该漏洞发生的根本原因是该组件未对请求进行适当限制，允许其访问本地地址。攻击者利用该漏洞可以进行端口扫描、访问本地服务，并在云环境中读取实例元数据。尽管只允许通过 GET 请求进行攻击，但仍可能会影响机密性、完整性和可用性。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即将 langchain 升级到 0.2.10 或更高版本，以修复该漏洞。同时，考虑实施其他安全措施，例如使用代理来防止请求访问本地地址。\u003c/p\u003e",
+              "attack_type": "物理",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "LangChain pickle反序列化不受信任数据",
+              "id": "XMIRROR-E5B70F5F-80435F95",
+              "cve_id": "CVE-2024-5998",
+              "cnnvd_id": "CNNVD-202409-1507",
+              "cwe_id": "CWE-502",
+              "description": "\u003cp\u003eLangChain 是一个开源的 Python 库，旨在通过组合性构建基于大语言模型的应用程序。在其 FAISS.deserialize_from_bytes 函数中，存在不信任数据的 pickle 反序列化漏洞。此漏洞的根源在于未能充分验证反序列化后的数据有效性，攻击者可以通过操控输入数据来执行任意命令，利用 os.system 函数。利用此漏洞，攻击者只需向应用程序发送恶意构造的序列化数据即可触发该漏洞。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e立即升级 LangChain 至 0.2.10 及更高版本以修复此漏洞。如果暂时无法升级，请采取措施限制对 FAISS.deserialize_from_bytes 函数的访问，并实施输入数据的严格验证，以防止不信任的数据被反序列化。\u003c/p\u003e",
+              "attack_type": "物理",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Langchain SQL注入漏洞",
+              "id": "XMIRROR-E5B70F5F-80902195",
+              "cve_id": "CVE-2024-8309",
+              "cnnvd_id": "CNNVD-202410-3353",
+              "cwe_id": "CWE-89 CWE-74",
+              "description": "\u003cp\u003eLangChain 是一个开源框架，用于开发由大型语言模型（LLM）支持的应用程序。版本 0.2.5 存在 SQL 注入漏洞，此漏洞源于 GraphCypherQAChain 类的不充分输入验证，攻击者可以通过提示注入恶意 SQL 命令来操纵、删除或创建数据。这可能导致未经授权的数据操纵、服务中断、数据泄露、多租户环境的安全漏洞和数据完整性问题。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到 langchain-community 的 0.2.19 版本或更高版本，以防止此 SQL 注入漏洞。如果无法立即升级，请实施适当的访问控制，限制对相关端点的访问，并加强输入验证以避免潜在的攻击。\u003c/p\u003e",
+              "attack_type": "远程",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "langchain_community Cypher注入漏洞",
+              "id": "XMIRROR-E5F54184-68BE321D",
+              "description": "\u003cp\u003elangchain_community是一个基于Python的开源库，旨在简化图形数据库与机器学习的集成。此漏洞存在于Neo4jVector类中，导致对用户输入的清理不足，允许攻击者通过node_label或embedding_node_property进行Cypher注入。攻击者可以通过不安全的用户输入创建、修改或删除数据库中的节点。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e应立即对langchain库进行升级，修复版本应在0.2.6以上。临时缓解措施包括对用户输入进行严格的清理和验证，移除不安全的字符（如反引号和注释符号），并实施输入黑名单策略。为了防止此类漏洞再次出现，建议开发团队采用参数化查询方式，以保证输入值的安全。\u003c/p\u003e",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Langchain 提示词注入漏洞",
+              "id": "XMIRROR-E5F54184-3E11411D",
+              "description": "\u003cp\u003eLangchain 是一个用于构建语言模型应用程序的Python库。该漏洞影响到用 Playwright 浏览器工具包创建的 LLM 浏览器 AI 代理，当目标网站中包含 visibility:hidden 的元素时，外部攻击者可以通过恶意提示获取这些元素的值。这些元素可能包含用于安全目的的令牌，如 CSRF 令牌，此外在 OAuth 2.0 response_mode=form_post 中，包含了用于身份验证和授权的 ID 令牌和访问令牌。这一漏洞的根本原因在于在处理隐藏字段时缺乏严格的安全机制，从而导致通过被注入的恶意代码泄露重要的安全令牌。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到 Langchain 的最新版本，以修复此漏洞。如果无法立即升级，请审查并限制对敏感数据的访问，确保提示注入的风险得到管控，并优化代码中对隐藏元素的处理。未来的安全措施应包括建立更严格的输入验证和安全编码实践，以防止类似漏洞的出现。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Langchain XXE漏洞",
+              "id": "XMIRROR-E5F54184-43D3641D",
+              "description": "\u003cp\u003eLangchain是一个用于处理文档的Python库，通过多个数据源加载器提取信息。当开发者将这些加载器的参数暴露给不可信的来源时，可能会导致XXE漏洞的出现。此漏洞的根本原因在于对外部实体的处理不当，攻击者可以通过构造恶意XML文件，利用XXE漏洞读取服务器上的敏感文件，如配置文件、源代码文件和数据备份等。此外，攻击者还可以利用该漏洞强制应用程序向内部或外部服务发送请求，可能对其他内部系统构成安全威胁。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即修复此漏洞，方法是将Langchain升级到v0.1.17rc1及以上版本。临时的缓解措施包括限制对加载器参数的访问并禁止不安全的XML外部实体。为了防止未来出现类似的漏洞，建议在编写代码时遵循安全编码最佳实践，确保对外部输入进行严格验证和限制。\u003c/p\u003e",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "langchainSQL注入漏洞",
+              "id": "XMIRROR-E5F5415F-7C7DFA1D",
+              "description": "\u003cp\u003eTiDBChatMessageHistory 类是 langchain 库的一部分，该类用于管理聊天消息的历史记录并从数据库加载消息。该漏洞源于对 parameters 参数 (earliest_time) 的类型未进行验证，攻击者可以通过构造恶意输入来控制数据库查询。具体而言，攻击者可以在 _load_messages_to_cache 方法中传入恶意的 earliest_time 值，从而执行任意 SQL 查询。这使得攻击者能够窃取数据库内容。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即对 langchain 库进行升级，确保使用的是包含修复的版本，或对 earliest_time 参数进行类型检查，确保其为 datetime.datetime 对象。另外，应当定期审核代码，并遵循安全编码的最佳实践，以防类似漏洞的再次出现。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "langchain ReDoS漏洞",
+              "id": "XMIRROR-E5F5415F-FD01AE1D",
+              "description": "\u003cp\u003eMRKLOutputParser 是 Langchain 库中的一个输出解析器，负责解析输入文本并确定相应的操作。然而，该组件的 'parse' 函数未能有效处理输入文本中的正则表达式，当文本中包含恶意输入时，可能导致拒绝服务（ReDoS）攻击。由于正则表达式的执行时间与输入大小呈指数关系，恶意输入可能导致解析时间显著增加，进而使服务器变得不可用。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即修复该漏洞，最有效的解决方案是更新到最新版本的 langchain 库以包含修复。同时，建议对输入进行严格校验，避免恶意输入。如果无法立即升级，可以考虑在可用性方面进行防范，限制输入的大小或复杂性。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Langchain 任意文件读取漏洞",
+              "id": "XMIRROR-E5F5415F-7C11641D",
+              "description": "\u003cp\u003eLangchain 是一个用于简化文档加载和处理的 Python 库，具有灵活性和可扩展性。该漏洞允许攻击者使用 'file://' URL 方案从服务器读取任意文件的内容，进而导致敏感信息泄露。具体来说，漏洞源于 PlaywrightWebBaseLoader 组件未能正确限制用户输入，攻击者能够触发页面内容加载任意文件。通过构造特定的请求，攻击者可以下载配置文件、环境变量等敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立刻升级到 Langchain 的最新版本，并修复此漏洞。如果无法立即升级，建议实施访问控制限制受影响的文件读取功能，并进行代码审查，确保所有输入都经过严格校验。注重安全编码最佳实践，以防范类似的漏洞。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Langchain BibtexLoader路径遍历漏洞",
+              "id": "XMIRROR-E5F5415F-D2DAEF1D",
+              "description": "\u003cp\u003eBibtexLoader 是 Langchain 社区的一个组件，旨在从 bib 文件中提取引用的文献并加载相关的 PDF 文件。该漏洞是由文件名未经过验证引起的，允许攻击者读取位于 bib 文件目录以外的任意 PDF 文件。例如，攻击者可以通过构造特定的 bibtex 条目来访问上层目录中的 '1.pdf' 文件，从而导致未授权的数据访问。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到修复此漏洞的最新版本 Langchain，或审查文件名验证逻辑，确保构造的路径只在允许的目录内。此外，在可能的情况下，使用白名单检查文件名，并定期进行安全检查以防止类似漏洞的发生。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Langchain 服务器端请求伪造漏洞",
+              "id": "XMIRROR-E5F5415F-FB02891D",
+              "description": "\u003cp\u003eLangchain 是一个基于 Python 的数据处理库，用于构建数据处理管道。该库中的 split_text_from_url 方法存在服务器端请求伪造漏洞，攻击者可以利用这一方法来访问敏感的服务器文件或执行恶意代码。攻击者只需提供特制的 URL，例如通过路径遍历载荷（如 file:///etc/passwd）或恶意的 data URI，即可绕过安全限制，从而导致对机密文件的未授权访问或通过注入的转换实现服务器的破坏。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到 Langchain 的最新版本，以修复此漏洞。同时，临时缓解措施包括严格验证 URL 输入，并调整代码以限制对可疑 URL 的访问。此外，建议在代码开发过程中采用安全编码实践，以预防类似的漏洞出现。\u003c/p\u003e",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 11
+        },
+        {
+          "name": "langchain-openai",
+          "language": "Python",
+          "id": "57811781013766174",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[langchain-openai:]"
+          ]
+        },
+        {
+          "name": "langchainhub",
+          "language": "Python",
+          "id": "57811781013766175",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[langchainhub:]"
+          ]
+        },
+        {
+          "name": "langchain_community",
+          "language": "Python",
+          "id": "57811781013766176",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[langchain_community:]"
+          ]
+        },
+        {
+          "name": "groq",
+          "language": "Python",
+          "id": "57811781013766177",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[groq:]"
+          ]
+        },
+        {
+          "name": "markdown",
+          "language": "Python",
+          "id": "57811781013766178",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[markdown:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "PyPDF2",
+          "language": "Python",
+          "id": "57811781013766179",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[PyPDF2:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyPDF2 安全漏洞",
+              "id": "XMIRROR-E5B714FC-FE26FB95",
+              "cve_id": "CVE-2022-24859",
+              "cnnvd_id": "CNNVD-202204-3710",
+              "cwe_id": "CWE-835",
+              "description": "PyPDF2是一个免费的开源纯 python PDF 库。能够拆分、 合并、 裁剪和转换 PDF 文件的页面。\r\nPyPDF2 存在安全漏洞，该漏洞源于在 1.27.5 之前的版本中，使用此漏洞的攻击者可以制作 PDF，如果代码尝试获取内容流，则如果 PyPDF2 导致无限循环。",
+              "suggestion": "## Remediation\nUpgrade `PyPDF2` to version 1.27.5 or higher.",
+              "attack_type": "本地",
+              "release_date": "2022-04-18",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-04FF602B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n[PyPDF2](https://pypi.org/project/PyPDF2) is an A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to invalid object. Exploiting this vulnerability is possible when reading the metadata.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `PyPDF2` to version 2.10.6 or higher.\n## References\n- [GitHub Commit](https://github.com/py-pdf/pypdf/pull/1331/commits/f88a1b022de5822261abec4e7dd9fa0e457a4ee7?show-viewed-files=true\u0026file-filters%5B%5D=)\n- [GitHub Issue](https://github.com/py-pdf/pypdf/issues/1329)\n- [GitHub PR](https://github.com/py-pdf/pypdf/pull/1331)\n",
+              "suggestion": "## Remediation\nUpgrade `PyPDF2` to version 2.10.6 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-01-02",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "pypdf 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88EE5795",
+              "cve_id": "CVE-2023-36810",
+              "cnnvd_id": "CNNVD-202306-2256",
+              "cwe_id": "CWE-407",
+              "description": "PyPDF2是一个免费的开源纯 python PDF 库。能够拆分、 合并、 裁剪和转换 PDF 文件的页面。\r\npypdf 1.27.9之前版本存在安全漏洞，该漏洞源于攻击者可以制PDF导致意外的长时间运行，会阻塞进程。",
+              "suggestion": "此问题已在 PR 808 中得到解决，并且从 1.27.9 开始的版本包含此修复。 建议用户升级。\n官方补丁下载地址：\nhttps://github.com/py-pdf/pypdf/pull/808\nhttps://github.com/py-pdf/pypdf/releases/tag/3.12.0",
+              "attack_type": "本地",
+              "release_date": "2023-06-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "pdfplumber",
+          "language": "Python",
+          "id": "57811781013766180",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[pdfplumber:]"
+          ]
+        },
+        {
+          "name": "pandas",
+          "language": "Python",
+          "id": "57811781013766181",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[pandas:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "pandas 代码问题漏洞",
+              "id": "XMIRROR-E5B71403-473F9395",
+              "cve_id": "CVE-2020-13091",
+              "cnnvd_id": "CNNVD-202005-833",
+              "cnvd_id": "CNVD-2020-33500",
+              "cwe_id": "CWE-502",
+              "description": "pandas是一款基于Python语言的开源数据分析和处理工具。\r\npandas 1.0.3及之前版本中存在代码问题漏洞。攻击者可利用该漏洞执行命令。",
+              "suggestion": "通用方案： 厂商尚未提供漏洞修复方案，请关注厂商主页更新： https://pandas.pydata.org/\n",
+              "attack_type": "远程",
+              "release_date": "2020-05-15",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "SQL Injection",
+              "id": "XMIRROR-E5B77528-A555642B",
+              "cwe_id": "CWE-89",
+              "description": "## Overview\n[pandas](https://pypi.org/project/pandas/) is a Python package providing data structures designed to make working with structured (tabular, multidimensional, potentially heterogeneous) and time series data both easy and intuitive.\n\nAffected versions of this package are vulnerable to SQL Injection via `sql.py`, due to improper input sanitization.\n## Remediation\nUpgrade `pandas` to version 0.16.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pandas-dev/pandas/commit/a774ee84485412459f7205cccd87b639022afd07)\n- [GitHub PR](https://github.com/pandas-dev/pandas/pull/8986)\n",
+              "suggestion": "## Remediation\nUpgrade `pandas` to version 0.16.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-09-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pandas命令注入漏洞",
+              "id": "XMIRROR-E5B70F5F-80568695",
+              "cve_id": "CVE-2024-9880",
+              "cnnvd_id": "CNNVD-202503-2441",
+              "cnvd_id": "CNVD-2024-46012",
+              "cwe_id": "CWE-77",
+              "description": "Pandas是一个开源的Python数据分析与处理库，提供高效的数据结构与数据分析工具。此漏洞存在于pandas.DataFrame.query()函数，攻击者可以通过构造恶意查询来执行任意命令。该漏洞源于对用户输入验证不足，特别是在使用'python'引擎时，导致可能的远程命令执行。",
+              "suggestion": "由于当前未提供修复版本，建议密切关注官方更新。同时，应限制对应用程序接口的访问，确保输入验证机制的加强，以预防此类漏洞的发生。可考虑使用参数化查询或其他安全编码实践。",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "pandas 本地文件包含漏洞",
+              "id": "XMIRROR-E5F5415F-804AD31D",
+              "description": "\u003cp\u003epandas 是一个流行的 Python 数据分析库，提供高效的数据操作和分析工具。该库中的 read_xml 函数存在本地文件包含 (LFI) 漏洞，因为其 path_or_buffer 参数未经过严格的路径验证，攻击者可以通过提供恶意文件路径访问任意文件。这可通过调用 get_handle 函数实现，该函数在没有验证路径的情况下打开文件，从而导致敏感文件的泄露，比如 /etc/passwd 和 /etc/shadow。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e对 path_or_buffer 参数进行严格的输入验证，确保只允许访问受信任的文件路径。应限制访问特定目录或文件类型。对于已知的读取功能，例如 read_xml 和 read_csv，应确保所读取的文件类型符合预期。此外，建议尽快升级到修复该漏洞的新版本或应用相应的补丁。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "commentjson",
+          "language": "Python",
+          "id": "57811781013766182",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[commentjson:]"
+          ]
+        },
+        {
+          "name": "openpyxl",
+          "language": "Python",
+          "id": "57811781013766183",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[openpyxl:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Openpyxl 安全漏洞",
+              "id": "XMIRROR-E5B70F7B-98601195",
+              "cve_id": "CVE-2017-5992",
+              "cnnvd_id": "CNNVD-201702-546",
+              "cnvd_id": "CNVD-2017-02283",
+              "cwe_id": "CWE-611",
+              "description": "Openpyxl是一个用于读写Excel 2010的Python库。\r\nOpenpyxl 2.4.1版本存在XML外部实体注入漏洞。远程攻击者可借助特制的文档利用该漏洞读取本地文件，造成应用程序拒绝服务。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： https://openpyxl.readthedocs.io/\n",
+              "attack_type": "本地",
+              "release_date": "2017-02-15",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "pandoc",
+          "language": "Python",
+          "id": "57811781013766184",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[pandoc:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "wolframalpha",
+          "language": "Python",
+          "id": "57811781013766185",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[wolframalpha:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "faiss-cpu",
+          "version": "1.7.4",
+          "language": "Python",
+          "id": "57811781013766186",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[faiss-cpu:1.7.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "duckduckgo-search",
+          "version": "\u003e=5.3.0",
+          "language": "Python",
+          "id": "57811781013766187",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[duckduckgo-search:\u003e=5.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "arxiv",
+          "language": "Python",
+          "id": "57811781013766188",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[arxiv:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "wikipedia",
+          "language": "Python",
+          "id": "57811781013766189",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[wikipedia:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "google-cloud-aiplatform",
+          "language": "Python",
+          "id": "57811781013766190",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[google-cloud-aiplatform:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "google.generativeai",
+          "language": "Python",
+          "id": "57811781013766191",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[google.generativeai:]"
+          ]
+        },
+        {
+          "name": "unstructured",
+          "language": "Python",
+          "id": "57811781013766192",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[unstructured:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Unstructured 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14DABB95",
+              "cve_id": "CVE-2024-46455",
+              "cnnvd_id": "CNNVD-202412-1015",
+              "cwe_id": "CWE-611",
+              "description": "Unstructured是Unstructured开源的一个非结构化数据的开源预处理工具。\r\nUnstructured 0.14.2及之前版本存在安全漏洞，该漏洞源于通过XMLParser容易受到XML外部实体(XXE)攻击。",
+              "suggestion": "## Remediation\nUpgrade `unstructured` to version 0.14.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-12-09",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "google-api-python-client",
+          "language": "Python",
+          "id": "57811781013766193",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[google-api-python-client:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tabulate",
+          "language": "Python",
+          "id": "57811781013766194",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[tabulate:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "ujson",
+          "language": "Python",
+          "id": "57811781013766195",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[ujson:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "UltraJSON 资源管理错误漏洞",
+              "id": "XMIRROR-E5B714FC-FEC6DD95",
+              "cve_id": "CVE-2022-31117",
+              "cnnvd_id": "CNNVD-202207-404",
+              "cwe_id": "CWE-415",
+              "description": "UltraJSON是开源的一个超快的 JSON 编码器和解码器，用纯 C 语言编写，并绑定了 Python 3.7+。\r\nUltraJSON 5.4.0之前版本存在资源管理错误漏洞，该漏洞源于为字符串解码重新分配缓冲区时发生错误，可能导致缓冲区被释放两次。",
+              "suggestion": "## Remediation\nUpgrade `ujson` to version 5.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-07-04",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "UltraJSON 安全漏洞",
+              "id": "XMIRROR-E5B714FC-FEC66695",
+              "cve_id": "CVE-2022-31116",
+              "cnnvd_id": "CNNVD-202207-402",
+              "cwe_id": "CWE-670",
+              "description": "UltraJSON是开源的一个超快的 JSON 编码器和解码器，用纯 C 语言编写，并绑定了 Python 3.7+。\r\nUltraJSON 5.4.0之前版本存在安全漏洞，该漏洞源于无法正确解码某些字符，允许字典中潜在的键混淆和值覆盖。",
+              "suggestion": "## Remediation\nUpgrade `RHEL:8` `python3-ujson` to version 0:2.0.3-3.el8ost or higher.  \nThis issue was patched in `RHSA-2022:8850`.",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "python-docx",
+          "language": "Python",
+          "id": "57811781013766196",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[python-docx:]"
+          ],
+          "licenses": [
+            {
+              "name": "mit"
+            },
+            {
+              "name": "unknown"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "python-docx 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8BBEC795",
+              "cve_id": "CVE-2016-5851",
+              "cnnvd_id": "CNNVD-201606-649",
+              "cnvd_id": "CNVD-2016-04451",
+              "cwe_id": "CWE-611",
+              "description": "python-docx是一个用于编辑并生成Microsoft Word文档的python库。\r\r\npython-docx 0.8.6之前的版本中存在安全漏洞。依赖于上下文的攻击者可借助特制的文件利用该漏洞实施XML External Entity (XXE)攻击。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-openxml/python-docx/releases/tag/v0.8.6\n",
+              "attack_type": "远程",
+              "release_date": "2016-04-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "websocket_client",
+          "language": "Python",
+          "id": "57811781013766197",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[websocket_client:]"
+          ]
+        },
+        {
+          "name": "pydantic",
+          "version": "2.5.2",
+          "language": "Python",
+          "id": "57811781013766198",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[pydantic:2.5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "google-search-results",
+          "language": "Python",
+          "id": "57811781013766199",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[google-search-results:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "anthropic",
+          "version": "0.18.1",
+          "language": "Python",
+          "id": "57811781013766200",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[anthropic:0.18.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "Pillow",
+          "version": "\u003e=10.1.0",
+          "language": "Python",
+          "id": "57811781013766201",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[Pillow:\u003e=10.1.0]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7C6FEB95",
+              "cve_id": "CVE-2023-50447",
+              "cnnvd_id": "CNNVD-202401-1886",
+              "cwe_id": "CWE-94 CWE-95",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 10.1.0及之前版本存在安全漏洞，该漏洞源于可以通过PIL.ImageMath.eval中的environment 参数执行任意代码。",
+              "suggestion": "## Remediation\nUpgrade `pillow` to version 10.2.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-19",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B714EF-141CEE95",
+              "cve_id": "CVE-2024-28219",
+              "cnnvd_id": "CNNVD-202404-098",
+              "cwe_id": "CWE-680",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow(PIL Fork)存在安全漏洞，该漏洞源于_imagingcms.c中存在缓冲区溢出漏洞。",
+              "suggestion": "## Remediation\nUpgrade `pillow` to version 10.3.0 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-04-01",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "protobuf",
+          "version": "3.20.3",
+          "language": "Python",
+          "id": "57811781013766202",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[protobuf:3.20.3]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "protobuf-python 远程拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F8A-9E9DE995",
+              "cve_id": "CVE-2025-4565",
+              "cnnvd_id": "CNNVD-202506-1897",
+              "cwe_id": "CWE-674",
+              "description": "Protobuf 是一种用于序列化结构化数据的库，广泛应用于数据传输、配置文件保存等领域。该漏洞影响 Protobuf 的纯 Python 实现，当对含有任意数量递归组、递归消息或 SGROUP 标签的未受信任数据进行解析时，可能会超过 Python 的递归限制。攻击者可以利用这些递归结构触发无限递归，导致解析进程崩溃，从而造成拒绝服务。",
+              "suggestion": "建议立即升级到 Protobuf-Python 的最新版本（4.25.8、5.29.5 或 6.31.1），并确保环境中未使用易受攻击的纯 Python 实现版本。此外，用户可在代码中检测并限制递归深度，以适当缓解该类攻击。",
+              "attack_type": "远程",
+              "release_date": "2025-06-16",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "ollama",
+          "version": "\u003e=0.1.6",
+          "language": "Python",
+          "id": "57811781013766203",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[ollama:\u003e=0.1.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "numexpr",
+          "language": "Python",
+          "id": "57811781013766204",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[numexpr:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "regex",
+          "language": "Python",
+          "id": "57811781013766205",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[regex:]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-multipart",
+          "version": "0.0.9",
+          "language": "Python",
+          "id": "57811781013766206",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[python-multipart:0.0.9]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "HashiCorp Boundary 安全漏洞",
+              "id": "XMIRROR-E5B714EF-DD77A195",
+              "cve_id": "CVE-2024-12289",
+              "cnnvd_id": "CNNVD-202412-1670",
+              "cwe_id": "CWE-460",
+              "description": "HashiCorp Boundary是美国HashiCorp公司的一种开源解决方案。可自动实现基于身份的安全用户跨环境访问主机和服务。\r\nHashiCorp Boundary 0.8.0至0.18.1版本存在安全漏洞，该漏洞源于控制器初始化期间错误地处理HTTP请求，会导致Boundary服务器过早终止。",
+              "suggestion": "## Remediation\nUpgrade `github.com/hashicorp/boundary/internal/daemon/controller/handlers/authmethods` to version 0.18.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-12-12",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-multipart 拒绝服务漏洞",
+              "id": "XMIRROR-E5B714EF-EAE7A895",
+              "cve_id": "CVE-2024-53981",
+              "cnnvd_id": "CNNVD-202412-155",
+              "cwe_id": "CWE-770",
+              "description": "python-multipart 是一个用于 Python 的流式多部分解析器，用于解析表单数据。在解析过程中，python-multipart 会跳过第一个边界前的换行符 (CR \\r 或 LF \\n) 及最后一个边界后的任何尾部字节。此过程逐字节执行，并在每次操作时发出一个日志事件，可能会因为某些输入导致过多日志记录。攻击者可以通过发送包含大量数据的恶意请求，在第一个边界之前或最后一个边界之后，从而导致高 CPU 负载并阻塞处理线程较长时间。对于 ASGI 应用程序，这可能导致事件循环停滞并阻止其他请求的处理，从而导致拒绝服务 (DoS)。",
+              "suggestion": "升级 python-multipart 至 0.0.18 版本以修复该漏洞。对于暂无法升级的系统，应对请求输入施加限制，例如限制请求大小或启用请求速率限制，以降低此类攻击的可能性。为防止类似漏洞，建议开发时注重输入验证和日志记录优化。",
+              "attack_type": "远程",
+              "release_date": "2024-12-02",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "fastapi",
+          "version": "0.112.4",
+          "language": "Python",
+          "id": "57811781013766207",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements.txt\\[fastapi:0.112.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 55
+    },
+    {
+      "language": "Python",
+      "id": "57811781013766146",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt"
+      ],
+      "children": [
+        {
+          "name": "transformers",
+          "language": "Python",
+          "id": "57811781013766208",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[transformers:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Open Redirect",
+              "id": "XMIRROR-E5B77528-5C7B932B",
+              "cwe_id": "CWE-601",
+              "description": "## Overview\n[transformers](https://pypi.org/project/transformers) is a State-of-the-art Machine Learning for JAX, PyTorch and TensorFlow\n\nAffected versions of this package are vulnerable to Open Redirect due to referencing an obsolete link.\n## Remediation\nUpgrade `transformers` to version 4.23.0 or higher.\n## References\n- [GitHub Commit](https://github.com/huggingface/transformers/commit/ce2620194b4a8f070cd29504d34a79758affdf95)\n- [GitHub PR](https://github.com/huggingface/transformers/pull/19001)\n- [GitHub Release](https://github.com/huggingface/transformers/releases/tag/v4.23.0)\n",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.23.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-11-01",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Hugging Face Transformers 不安全的临时文件漏洞",
+              "id": "XMIRROR-E5B70F55-9AB3BF95",
+              "cve_id": "CVE-2023-2800",
+              "cnnvd_id": "CNNVD-202305-1786",
+              "cwe_id": "CWE-377",
+              "description": "Hugging Face Transformers 是用于 JAX、PyTorch 和 TensorFlow 的先进自然语言处理库。该漏洞出现在 4.30.0 之前的版本中，源于使用过时的 tempfile.mktemp() 方法。该方法不安全，因为在调用 mktemp() 与文件创建之间，可能有其他进程创建同名文件。这可能导致文件可用性受干扰，并可能导致敏感信息泄露。",
+              "suggestion": "升级 Hugging Face Transformers 库至 4.30.0 或更高版本。查看更新补丁链接：https://github.com/huggingface/transformers/commit/80ca92470938bbcc348e2d9cf4734c7c25cb1c43。同时建议避免使用不安全的临时文件处理方法，如 tempfile.mktemp()。",
+              "attack_type": "本地",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 不安全反序列化漏洞",
+              "id": "XMIRROR-E5B70F55-9AA82995",
+              "cve_id": "CVE-2023-6730",
+              "cnnvd_id": "CNNVD-202312-1850",
+              "cwe_id": "CWE-502",
+              "description": "Hugging Face Transformers 是为 JAX、PyTorch 和 TensorFlow 提供的先进自然语言处理框架。此组件用于处理自然语言任务，如文本分类、翻译和问答系统等。漏洞发生在 Transformers 4.36.0 之前的版本，其 root cause 是在 `RagRetriever.from_pretrained()` 函数中，`index_name` 和 `index_path` 参数会反序列化不受信任的数据，攻击者可以远程加载恶意 pickle 文件，从而绕过文件检查并在主机上执行任意代码。反序列化是将字节序列转换为对象的过程，被用于通信和存储。此漏洞允许攻击者在未验证数据合法性的情况下进行反序列化，导致代码执行。",
+              "suggestion": "升级 Hugging Face Transformers 至版本 4.36.0 或更高版本。临时缓解措施包括限制对敏感参数的输入验证及文件检查，并通过使用安全的反序列化机制替代不受信任的数据反序列化。长远建议是定期安全审计以检测和修复潜在的安全缺陷。",
+              "attack_type": "远程",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 不安全反序列化漏洞",
+              "id": "XMIRROR-E5B70F55-9A387B95",
+              "cve_id": "CVE-2023-7018",
+              "cnnvd_id": "CNNVD-202312-1923",
+              "cwe_id": "CWE-502",
+              "description": "Hugging Face Transformers是一个用于JAX、PyTorch和TensorFlow的先进自然语言处理库。在受到影响的版本中，使用TransfoXLTokenizer()函数可能会自动加载恶意的vocab.pkl文件，利用pickle.load函数反序列化不受信任的数据。此漏洞源于未能充分验证反序列化的数据，使攻击者可执行任意代码，控制应用程序的状态或执行流程。",
+              "suggestion": "升级Hugging Face Transformers至版本4.36.0或更高。同时，建议在转型为长期防护措施时，增强反序列化过程的输入验证，并使用安全编码规范，规避使用pickle进行反序列化。",
+              "attack_type": "远程",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 反序列化不受信任数据漏洞",
+              "id": "XMIRROR-E5B70F5F-8026BF95",
+              "cve_id": "CVE-2024-3568",
+              "cnnvd_id": "CNNVD-202404-1490",
+              "cwe_id": "CWE-502",
+              "description": "Hugging Face Transformers 是一个为 Jax、PyTorch 和 TensorFlow 打造的用于先进自然语言处理的库。TFPreTrainedModel 类的 load_repo_checkpoint() 函数存在反序列化不受信任数据的漏洞。该漏洞允许攻击者通过构造恶意的序列化有效负载，利用函数中的 pickle.load() 方法在处理来自可能不受信任源的数据时执行任意代码和命令。这种不安全反序列化的根本原因是缺少对输入数据的信任边界控制，以及对来源不明数据的直接反序列化处理。",
+              "suggestion": "升级 transformers 库至版本 4.38.0 或更高版本。同时，尽量避免从不受信任来源加载检查点，并在程序中增加反序列化处理的数据来源验证逻辑，以免遭受类似攻击。",
+              "attack_type": "远程",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 安全漏洞",
+              "id": "XMIRROR-E5B70F8A-9EB8EF95",
+              "cve_id": "CVE-2025-3933",
+              "cnnvd_id": "CNNVD-202507-1636",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers是Hugging Face开源的为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理。\r\nHugging Face Transformers 4.50.3及之前版本存在安全漏洞，该漏洞源于DonutProcessor类的token2json方法存在正则表达式拒绝服务，可能导致服务中断。",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.52.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-07-11",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Hugging Face Transformers 安全漏洞",
+              "id": "XMIRROR-E5B70F8A-9EA04095",
+              "cve_id": "CVE-2025-3263",
+              "cnnvd_id": "CNNVD-202507-660",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers是Hugging Face开源的为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理。\r\nHugging Face Transformers 4.49.0版本存在安全漏洞，该漏洞源于transformers.configuration_utils模块中get_configuration_file函数的正则表达式复杂性不足，可能导致正则表达式拒绝服务攻击。",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.51.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-07-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Hugging Face Transformers 输入验证错误漏洞",
+              "id": "XMIRROR-E5B70F8A-9E423095",
+              "cve_id": "CVE-2025-3777",
+              "cnnvd_id": "CNNVD-202507-662",
+              "cwe_id": "CWE-20",
+              "description": "Hugging Face Transformers是Hugging Face开源的为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理。\r\nHugging Face Transformers 4.49.0及之前版本存在输入验证错误漏洞，该漏洞源于image_utils.py中URL验证不足，可能导致钓鱼攻击。",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.52.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-07-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Hugging Face Transformers 安全漏洞",
+              "id": "XMIRROR-E5B70F8A-9EA04C95",
+              "cve_id": "CVE-2025-3264",
+              "cnnvd_id": "CNNVD-202507-658",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers是Hugging Face开源的为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理。\r\nHugging Face Transformers 4.49.0版本存在安全漏洞，该漏洞源于dynamic_module_utils.py中get_imports函数的正则表达式复杂性不足，可能导致正则表达式拒绝服务攻击。",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.51.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-07-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Hugging Face Transformers 安全漏洞",
+              "id": "XMIRROR-E5B70F8A-9E92A895",
+              "cve_id": "CVE-2025-5197",
+              "cnnvd_id": "CNNVD-202508-407",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers是Hugging Face开源的为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理。\r\nHugging Face Transformers 4.51.3及之前版本存在安全漏洞，该漏洞源于正则表达式拒绝服务攻击。",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.53.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-08-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "transformers 资源管理错误漏洞",
+              "id": "XMIRROR-E5B70F8A-411AFD95",
+              "cve_id": "CVE-2025-6921",
+              "cnnvd_id": "CNNVD-202509-3659",
+              "cwe_id": "CWE-400",
+              "description": "\u003cp\u003etransformers是Hugging Face开源的一个用于机器学习的应用程序。 transformers 4.53.0之前版本存在资源管理错误漏洞，该漏洞源于_do_use_weight_decay方法处理用户控制的正则表达式时存在缺陷，可能导致正则表达式拒绝服务攻击。\u003c/p\u003e",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.53.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-09-23",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Hugging Face Transformers 反序列化任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-DD76F795",
+              "cve_id": "CVE-2024-11394",
+              "cnnvd_id": "CNNVD-202411-3328",
+              "cwe_id": "CWE-502",
+              "description": "Hugging Face Transformers 是一个用于 Jax、PyTorch 和 TensorFlow 的自然语言处理框架。该框架提供构建和应用 Transformer 模型的丰富工具。在其模型文件处理过程中，由于缺乏对用户提供数据的充分验证，导致存在不安全反序列化漏洞，攻击者可以通过插入特制的未验证模型文件进行反序列化，进而在应用中执行任意代码。",
+              "suggestion": "建议立即升级 Hugging Face Transformers 到版本 4.48.0 或更高版本，以修复此漏洞。此外，可临时禁用或删除相关的转换脚本来减轻风险，并建议进行严格的数据校验和代码审计以防止未来出现类似问题。",
+              "attack_type": "远程",
+              "release_date": "2024-11-22",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 正则表达式拒绝服务 (ReDoS) 漏洞",
+              "id": "XMIRROR-E5B714EF-DD535695",
+              "cve_id": "CVE-2024-12720",
+              "cnnvd_id": "CNNVD-202503-2290",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers 是一个开源的自然语言处理库，广泛应用于构建和训练先进的模型。该库支持 Jax、PyTorch 和 TensorFlow 的集成。在 tokenization_nougat_fast.py 文件中的 post_process_single() 函数存在正则表达式的处理漏洞。此漏洞由于正则表达式在特定条件下表现出指数时间复杂性，导致出现过度回溯，从而造成 CPU 使用率过高以及应用程序潜在的停机，形成拒绝服务 (DoS) 的场景。受影响的版本是 v4.46.3。",
+              "suggestion": "建议用户尽快将 transformers 库升级到版本 4.48.0 或更高版本。作为临时的缓解措施，可以考虑通过应用程序防火墙 (WAF) 限制输入长度或排除恶意输入以降低风险。长期来看，需对正则表达式进行安全审计优化，避免使用可导致大量回溯的复杂表达式。",
+              "attack_type": "远程",
+              "release_date": "2025-03-20",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Hugging Face Transformers 数据反序列化远程代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-DD76BF95",
+              "cve_id": "CVE-2024-11392",
+              "cnnvd_id": "CNNVD-202411-3326",
+              "cwe_id": "CWE-502",
+              "description": "Hugging Face Transformers 是一个开源项目，提供 Jax、PyTorch 和 TensorFlow 的自然语言处理模型库。其主要用于构建和训练深度学习模型以及处理自然语言数据。在处理配置文件时，因数据验证不当，导致可能不受信任的数据被反序列化。此漏洞的核心是缺乏对用户输入数据的充分验证，从而使得攻击者能够控制程序执行流，仅需用户访问恶意页面或打开恶意配置文件即可触发。该漏洞允许嵌入恶意代码执行，并在应用环境中获得与当前用户相同的权限。",
+              "suggestion": "升级 Hugging Face Transformers 至版本 4.48.0 或更高版本。对于尚未能够升级的环境，建议在代码层面增强输入验证，过滤不受信任的数据，并在网络层面通过防火墙规则阻止对恶意配置文件的访问。长期而言，建议展开组件安全审计，确保正确配置并遵循安全编码规范。",
+              "attack_type": "远程",
+              "release_date": "2024-11-22",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 反序列化不受信任数据远程代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-DD76A195",
+              "cve_id": "CVE-2024-11393",
+              "cnnvd_id": "CNNVD-202411-3322",
+              "cwe_id": "CWE-502",
+              "description": "Hugging Face Transformers 是一个用于 Jax、PyTorch 和 TensorFlow 的先进自然语言处理库，提供各种预训练模型以支持多种自然语言处理任务。漏洞存在于模型文件解析过程中，因缺乏对用户输入数据的充分验证，导致不受信任的数据被反序列化。攻击者能利用该漏洞在受影响的安装上以当前用户权限执行任意代码。此漏洞主要影响版本低于4.48.0的转换脚本，但不影响核心库功能。",
+              "suggestion": "升级 Hugging Face Transformers 至版本 4.48.0 或更高版本。另外，考虑在应用中添加输入验证逻辑，避免反序列化不受信任数据的风险。",
+              "attack_type": "远程",
+              "release_date": "2024-11-22",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 正则表达式拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F8A-9E76AF95",
+              "cve_id": "CVE-2025-1194",
+              "cnnvd_id": "CNNVD-202504-3961",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers 是一个用于自然语言处理的开源库，提供了多种预训练模型以便于开发者快速构建机器学习应用。该漏洞存在于 GPT-NeoX-Japanese 模型的 `tokenization_gpt_neox_japanese.py` 文件中，具体是在 SubWordJapaneseTokenizer 类中。当正则表达式处理经过精心构造的输入时，会导致漏洞产生。根本原因在于某些条件下的正则表达式表现出指数复杂性，导致过度回溯。这可能导致 CPU 使用率升高，进而造成应用程序停机，有效地生成拒绝服务 (DoS) 场景。受影响的版本为 v4.48.1（最新）。",
+              "suggestion": "立即升级到 v4.48.2 或更高版本以修复此漏洞。如果无法立即升级，建议对输入进行严格的验证和限制，从而降低受到攻击的风险。",
+              "attack_type": "远程",
+              "release_date": "2025-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "huggingface/transformers正则表达式拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F8A-9E775A95",
+              "cve_id": "CVE-2025-2099",
+              "cnnvd_id": "CNNVD-202505-2759",
+              "cwe_id": "CWE-1333",
+              "description": "\u003cp\u003e在huggingface/transformers版本v4.48.3的`transformers.testing_utils`模块中，`preprocess_string()`函数存在一个漏洞。该漏洞允许通过正则表达式拒绝服务（ReDoS）攻击进行利用。处理文档字符串中代码块所使用的正则表达式包含嵌套量词，导致在处理含有大量换行符的输入时发生指数级回溯。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议升级到修复版本，避免使用含有嵌套量词的正则表达式。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-05-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Hugging Face Transformers 安全漏洞",
+              "id": "XMIRROR-E5B70F8A-41D85F95",
+              "cve_id": "CVE-2025-6638",
+              "cnnvd_id": "CNNVD-202509-1814",
+              "cwe_id": "CWE-1333",
+              "description": "Hugging Face Transformers是Hugging Face开源的为 Jax、PyTorch 和 TensorFlow 打造的先进的自然语言处理。\r\nHugging Face Transformers 4.52.4版本存在安全漏洞，该漏洞源于MarianTokenizer的remove_language_code方法存在正则表达式处理效率问题，可能导致正则表达式拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `transformers` to version 4.53.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2025-09-12",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Transformers命令注入漏洞",
+              "id": "XMIRROR-E5F5415F-F92B7D1D",
+              "description": "\u003cp\u003eTransformers是一个支持多种任务的开源自然语言处理库，基于PyTorch和TensorFlow构建。由于在GitHub Actions工作流的分支名称未正确清理，攻击者可以利用此漏洞实现任意代码注入。当攻击者提供特制的分支名称时，可以触发不受信任的命令执行。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即更新到最新版本的Transformers，或参考下述最佳实践，避免在GitHub工作流中发生代码和命令注入漏洞：将未受信任的输入值设置到中间环境变量。示例代码如下： ```yaml - name: Prepare custom environment variables shell: bash env: CI_BRANCH_WORKFLOW_RUN: ${{ github.event.workflow_run.head_branch }} run: echo \"$CI_BRANCH_WORKFLOW_RUN\" ```\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "HuggingFace Transformers 远程代码执行漏洞",
+              "id": "XMIRROR-E5F5415F-F524301D",
+              "description": "\u003cp\u003eHuggingFace Transformers 是一个用于自然语言处理和机器学习的开源库，提供各种工具和模型以简化开发。该库中的 load_tool 功能允许从 HuggingFace Hub 加载外部工具，但存在远程代码执行漏洞。攻击者可以在未启用 `Trust Remote Code` 的情况下，通过从恶意构建的库加载工具，导致执行任意 Python 代码。此漏洞的调用链为 `load_tool() -\u0026gt; Tool.from_hub() -\u0026gt; get_class_from_dynamic_module() -\u0026gt; get_class_in_module() -\u0026gt; importlib.import_module(module_path)`，其中的 importlib.import_module 函数在没有任何警告的情况下执行导入操作。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户立即查看并更新 HuggingFace Transformers 到最新版本，或者应用官方发布的补丁以修复此漏洞。此外，建议在使用 HuggingFace Hub 时谨慎启用 `Trust Remote Code` 选项，并进行必要的安全审核及防护，确保不加载不受信任的代码。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Transformers远程代码执行漏洞",
+              "id": "XMIRROR-E5F5415F-7CAAF71D",
+              "description": "\u003cp\u003eTransformers 是一个由 Hugging Face 开发的开源自然语言处理模型库，旨在提供强大的模型以简化深度学习任务。该库中的 TransfoXLCorpus 组件存在一个远程代码执行漏洞，当用户按照 Hugging Face 的官方指导使用该模型时，恶意用户可以通过不安全的 torch.load 方法进行攻击。攻击的根本原因在于该方法在未正确处理受信任输入时，可能执行任意可执行代码。具体来说，攻击者可利用该漏洞使受害者在本地执行恶意代码，从而在系统中创建特定文件。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即将 Transformers 更新至未受影响的版本。可采用两种修补方案：第一种是在调用 torch.load 时，设置 weights_only=True；第二种是在代码中增加 TRUST_REMOTE_CODE 环境变量的检查，拒绝不安全的加载操作。同时，开发者应当始终验证来自不受信任来源的数据，以防止类似的反序列化漏洞。\u003c/p\u003e",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Transformers OS命令注入漏洞",
+              "id": "XMIRROR-E5F5415F-D2F7DD1D",
+              "description": "\u003cp\u003eTransformers 是一个开源的 Python 库，旨在简化和加速使用深度学习模型的自然语言处理任务。在 `build-eval-data.py` 代码片段中，使用用户提供的字符串动态生成 shell 命令。攻击者可以通过输入特定的字符或命令，利用此漏洞进行远程命令注入。例如，如果用户将变量 `src` 或 `tgt` 设置为 \"en; rm -rf /\"，那么代码将生成执行 `rm -rf /` 的命令，从而导致系统数据丢失或损坏。由于缺乏对输入的处理和验证，恶意用户可以执行任意 shell 命令。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e应立即审查和修复此漏洞，推荐的解决方案是使用 `subprocess.run()` 函数的安全方法，确保输入被适当检查和清理。例如，可以将命令参数作为列表传递，而不是构建动态字符串。同时，建议升级到最新版本以获得安全修复。\u003c/p\u003e",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Transformers 不受信任的反序列化命令执行漏洞",
+              "id": "XMIRROR-E5F5415F-8080EA1D",
+              "description": "\u003cp\u003eTransformers 是一个用于自然语言处理的开源 Python 库，提供多种模型和工具以简化文本建模的过程。该库的 export 函数 TextDatasetForNextSentencePrediction() 存在一个反序列化漏洞，如果读取的文件路径为 C:/1.txt，程序将会读取当前目录中精心构造的副本。该漏洞的根本原因在于库中对输入数据的处理不当，攻击者可以借此构造恶意数据流通过反序列化执行任意命令。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到 Transformes 的最新版本，或者应用官方发布的补丁。如果无法立即升级，建议对输入源进行严密的验证，确保不处理任何不受信任数据。同时，采用安全编码的最佳实践，防止不受信任数据的反序列化。\u003c/p\u003e",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 正则表达式拒绝服务漏洞 (ReDoS)",
+              "id": "XMIRROR-E5B70F8A-4172B895",
+              "cve_id": "CVE-2025-6051",
+              "cnnvd_id": "CNNVD-202509-1851",
+              "cwe_id": "CWE-1333",
+              "description": "\u003cp\u003eHugging Face Transformers 是一个用于自然语言处理 (NLP) 的开源库，提供了许多预训练的模型和工具，广泛应用于文本分类、机器翻译、文本生成等任务。此漏洞存在于该库的 `EnglishNormalizer` 类的 `normalize_numbers()` 方法中。该方法用于对数字字符串进行归一化处理，但在处理特制的长数字序列时，由于正则表达式匹配效率低下，会导致 CPU 资源过度消耗。攻击者可以通过向应用程序发送特制的输入数据，触发该漏洞，进而导致系统性能严重下降。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e1. 立即升级 Hugging Face Transformers 至 4.53.0 或更高版本，该版本已修复该问题。 2. 在升级之前，可通过限制输入字符串的长度或对输入进行预处理来缓解漏洞的影响。 3. 加强代码审计，避免在生产环境中使用低效的正则表达式。 4. 使用 WAF（Web 应用防火墙）规则检测和阻止可疑的输入数据。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-09-14",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Transformers 死锁漏洞",
+              "id": "XMIRROR-E5F5415F-5E3ADF1D",
+              "description": "\u003cp\u003eTransformers 是一个用于自然语言处理的开源 Python 库，旨在借助深度学习模型简化文本处理任务。WaitCanDeadlock 漏洞是一种与并发相关的特定问题，通常发生在多线程系统中。当一个持有锁的线程被迫无期限地等待一个无法满足的条件时，可能导致死锁场景的发生。这种漏洞的触发条件为：使用 subprocess.Popen 启动子进程并直接调用 proc.wait()，如果子进程输出内容过大时，就可能会导致死锁，因此建议使用 proc.communicate() 方法来避免这一问题。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即将 Transformers 库升级到最新版本，避免使用 proc.wait() 来等待子进程输出，而是使用 proc.communicate() 方法。如果无法立即升级，可以尝试限制输出内容的大小或调整线程管理策略以减少死锁风险。为未来防止类似漏洞，建议遵循安全编码原则，加强对并发编程的培训。\u003c/p\u003e",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Transformers Code Execution Vulnerability",
+              "id": "XMIRROR-E5F5415F-7124441D",
+              "description": "\u003cp\u003eTransformers 是一个基于 Python 的开源机器学习库，专注于自然语言处理任务。该库中的 CodeAgent 组件负责生成并执行解决任务的代码。然而，由于未能对生成的代码进行检查，攻击者可以通过精心构造的提示直接执行任意代码，从而导致代码执行漏洞。攻击者无需额外的授权导入即可利用此漏洞。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户立即升级到 Transformes 最新版，确保不再使用受影响的版本（\u0026lt;=4.42.3）。如无法直接更新，请考虑限制对 CodeAgent 的访问或实施其他安全措施以减少风险。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Transformers不安全临时文件漏洞",
+              "id": "XMIRROR-E5F5415F-AD7AEF1D",
+              "description": "\u003cp\u003eTransformers是一个用于自然语言处理的开源Python库，能够处理预训练模型和变换器架构。当该库使用已不再安全的函数`tempfile.mktemp()`时，存在一个不安全的临时文件漏洞。由于调用`mktemp()`和随后尝试创建文件之间可能会有其他进程创建同名文件，这使得该函数不再安全。这使攻击者可以在文件打开之前影响文件内容。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e将使用的`tempfile.mktemp()`函数替换为更安全的`mkstemp()`函数，确保文件创建与打开操作的原子性。同时在未来开发中应遵守安全编码规范，避免使用不安全的函数。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Transformers反序列化不受信数据导致的远程代码执行漏洞",
+              "id": "XMIRROR-E5F5415F-1278E91D",
+              "description": "\u003cp\u003eTransformers 是一个开源的 Python 库，用于构建和训练深度学习模型，特别是在自然语言处理方面。当用户使用 convert_maskformer_resnet_to_pytorch.py 脚本，并通过 --checkpoint_path 参数提供一个恶意的 .pkl 文件时，该脚本使用 pickle.load 进行不安全的反序列化。这使得攻击者可以在用户的系统上执行嵌入在 pickle 文件中的任意恶意代码。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到 Transformers 库的最新版本，以修补该漏洞。如果不能升级，请限制对 convert_maskformer_resnet_to_pytorch.py 脚本的访问，避免用户使用不可信的 .pkl 文件进行转换，确保输入数据的来源可信。同时，采用安全的反序列化方法，避免使用 pickle 库进行反序列化操作。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers 反序列化不受信任数据远程代码执行漏洞",
+              "id": "XMIRROR-E5F5415F-FFEDBB1D",
+              "description": "\u003cp\u003eHugging Face Transformers 是一个用于自然语言处理的开源库，旨在为研究人员和开发者提供强大的工具以训练和应用转化器模型。该库中的 Transformer-XL 模型在执行反序列化操作时存在安全漏洞，具体是在 convert_transfo_xl_original_tf_checkpoint_to_pytorch.py 脚本中使用了 pickle.load，从而导致恶意的 pickle 文件可以被用来执行任意代码。如果攻击者能够控制传入的文件，他们可以创建一个恶意文件“一旦加载” 就可以在受害者系统上执行代码。该漏洞可以通过提供一个精心构造的 pickle 文件（例如，包含打开计算器应用的代码）进行利用。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e开发者应立即修复此漏洞，可以通过升级 Hugging Face Transformers 库到最新版本来实现。同时，对于临时缓解措施，可以考虑对文件输入进行严格的验证，确保不接受未经过审查的 pickle 文件。考虑在未来采取更安全的序列化方式来替代使用 pickle。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "transformers 命令注入漏洞",
+              "id": "XMIRROR-E5F5415F-D0F9E31D",
+              "description": "\u003cp\u003etransformers 是一个开源的 Python 库，主要用于自然语言处理，具有强大的模型支持。在 utils/check_self_hosted_runner.py 文件中存在命令注入漏洞。攻击者可以通过在服务或 Web 服务器中运行该工具实现任意命令执行。该漏洞的根本原因是使用了 shell=True，在 subprocess.run 函数中直接注入用户提供的命令。利用该漏洞，攻击者可以执行任意命令，例如通过特制的命令参数获取系统敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e立即将 utils/check_self_hosted_runner.py 文件中的 subprocess.run 函数的 shell 参数设置为 False，避免命令注入的可能性。如果可能，升级到修复该漏洞的版本。此外，应实施安全编程最佳实践，以减少发生类似漏洞的风险。\u003c/p\u003e",
+              "security_level_id": 4,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Hugging Face Transformers EXIF数据未去除漏洞",
+              "id": "XMIRROR-E5F54184-68912C1D",
+              "description": "\u003cp\u003eHugging Face Transformers 是一个用于自然语言处理的开源 Python 库，旨在使机器学习模型的使用更为简单和可访问。该漏洞涉及用户在 https://huggingface.co/ 上传的个人资料图片，其 EXIF 地理位置数据未被去除。这导致任何人都可以获取用户的敏感信息，例如他们的地理位置和设备信息（如设备名称、版本、使用的软件及其版本等）。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议使用 S3 批量操作和 AWS Lambda 脚本来去除上传文件的元数据。采取此措施后，确认上传的图片不包含任何 EXIF 数据，以保护用户隐私。\u003c/p\u003e",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 31
+        },
+        {
+          "name": "huggingface_hub",
+          "language": "Python",
+          "id": "57811781013766209",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[huggingface_hub:]"
+          ]
+        },
+        {
+          "name": "torch",
+          "language": "Python",
+          "id": "57811781013766210",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[torch:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyTorch代码执行漏洞",
+              "id": "XMIRROR-E5B714FC-3118F395",
+              "cve_id": "CVE-2022-45907",
+              "cnnvd_id": "CNNVD-202211-3532",
+              "cwe_id": "CWE-94",
+              "description": "PyTorch是一个开源机器学习框架，提供张量计算、构建神经网络等功能。其torch.jit.annotations.parse_type_line组件存在代码注入漏洞，原因是对eval的使用不安全，导致潜在的任意代码执行。",
+              "suggestion": "升级至PyTorch安全版本（\u003e= 1.13.1）或安装相关补丁。",
+              "attack_type": "远程",
+              "release_date": "2022-11-26",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "PyTorch 堆缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B714EF-14355895",
+              "cve_id": "CVE-2024-31580",
+              "cnnvd_id": "CNNVD-202404-2627",
+              "cwe_id": "CWE-122",
+              "description": "PyTorch是一个开源的Python包，主要用于张量计算和动态神经网络，并且具有强大的GPU加速功能。在v2.2.0之前的版本中，/runtime/vararg_functions.cpp组件中存在堆缓冲区溢出漏洞。由于函数的大小检查不当，攻击者可以通过提供精心构造的输入导致拒绝服务(DoS)，甚至可能执行任意代码。",
+              "suggestion": "升级PyTorch到版本2.2.0或更高版本，以修复此漏洞。作为临时缓解措施，可以在应用中实现额外的输入校验机制，并使用WAF来检测和阻止恶意输入。",
+              "attack_type": "本地",
+              "release_date": "2024-04-17",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch 释放后重用漏洞",
+              "id": "XMIRROR-E5B714EF-14352D95",
+              "cve_id": "CVE-2024-31583",
+              "cnnvd_id": "CNNVD-202404-2624",
+              "cwe_id": "CWE-416",
+              "description": "PyTorch 是一个以开源方式提供的 Python 库，专门用于神经网络构建与张量计算，具备强大的 GPU 加速能力。此漏洞涉及内存的释放后重用，位于 torch/csrc/jit/mobile/interpreter.cpp 组件中，由于内存管理不当可能导致此问题。攻击者可通过该漏洞执行任意代码或引发拒绝服务攻击。",
+              "suggestion": "修复方案是升级 PyTorch 到版本 2.2.0 或更高版本。此外，在升级到安全版本之前，可以通过调整相关代码段以确保内存管理的正确性，从而暂时缓解该漏洞。",
+              "attack_type": "本地",
+              "release_date": "2024-04-17",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch分布式RPC模块RemoteModule存在反序列化RCE漏洞",
+              "id": "XMIRROR-E5B714EF-1492C895",
+              "cve_id": "CVE-2024-48063",
+              "cnnvd_id": "CNNVD-202410-3377",
+              "cwe_id": "CWE-502",
+              "description": "\u003cp\u003ePyTorch是一个由PyTorch开源社区提供的常用机器学习框架，广泛应用于深度学习和人工智能开发。此漏洞在PyTorch版本2.4.1及之前的版本中发现，该漏洞源于用于分布式RPC任务的RemoteModule模块。当应用程序允许从未经验证的来源加载和执行代码时，会导致远程代码执行漏洞。此漏洞会使攻击者能够在没有适当权限或安全审查的情况下执行任意代码。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级到最新版本的PyTorch来修复此漏洞。此外，仔细审查和限制加载到RemoteModule中的代码来源是减少风险的关键手段。还可以在应用程序中强制使用严格的代码签名和验证机制来阻止未授权的代码执行。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2024-10-29",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "PyTorch 2.6.0 计算图丢弃(CTC)损失函数拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F8A-9E426895",
+              "cve_id": "CVE-2025-3730",
+              "cnnvd_id": "CNNVD-202504-2733",
+              "cwe_id": "CWE-404",
+              "description": "PyTorch是一个广泛使用的开源深度学习框架，其提供了动态神经网络的构建和强力的GPU加速支持。该框架中的torch.nn.functional.ctc_loss函数在处理输入为空的张量时，会在文件 aten/src/ATen/native/LossCTC.cpp中引发拒绝服务漏洞。攻击者可以通过触发该漏洞使得系统崩溃，导致服务不可用。",
+              "suggestion": "尽快应用官方补丁以修复此问题。补丁已经发布在GitHub的master分支中。此外，建议在可能的情况下对输入数据进行严格的校验，避免传递空的张量给ctc_loss函数。",
+              "attack_type": "本地",
+              "release_date": "2025-04-16",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch反序列化漏洞",
+              "id": "XMIRROR-E5B70F5F-803F6695",
+              "cve_id": "CVE-2024-7804",
+              "cnnvd_id": "CNNVD-202503-2349",
+              "cwe_id": "CWE-502",
+              "description": "PyTorch 是一个开源的 Python 深度学习框架，广泛用于机器学习和人工智能应用。该框架的 RPC 组件 (torch.distributed.rpc) 在 2.3.1 及其之前的版本中存在反序列化漏洞。该漏洞源于在反序列化 PythonUDF 对象时缺乏安全验证，攻击者能够通过发送恶意序列化的 PythonUDF 对象来远程执行任意代码，从而在主节点上实现远程代码执行 (RCE)。",
+              "suggestion": "立即升级到 PyTorch 的 2.3.2 版本或以上，以修复此漏洞。如果无法立即升级，可以考虑限制对主节点的访问，以及在网络层实施严格的安全控制措施。推荐确保在反序列化代码时进行安全验证以防止类似漏洞的再次出现。",
+              "attack_type": "远程",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "PyTorch 深度神经网络远程命令执行漏洞",
+              "id": "XMIRROR-E5B714FA-9AD38995",
+              "cve_id": "CVE-2025-32434",
+              "cnnvd_id": "CNNVD-202504-3134",
+              "cwe_id": "CWE-502",
+              "description": "PyTorch 是一个用于深度学习的 Python 包，提供强大的 GPU 加速和自动微分能力。该漏洞存在于 PyTorch 2.5.1 及之前的版本中。当用户使用 torch.load 方法并将 weights_only 参数设置为 True 时，攻击者可以通过构造恶意模型文件强制调用 legacy_load 方法，从而实现远程命令执行，即使官方文档认为在此模式下是安全的。漏洞的根本原因在于反序列化过程中缺乏充分的安全验证。",
+              "suggestion": "升级 PyTorch 到 2.6.0 或更高版本以修复此漏洞。对于短期防护措施，建议限制未知模型的下载和使用，并加强对加载模型的源进行可信验证。同时，进行代码审计以确保未使用不安全的反序列化逻辑。",
+              "attack_type": "远程",
+              "release_date": "2025-04-18",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "PyTorch 2.6.0+cu124 torch.mkldnn_max_pool2d 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F8A-9EC8FD95",
+              "cve_id": "CVE-2025-2953",
+              "cnnvd_id": "CNNVD-202503-3737",
+              "cwe_id": "CWE-404",
+              "description": "PyTorch 是一个深度学习框架，提供了动态神经网络和张量计算功能。该组件中受影响的函数 torch.mkldnn_max_pool2d 存在一个拒绝服务漏洞。这是由于在处理张量过程中发生了不当的资源关闭或释放，可能导致系统崩溃。本地攻击者可以通过特制输入触发此漏洞，导致服务中断。",
+              "suggestion": "建议用户尽快参考 \u003chttps://github.com/pytorch/pytorch/releases\u003e 页面获取相关补丁版本进行升级。同时，避免信任和加载外部未验证的模型可作为暂时的缓解手段。长期来看，应加强对代码的安全审计和测试，以防此类漏洞再次出现。",
+              "attack_type": "本地",
+              "release_date": "2025-03-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch 安全漏洞",
+              "id": "XMIRROR-E5B714EF-1435B495",
+              "cve_id": "CVE-2024-31584",
+              "cnnvd_id": "CNNVD-202404-2910",
+              "cwe_id": "CWE-125",
+              "description": "PyTorch是PyTorch开源的一个 Python 包。\r\nPytorch v2.2.0之前版本存在安全漏洞，该漏洞源于组件 torch/csrc/jit/mobile/flatbuffer_loader.cpp存在越界读取漏洞。",
+              "suggestion": "## Remediation\nUpgrade `pytorch/pytorch` to version 2.2.0-rc1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-04-19",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch v2.7.0 proxy_tensor.py 语法错误导致的拒绝服务漏洞",
+              "id": "XMIRROR-E5B714FA-9A2CA195",
+              "cve_id": "CVE-2025-55553",
+              "cnnvd_id": "CNNVD-202509-3950",
+              "cwe_id": "CWE-248",
+              "description": "PyTorch 是一个广泛使用的开源机器学习框架，主要用于深度学习模型的开发和训练。组件 proxy_tensor.py 是 PyTorch 的一部分，负责处理张量代理操作。此漏洞因组件 proxy_tensor.py 中存在的语法错误导致，攻击者可以通过触发该错误使目标系统进入不可用状态，从而造成拒绝服务（DoS）。利用该漏洞无需复杂的技术手段，可能通过特定的输入数据引发异常错误，从而导致服务中断。",
+              "suggestion": "1. 升级到修复该漏洞的 PyTorch 新版本（请参考官方公告或相关修复补丁信息）。\n2. 如果不能立即升级，请审查 proxy_tensor.py 的代码，修复语法错误。\n3. 在系统中启用 WAF（Web 应用防火墙）规则，以检测和阻止可能的恶意输入。\n4. 加强代码审计流程，避免类似问题的再次发生。",
+              "attack_type": "远程",
+              "release_date": "2025-09-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "PyTorch v2.7.0 通过 Inductor 编译的模型拒绝服务漏洞",
+              "id": "XMIRROR-E5B714FA-9A2CC095",
+              "cve_id": "CVE-2025-55560",
+              "cnnvd_id": "CNNVD-202509-3944",
+              "cwe_id": "CWE-400",
+              "description": "PyTorch 是一个广泛使用的开源深度学习框架，支持多种机器学习任务和模型训练。该漏洞影响 PyTorch v2.7.0，当模型使用了 `torch.Tensor.to_sparse()` 和 `torch.Tensor.to_dense()` 方法并通过 Inductor 编译时，可能会导致拒绝服务 (DoS)。漏洞成因可能与 Inductor 编译器在处理稀疏与密集张量转换时出现的内存或计算资源耗尽问题有关。攻击者可以通过特制的模型触发该问题，从而使系统无法正常响应。",
+              "suggestion": "1. 升级 PyTorch 至最新版本，以解决该漏洞问题。\n2. 临时缓解方案包括避免使用 `torch.Tensor.to_sparse()` 和 `torch.Tensor.to_dense()` 的组合，或者暂时停用 Inductor 编译器。\n3. 长期建议：加强对模型和框架的安全性测试，尤其是在编译器优化部分，并在代码库开发过程中引入更严格的资源管理机制。",
+              "attack_type": "远程",
+              "release_date": "2025-09-25",
+              "security_level_id": 4,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "PyTorch v2.7.0 编译器 Inductor 缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B714FA-9A2C0D95",
+              "cve_id": "CVE-2025-55558",
+              "cnnvd_id": "CNNVD-202509-3946",
+              "cwe_id": "CWE-400",
+              "description": "PyTorch 是一个广泛使用的开源深度学习框架，通常用于构建和训练神经网络。该框架支持多种模块和操作，包括 torch.nn.Conv2d（二维卷积层）、torch.nn.functional.hardshrink（硬收缩激活函数）以及 torch.Tensor.view 和 torch.mv（矩阵向量乘法）。Inductor 是 PyTorch 的编译器部分，负责将模型代码编译为高效运行的计算图。在 PyTorch v2.7.0 中，当包含上述模块的模型经过 Inductor 编译时，会触发缓冲区溢出问题。缓冲区溢出通常是由于代码中对内存管理不当或缺乏边界检查导致的，这可能会导致存储数据的内存被过度写入，从而破坏程序的正常运行。",
+              "suggestion": "建议用户升级到修复此漏洞的 PyTorch 最新版本（预计为 v2.7.x 的后续版本）。同时，在修复版本发布之前，用户可以考虑以下临时缓解措施：1. 避免使用容易触发漏洞的模块组合（如 torch.nn.Conv2d、torch.nn.functional.hardshrink 等）；2. 关闭 Inductor 编译器功能，使用替代编译器或解释器模式运行模型。长期建议包括：加强 PyTorch 代码审计，特别是对编译器和内存管理相关模块的安全性测试。",
+              "attack_type": "远程",
+              "release_date": "2025-09-25",
+              "security_level_id": 4,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "PyTorch v2.7.0 Inductor 模式 Name Error 导致的拒绝服务漏洞",
+              "id": "XMIRROR-E5B714FA-9A2C2195",
+              "cve_id": "CVE-2025-55557",
+              "cnnvd_id": "CNNVD-202509-3947",
+              "cwe_id": "CWE-248",
+              "description": "PyTorch 是一个广泛使用的开源深度学习框架，主要用于构建和训练神经网络。torch.cummin 是 PyTorch 中的一个函数，用于计算张量的逐元素累积最小值。Inductor 是 PyTorch 的一个编译器后端，用于优化模型运行性能。在 PyTorch v2.7.0 中，当模型包含 torch.cummin 函数并使用 Inductor 编译时，会触发 Name Error。此错误可能导致系统无法正常运行，进而引发拒绝服务（DoS）。漏洞的成因可能是 Inductor 编译器在处理 torch.cummin 函数时未正确处理某些变量或名称解析，导致程序在运行时崩溃。",
+              "suggestion": "1. 升级到 PyTorch 的最新版本（修复此漏洞的版本）。\n2. 在漏洞修复之前，避免使用 Inductor 编译包含 torch.cummin 函数的模型。\n3. 对模型和代码进行安全审计，确保不包含可能触发该漏洞的代码。\n4. 部署 Web 应用防火墙（WAF）以检测和阻止可能的恶意输入。",
+              "attack_type": "远程",
+              "release_date": "2025-09-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "PyTorch nn.PairwiseDistance(p=2) 计算错误漏洞",
+              "id": "XMIRROR-E5B714FA-9A0B1595",
+              "cve_id": "CVE-2025-46148",
+              "cnnvd_id": "CNNVD-202509-3971",
+              "cwe_id": "CWE-1284",
+              "description": "PyTorch 是一个广泛使用的开源深度学习框架，支持动态计算图和自动梯度计算，用于构建和训练神经网络。nn.PairwiseDistance 是 PyTorch 中的一个模块，主要用于计算向量之间的距离。在 PyTorch 2.6.0 及之前的版本中，当启用 eager 模式时，该模块在计算 p=2 的距离时会产生错误结果。该问题可能由于实现中的算法逻辑错误或数据处理方式不当导致。",
+              "suggestion": "升级到 PyTorch 的最新版本以修复此问题。同时，建议在漏洞修复之前避免使用 nn.PairwiseDistance(p=2) 或 eager 模式。此外，开发者可以在代码中加入额外的测试用例，以验证计算结果的准确性。长期建议包括加强代码审计和测试覆盖度。",
+              "attack_type": "远程",
+              "release_date": "2025-09-25",
+              "security_level_id": 4,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "PyTorch 量化 Sigmoid 模块 nnq_Sigmoid 初始化漏洞",
+              "id": "XMIRROR-E5B70F8A-9E77E395",
+              "cve_id": "CVE-2025-2149",
+              "cnnvd_id": "CNNVD-202503-1041",
+              "cwe_id": "CWE-665",
+              "description": "\u003cp\u003ePyTorch 是一个开源的深度学习框架，广泛用于机器学习和人工智能领域。受影响的组件是量化 Sigmoid 模块中的 nnq_Sigmoid 函数。PyTorch 的量化机制旨在减少模型的大小并提高推理速度，其中 nnq_Sigmoid 函数是用于激活函数的量化实现。漏洞的根本原因在于对参数 scale/zero_point 的处理不当，导致该组件的初始化过程发生错误。这种处理不当可能导致量化参数在初始化过程中被错误设置，进而影响模型的精度或功能。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户升级到修复该漏洞的最新版本。此外，可以在代码中增强参数校验逻辑以防止 scale/zero_point 参数被错误设置。为了长期规避类似问题，建议加入更严格的单元测试以确保参数初始化的正确性。\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2025-03-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch 2.6.0+cu124 缓冲区错误内存损坏漏洞",
+              "id": "XMIRROR-E5B70F8A-9E773395",
+              "cve_id": "CVE-2025-2148",
+              "cnnvd_id": "CNNVD-202503-1042",
+              "cwe_id": "CWE-119",
+              "description": "\u003cp\u003ePyTorch 是一个用于机器学习的开源 Python 库，广泛应用于深度学习模型的构建与训练。此漏洞出现在 PyTorch 2.6.0+cu124 版本的 torch.ops.profiler._call_end_callbacks_on_jit_fut 函数中，该函数处理过程中由于输入参数 None 导致内存损坏。这是一种缓冲区错误，可能由于未正确处理输入而导致不安全的内存操作。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级至最新的 PyTorch 版本以修复此漏洞。临时措施包括在应用中禁用相关功能模块，或通过部署 WAF 规则过滤输入数据。此外，开发者应当在代码中加强输入校验并进行安全代码审计。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-03-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch torch.jit.jit_module_from_flatbuffer 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70F8A-9E820095",
+              "cve_id": "CVE-2025-3121",
+              "cnnvd_id": "CNNVD-202504-542",
+              "cwe_id": "CWE-119",
+              "description": "\u003cp\u003ePyTorch是一个开源的机器学习框架，广泛用于深度学习模型的开发和训练。该框架的2.6.0版本中，torch.jit.jit_module_from_flatbuffer函数存在内存损坏问题，导致缓冲区错误。此漏洞源于函数在处理flatbuffer的数据时没有正确管理内存，可能引发内存溢出或损坏，从而影响系统稳定性。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议立即升级至PyTorch的最新版本以修复此漏洞。临时缓解措施包括限制对该功能的本地访问权限，并部署内存管理和访问控制的额外防护措施。长期建议包括进行代码审计以识别和修复类似的内存管理漏洞。\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2025-04-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch 2.6.0 缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F8A-9EC9E095",
+              "cve_id": "CVE-2025-2998",
+              "cnnvd_id": "CNNVD-202503-3833",
+              "cnvd_id": "CNVD-2025-06943",
+              "cwe_id": "CWE-119",
+              "description": "\u003cp\u003ePyTorch 是一个开源的深度学习框架，广泛用于各种机器学习和深度学习项目。该漏洞影响了 PyTorch 版本 2.6.0 中的函数 torch.nn.utils.rnn.pad_packed_sequence。PyTorch 提供丰富的神经网络构件与优化工具，帮助开发者构建复杂的深度学习模型。在该漏洞中，由于函数在处理输入时未进行适当的长度验证，导致出现内存损坏问题。这种处理不当使得本地用户有机会通过特定输入数据触发内存操作异常，导致内存访问错误。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户升级到 PyTorch 的最新版本，修补该漏洞。同时，在短期内可以考虑通过限制本地用户访问权限来降低风险。此外，使用静态分析工具监控和校验代码中的潜在漏洞也是防范此类问题的有效方法。\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2025-03-31",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch torch.nn.utils.rnn.unpack_sequence 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70F8A-9EC96095",
+              "cve_id": "CVE-2025-2999",
+              "cnnvd_id": "CNNVD-202503-3839",
+              "cnvd_id": "CNVD-2025-06944",
+              "cwe_id": "CWE-119",
+              "description": "\u003cp\u003ePyTorch 是一个开源的机器学习框架，提供了深度学习所需的核心功能。此漏洞影响了 PyTorch 2.6.0 版本中的 torch.nn.utils.rnn.unpack_sequence 函数。由于该函数在处理内存操作时存在不当处理，导致出现内存损坏从而引发缓冲区溢出问题。漏洞成因根本于对输入数据的长度大小缺乏正确验证，可能导致系统的内存被意外覆盖或破坏。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议及时关注 PyTorch 官方平台，获取安全更新或补丁以修复该漏洞。在此过程中，可以通过严格验证输入数据或使用内存相关的安全函数来临时缓解风险。此外，还可以采取安全审计措施，加强代码审查以提高软件的安全性。\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2025-03-31",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch torch.lstm_cell 函数内存损坏漏洞",
+              "id": "XMIRROR-E5B70F8A-9EC9B295",
+              "cve_id": "CVE-2025-3001",
+              "cnnvd_id": "CNNVD-202503-3854",
+              "cnvd_id": "CNVD-2025-06942",
+              "cwe_id": "CWE-119",
+              "description": "\u003cp\u003ePyTorch 是一个广泛使用的开源深度学习框架，支持用于科学研究和商业应用的复杂张量计算和自动求导特性。该漏洞出现在 PyTorch 2.6.0 版本的 torch.lstm_cell 函数中，由于该函数未能正确验证输入数据的长度大小，攻击者可以通过操控输入数据导致内存损坏。由于内存地址定位错误或指针操作不当，使得进程内存中相邻区域可能被篡改或控制，进而引发程序异常或恶意代码执行。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户立即升级到 PyTorch 的最新修补版本，以消除此漏洞。若无法立即更新，可以考虑在使用 lstm_cell 函数时加入输入验证来限制函数调用的合法性。长期来看，应加强代码审计和测试的力度，确保类似问题在开发阶段被发现和修复。\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2025-03-31",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "PyTorch 2.6.0 torch.jit.script 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70F8A-9EC91395",
+              "cve_id": "CVE-2025-3000",
+              "cnnvd_id": "CNNVD-202503-3844",
+              "cnvd_id": "CNVD-2025-06941",
+              "cwe_id": "CWE-119",
+              "description": "\u003cp\u003ePyTorch 是一个广泛使用的深度学习框架，提供自动求导和灵活的计算图功能。漏洞存在于 PyTorch 2.6.0 的 torch.jit.script 函数中，导致内存损坏。此漏洞是由于函数未能正确验证输入数据的长度大小，引发缓冲区溢出，从而导致内存损坏和潜在的代码执行风险。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户尽快升级到 PyTorch 的新版本以修复该漏洞。如果无法立即升级，请限制对使用受影响功能的本地主机的访问权限，并监控异常活动。\u003c/p\u003e",
+              "attack_type": "本地",
+              "release_date": "2025-03-31",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 21
+        },
+        {
+          "name": "cpm-kernels",
+          "language": "Python",
+          "id": "57811781013766211",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[cpm-kernels:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sentence_transformers",
+          "language": "Python",
+          "id": "57811781013766212",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[sentence_transformers:]"
+          ]
+        },
+        {
+          "name": "accelerate",
+          "language": "Python",
+          "id": "57811781013766213",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[accelerate:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "sentencepiece",
+          "language": "Python",
+          "id": "57811781013766214",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[sentencepiece:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "llama-cpp-python",
+          "language": "Python",
+          "id": "57811781013766215",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[llama-cpp-python:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Arbitrary Code Execution",
+              "id": "XMIRROR-E5B77528-8480682B",
+              "cwe_id": "CWE-94",
+              "description": "## Overview\n[llama-cpp-python](https://pypi.org/project/llama-cpp-python) is a Python bindings for the llama.cpp library\n\nAffected versions of this package are vulnerable to Arbitrary Code Execution due to improper `Llama._create_completion` suffix parameter check, allows an attacker to send string-like object which could actually lead to exploitation of this vulnerability.\n## Remediation\nUpgrade `llama-cpp-python` to version 0.2.12 or higher.\n## References\n- [GitHub Commit](https://github.com/abetlen/llama-cpp-python/pull/854/commits/474474d062ed0641efc9253c49a13631a5d57576)\n- [GitHub PR](https://github.com/abetlen/llama-cpp-python/pull/854)\n- [Vulnerable Code](https://github.com/tangledgroup/llama-cpp-python-exploit/blob/f99baf1e66b9fa79987c594179ac93eadfb2ca97/exploit.py#L45)\n",
+              "suggestion": "## Remediation\nUpgrade `llama-cpp-python` to version 0.2.12 or higher.",
+              "attack_type": "本地",
+              "release_date": "2023-12-20",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "transformers_stream_generator",
+          "language": "Python",
+          "id": "57811781013766216",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[transformers_stream_generator:]"
+          ]
+        },
+        {
+          "name": "einops",
+          "language": "Python",
+          "id": "57811781013766217",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[einops:]"
+          ]
+        },
+        {
+          "name": "optimum",
+          "language": "Python",
+          "id": "57811781013766218",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[optimum:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "auto-gptq",
+          "language": "Python",
+          "id": "57811781013766219",
+          "direct": true,
+          "paths": [
+            "GaiZhenbiao_ChuanhuChatGPT\\requirements_advanced.txt\\[auto-gptq:]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 53
+    },
+    {
+      "id": "57811781013766147",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\config_example.json"
+      ]
+    },
+    {
+      "id": "57811781013766148",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\configs\\ds_config_chatbot.json"
+      ]
+    },
+    {
+      "id": "57811781013766149",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\en_US.json"
+      ]
+    },
+    {
+      "id": "57811781013766150",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\ja_JP.json"
+      ]
+    },
+    {
+      "id": "57811781013766151",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\ko_KR.json"
+      ]
+    },
+    {
+      "id": "57811781013766152",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\ru_RU.json"
+      ]
+    },
+    {
+      "id": "57811781013766153",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\sv_SE.json"
+      ]
+    },
+    {
+      "id": "57811781013766154",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\vi_VN.json"
+      ]
+    },
+    {
+      "id": "57811781013766155",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\locale\\zh_CN.json"
+      ]
+    },
+    {
+      "id": "57811781013766156",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\templates\\1 中文提示词.json"
+      ]
+    },
+    {
+      "id": "57811781013766157",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\templates\\3 繁體提示詞.json"
+      ]
+    },
+    {
+      "id": "57811781013766158",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\templates\\4 川虎的Prompts.json"
+      ]
+    },
+    {
+      "id": "57811781013766159",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\templates\\5 日本語Prompts.json"
+      ]
+    },
+    {
+      "id": "57811781013766160",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\templates\\6 Russian Prompts.json"
+      ]
+    },
+    {
+      "id": "57811781013766161",
+      "direct": true,
+      "paths": [
+        "GaiZhenbiao_ChuanhuChatGPT\\web_assets\\manifest.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 108
+}

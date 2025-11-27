@@ -1,0 +1,3098 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "ansible_ansible",
+    "size": 0,
+    "start_time": "2025-11-27 21:15:15",
+    "end_time": "2025-11-27 21:15:20",
+    "cost_time": 5.2327543
+  },
+  "id": "57811747423879168",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811747423879169",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\lib\\ansible\\modules\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879170",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "jinja2 ",
+          "version": "\u003e= 3.1.0",
+          "language": "Python",
+          "id": "57811747423879350",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\requirements.txt\\[jinja2 :\u003e= 3.1.0]"
+          ]
+        },
+        {
+          "name": "PyYAML ",
+          "version": "\u003e= 5.1",
+          "language": "Python",
+          "id": "57811747423879351",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\requirements.txt\\[PyYAML :\u003e= 5.1]"
+          ]
+        },
+        {
+          "name": "cryptography",
+          "language": "Python",
+          "id": "57811747423879352",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\requirements.txt\\[cryptography:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 12
+        },
+        {
+          "name": "packaging",
+          "language": "Python",
+          "id": "57811747423879353",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\requirements.txt\\[packaging:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "resolvelib ",
+          "version": "\u003e= 0.8.0, \u003c 2.0.0",
+          "language": "Python",
+          "id": "57811747423879354",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\requirements.txt\\[resolvelib :\u003e= 0.8.0, \u003c 2.0.0]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 12
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879171",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\ansible-test-integration-constraints\\ansible_collections\\ns\\col\\tests\\integration\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "botocore",
+          "language": "Python",
+          "id": "57811747423879355",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\integration\\targets\\ansible-test-integration-constraints\\ansible_collections\\ns\\col\\tests\\integration\\requirements.txt\\[botocore:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Race Condition",
+              "id": "XMIRROR-E5B77528-1CA59C2B",
+              "cwe_id": "CWE-362",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Race Condition related to assuming a role for the first time.\n## Remediation\nUpgrade `botocore` to version 1.9.12 or higher.\n## References\n- [GitHub Commit](https://github.com/boto/botocore/commit/5e044f7b94acb83fce4265b5ce47620db70a9876)\n- [GitHub PR](https://github.com/boto/botocore/pull/1405)\n",
+              "suggestion": "## Remediation\nUpgrade `botocore` to version 1.9.12 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879172",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\ansible-test-units-constraints\\ansible_collections\\ns\\col\\tests\\unit\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "botocore",
+          "language": "Python",
+          "id": "57811747423879356",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\integration\\targets\\ansible-test-units-constraints\\ansible_collections\\ns\\col\\tests\\unit\\requirements.txt\\[botocore:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Race Condition",
+              "id": "XMIRROR-E5B77528-1CA59C2B",
+              "cwe_id": "CWE-362",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Race Condition related to assuming a role for the first time.\n## Remediation\nUpgrade `botocore` to version 1.9.12 or higher.\n## References\n- [GitHub Commit](https://github.com/boto/botocore/commit/5e044f7b94acb83fce4265b5ce47620db70a9876)\n- [GitHub PR](https://github.com/boto/botocore/pull/1405)\n",
+              "suggestion": "## Remediation\nUpgrade `botocore` to version 1.9.12 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879173",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\pip\\files\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879174",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.in"
+      ],
+      "children": [
+        {
+          "name": "black",
+          "language": "Python",
+          "id": "57811747423879357",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.in\\[black:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "black 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14808A95",
+              "cve_id": "CVE-2024-21503",
+              "cnnvd_id": "CNNVD-202403-1809",
+              "cwe_id": "CWE-1333 CWE-75",
+              "description": "Black是一个 Python 代码格式化程序。\r\nblack 24.3.0 之前版本存在安全漏洞，该漏洞源于 strings.py 文件中的lines_with_leading_tabs_expanded 函数容易受到拒绝服务攻击，攻击者利用该漏洞可以通过制作恶意输入导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `black` to version 24.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-03-18",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879175",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "black",
+          "version": "25.9.0",
+          "language": "Python",
+          "id": "57811747423879358",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[black:25.9.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "click",
+          "version": "8.3.0",
+          "language": "Python",
+          "id": "57811747423879359",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[click:8.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "mypy_extensions",
+          "version": "1.1.0",
+          "language": "Python",
+          "id": "57811747423879360",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[mypy_extensions:1.1.0]"
+          ]
+        },
+        {
+          "name": "packaging",
+          "version": "25.0",
+          "language": "Python",
+          "id": "57811747423879361",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[packaging:25.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pathspec",
+          "version": "0.12.1",
+          "language": "Python",
+          "id": "57811747423879362",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[pathspec:0.12.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MPL-2.0"
+            }
+          ]
+        },
+        {
+          "name": "platformdirs",
+          "version": "4.5.0",
+          "language": "Python",
+          "id": "57811747423879363",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[platformdirs:4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytokens",
+          "version": "0.2.0",
+          "language": "Python",
+          "id": "57811747423879364",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\black.requirements.txt\\[pytokens:0.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879176",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.in"
+      ],
+      "children": [
+        {
+          "name": "jinja2",
+          "language": "Python",
+          "id": "57811747423879365",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.in\\[jinja2:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Jinja2 权限许可和访问控制问题漏洞",
+              "id": "XMIRROR-E5B70F18-48778095",
+              "cve_id": "CVE-2014-0012",
+              "cnnvd_id": "CNNVD-201405-315",
+              "cwe_id": "CWE-264",
+              "description": "Jinja2是一款基于Python的模板引擎。该产品具有完整的Unicode支持，并提供了可选的沙箱模板执行环境。\r\nJinja2 2.7.2版本存在权限许可和访问控制问题漏洞，该漏洞源于程序没有正确创建临时目录。本地攻击者可通利用该漏洞以用户的UID提前创建临时目录，获取特权。",
+              "suggestion": "通用方案： 目前没有详细解决方案提供： http://jinja.pocoo.org/\n",
+              "attack_type": "本地",
+              "release_date": "2014-01-18",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71403-AFD55C95",
+              "cve_id": "CVE-2020-28493",
+              "cnnvd_id": "CNNVD-202102-010",
+              "cwe_id": "CWE-400",
+              "description": "Jinja2是一款基于Python的模板引擎。该产品具有完整的Unicode支持，并提供了可选的沙箱模板执行环境。\r\njinja2 from 0.0.0 and before 2.11.3 存在资源管理错误漏洞，该漏洞源于regex的ReDOS漏洞。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Jinja 格式化字符串错误漏洞",
+              "id": "XMIRROR-E5B7668D-7D466395",
+              "cve_id": "CVE-2016-10745",
+              "cnnvd_id": "CNNVD-201904-333",
+              "cwe_id": "CWE-134",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja中存在格式化字符串错误漏洞。该漏洞源于网络系统或产品接收外部格式化字符串作为参数时，对参数类型、数量等过滤不严格。以下产品及版本受到影响：Pallets Jinja 2.8.1之前版本。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-08",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Jinja 权限许可和访问控制问题漏洞",
+              "id": "XMIRROR-E5B7140E-B014AD95",
+              "cve_id": "CVE-2019-10906",
+              "cnnvd_id": "CNNVD-201904-294",
+              "cwe_id": "CWE-693",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 2.10.1之前版本中存在权限许可和访问控制问题漏洞。攻击者可利用该漏洞绕过沙盒保护。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-06",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-1432B895",
+              "cve_id": "CVE-2024-22195",
+              "cnnvd_id": "CNNVD-202401-963",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nJinja 3.1.3之前版本存在安全漏洞，该漏洞源于存在跨站脚本（XSS）漏洞。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-11",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2‘jinja2.bccache.FileSystemBytecodeCache’不安全文件权限漏洞",
+              "id": "XMIRROR-E5B70F18-48DAA695",
+              "cve_id": "CVE-2014-1402",
+              "cnnvd_id": "CNNVD-201401-184",
+              "cnvd_id": "CNVD-2014-00228",
+              "cwe_id": "CWE-264",
+              "description": "Jinja2是一个基于Python的模板引擎，它拥有完整的unicode支持，并且提供了可选的沙箱模板执行环境来保证安全。\r\nJinja2 2.7.1及之前版本的bccache.FileSystemBytecodeCache中的默认配置存在安全漏洞，该漏洞源于程序没有正确创建临时文件。本地攻击者可借助/tmp目录下特制的cache文件利用该漏洞获取特权。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://pypi.python.org/packages/source/J/Jinja2/Jinja2-2.7.2.tar.gz#md5=df1581455564e97010e38bc792012aa5\n",
+              "attack_type": "本地",
+              "release_date": "2014-01-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pallets Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-145CB795",
+              "cve_id": "CVE-2024-34064",
+              "cnnvd_id": "CNNVD-202405-1436",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 3.1.4之前版本存在安全漏洞，该漏洞源于将用户输入作为键传递给 xmlattr 过滤器时，Jinja 容易受到 HTML 属性注入。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-05-06",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja 模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EAF90D95",
+              "cve_id": "CVE-2024-56326",
+              "cnnvd_id": "CNNVD-202412-2665",
+              "cwe_id": "CWE-693 CWE-1336",
+              "description": "Jinja 是由 Pallets 开源的一个快速、富有表现力并可扩展的模板引擎。该漏洞存在于 Jinja 版本 3.1.5 之前，由于在沙箱环境中对 str.format 调用的检测存在不当，攻击者可以控制模板的内容并执行任意 Python 代码。攻击者可以通过创建包含恶意字符串的模板并利用自定义过滤器实现攻击，这可能导致系统安全性严重受损。",
+              "suggestion": "建议立即升级到 Jinja 版本 3.1.5 或更高版本，以修复此漏洞。如果无法立即升级，建议限制对受影响模板内容的访问权限，并定期审计和监控应用程序的模板使用情况，以防出现不安全的自定义过滤器。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EA6B2B95",
+              "cve_id": "CVE-2024-56201",
+              "cnnvd_id": "CNNVD-202412-2662",
+              "cwe_id": "CWE-150",
+              "description": "Jinja是Pallets开源的一个快速、富有表现力且可扩展的模板引擎。版本3.1.5之前的Jinja存在安全漏洞，该漏洞源于编译器的一个错误，允许同时控制模板内容和文件名的攻击者执行任意Python代码，无论Jinja的沙箱是否被使用。当应用程序执行不可信的模板时，攻击者需要能够控制模板的文件名和内容，才能有效利用此漏洞。",
+              "suggestion": "立即升级到Jinja版本3.1.5或更高版本，以修复此漏洞。建议对用户提供的模板进行严格的验证，并限制攻击者对模板文件名和内容的控制，以防止类似漏洞的再次发生。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2 任意代码执行漏洞",
+              "id": "XMIRROR-E5B714FA-9AF4BE95",
+              "cve_id": "CVE-2025-27516",
+              "cnnvd_id": "CNNVD-202503-672",
+              "cwe_id": "CWE-1336",
+              "description": "Jinja2 是一个广泛用于Web应用程序的模板引擎，用于渲染模板。该漏洞源于 Jinja2 沙盒环境与 `|attr` 过滤器交互时的一个疏忽。特别是，当攻击者能够控制模板的内容时，就可以利用此缺陷执行任意 Python 代码。这意味着，如果某个应用程序处理不可信的模板，就可能受到威胁，从而导致未经授权的系统访问或操作。",
+              "suggestion": "强烈建议开发人员和系统管理员立即将 Jinja2 升级到 3.1.6 及以上版本，以修复此漏洞。同时，实施严格的用户生成内容控制和验证，避免允许用户提交模板，必要时应对输入进行清理。此外，监控与 Jinja2 及其他应用程序组件相关的安全公告和更新。",
+              "attack_type": "本地",
+              "release_date": "2025-03-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 10
+        },
+        {
+          "name": "pyyaml",
+          "language": "Python",
+          "id": "57811747423879366",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.in\\[pyyaml:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyYAML 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71403-4782AE95",
+              "cve_id": "CVE-2020-14343",
+              "cnnvd_id": "CNNVD-202102-918",
+              "cwe_id": "CWE-20",
+              "description": "CVE-2020-14343是与Python的第三方库“PyYAML”相关的漏洞，该库用于处理YAML文件。该漏洞的根本原因在于PyYAML库的yaml.load函数会解析未经验证的输入数据。具体来说，当用户使用yaml.load函数并且未明确指定加载器时，PyYAML会默认使用“UnsafeLoader”来解析YAML文件，这会导致任意代码执行的风险。如果攻击者能够控制传递给yaml.load的YAML内容，他们就可以构造一个恶意的YAML文件，其中包含恶意的Python对象。yaml.load在加载这个文件时会执行这些对象的代码，从而导致任意代码执行。这使得攻击者可以在目标系统上执行任意命令，潜在地获得系统的控制权限。",
+              "suggestion": "1. 立即升级PyYAML库到最新版本。2. 在解析YAML文件时，明确使用安全加载器，如yaml.safe_load函数来代替yaml.load函数。3. 对从不受信任来源获取的YAML数据进行严格的输入验证和清理。4. 定期审计代码库，以确认使用了安全的方法处理YAML文件。",
+              "attack_type": "远程",
+              "release_date": "2020-07-26",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Exiv2 整数溢出漏洞",
+              "id": "XMIRROR-E5B7669E-3A103195",
+              "cve_id": "CVE-2017-18342",
+              "cnnvd_id": "CNNVD-201806-1372",
+              "cnvd_id": "CNVD-2019-42857",
+              "cwe_id": "CWE-502",
+              "description": "CVE-2017-18342 是一个影响 Exiv2 库的整数溢出漏洞。Exiv2 是一个用于处理图像元数据的库，在处理 TIFF 图像文件时，由于对用户输入数据的边界检查不充分，可能导致整数溢出。具体来说，该漏洞出现在 readTiffDirectory 函数中，该函数在处理 TIFF 文件中的目录项时，没有正确检查涉及的偏移量和大小。这可能导致超出预期的内存分配，并进一步引发缓冲区溢出，允许攻击者通过构造恶意的 TIFF 文件来利用该漏洞，最终导致任意代码执行。",
+              "suggestion": "立即更新到已经修复该漏洞的 Exiv2 版本。与此同时，尽量避免处理来自不受信任来源的 TIFF 文件。可以通过安全策略限制用户对可疑文件的操作，并进行相关的安全培训教育，提高用户的安全意识。",
+              "attack_type": "远程",
+              "release_date": "2018-06-27",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        }
+      ],
+      "indirect_vulnerabilities": 12
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879177",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "Jinja2",
+          "version": "3.1.6",
+          "language": "Python",
+          "id": "57811747423879367",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.txt\\[Jinja2:3.1.6]"
+          ]
+        },
+        {
+          "name": "MarkupSafe",
+          "version": "3.0.3",
+          "language": "Python",
+          "id": "57811747423879368",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.txt\\[MarkupSafe:3.0.3]"
+          ]
+        },
+        {
+          "name": "PyYAML",
+          "version": "6.0.3",
+          "language": "Python",
+          "id": "57811747423879369",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.requirements.txt\\[PyYAML:6.0.3]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879178",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in"
+      ],
+      "children": [
+        {
+          "name": "mypy",
+          "language": "Python",
+          "id": "57811747423879370",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[mypy:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "#typestubsnotpublishedseparately",
+          "language": "Python",
+          "id": "57811747423879371",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[cryptography:#typestubsnotpublishedseparately]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F5B-1DBEED95",
+              "cve_id": "CVE-2022-3996",
+              "cnnvd_id": "CNNVD-202212-2982",
+              "cwe_id": "CWE-667",
+              "description": "OpenSSL是一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库，支持多种加密算法。如果X.509证书包含格式错误的策略约束并且启用了策略处理，系统将递归地获取两次写锁，导致在某些操作系统上进程挂起，进而造成拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本3.0.8或更高版本，以修复此漏洞。",
+              "attack_type": "远程",
+              "release_date": "2022-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-808F9F95",
+              "cve_id": "CVE-2024-4603",
+              "cnnvd_id": "CNNVD-202405-2902",
+              "cwe_id": "CWE-606 CWE-834",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。\r\nOpenSSL 3.0 和 3.1 版本存在安全漏洞，该漏洞源于使用函数 EVP_PKEY_param_check()、EVP_PKEY_public_check() 检查 DSA 公钥或 DSA 参数检查的键或参数，可能会导致拒绝服务。",
+              "suggestion": "## Remediation\nA fix was pushed into the `master` branch but not yet published.",
+              "attack_type": "远程",
+              "release_date": "2024-05-16",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 14
+        },
+        {
+          "name": "jinja2",
+          "version": "#typestubsnotpublishedseparately",
+          "language": "Python",
+          "id": "57811747423879372",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[jinja2:#typestubsnotpublishedseparately]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Jinja2 权限许可和访问控制问题漏洞",
+              "id": "XMIRROR-E5B70F18-48778095",
+              "cve_id": "CVE-2014-0012",
+              "cnnvd_id": "CNNVD-201405-315",
+              "cwe_id": "CWE-264",
+              "description": "Jinja2是一款基于Python的模板引擎。该产品具有完整的Unicode支持，并提供了可选的沙箱模板执行环境。\r\nJinja2 2.7.2版本存在权限许可和访问控制问题漏洞，该漏洞源于程序没有正确创建临时目录。本地攻击者可通利用该漏洞以用户的UID提前创建临时目录，获取特权。",
+              "suggestion": "通用方案： 目前没有详细解决方案提供： http://jinja.pocoo.org/\n",
+              "attack_type": "本地",
+              "release_date": "2014-01-18",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71403-AFD55C95",
+              "cve_id": "CVE-2020-28493",
+              "cnnvd_id": "CNNVD-202102-010",
+              "cwe_id": "CWE-400",
+              "description": "Jinja2是一款基于Python的模板引擎。该产品具有完整的Unicode支持，并提供了可选的沙箱模板执行环境。\r\njinja2 from 0.0.0 and before 2.11.3 存在资源管理错误漏洞，该漏洞源于regex的ReDOS漏洞。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Jinja 格式化字符串错误漏洞",
+              "id": "XMIRROR-E5B7668D-7D466395",
+              "cve_id": "CVE-2016-10745",
+              "cnnvd_id": "CNNVD-201904-333",
+              "cwe_id": "CWE-134",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja中存在格式化字符串错误漏洞。该漏洞源于网络系统或产品接收外部格式化字符串作为参数时，对参数类型、数量等过滤不严格。以下产品及版本受到影响：Pallets Jinja 2.8.1之前版本。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-08",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Jinja 权限许可和访问控制问题漏洞",
+              "id": "XMIRROR-E5B7140E-B014AD95",
+              "cve_id": "CVE-2019-10906",
+              "cnnvd_id": "CNNVD-201904-294",
+              "cwe_id": "CWE-693",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 2.10.1之前版本中存在权限许可和访问控制问题漏洞。攻击者可利用该漏洞绕过沙盒保护。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-06",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-1432B895",
+              "cve_id": "CVE-2024-22195",
+              "cnnvd_id": "CNNVD-202401-963",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nJinja 3.1.3之前版本存在安全漏洞，该漏洞源于存在跨站脚本（XSS）漏洞。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-11",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2‘jinja2.bccache.FileSystemBytecodeCache’不安全文件权限漏洞",
+              "id": "XMIRROR-E5B70F18-48DAA695",
+              "cve_id": "CVE-2014-1402",
+              "cnnvd_id": "CNNVD-201401-184",
+              "cnvd_id": "CNVD-2014-00228",
+              "cwe_id": "CWE-264",
+              "description": "Jinja2是一个基于Python的模板引擎，它拥有完整的unicode支持，并且提供了可选的沙箱模板执行环境来保证安全。\r\nJinja2 2.7.1及之前版本的bccache.FileSystemBytecodeCache中的默认配置存在安全漏洞，该漏洞源于程序没有正确创建临时文件。本地攻击者可借助/tmp目录下特制的cache文件利用该漏洞获取特权。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://pypi.python.org/packages/source/J/Jinja2/Jinja2-2.7.2.tar.gz#md5=df1581455564e97010e38bc792012aa5\n",
+              "attack_type": "本地",
+              "release_date": "2014-01-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pallets Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-145CB795",
+              "cve_id": "CVE-2024-34064",
+              "cnnvd_id": "CNNVD-202405-1436",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 3.1.4之前版本存在安全漏洞，该漏洞源于将用户输入作为键传递给 xmlattr 过滤器时，Jinja 容易受到 HTML 属性注入。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-05-06",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja 模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EAF90D95",
+              "cve_id": "CVE-2024-56326",
+              "cnnvd_id": "CNNVD-202412-2665",
+              "cwe_id": "CWE-693 CWE-1336",
+              "description": "Jinja 是由 Pallets 开源的一个快速、富有表现力并可扩展的模板引擎。该漏洞存在于 Jinja 版本 3.1.5 之前，由于在沙箱环境中对 str.format 调用的检测存在不当，攻击者可以控制模板的内容并执行任意 Python 代码。攻击者可以通过创建包含恶意字符串的模板并利用自定义过滤器实现攻击，这可能导致系统安全性严重受损。",
+              "suggestion": "建议立即升级到 Jinja 版本 3.1.5 或更高版本，以修复此漏洞。如果无法立即升级，建议限制对受影响模板内容的访问权限，并定期审计和监控应用程序的模板使用情况，以防出现不安全的自定义过滤器。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EA6B2B95",
+              "cve_id": "CVE-2024-56201",
+              "cnnvd_id": "CNNVD-202412-2662",
+              "cwe_id": "CWE-150",
+              "description": "Jinja是Pallets开源的一个快速、富有表现力且可扩展的模板引擎。版本3.1.5之前的Jinja存在安全漏洞，该漏洞源于编译器的一个错误，允许同时控制模板内容和文件名的攻击者执行任意Python代码，无论Jinja的沙箱是否被使用。当应用程序执行不可信的模板时，攻击者需要能够控制模板的文件名和内容，才能有效利用此漏洞。",
+              "suggestion": "立即升级到Jinja版本3.1.5或更高版本，以修复此漏洞。建议对用户提供的模板进行严格的验证，并限制攻击者对模板文件名和内容的控制，以防止类似漏洞的再次发生。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2 任意代码执行漏洞",
+              "id": "XMIRROR-E5B714FA-9AF4BE95",
+              "cve_id": "CVE-2025-27516",
+              "cnnvd_id": "CNNVD-202503-672",
+              "cwe_id": "CWE-1336",
+              "description": "Jinja2 是一个广泛用于Web应用程序的模板引擎，用于渲染模板。该漏洞源于 Jinja2 沙盒环境与 `|attr` 过滤器交互时的一个疏忽。特别是，当攻击者能够控制模板的内容时，就可以利用此缺陷执行任意 Python 代码。这意味着，如果某个应用程序处理不可信的模板，就可能受到威胁，从而导致未经授权的系统访问或操作。",
+              "suggestion": "强烈建议开发人员和系统管理员立即将 Jinja2 升级到 3.1.6 及以上版本，以修复此漏洞。同时，实施严格的用户生成内容控制和验证，避免允许用户提交模板，必要时应对输入进行清理。此外，监控与 Jinja2 及其他应用程序组件相关的安全公告和更新。",
+              "attack_type": "本地",
+              "release_date": "2025-03-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 10
+        },
+        {
+          "name": "packaging",
+          "version": "#typestubsnotpublishedseparately",
+          "language": "Python",
+          "id": "57811747423879373",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[packaging:#typestubsnotpublishedseparately]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pytest",
+          "version": "#typestubsnotpublishedseparately",
+          "language": "Python",
+          "id": "57811747423879374",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[pytest:#typestubsnotpublishedseparately]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytest-mock",
+          "version": "#typestubsnotpublishedseparately",
+          "language": "Python",
+          "id": "57811747423879375",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[pytest-mock:#typestubsnotpublishedseparately]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "resolvelib",
+          "version": "#typestubsnotpublishedseparately",
+          "language": "Python",
+          "id": "57811747423879376",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[resolvelib:#typestubsnotpublishedseparately]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ]
+        },
+        {
+          "name": "tomli",
+          "version": "#typestubsnotpublishedseparately,requiredfortomlinventoryplugin",
+          "language": "Python",
+          "id": "57811747423879377",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[tomli:#typestubsnotpublishedseparately,requiredfortomlinventoryplugin]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "types-backports",
+          "language": "Python",
+          "id": "57811747423879378",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[types-backports:]"
+          ]
+        },
+        {
+          "name": "types-paramiko",
+          "language": "Python",
+          "id": "57811747423879379",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[types-paramiko:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-pyyaml",
+          "language": "Python",
+          "id": "57811747423879380",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[types-pyyaml:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-requests",
+          "language": "Python",
+          "id": "57811747423879381",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[types-requests:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-setuptools",
+          "version": "#requiredforthepkg_resourcesimportinthepipmodule",
+          "language": "Python",
+          "id": "57811747423879382",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[types-setuptools:#requiredforthepkg_resourcesimportinthepipmodule]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-toml",
+          "language": "Python",
+          "id": "57811747423879383",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.in\\[types-toml:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 24
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879179",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "cffi",
+          "version": "2.0.0",
+          "language": "Python",
+          "id": "57811747423879384",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[cffi:2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "46.0.3",
+          "language": "Python",
+          "id": "57811747423879385",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[cryptography:46.0.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "iniconfig",
+          "version": "2.3.0",
+          "language": "Python",
+          "id": "57811747423879386",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[iniconfig:2.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "Jinja2",
+          "version": "3.1.6",
+          "language": "Python",
+          "id": "57811747423879387",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[Jinja2:3.1.6]"
+          ]
+        },
+        {
+          "name": "MarkupSafe",
+          "version": "3.0.3",
+          "language": "Python",
+          "id": "57811747423879388",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[MarkupSafe:3.0.3]"
+          ]
+        },
+        {
+          "name": "mypy",
+          "version": "1.18.2",
+          "language": "Python",
+          "id": "57811747423879389",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[mypy:1.18.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "mypy_extensions",
+          "version": "1.1.0",
+          "language": "Python",
+          "id": "57811747423879390",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[mypy_extensions:1.1.0]"
+          ]
+        },
+        {
+          "name": "packaging",
+          "version": "25.0",
+          "language": "Python",
+          "id": "57811747423879391",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[packaging:25.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pathspec",
+          "version": "0.12.1",
+          "language": "Python",
+          "id": "57811747423879392",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[pathspec:0.12.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MPL-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pluggy",
+          "version": "1.6.0",
+          "language": "Python",
+          "id": "57811747423879393",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[pluggy:1.6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pycparser",
+          "version": "2.23",
+          "language": "Python",
+          "id": "57811747423879394",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[pycparser:2.23]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "Pygments",
+          "version": "2.19.2",
+          "language": "Python",
+          "id": "57811747423879395",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[Pygments:2.19.2]"
+          ]
+        },
+        {
+          "name": "pytest",
+          "version": "8.4.2",
+          "language": "Python",
+          "id": "57811747423879396",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[pytest:8.4.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytest-mock",
+          "version": "3.15.1",
+          "language": "Python",
+          "id": "57811747423879397",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[pytest-mock:3.15.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "resolvelib",
+          "version": "1.2.1",
+          "language": "Python",
+          "id": "57811747423879398",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[resolvelib:1.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ]
+        },
+        {
+          "name": "tomli",
+          "version": "2.3.0",
+          "language": "Python",
+          "id": "57811747423879399",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[tomli:2.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "types-backports",
+          "version": "0.1.3",
+          "language": "Python",
+          "id": "57811747423879400",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[types-backports:0.1.3]"
+          ]
+        },
+        {
+          "name": "types-paramiko",
+          "version": "4.0.0.20250822",
+          "language": "Python",
+          "id": "57811747423879401",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[types-paramiko:4.0.0.20250822]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-PyYAML",
+          "version": "6.0.12.20250915",
+          "language": "Python",
+          "id": "57811747423879402",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[types-PyYAML:6.0.12.20250915]"
+          ]
+        },
+        {
+          "name": "types-requests",
+          "version": "2.32.4.20250913",
+          "language": "Python",
+          "id": "57811747423879403",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[types-requests:2.32.4.20250913]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-setuptools",
+          "version": "80.9.0.20250822",
+          "language": "Python",
+          "id": "57811747423879404",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[types-setuptools:80.9.0.20250822]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-toml",
+          "version": "0.10.8.20240310",
+          "language": "Python",
+          "id": "57811747423879405",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[types-toml:0.10.8.20240310]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "typing_extensions",
+          "version": "4.15.0",
+          "language": "Python",
+          "id": "57811747423879406",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[typing_extensions:4.15.0]"
+          ]
+        },
+        {
+          "name": "urllib3",
+          "version": "2.5.0",
+          "language": "Python",
+          "id": "57811747423879407",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\mypy.requirements.txt\\[urllib3:2.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879180",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\package-data.requirements.in"
+      ],
+      "children": [
+        {
+          "name": "build",
+          "version": "#requiredtobuildsdist",
+          "language": "Python",
+          "id": "57811747423879408",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\package-data.requirements.in\\[build:#requiredtobuildsdist]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879181",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\package-data.requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "build",
+          "version": "1.3.0",
+          "language": "Python",
+          "id": "57811747423879409",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\package-data.requirements.txt\\[build:1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "packaging",
+          "version": "25.0",
+          "language": "Python",
+          "id": "57811747423879410",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\package-data.requirements.txt\\[packaging:25.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pyproject_hooks",
+          "version": "1.2.0",
+          "language": "Python",
+          "id": "57811747423879411",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\package-data.requirements.txt\\[pyproject_hooks:1.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879182",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.in"
+      ],
+      "children": [
+        {
+          "name": "pymarkdownlnt",
+          "language": "Python",
+          "id": "57811747423879412",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.in\\[pymarkdownlnt:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879183",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "application_properties",
+          "version": "0.9.0",
+          "language": "Python",
+          "id": "57811747423879413",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[application_properties:0.9.0]"
+          ]
+        },
+        {
+          "name": "Columnar",
+          "version": "1.4.1",
+          "language": "Python",
+          "id": "57811747423879414",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[Columnar:1.4.1]"
+          ]
+        },
+        {
+          "name": "pyjson5",
+          "version": "2.0.0",
+          "language": "Python",
+          "id": "57811747423879415",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[pyjson5:2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pymarkdownlnt",
+          "version": "0.9.33",
+          "language": "Python",
+          "id": "57811747423879416",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[pymarkdownlnt:0.9.33]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "PyYAML",
+          "version": "6.0.3",
+          "language": "Python",
+          "id": "57811747423879417",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[PyYAML:6.0.3]"
+          ]
+        },
+        {
+          "name": "tomli",
+          "version": "2.3.0",
+          "language": "Python",
+          "id": "57811747423879418",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[tomli:2.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "toolz",
+          "version": "1.1.0",
+          "language": "Python",
+          "id": "57811747423879419",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[toolz:1.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "typing_extensions",
+          "version": "4.15.0",
+          "language": "Python",
+          "id": "57811747423879420",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[typing_extensions:4.15.0]"
+          ]
+        },
+        {
+          "name": "wcwidth",
+          "version": "0.2.14",
+          "language": "Python",
+          "id": "57811747423879421",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.requirements.txt\\[wcwidth:0.2.14]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879184",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\update-bundled.requirements.in"
+      ],
+      "children": [
+        {
+          "name": "packaging",
+          "language": "Python",
+          "id": "57811747423879422",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\update-bundled.requirements.in\\[packaging:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879185",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\update-bundled.requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "packaging",
+          "version": "25.0",
+          "language": "Python",
+          "id": "57811747423879423",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\sanity\\code-smell\\update-bundled.requirements.txt\\[packaging:25.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811747423879186",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "bcrypt ",
+          "version": "\u003c 5",
+          "language": "Python",
+          "id": "57811747423879424",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\units\\requirements.txt\\[bcrypt :\u003c 5]"
+          ]
+        },
+        {
+          "name": "passlib",
+          "language": "Python",
+          "id": "57811747423879425",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\units\\requirements.txt\\[passlib:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Cryptographic Weakness",
+              "id": "XMIRROR-E5B77528-8119932B",
+              "cwe_id": "CWE-521",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Cryptographic Weakness. The `SHA-256` prehash is unsalted, meaning the resulting `bcrypt` digest is vulnerable to breach correlation attacks.\n## Remediation\nUpgrade `passlib` to version 1.7.3 or higher.\n## References\n- [1.7.3 Release Changelog](https://passlib.readthedocs.io/en/stable/history/1.7.html#id1)\n- [BitBucket Commit](https://bitbucket.org/ecollins/passlib/commits/bd0da1bdf0fd17b886212649184f2ce3eb8c8329)\n- [BitBucket Issue](https://bitbucket.org/ecollins/passlib/issues/114/bcrypt_sha256-is-vulnerable-to-breach)\n",
+              "suggestion": "## Remediation\nUpgrade `passlib` to version 1.7.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-05-19",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71362B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`passlib`](https://pypi.python.org/pypi/passlib) are vulnerable to Denial of Service (DoS) attack.\n\n`passlib` is enable `wildcard password` by default, which allows remote attackers to cause a denial of service (CPU consumption) via multiple wildcard characters in the common name in a certificate.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `passlib` to version 1.4 or higher.\n\n## References\n- [Readthedocs Passlib ChangeLog](http://passlib.readthedocs.io/en/stable/history/ancient.html#hashes)\n- [BitBucket Commit](https://bitbucket.org/ecollins/passlib/commits/aca22d57fc1d110be722d71180185f411a3374b7?at=1.4)\n",
+              "suggestion": "## Remediation\nUpgrade `passlib` to version 1.4 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "pexpect",
+          "language": "Python",
+          "id": "57811747423879426",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\units\\requirements.txt\\[pexpect:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ]
+        },
+        {
+          "name": "pywinrm",
+          "language": "Python",
+          "id": "57811747423879427",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\units\\requirements.txt\\[pywinrm:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "typing_extensions",
+          "language": "Python",
+          "id": "57811747423879428",
+          "direct": true,
+          "paths": [
+            "ansible_ansible\\test\\units\\requirements.txt\\[typing_extensions:]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 2
+    },
+    {
+      "id": "57811747423879187",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\ansible-doc\\broken-docs\\collections\\ansible_collections\\testns\\testcol\\MANIFEST.json"
+      ]
+    },
+    {
+      "id": "57811747423879188",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\ansible-doc\\collections\\ansible_collections\\testns\\testcol\\MANIFEST.json"
+      ]
+    },
+    {
+      "id": "57811747423879189",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\ansible-doc\\collections\\ansible_collections\\testns\\testcol2\\MANIFEST.json"
+      ]
+    },
+    {
+      "id": "57811747423879190",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\ansible-inventory\\with_untrusted_expected.json"
+      ]
+    },
+    {
+      "id": "57811747423879191",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\dataloader\\vars\\invalid.json"
+      ]
+    },
+    {
+      "id": "57811747423879192",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\gathering_facts\\one_two.json"
+      ]
+    },
+    {
+      "id": "57811747423879193",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\gathering_facts\\two_one.json"
+      ]
+    },
+    {
+      "id": "57811747423879194",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\hosts_field\\test_hosts_field.json"
+      ]
+    },
+    {
+      "id": "57811747423879195",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\inventory_yaml\\empty.json"
+      ]
+    },
+    {
+      "id": "57811747423879196",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\inventory_yaml\\success.json"
+      ]
+    },
+    {
+      "id": "57811747423879197",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\roles_arg_spec\\collections\\ansible_collections\\foo\\bar\\MANIFEST.json"
+      ]
+    },
+    {
+      "id": "57811747423879198",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\run_modules\\args.json"
+      ]
+    },
+    {
+      "id": "57811747423879199",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail0.json"
+      ]
+    },
+    {
+      "id": "57811747423879200",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail1.json"
+      ]
+    },
+    {
+      "id": "57811747423879201",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail10.json"
+      ]
+    },
+    {
+      "id": "57811747423879202",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail11.json"
+      ]
+    },
+    {
+      "id": "57811747423879203",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail12.json"
+      ]
+    },
+    {
+      "id": "57811747423879204",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail13.json"
+      ]
+    },
+    {
+      "id": "57811747423879205",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail14.json"
+      ]
+    },
+    {
+      "id": "57811747423879206",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail15.json"
+      ]
+    },
+    {
+      "id": "57811747423879207",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail16.json"
+      ]
+    },
+    {
+      "id": "57811747423879208",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail17.json"
+      ]
+    },
+    {
+      "id": "57811747423879209",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail18.json"
+      ]
+    },
+    {
+      "id": "57811747423879210",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail19.json"
+      ]
+    },
+    {
+      "id": "57811747423879211",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail2.json"
+      ]
+    },
+    {
+      "id": "57811747423879212",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail20.json"
+      ]
+    },
+    {
+      "id": "57811747423879213",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail21.json"
+      ]
+    },
+    {
+      "id": "57811747423879214",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail22.json"
+      ]
+    },
+    {
+      "id": "57811747423879215",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail23.json"
+      ]
+    },
+    {
+      "id": "57811747423879216",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail24.json"
+      ]
+    },
+    {
+      "id": "57811747423879217",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail25.json"
+      ]
+    },
+    {
+      "id": "57811747423879218",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail26.json"
+      ]
+    },
+    {
+      "id": "57811747423879219",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail27.json"
+      ]
+    },
+    {
+      "id": "57811747423879220",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail28.json"
+      ]
+    },
+    {
+      "id": "57811747423879221",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail29.json"
+      ]
+    },
+    {
+      "id": "57811747423879222",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail3.json"
+      ]
+    },
+    {
+      "id": "57811747423879223",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail30.json"
+      ]
+    },
+    {
+      "id": "57811747423879224",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail4.json"
+      ]
+    },
+    {
+      "id": "57811747423879225",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail5.json"
+      ]
+    },
+    {
+      "id": "57811747423879226",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail6.json"
+      ]
+    },
+    {
+      "id": "57811747423879227",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail7.json"
+      ]
+    },
+    {
+      "id": "57811747423879228",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail8.json"
+      ]
+    },
+    {
+      "id": "57811747423879229",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\fail9.json"
+      ]
+    },
+    {
+      "id": "57811747423879230",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\pass0.json"
+      ]
+    },
+    {
+      "id": "57811747423879231",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\pass1.json"
+      ]
+    },
+    {
+      "id": "57811747423879232",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\pass2.json"
+      ]
+    },
+    {
+      "id": "57811747423879233",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\pass3.json"
+      ]
+    },
+    {
+      "id": "57811747423879234",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\integration\\targets\\uri\\files\\pass4.json"
+      ]
+    },
+    {
+      "id": "57811747423879235",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\action-plugin-docs.json"
+      ]
+    },
+    {
+      "id": "57811747423879236",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\changelog.json"
+      ]
+    },
+    {
+      "id": "57811747423879237",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\empty-init.json"
+      ]
+    },
+    {
+      "id": "57811747423879238",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\line-endings.json"
+      ]
+    },
+    {
+      "id": "57811747423879239",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\no-assert.json"
+      ]
+    },
+    {
+      "id": "57811747423879240",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\no-get-exception.json"
+      ]
+    },
+    {
+      "id": "57811747423879241",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\no-illegal-filenames.json"
+      ]
+    },
+    {
+      "id": "57811747423879242",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\no-smart-quotes.json"
+      ]
+    },
+    {
+      "id": "57811747423879243",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\replace-urlopen.json"
+      ]
+    },
+    {
+      "id": "57811747423879244",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\runtime-metadata.json"
+      ]
+    },
+    {
+      "id": "57811747423879245",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\shebang.json"
+      ]
+    },
+    {
+      "id": "57811747423879246",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\symlinks.json"
+      ]
+    },
+    {
+      "id": "57811747423879247",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\use-argspec-type-path.json"
+      ]
+    },
+    {
+      "id": "57811747423879248",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\lib\\ansible_test\\_util\\controller\\sanity\\code-smell\\use-compat-six.json"
+      ]
+    },
+    {
+      "id": "57811747423879249",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\ansible-requirements.json"
+      ]
+    },
+    {
+      "id": "57811747423879250",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\black.json"
+      ]
+    },
+    {
+      "id": "57811747423879251",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\boilerplate.json"
+      ]
+    },
+    {
+      "id": "57811747423879252",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\deprecated-config.json"
+      ]
+    },
+    {
+      "id": "57811747423879253",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\mypy.json"
+      ]
+    },
+    {
+      "id": "57811747423879254",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\no-unwanted-characters.json"
+      ]
+    },
+    {
+      "id": "57811747423879255",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\no-unwanted-files.json"
+      ]
+    },
+    {
+      "id": "57811747423879256",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\obsolete-files.json"
+      ]
+    },
+    {
+      "id": "57811747423879257",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\package-data.json"
+      ]
+    },
+    {
+      "id": "57811747423879258",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.config.json"
+      ]
+    },
+    {
+      "id": "57811747423879259",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\pymarkdown.json"
+      ]
+    },
+    {
+      "id": "57811747423879260",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\release-names.json"
+      ]
+    },
+    {
+      "id": "57811747423879261",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\required-and-default-attributes.json"
+      ]
+    },
+    {
+      "id": "57811747423879262",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\test-constraints.json"
+      ]
+    },
+    {
+      "id": "57811747423879263",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\sanity\\code-smell\\update-bundled.json"
+      ]
+    },
+    {
+      "id": "57811747423879264",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\almalinux_8_3_beta.json"
+      ]
+    },
+    {
+      "id": "57811747423879265",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\alp-dolomite.json"
+      ]
+    },
+    {
+      "id": "57811747423879266",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\amazon_linux_2.json"
+      ]
+    },
+    {
+      "id": "57811747423879267",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\amazon_linux_2016.03.json"
+      ]
+    },
+    {
+      "id": "57811747423879268",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\amazon_linux_2018.03.json"
+      ]
+    },
+    {
+      "id": "57811747423879269",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\amazon_linux_2_karoo.json"
+      ]
+    },
+    {
+      "id": "57811747423879270",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\amazon_linux_release_2.json"
+      ]
+    },
+    {
+      "id": "57811747423879271",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\arch_linux_na.json"
+      ]
+    },
+    {
+      "id": "57811747423879272",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\arch_linux_no_arch-release_na.json"
+      ]
+    },
+    {
+      "id": "57811747423879273",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\archlinux_rolling.json"
+      ]
+    },
+    {
+      "id": "57811747423879274",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\centos_6.7.json"
+      ]
+    },
+    {
+      "id": "57811747423879275",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\centos_8_1.json"
+      ]
+    },
+    {
+      "id": "57811747423879276",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\centos_stream_8.json"
+      ]
+    },
+    {
+      "id": "57811747423879277",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\clearlinux_26580.json"
+      ]
+    },
+    {
+      "id": "57811747423879278",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\clearlinux_28120.json"
+      ]
+    },
+    {
+      "id": "57811747423879279",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\core_os_1911.5.0.json"
+      ]
+    },
+    {
+      "id": "57811747423879280",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\core_os_976.0.0.json"
+      ]
+    },
+    {
+      "id": "57811747423879281",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\cumulus_linux_2.5.4.json"
+      ]
+    },
+    {
+      "id": "57811747423879282",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\cumulus_linux_3.7.3.json"
+      ]
+    },
+    {
+      "id": "57811747423879283",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\debian_10.json"
+      ]
+    },
+    {
+      "id": "57811747423879284",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\debian_7.9.json"
+      ]
+    },
+    {
+      "id": "57811747423879285",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\debian_stretch_sid.json"
+      ]
+    },
+    {
+      "id": "57811747423879286",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\deepin_20.4.json"
+      ]
+    },
+    {
+      "id": "57811747423879287",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\devuan.json"
+      ]
+    },
+    {
+      "id": "57811747423879288",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\dragonfly_5.2.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879289",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\dragonfly_5.6.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879290",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\eurolinux_8.5.json"
+      ]
+    },
+    {
+      "id": "57811747423879291",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\fedora_22.json"
+      ]
+    },
+    {
+      "id": "57811747423879292",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\fedora_25.json"
+      ]
+    },
+    {
+      "id": "57811747423879293",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\fedora_31.json"
+      ]
+    },
+    {
+      "id": "57811747423879294",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\flatcar_3139.2.0.json"
+      ]
+    },
+    {
+      "id": "57811747423879295",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\kali_2019.1.json"
+      ]
+    },
+    {
+      "id": "57811747423879296",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\kde_neon_16.04.json"
+      ]
+    },
+    {
+      "id": "57811747423879297",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\kylin_linux_advanced_server_v10.json"
+      ]
+    },
+    {
+      "id": "57811747423879298",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\linux_mint_18.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879299",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\linux_mint_19.1.json"
+      ]
+    },
+    {
+      "id": "57811747423879300",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\lmde_6.json"
+      ]
+    },
+    {
+      "id": "57811747423879301",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\miracle_linux_9.json"
+      ]
+    },
+    {
+      "id": "57811747423879302",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\netbsd_8.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879303",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\nexenta_3.json"
+      ]
+    },
+    {
+      "id": "57811747423879304",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\nexenta_4.json"
+      ]
+    },
+    {
+      "id": "57811747423879305",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\omnios.json"
+      ]
+    },
+    {
+      "id": "57811747423879306",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\openeuler_20.03.json"
+      ]
+    },
+    {
+      "id": "57811747423879307",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\openindiana.json"
+      ]
+    },
+    {
+      "id": "57811747423879308",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\opensuse-microos-20241205.json"
+      ]
+    },
+    {
+      "id": "57811747423879309",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\opensuse_13.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879310",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\opensuse_leap_15.0.json"
+      ]
+    },
+    {
+      "id": "57811747423879311",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\opensuse_leap_15.1.json"
+      ]
+    },
+    {
+      "id": "57811747423879312",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\opensuse_leap_42.1.json"
+      ]
+    },
+    {
+      "id": "57811747423879313",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\opensuse_tumbleweed_20160917.json"
+      ]
+    },
+    {
+      "id": "57811747423879314",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\osmc.json"
+      ]
+    },
+    {
+      "id": "57811747423879315",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\pardus_19.1.json"
+      ]
+    },
+    {
+      "id": "57811747423879316",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\parrot_4.8.json"
+      ]
+    },
+    {
+      "id": "57811747423879317",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\pop_os_20.04.json"
+      ]
+    },
+    {
+      "id": "57811747423879318",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\redhat_6.7.json"
+      ]
+    },
+    {
+      "id": "57811747423879319",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\redhat_7.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879320",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\redhat_7.7.json"
+      ]
+    },
+    {
+      "id": "57811747423879321",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\rockylinux_8_3.json"
+      ]
+    },
+    {
+      "id": "57811747423879322",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sl-micro.json"
+      ]
+    },
+    {
+      "id": "57811747423879323",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_11.3.json"
+      ]
+    },
+    {
+      "id": "57811747423879324",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_11.4.json"
+      ]
+    },
+    {
+      "id": "57811747423879325",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_12_sp0.json"
+      ]
+    },
+    {
+      "id": "57811747423879326",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_12_sp1.json"
+      ]
+    },
+    {
+      "id": "57811747423879327",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_15_6.json"
+      ]
+    },
+    {
+      "id": "57811747423879328",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_16_0.json"
+      ]
+    },
+    {
+      "id": "57811747423879329",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_sap_15_6.json"
+      ]
+    },
+    {
+      "id": "57811747423879330",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\sles_sap_16_0.json"
+      ]
+    },
+    {
+      "id": "57811747423879331",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\smartos_global_zone.json"
+      ]
+    },
+    {
+      "id": "57811747423879332",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\smartos_zone.json"
+      ]
+    },
+    {
+      "id": "57811747423879333",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\smgl_na.json"
+      ]
+    },
+    {
+      "id": "57811747423879334",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\solaris_10.json"
+      ]
+    },
+    {
+      "id": "57811747423879335",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\solaris_11.3.json"
+      ]
+    },
+    {
+      "id": "57811747423879336",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\solaris_11.4.json"
+      ]
+    },
+    {
+      "id": "57811747423879337",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\solaris_11.json"
+      ]
+    },
+    {
+      "id": "57811747423879338",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\steamos_2.0.json"
+      ]
+    },
+    {
+      "id": "57811747423879339",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\tencentos_3_1.json"
+      ]
+    },
+    {
+      "id": "57811747423879340",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\truenas_12.0rc1.json"
+      ]
+    },
+    {
+      "id": "57811747423879341",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\ubuntu_10.04_guess.json"
+      ]
+    },
+    {
+      "id": "57811747423879342",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\ubuntu_12.04.json"
+      ]
+    },
+    {
+      "id": "57811747423879343",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\ubuntu_14.04.json"
+      ]
+    },
+    {
+      "id": "57811747423879344",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\ubuntu_16.04.json"
+      ]
+    },
+    {
+      "id": "57811747423879345",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\ubuntu_18.04.json"
+      ]
+    },
+    {
+      "id": "57811747423879346",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\univention_corporate_server_5.2.json"
+      ]
+    },
+    {
+      "id": "57811747423879347",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\uos_20.json"
+      ]
+    },
+    {
+      "id": "57811747423879348",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\module_utils\\facts\\system\\distribution\\fixtures\\virtuozzo_7.3.json"
+      ]
+    },
+    {
+      "id": "57811747423879349",
+      "direct": true,
+      "paths": [
+        "ansible_ansible\\test\\units\\parsing\\fixtures\\ajson.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 30
+}

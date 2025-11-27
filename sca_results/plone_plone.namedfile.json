@@ -1,0 +1,834 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "plone_plone.namedfile",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:54",
+    "end_time": "2025-11-27 21:56:56",
+    "cost_time": 1.9726385
+  },
+  "language": "Python",
+  "id": "57811829219557376",
+  "direct": true,
+  "paths": [
+    "plone_plone.namedfile\\setup.py"
+  ],
+  "children": [
+    {
+      "name": "BeautifulSoup4",
+      "language": "Python",
+      "id": "57811829219557377",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[BeautifulSoup4:]"
+      ]
+    },
+    {
+      "name": "persistent",
+      "language": "Python",
+      "id": "57811829219557378",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[persistent:]"
+      ],
+      "licenses": [
+        {
+          "name": "ZPL-2.1"
+        }
+      ]
+    },
+    {
+      "name": "piexif",
+      "language": "Python",
+      "id": "57811829219557379",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[piexif:]"
+      ],
+      "licenses": [
+        {
+          "name": "MIT"
+        }
+      ]
+    },
+    {
+      "name": "Pillow",
+      "language": "Python",
+      "id": "57811829219557380",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[Pillow:]"
+      ],
+      "vulnerabilities": [
+        {
+          "name": "Duplicate Advisory: Bundled libwebp in Pillow vulnerable",
+          "id": "XMIRROR-C9431C71-6E109FA5",
+          "description": "## Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-56pw-mpj4-fxww. This link is maintained to preserve external references.\n\n## Original Description\nPillow versions before v10.0.1 bundled libwebp binaries in wheels that are vulnerable to CVE-2023-5129 (previously CVE-2023-4863). Pillow v10.0.1 upgrades the bundled libwebp binary to v1.3.2.",
+          "release_date": "2023-10-05",
+          "security_level_id": 2,
+          "exploit_level_id": -2
+        },
+        {
+          "name": "Uncontrolled Resource Consumption in pillow",
+          "id": "XMIRROR-C9431C71-CB160D55",
+          "cwe_id": "CWE-400",
+          "description": "### Impact\n_Pillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for a BLP container, and thus an attempted memory allocation can be very large._\n\n### Patches\n_An issue was discovered in Pillow before 6.2.0. When reading specially crafted invalid image files, the library can either allocate very large amounts of memory or take an extremely long period of time to process the image._\n\n### Workarounds\n_An issue was discovered in Pillow before 6.2.0. When reading specially crafted invalid image files, the library can either allocate very large amounts of memory or take an extremely long period of time to process the image._\n\n### References\nhttps://nvd.nist.gov/vuln/detail/CVE-2021-27921\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [example link to repo](http://example.com)\n* Email us at [example email address](mailto:example@example.com)",
+          "attack_type": "远程",
+          "release_date": "2021-04-24",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Infinite loop in Pillow",
+          "id": "XMIRROR-C9431C71-881DCBE8",
+          "cwe_id": "CWE-400",
+          "description": "JpegImagePlugin may append an EOF marker to the end of a truncated file, so that the last segment of the data will still be processed by the decoder.\n\nIf the EOF marker is not detected as such however, this could lead to an infinite loop where JpegImagePlugin keeps trying to end the file.",
+          "release_date": "2022-03-12",
+          "security_level_id": 4,
+          "exploit_level_id": -2
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B714FC-311C7A95",
+          "cve_id": "CVE-2022-45198",
+          "cnnvd_id": "CNNVD-202211-2678",
+          "cwe_id": "CWE-409",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.2.0之前版本存在安全漏洞，该漏洞源于对高度压缩的GIF数据处理不当。",
+          "suggestion": "## Remediation\nUpgrade `Amazon-Linux:2023` `python3-pillow` to version 0:9.4.0-2.amzn2023.0.1 or higher.  \nThis issue was patched in `ALAS2023-2023-146`.",
+          "attack_type": "远程",
+          "release_date": "2022-11-14",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-47939495",
+          "cve_id": "CVE-2020-10994",
+          "cnnvd_id": "CNNVD-202006-1727",
+          "cnvd_id": "CNVD-2021-21942",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/Jpeg2KDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4538\n",
+          "attack_type": "本地",
+          "release_date": "2020-06-25",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow‘ImagingResampleHorizontal’函数整数溢出漏洞",
+          "id": "XMIRROR-E5B70F1C-8BE9A495",
+          "cve_id": "CVE-2016-4009",
+          "cnnvd_id": "CNNVD-201604-281",
+          "cnvd_id": "CNVD-2016-02300",
+          "cwe_id": "CWE-119",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\r\nPillow 3.1.1之前版本的libImaging/Resample.c文件中的‘ImagingResampleHorizontal’函数存在整数溢出漏洞。远程攻击者可借助负的‘new’的大小值利用该漏洞造成拒绝服务（基于堆的缓冲区溢出）。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+          "attack_type": "远程",
+          "release_date": "2016-04-13",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-4797EA95",
+          "cve_id": "CVE-2020-11538",
+          "cnnvd_id": "CNNVD-202006-1728",
+          "cnvd_id": "CNVD-2021-21943",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.0.0及之前版本中的libImaging/SgiRleDecode.c文件的SGI图像文件的处理存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4504\n",
+          "attack_type": "远程",
+          "release_date": "2020-06-25",
+          "security_level_id": 1,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B71412-ED0D3295",
+          "cve_id": "CVE-2021-27923",
+          "cnnvd_id": "CNNVD-202103-238",
+          "cnvd_id": "CNVD-2021-14766",
+          "cwe_id": "CWE-20",
+          "description": "Pillow是Pillow开源的一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本 存在输入验证错误漏洞，该漏洞允许攻击者导致拒绝服务。",
+          "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html\n",
+          "attack_type": "远程",
+          "release_date": "2021-03-03",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B71412-ED0DEA95",
+          "cve_id": "CVE-2021-27922",
+          "cnnvd_id": "CNNVD-202103-239",
+          "cnvd_id": "CNVD-2021-14763",
+          "cwe_id": "CWE-20",
+          "description": "Pillow是Pillow开源的一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本 存在输入验证错误漏洞，该漏洞允许攻击者导致拒绝服务。",
+          "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html\n",
+          "attack_type": "远程",
+          "release_date": "2021-03-03",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B71412-ED0D4495",
+          "cve_id": "CVE-2021-27921",
+          "cnnvd_id": "CNNVD-202103-240",
+          "cnvd_id": "CNVD-2021-14762",
+          "cwe_id": "CWE-20",
+          "description": "Pillow是Pillow开源的一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本 存在输入验证错误漏洞，该漏洞允许攻击者导致拒绝服务。",
+          "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html\n",
+          "attack_type": "远程",
+          "release_date": "2021-03-03",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71412-EDC05795",
+          "cve_id": "CVE-2021-25290",
+          "cnnvd_id": "CNNVD-202103-809",
+          "cnvd_id": "CNVD-2021-54033",
+          "cwe_id": "CWE-787",
+          "description": "\u003cp\u003ePillow是一款基于Python的图像处理库。 Pillow 8.1.1之前版本存在安全漏洞。该漏洞源于在TiffDecode.c中存在一个大小无效的负偏移memcpy。\u003c/p\u003e",
+          "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+          "attack_type": "远程",
+          "release_date": "2021-03-11",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71412-EDC05C95",
+          "cve_id": "CVE-2021-25293",
+          "cnnvd_id": "CNNVD-202103-813",
+          "cnvd_id": "CNVD-2021-54037",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.1版本之前存在安全漏洞。该漏洞源于SGIRleDecode.c中存在越界读取。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2021-03-11",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71412-EDC04595",
+          "cve_id": "CVE-2021-25291",
+          "cnnvd_id": "CNNVD-202103-810",
+          "cnvd_id": "CNVD-2021-54036",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本中存在安全漏洞。该漏洞源于TiffDecode.c在TiffreadRGBATile中通过无效的title越界读取。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2021-03-11",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-AF4D5095",
+          "cve_id": "CVE-2020-35653",
+          "cnnvd_id": "CNNVD-202101-496",
+          "cnvd_id": "CNVD-2021-54038",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.0之前版本中存在缓冲区错误漏洞，当解码一个精心制作的PCX文件时，PoxDecode有一个缓冲区过读，因为缓冲区计算信任用户提供的stride值。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2021-01-11",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Command Injection",
+          "id": "XMIRROR-E5B77528-E123BF2B",
+          "cwe_id": "CWE-78",
+          "description": "## Overview\n[Pillow](https://python-pillow.org/) is a PIL (Python Imaging Library) fork.\n\nAffected versions of this package are vulnerable to Command Injection in filenames that contain single quotes via `load_djpeg`.\n## Remediation\nUpgrade `Pillow` to version 2.5.0 or higher.\n## References\n- [GitHub PR](https://github.com/python-pillow/Pillow/pull/748)\n- [Pillow Changelog](https://github.com/python-pillow/Pillow/blob/master/CHANGES.rst#250-2014-07-01)\n",
+          "suggestion": "## Remediation\nUpgrade `Pillow` to version 2.5.0 or higher.",
+          "attack_type": "远程",
+          "release_date": "2020-11-02",
+          "security_level_id": 1,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-47ACA695",
+          "cve_id": "CVE-2020-10378",
+          "cnnvd_id": "CNNVD-202006-1726",
+          "cnvd_id": "CNVD-2021-21941",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/PcxDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4538\n",
+          "attack_type": "本地",
+          "release_date": "2020-06-25",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-47ED0095",
+          "cve_id": "CVE-2020-10177",
+          "cnnvd_id": "CNNVD-202006-1725",
+          "cnvd_id": "CNVD-2021-21940",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/FliDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+          "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/python-pillow/Pillow/pull/4538 ",
+          "attack_type": "本地",
+          "release_date": "2020-06-25",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B70FBE-53644C95",
+          "cve_id": "CVE-2020-5312",
+          "cnnvd_id": "CNNVD-202001-055",
+          "cnvd_id": "CNVD-2020-43130",
+          "cwe_id": "CWE-120",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/PcxDecode.c文件存在缓冲区错误漏洞，该漏洞源于程序没有正确检查边界。远程攻击者可借助特制PCX文件利用该漏洞在系统上执行任意代码。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+          "attack_type": "远程",
+          "release_date": "2020-01-02",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B70FBE-53644095",
+          "cve_id": "CVE-2020-5311",
+          "cnnvd_id": "CNNVD-202001-051",
+          "cnvd_id": "CNVD-2020-03288",
+          "cwe_id": "CWE-120",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/SgiRleDecode.c文件存在缓冲区错误漏洞，该漏洞源于程序没有正确检查边界。远程攻击者可借助特制SGI文件利用该漏洞在系统上执行任意代码，或者导致应用程序崩溃。",
+          "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html",
+          "attack_type": "远程",
+          "release_date": "2020-01-02",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B70FBE-53643095",
+          "cve_id": "CVE-2020-5313",
+          "cnnvd_id": "CNNVD-202001-052",
+          "cnvd_id": "CNVD-2020-03505",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/FliDecode.c文件存在缓冲区错误漏洞，该漏洞源于程序没有正确检查边界。远程攻击者可借助特制FLI文件利用该漏洞在系统上执行任意代码，或者导致应用程序崩溃。",
+          "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+          "attack_type": "远程",
+          "release_date": "2020-01-02",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B7140E-B071A295",
+          "cve_id": "CVE-2019-16865",
+          "cnnvd_id": "CNNVD-201910-194",
+          "cnvd_id": "CNVD-2021-54039",
+          "cwe_id": "CWE-770",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.0之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2019-10-04",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B70F1C-8BB2E395",
+          "cve_id": "CVE-2016-9189",
+          "cnnvd_id": "CNNVD-201611-077",
+          "cnvd_id": "CNVD-2016-11325",
+          "cwe_id": "CWE-190",
+          "description": "Pillow是美国软件开发者Alex Clark所研发的一个对PIL（Python图像处理库）一些BUG修正后的编译版。\r\n\r\nPillow 3.3.2之前的版本中存在安全漏洞。上下文相关的攻击者可利用该漏洞获取敏感信息。",
+          "suggestion": "通用方案： 用户可联系供应商获得补丁信息： https://github.com/python-pillow/\n",
+          "attack_type": "本地",
+          "release_date": "2016-11-04",
+          "security_level_id": 3,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B70F1C-8BB20795",
+          "cve_id": "CVE-2016-9190",
+          "cnnvd_id": "CNNVD-201611-076",
+          "cnvd_id": "CNVD-2016-10739",
+          "cwe_id": "CWE-284",
+          "description": "Pillow是美国软件开发者Alex Clark所研发的一个对PIL（Python图像处理库）一些BUG修正后的编译版。\r\n\r\nPillow 3.3.2之前的版本中存在安全漏洞。上下文相关的攻击者可通过使用‘crafted image file’方法利用该漏洞执行任意代码。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： http://pillow.readthedocs.io/en/3.4.x/releasenotes/3.3.2.html\n",
+          "attack_type": "本地",
+          "release_date": "2016-11-04",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow缓冲区错误漏洞",
+          "id": "XMIRROR-E5B70F1C-8BD31B95",
+          "cve_id": "CVE-2016-0775",
+          "cnnvd_id": "CNNVD-201604-278",
+          "cnvd_id": "CNVD-2016-02295",
+          "cwe_id": "CWE-119",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 3.1.1之前版本的libImaging/FliDecode.c文件中的‘ImagingFliDecode’函数存在缓冲区错误漏洞。远程攻击者可借助特制的FLI文件利用该漏洞造成拒绝服务（崩溃）。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+          "attack_type": "远程",
+          "release_date": "2016-04-13",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow和Python Imaging Library 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B70F1C-8BFAE395",
+          "cve_id": "CVE-2016-2533",
+          "cnnvd_id": "CNNVD-201604-280",
+          "cnvd_id": "CNVD-2016-02299",
+          "cwe_id": "CWE-119",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\r\nPillow 3.1.1之前版本和PIL 1.1.7及之前版本的PcdDecode.c文件中的‘ImagingPcdDecode’函数存在缓冲区溢出漏洞。远程攻击者可借助特制的PhotoCD文件利用该漏洞造成拒绝服务（崩溃）。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+          "attack_type": "远程",
+          "release_date": "2016-04-13",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Python Image Library和Pillow 后置链接漏洞",
+          "id": "XMIRROR-E5B70F18-48C68095",
+          "cve_id": "CVE-2014-1932",
+          "cnnvd_id": "CNNVD-201404-363",
+          "cwe_id": "CWE-59",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。Pillow是对PIL的一些BUG修正后的编译版。\r\nPIL 1.1.7及之前的版本和Pillow 2.3.0及之前的版本中的JpegImagePlugin.py文件的‘load_djpeg’函数；EpsImagePlugin.py文件的‘Ghostscript’函数；IptcImagePlugin.py文件的‘load’函数；Image.py文件的‘_copy’函数存在安全漏洞，该漏洞源于程序没有正确创建临时文件。本地攻击者可通过对临时文件的符号链接攻击利用该漏洞覆盖任意文件，获取敏感信息。",
+          "suggestion": "通用方案： 目前没有详细解决方案提供： http://www.pythonware.com/products/pil/\n",
+          "attack_type": "本地",
+          "release_date": "2014-04-17",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Python Image Library和Pillow 权限许可和访问控制漏洞",
+          "id": "XMIRROR-E5B70F18-48C6DF95",
+          "cve_id": "CVE-2014-1933",
+          "cnnvd_id": "CNNVD-201404-364",
+          "cwe_id": "CWE-264",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。Pillow是对PIL的一些BUG修正后的编译版。\r\nPIL 1.1.7及之前的版本和Pillow 2.3.0及之前的版本中的JpegImagePlugin.py和EpsImagePlugin.py脚本存在安全漏洞，该漏洞源于程序在命令行上使用临时文件名。本地攻击者可利用该漏洞实施符号链接攻击。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://www.pythonware.com/products/pil/\n",
+          "attack_type": "本地",
+          "release_date": "2014-04-17",
+          "security_level_id": 3,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow‘ImagingLibTiffDecode’函数缓冲区溢出漏洞",
+          "id": "XMIRROR-E5B70F1C-8BD33395",
+          "cve_id": "CVE-2016-0740",
+          "cnnvd_id": "CNNVD-201604-277",
+          "cnvd_id": "CNVD-2016-02296",
+          "cwe_id": "CWE-119",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPillow 3.1.1之前版本的libImaging/TiffDecode.c文件中的‘ImagingLibTiffDecode’函数存在缓冲区溢出漏洞。远程攻击者可借助特制的TIFF文件利用该漏洞覆盖内存。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+          "attack_type": "远程",
+          "release_date": "2016-04-13",
+          "security_level_id": 3,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-47AC9F95",
+          "cve_id": "CVE-2020-10379",
+          "cnnvd_id": "CNNVD-202006-1729",
+          "cnvd_id": "CNVD-2021-37065",
+          "cwe_id": "CWE-120",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/TiffDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4507\n",
+          "attack_type": "本地",
+          "release_date": "2020-06-25",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B714FC-FEB11D95",
+          "cve_id": "CVE-2022-24303",
+          "cnnvd_id": "CNNVD-202202-1204",
+          "cnvd_id": "CNVD-2022-28799",
+          "cwe_id": "CWE-22",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.1之前版本存在输入验证错误漏洞，该漏洞源于产品的remove操作未验证用户输入数据。攻击者可通过该漏洞利用输入命令来修改或删除预期的命令。",
+          "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/9.0.1.html#security",
+          "attack_type": "远程",
+          "release_date": "2022-02-03",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B714FC-FEF3E795",
+          "cve_id": "CVE-2022-22815",
+          "cnnvd_id": "CNNVD-202201-632",
+          "cwe_id": "CWE-665",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.0 之前存在安全漏洞，该漏洞源于 path.c 中的 path_getbbox 不正确地初始化 ImagePath.Path。",
+          "suggestion": "## Remediation\nUpgrade `AlmaLinux:8` `python3-pillow` to version 0:5.1.1-18.el8_5 or higher.  \nThis issue was patched in `ALSA-2022:0643`.",
+          "attack_type": "远程",
+          "release_date": "2022-01-07",
+          "security_level_id": 3,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B714FC-FE49F095",
+          "cve_id": "CVE-2022-22816",
+          "cnnvd_id": "CNNVD-202201-633",
+          "cnvd_id": "CNVD-2022-05433",
+          "cwe_id": "CWE-125",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.0 之前存在安全漏洞，该漏洞源于 path.c 中的 path_getbbox 在 ImagePath.Path 初始化期间有一个缓冲区过度读取。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#fixed-imagepath-path-array-handling\n",
+          "attack_type": "远程",
+          "release_date": "2022-01-07",
+          "security_level_id": 3,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B714FC-FE499795",
+          "cve_id": "CVE-2022-22817",
+          "cnnvd_id": "CNNVD-202201-634",
+          "cnvd_id": "CNVD-2022-05434",
+          "cwe_id": "CWE-94",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.0 之前存在安全漏洞，该漏洞源于 PIL.ImageMath.eval 允许评估任意表达式，例如使用 Python exec 方法的表达式。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#restrict-builtins-available-to-imagemath-eval\n",
+          "attack_type": "远程",
+          "release_date": "2022-01-07",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Denial of Service (DoS)",
+          "id": "XMIRROR-E5B77528-95BF402B",
+          "cwe_id": "CWE-400",
+          "description": "## Overview\n[Pillow](https://python-pillow.org/) is a PIL (Python Imaging Library) fork.\n\nAffected versions of this package are vulnerable to Denial of Service (DoS). The `JpegImagePlugin` may append an EOF marker to the end of a truncated file, so that the last segment of the data will still be processed by the decoder. If the EOF marker is not detected as such, this can lead to an infinite loop where `JpegImagePlugin` keeps trying to end the file.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `Pillow` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/python-pillow/Pillow/pull/5921/commits/1059eb537639925c96d3245dcd73c106d4266c83)\n- [GitHub Issue](https://github.com/python-pillow/Pillow/issues/5864#issuecomment-1003788821)\n- [GitHub PR](https://github.com/python-pillow/Pillow/pull/5921)\n- [Release Notes](https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#ensure-jpegimageplugin-stops-at-the-end-of-a-truncated-file)\n",
+          "suggestion": "## Remediation\nUpgrade `Pillow` to version 9.0.0 or higher.",
+          "attack_type": "远程",
+          "release_date": "2022-01-04",
+          "security_level_id": 3,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71412-ED6F1195",
+          "cve_id": "CVE-2021-34552",
+          "cnnvd_id": "CNNVD-202107-960",
+          "cnvd_id": "CNVD-2021-54028",
+          "cwe_id": "CWE-120",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 中存在缓冲区错误漏洞，该漏洞源于产品的convert .c未能验证参数的安全性，攻击者可通过该漏洞引发缓冲区溢出。以下产品及版本受到影响：Pillow 8.2.0 之前版本、PIL 1.1.7 之前版本。",
+          "suggestion": "补丁方案： \u003cp\u003e\u003cbr/\u003e目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\u003c/p\u003e\u003cp\u003e\u003ca target=\"_Blank\" href=\"https://pillow.readthedocs.io/en/stable/releasenotes/8.3.0.html#buffer-overflow\"\u003ehttps://pillow.readthedocs.io/en/stable/releasenotes/8.3.0.html#buffer-overflow\u003c/a\u003e\u003c/p\u003e\n",
+          "attack_type": "远程",
+          "release_date": "2021-07-13",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B71412-ED212195",
+          "cve_id": "CVE-2021-28677",
+          "cnnvd_id": "CNNVD-202104-966",
+          "cnvd_id": "CNVD-2021-54031",
+          "cwe_id": "CWE-20",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在输入验证错误漏洞，该漏洞由于在处理换行符（例如在打开文件时使用“  r”，“  n”）时对用户提供的输入的验证不足而存在的。远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2021-04-13",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 资源管理错误漏洞",
+          "id": "XMIRROR-E5B71412-ED21D995",
+          "cve_id": "CVE-2021-28675",
+          "cnnvd_id": "CNNVD-202104-968",
+          "cnvd_id": "CNVD-2021-54030",
+          "cwe_id": "CWE-252",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在资源管理错误漏洞，该漏洞由于对PsdImagePlugin.PsdImageFile方法中的内部资源管理不当，远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "本地",
+          "release_date": "2021-04-13",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 数据伪造问题漏洞",
+          "id": "XMIRROR-E5B71412-ED210D95",
+          "cve_id": "CVE-2021-28678",
+          "cnnvd_id": "CNNVD-202104-965",
+          "cnvd_id": "CNVD-2021-54029",
+          "cwe_id": "CWE-345",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在数据伪造问题漏洞，该漏洞由于对PsdImagePlugin.PsdImageFile方法中的内部资源管理不当，远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "本地",
+          "release_date": "2021-04-13",
+          "security_level_id": 3,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B71412-ED216495",
+          "cve_id": "CVE-2021-28676",
+          "cnnvd_id": "CNNVD-202104-967",
+          "cnvd_id": "CNVD-2021-54032",
+          "cwe_id": "CWE-835",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在安全漏洞，该漏洞由于对PsdImagePlugin.PsdImageFile方法中的内部资源管理不当，远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2021-04-13",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B7141B-7C6FEB95",
+          "cve_id": "CVE-2023-50447",
+          "cnnvd_id": "CNNVD-202401-1886",
+          "cwe_id": "CWE-94 CWE-95",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 10.1.0及之前版本存在安全漏洞，该漏洞源于可以通过PIL.ImageMath.eval中的environment 参数执行任意代码。",
+          "suggestion": "## Remediation\nUpgrade `pillow` to version 10.2.0 or higher.",
+          "attack_type": "远程",
+          "release_date": "2024-01-19",
+          "security_level_id": 1,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B7141B-7C641D95",
+          "cve_id": "CVE-2023-44271",
+          "cnnvd_id": "CNNVD-202311-282",
+          "cwe_id": "CWE-770",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 10.0.0之前版本存在安全漏洞，该漏洞源于不受控制地分配内存，从而导致服务崩溃。",
+          "suggestion": "## Remediation\nUpgrade `pillow` to version 10.0.0 or higher.",
+          "attack_type": "远程",
+          "release_date": "2023-11-03",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Python Image Library和Pillow 安全漏洞",
+          "id": "XMIRROR-E5B70F18-81A67195",
+          "cve_id": "CVE-2014-3589",
+          "cnnvd_id": "CNNVD-201408-305",
+          "cwe_id": "CWE-20",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPIL和Pillow 2.3.2之前版本和2.5.2版本之前2.5.x版本的PIL/IcnsImagePlugin.py文件中存在安全漏洞。远程攻击者可通过特制的块数据利用该漏洞造成拒绝服务。",
+          "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://pypi.python.org/pypi/Pillow/2.3.2\n",
+          "attack_type": "远程",
+          "release_date": "2014-08-20",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Python Image Library和Pillow 操作系统命令注入漏洞",
+          "id": "XMIRROR-E5B70F18-48924095",
+          "cve_id": "CVE-2014-3007",
+          "cnnvd_id": "CNNVD-201404-533",
+          "cwe_id": "CWE-78",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPIL 1.1.7及之前的版本和Pillow 2.3版本中存在安全漏洞。远程攻击者可借助shell元字符利用该漏洞执行任意命令。",
+          "suggestion": "通用方案： 目前没有详细解决方案提供： http://www.pythonware.com/products/pil/\n",
+          "attack_type": "远程",
+          "release_date": "2014-04-27",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71403-AF4DE095",
+          "cve_id": "CVE-2020-35654",
+          "cnnvd_id": "CNNVD-202101-497",
+          "cnvd_id": "CNVD-2021-02806",
+          "cwe_id": "CWE-787",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.0之前版本中存在缓冲区错误漏洞，当解码制作好的YCbCr文件时，由于在RGBA模式下与LibTIFF的某些解释冲突，TiffDecode会出现基于堆的缓冲区溢出。",
+          "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://security.gentoo.org/glsa/202101-08\n",
+          "attack_type": "远程",
+          "release_date": "2021-01-11",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B7140E-B0A26095",
+          "cve_id": "CVE-2019-19911",
+          "cnnvd_id": "CNNVD-202001-097",
+          "cnvd_id": "CNVD-2020-03157",
+          "cwe_id": "CWE-190",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中存在输入验证错误漏洞。攻击者可利用该漏洞造成拒绝服务（进程终止）。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+          "attack_type": "远程",
+          "release_date": "2020-01-05",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 拒绝服务漏洞",
+          "id": "XMIRROR-E5B70F18-81274495",
+          "cve_id": "CVE-2014-9601",
+          "cnnvd_id": "CNNVD-201501-361",
+          "cnvd_id": "CNVD-2015-00535",
+          "cwe_id": "CWE-20",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPillow 2.7.0之前版本中存在安全漏洞。远程攻击者可借助特制的PNG图像中压缩的文本块利用该漏洞造成拒绝服务。",
+          "suggestion": "通用方案： 用户可参考如下供应商提供的安全公告获得补丁信息： http://pillow.readthedocs.org/releasenotes/2.7.0.html\n",
+          "attack_type": "远程",
+          "release_date": "2015-01-16",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 缓冲区错误漏洞",
+          "id": "XMIRROR-E5B71412-EDC0B295",
+          "cve_id": "CVE-2021-25289",
+          "cnnvd_id": "CNNVD-202103-811",
+          "cnvd_id": "CNVD-2021-54035",
+          "cwe_id": "CWE-787",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本中存在安全漏洞。该漏洞源于在解码精心编制的YCbCr文件时，TiffDecode会出现基于堆的缓冲区溢出。",
+          "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+          "attack_type": "远程",
+          "release_date": "2021-03-11",
+          "security_level_id": 1,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 输入验证错误漏洞",
+          "id": "XMIRROR-E5B70FBE-53644F95",
+          "cve_id": "CVE-2020-5310",
+          "cnnvd_id": "CNNVD-202001-053",
+          "cnvd_id": "CNVD-2020-43131",
+          "cwe_id": "CWE-190",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/TiffDecode.c文件存在输入验证错误漏洞，该漏洞源于程序没有正确分配内存。远程攻击者可借助特制TIFF图像利用该漏洞导致应用程序崩溃。",
+          "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+          "attack_type": "远程",
+          "release_date": "2020-01-02",
+          "security_level_id": 1,
+          "exploit_level_id": 0
+        },
+        {
+          "name": "Python Image Library Jpeg2KImagePlugin插件资源管理错误漏洞",
+          "id": "XMIRROR-E5B70F18-81A6D495",
+          "cve_id": "CVE-2014-3598",
+          "cnnvd_id": "CNNVD-201505-006",
+          "cnvd_id": "CNVD-2015-02861",
+          "cwe_id": "CWE-399",
+          "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。Jpeg2KImage是其中的一个图像处理插件。\r\nPIL 2.5.3之前版本的Jpeg2KImagePlugin插件中存在安全漏洞。远程攻击者可借助特制的图像利用该漏洞造成拒绝服务。",
+          "suggestion": "通用方案： 用户可参考如下厂商提供的安全公告获取补丁以修复该漏洞： https://pypi.python.org/pypi/Pillow/2.5.3\n",
+          "attack_type": "远程",
+          "release_date": "2015-05-01",
+          "security_level_id": 2,
+          "exploit_level_id": 2
+        },
+        {
+          "name": "Pillow 安全漏洞",
+          "id": "XMIRROR-E5B714EF-141CEE95",
+          "cve_id": "CVE-2024-28219",
+          "cnnvd_id": "CNNVD-202404-098",
+          "cwe_id": "CWE-680",
+          "description": "Pillow是一款基于Python的图像处理库。\r\nPillow(PIL Fork)存在安全漏洞，该漏洞源于_imagingcms.c中存在缓冲区溢出漏洞。",
+          "suggestion": "## Remediation\nUpgrade `pillow` to version 10.3.0 or higher.",
+          "attack_type": "本地",
+          "release_date": "2024-04-01",
+          "security_level_id": 2,
+          "exploit_level_id": 0
+        }
+      ],
+      "indirect_vulnerabilities": 50
+    },
+    {
+      "name": "plone.app.uuid\u003e=2.2.0",
+      "language": "Python",
+      "id": "57811829219557381",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.app.uuid\u003e=2.2.0:]"
+      ]
+    },
+    {
+      "name": "plone.base",
+      "language": "Python",
+      "id": "57811829219557382",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.base:]"
+      ],
+      "licenses": [
+        {
+          "name": "GPL-2.0-only"
+        }
+      ]
+    },
+    {
+      "name": "plone.dexterity",
+      "language": "Python",
+      "id": "57811829219557383",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.dexterity:]"
+      ],
+      "licenses": [
+        {
+          "name": "GPL-2.0-only"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "name": "Access Restriction Bypass",
+          "id": "XMIRROR-E5B77528-3E51382B",
+          "cwe_id": "CWE-284",
+          "description": "## Overview\n[`plone.dexterity`](https://pypi.python.org/pypi/plone.dexterity) is a framework for content types as filesystem code and TTW (Zope/CMF/Plone).\n\nAffected Versions of this package are vulnerable to Access Restriction Bypass.\n\n## References\n- [Github ChangeLog](https://github.com/plone/plone.dexterity/blob/master/CHANGES.rst#230-2015-03-13)\n- [Github PR](https://github.com/plone/plone.dexterity/pull/21)\n- [Github Commit](https://github.com/plone/plone.dexterity/commit/4437908dc6d4976f5a64f903d16b31489657ac39)\n",
+          "attack_type": "远程",
+          "release_date": "2017-11-07",
+          "security_level_id": 3,
+          "exploit_level_id": 2
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "name": "plone.memoize",
+      "language": "Python",
+      "id": "57811829219557384",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.memoize:]"
+      ],
+      "licenses": [
+        {
+          "name": "BSD-1-Clause"
+        }
+      ]
+    },
+    {
+      "name": "plone.protect",
+      "language": "Python",
+      "id": "57811829219557385",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.protect:]"
+      ],
+      "licenses": [
+        {
+          "name": "BSD-1-Clause"
+        }
+      ]
+    },
+    {
+      "name": "plone.rfc822\u003e=2.0.0",
+      "language": "Python",
+      "id": "57811829219557386",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.rfc822\u003e=2.0.0:]"
+      ]
+    },
+    {
+      "name": "plone.scale[storage",
+      "language": "Python",
+      "id": "57811829219557387",
+      "direct": true,
+      "paths": [
+        "plone_plone.namedfile\\setup.py\\[plone.scale[storage:]"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 51
+}

@@ -1,0 +1,1387 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "plone_Products.CMFPlone",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:56",
+    "end_time": "2025-11-27 21:56:59",
+    "cost_time": 2.7571396
+  },
+  "id": "57811829317140480",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811829317140481",
+      "direct": true,
+      "paths": [
+        "plone_Products.CMFPlone\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "borg.localrole",
+          "language": "Python",
+          "id": "57811829317140483",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[borg.localrole:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "five.customerize",
+          "language": "Python",
+          "id": "57811829317140484",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[five.customerize:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "five.intid",
+          "language": "Python",
+          "id": "57811829317140485",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[five.intid:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-1.0"
+            }
+          ]
+        },
+        {
+          "name": "lxml",
+          "language": "Python",
+          "id": "57811829317140486",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[lxml:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "lxml 和 libxml2 代码问题漏洞",
+              "id": "XMIRROR-E5B70F5B-1DE97195",
+              "cve_id": "CVE-2022-2309",
+              "cnnvd_id": "CNNVD-202207-382",
+              "cwe_id": "CWE-476",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。\r\nlxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "lxml‘clean_html’函数安全绕过漏洞",
+              "id": "XMIRROR-E5B70F18-489E2995",
+              "cve_id": "CVE-2014-3146",
+              "cnnvd_id": "CNNVD-201405-128",
+              "cnvd_id": "CNVD-2014-02756",
+              "cwe_id": "CWE-79",
+              "description": "lxml是一个使用Python语言编写的用于处理XML和HTML的库。\r\r\nlxml 3.3.4及之前版本的lxml.html.clean模块中存在不完整黑名单漏洞，该漏洞源于程序没有正确过滤link scheme中的控制字符。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： Python lxml Module 3.3.5已经修复该漏洞，建议用户下载更新： http://lxml.de\n",
+              "attack_type": "远程",
+              "release_date": "2014-04-15",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDADDF95",
+              "cve_id": "CVE-2021-28957",
+              "cnnvd_id": "CNNVD-202103-1229",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Arbitrary File Write",
+              "id": "XMIRROR-E5B77528-E19D382B",
+              "cwe_id": "CWE-22",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Arbitrary File Write. When writing to file paths that contain the URL escape character '%', the file path could wrongly be mangled by URL unescaping and thus write to a different file or directory.\n## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/0245aba002f069a0b157282707bdf77418d1b5be)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-AF96AE95",
+              "cve_id": "CVE-2020-27783",
+              "cnnvd_id": "CNNVD-202011-1920",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nLxml 存在跨站脚本漏洞，该漏洞源于javascript通过noscript和style组合进行转义。以下产品及版本会受到影响：Debian stretch, Debian stretch (security), Debian buster, Debian bullseye, sid; Red Hat Software Collections, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8 , Red Hat OpenStack Platform 10 (Newton), Red Hat OpenStack Platform 13 (Queens)",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://lists.debian.org/debian-lts-announce/2020/11/msg00044.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-11-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714B5-4F4D4595",
+              "cve_id": "CVE-2018-19787",
+              "cnnvd_id": "CNNVD-201812-001",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.2.5之前版本中存在跨站脚本漏洞，该漏洞源于lxml.html.clean模块的lxml/html/clean.py文件没有移除使用转义的javascript: URLs。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "lxml 注入漏洞",
+              "id": "XMIRROR-E5B71412-EDA94895",
+              "cve_id": "CVE-2021-43818",
+              "cnnvd_id": "CNNVD-202112-1050",
+              "cnvd_id": "CNVD-2021-100235",
+              "cwe_id": "CWE-74 CWE-79",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.5之前版本存在注入漏洞，该漏洞源于HTML Cleaner允许某些精心制作的脚本内容以及使用数据URI嵌入的SVG文件中的脚本内容通过。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-8455A22B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to race conditions when errors or user messages occur during threaded XSLT processing.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `lxml` to version 2.3.4 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/26ae51c60462ba1567a123bc9701ff18f9c10789)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 2.3.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-01",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "packaging",
+          "language": "Python",
+          "id": "57811829317140487",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[packaging:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.content",
+          "language": "Python",
+          "id": "57811829317140488",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.content:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Open Redirect",
+              "id": "XMIRROR-E5B77528-3E51E02B",
+              "cwe_id": "CWE-601",
+              "description": "## Overview\n[`plone.app.content`](https://pypi.python.org/pypi/plone.app.content) is a Content Views for Plone.\n\nAffected versions of this package are vulnerable to Open Redirect attacks.\n\n## References\n- [Github ChangeLog](https://github.com/plone/plone.app.content/blob/master/CHANGES.rst#331-2016-09-23)\n- [Github PR](https://github.com/plone/plone.app.content/pull/108)\n- [Github Commit](https://github.com/plone/plone.app.content/commit/ab6f71df4fb5d76d001cfe6c685a6344a2446133)\n",
+              "attack_type": "远程",
+              "release_date": "2017-11-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.app.contentlisting",
+          "language": "Python",
+          "id": "57811829317140489",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.contentlisting:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.contentmenu",
+          "version": "\u003e=2.0.1",
+          "language": "Python",
+          "id": "57811829317140490",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.contentmenu:\u003e=2.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.contentrules",
+          "language": "Python",
+          "id": "57811829317140491",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.contentrules:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.contenttypes",
+          "language": "Python",
+          "id": "57811829317140492",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.contenttypes:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Cross-site Scripting and Open Redirect in plone.app.contenttypes",
+              "id": "XMIRROR-C9431C71-4FAFBB78",
+              "cwe_id": "CWE-601 CWE-79",
+              "description": "### Impact\nPlone is vulnerable to reflected cross site scripting and open redirect when an attacker can get a compromised version of the image_view_fullscreen page in a cache, for example in Varnish.\nThe technique is known as cache poisoning.\nAny later visitor can get redirected when clicking on a link on this page.\nUsually only anonymous users are affected, but this depends on your cache settings.\n\n### Patches\nNew versions of plone.app.contenttypes have been released.\nVersion 2.2.3 works on Plone 5.2 and will be included in Plone 5.2.7.\nVersion 3.0.0a9 works on Plone 6 and will be included in Plone 6.0.0a3.\n\nNote that the Products.CMFPlone package has the same problem in the 4.3 series.\nIn Plone 5.0-5.2, the default Products.ATContentTypes version has the same problem. See [advisory](https://github.com/plone/Products.ATContentTypes/security/advisories/GHSA-g4c2-ghfg-g5rh).\nFor all unpatched versions of the three packages, you can use the following workaround.\n\n### Workaround\nMake sure the image_view_fullscreen page is not stored in the cache.\nIn Plone:\n\n* Login as Manager and go to Site Setup.\n* Go to the 'Caching' control panel. If this does not exist, or 'Enable caching' is not checked, you should normally not be vulnerable.\n* Click on the tab 'Caching operations'.\n* Under 'Legacy template mappings' locate the ruleset 'Content item view'.\n* From the last column ('Templates')  remove 'image_view_fullscreen'.\n* Click on Save.\n\n### Reporter\nThis vulnerability was responsibly disclosed to the Plone Security Team by Gustav Hansen, F-Secure Consulting. Thank you!\n\n### For more information\nIf you have any questions or comments about this advisory, email us at [security@plone.org](mailto:security@plone.org)\nThis is also the correct address to use when you want to report a possible vulnerability.\nSee [our security report policy](https://plone.org/security/report).",
+              "attack_type": "远程",
+              "release_date": "2022-02-01",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Cross-site Scripting (XSS)",
+              "id": "XMIRROR-E5B77528-3E511B2B",
+              "cwe_id": "CWE-79",
+              "description": "## Overview\n[plone-app-contenttypes](https://pypi.org/project/plone.app.contenttypes/) is a Dexterity-based content types for Plone.\n\nAffected versions of this package are vulnerable to Cross-site Scripting (XSS) attacks in lead image caption.\n\n## Details\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\r\n\r\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser’s Same Origin Policy.\r\n\r\nֿInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\r\n\r\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `\u003c` can be coded as  `\u0026lt`; and `\u003e` can be coded as `\u0026gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `\u003c` and `\u003e` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they’ve been correctly escaped in the application code and in this way the attempted attack is diverted.\r\n \r\nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware. \r\n\r\n### Types of attacks\r\nThere are a few methods by which XSS can be manipulated:\r\n\r\n|Type|Origin|Description|\r\n|--|--|--|\r\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\r\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user’s browser.| \r\n|**DOM-based**|Client|The attacker forces the user’s browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\r\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\r\n\r\n### Affected environments\r\nThe following environments are susceptible to an XSS attack:\r\n\r\n* Web servers\r\n* Application servers\r\n* Web application environments\r\n\r\n### How to prevent\r\nThis section describes the top best practices designed to specifically protect your code: \r\n\r\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches. \r\n* Convert special characters such as `?`, `\u0026`, `/`, `\u003c`, `\u003e` and spaces to their respective HTML or URL encoded equivalents. \r\n* Give users the option to disable client-side scripts.\r\n* Redirect invalid requests.\r\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\r\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\r\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.\n\n\n## Remediation\nUpgrade `plone-app-contenttypes` to version 1.2.15 or higher.\n\n## References\n- [Pypi ChangeLog](https://pypi.org/project/plone.app.contenttypes/1.2.15/)\n",
+              "suggestion": "## Remediation\nUpgrade `plone-app-contenttypes` to version 1.2.15 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2018-05-08",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "plone.app.customerize",
+          "language": "Python",
+          "id": "57811829317140493",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.customerize:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.dexterity",
+          "language": "Python",
+          "id": "57811829317140494",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.dexterity:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "XML External Entity (XXE) Injection",
+              "id": "XMIRROR-E5B77528-E19D4C2B",
+              "cwe_id": "CWE-611",
+              "description": "## Overview\n[plone.app.dexterity](https://pypi.org/project/plone.app.dexterity) is a Dexterity is a content type framework for CMF  applications, with particular emphasis on Plone. It can be viewed as an alternative to Archetypes that is more light-weight and modular.\n\nAffected versions of this package are vulnerable to XML External Entity (XXE) Injection via `AjaxSaveHandler`.\n\n## Details\nXXE Injection is a type of attack against an application that parses XML input.\nXML is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. By default, many XML processors allow specification of an external entity, a URI that is dereferenced and evaluated during XML processing. When an XML document is being parsed, the parser can make a request and include the content at the specified URI inside of the XML document.\n\nAttacks can include disclosing local files, which may contain sensitive data such as passwords or private user data, using file: schemes or relative paths in the system identifier.\n\nFor example, below is a sample XML document, containing an XML element- username.\n\n```\n\u003cxml\u003e\n\u003c?xml version=\"1.0\" encoding=\"ISO-8859-1\"?\u003e\n   \u003cusername\u003eJohn\u003c/username\u003e\n\u003c/xml\u003e\n```\n\nAn external XML entity - `xxe`, is defined using a system identifier and present within a DOCTYPE header. These entities can access local or remote content. For example the below code contains an external XML entity that would fetch the content of  `/etc/passwd` and display it to the user rendered by `username`.\n\n```\n\u003cxml\u003e\n\u003c?xml version=\"1.0\" encoding=\"ISO-8859-1\"?\u003e\n\u003c!DOCTYPE foo [\n   \u003c!ENTITY xxe SYSTEM \"file:///etc/passwd\" \u003e]\u003e\n   \u003cusername\u003e\u0026xxe;\u003c/username\u003e\n\u003c/xml\u003e\n```\n\nOther XXE Injection attacks can access local resources that may not stop returning data, possibly impacting application availability and leading to Denial of Service.\n\n## Remediation\nUpgrade `plone.app.dexterity` to version 2.6.8 or higher.\n## References\n- [Collective GitHub Commit](https://github.com/collective/collective.easyform/commit/261ea800fbe3bd650a83b1fe7558ba51bd7d0c9e)\n- [Plone GitHub Commit](https://github.com/plone/plone.app.dexterity/commit/b11b514fb7b79301a5562a6b63150553bf6ece2d)\n",
+              "suggestion": "## Remediation\nUpgrade `plone.app.dexterity` to version 2.6.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.app.i18n",
+          "language": "Python",
+          "id": "57811829317140495",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.i18n:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.layout",
+          "version": "\u003e=6.0.0a3",
+          "language": "Python",
+          "id": "57811829317140496",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.layout:\u003e=6.0.0a3]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.linkintegrity",
+          "version": "\u003e=1.0.3",
+          "language": "Python",
+          "id": "57811829317140497",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.linkintegrity:\u003e=1.0.3]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.locales",
+          "language": "Python",
+          "id": "57811829317140498",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.locales:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.portlets",
+          "language": "Python",
+          "id": "57811829317140499",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.portlets:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.redirector",
+          "language": "Python",
+          "id": "57811829317140500",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.redirector:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.relationfield",
+          "language": "Python",
+          "id": "57811829317140501",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.relationfield:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.registry",
+          "language": "Python",
+          "id": "57811829317140502",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.registry:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.theming",
+          "language": "Python",
+          "id": "57811829317140503",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.theming:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Arbitrary File Read",
+              "id": "XMIRROR-E5B77528-E19D402B",
+              "cwe_id": "CWE-22",
+              "description": "## Overview\n[plone.app.theming](https://pypi.org/project/plone.app.theming) is an Integrates the Diazo theming engine with Plone\n\nAffected versions of this package are vulnerable to Arbitrary File Read via `FailingFileProtocolResolver:resolve`.\n## Remediation\nUpgrade `plone.app.theming` to version 4.1.6 or higher.\n## References\n- [GitHub Commit](https://github.com/plone/plone.app.theming/commit/b22ccb1b8db526cc426ec6451e162bb5d94481d8)\n",
+              "suggestion": "## Remediation\nUpgrade `plone.app.theming` to version 4.1.6 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.app.users",
+          "language": "Python",
+          "id": "57811829317140504",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.users:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.uuid",
+          "language": "Python",
+          "id": "57811829317140505",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.uuid:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.viewletmanager",
+          "language": "Python",
+          "id": "57811829317140506",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.viewletmanager:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.vocabularies",
+          "language": "Python",
+          "id": "57811829317140507",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.vocabularies:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.app.workflow",
+          "language": "Python",
+          "id": "57811829317140508",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.workflow:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Cross-site Request Forgery (CSRF)",
+              "id": "XMIRROR-E5B77528-385D132B",
+              "cwe_id": "CWE-352",
+              "description": "## Overview\n[plone.app.workflow](https://pypi.org/project/plone.app.workflow) is a workflow and security settings for Plone\n\nAffected versions of this package are vulnerable to Cross-site Request Forgery (CSRF) via the `sharing.py` form, due to improper user input sanitization\n## Remediation\nUpgrade `plone.app.workflow` to version 1.1.0 or higher.\n## References\n- [GitHub Commit](https://github.com/plone/plone.app.workflow/commit/c2e300e52bb7b3ffad03c09afb42f441d58eec15)\n",
+              "suggestion": "## Remediation\nUpgrade `plone.app.workflow` to version 1.1.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-12-11",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.app.z3cform",
+          "version": "\u003e=4.1.0",
+          "language": "Python",
+          "id": "57811829317140509",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.app.z3cform:\u003e=4.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.autoform",
+          "language": "Python",
+          "id": "57811829317140510",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.autoform:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.autoinclude",
+          "language": "Python",
+          "id": "57811829317140511",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.autoinclude:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.base",
+          "version": "\u003e=4.0.0a1",
+          "language": "Python",
+          "id": "57811829317140512",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.base:\u003e=4.0.0a1]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.browserlayer",
+          "version": "\u003e=2.1.5",
+          "language": "Python",
+          "id": "57811829317140513",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.browserlayer:\u003e=2.1.5]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.contentrules",
+          "language": "Python",
+          "id": "57811829317140514",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.contentrules:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.dexterity",
+          "language": "Python",
+          "id": "57811829317140515",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.dexterity:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Access Restriction Bypass",
+              "id": "XMIRROR-E5B77528-3E51382B",
+              "cwe_id": "CWE-284",
+              "description": "## Overview\n[`plone.dexterity`](https://pypi.python.org/pypi/plone.dexterity) is a framework for content types as filesystem code and TTW (Zope/CMF/Plone).\n\nAffected Versions of this package are vulnerable to Access Restriction Bypass.\n\n## References\n- [Github ChangeLog](https://github.com/plone/plone.dexterity/blob/master/CHANGES.rst#230-2015-03-13)\n- [Github PR](https://github.com/plone/plone.dexterity/pull/21)\n- [Github Commit](https://github.com/plone/plone.dexterity/commit/4437908dc6d4976f5a64f903d16b31489657ac39)\n",
+              "attack_type": "远程",
+              "release_date": "2017-11-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.folder",
+          "language": "Python",
+          "id": "57811829317140516",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.folder:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.formwidget.namedfile",
+          "language": "Python",
+          "id": "57811829317140517",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.formwidget.namedfile:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.i18n",
+          "version": "\u003e=4.0.5",
+          "language": "Python",
+          "id": "57811829317140518",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.i18n:\u003e=4.0.5]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.indexer",
+          "language": "Python",
+          "id": "57811829317140519",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.indexer:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "plone.intelligenttext",
+          "language": "Python",
+          "id": "57811829317140520",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.intelligenttext:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.keyring",
+          "language": "Python",
+          "id": "57811829317140521",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.keyring:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "plone.locking",
+          "language": "Python",
+          "id": "57811829317140522",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.locking:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.memoize",
+          "language": "Python",
+          "id": "57811829317140523",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.memoize:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "plone.namedfile",
+          "language": "Python",
+          "id": "57811829317140524",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.namedfile:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Plone 跨站脚本漏洞",
+              "id": "XMIRROR-E5B7141B-7C72CA95",
+              "cve_id": "CVE-2023-41048",
+              "cnnvd_id": "CNNVD-202309-2066",
+              "cwe_id": "CWE-79 CWE-80",
+              "description": "Plone是一套基于Zope应用服务器构建的开源内容管理系统（CMS）。\r\nplone.namedfile 5.6.1、6.0.3、6.1.3 和 6.2.1 之前版本存在跨站脚本漏洞，该漏洞源于SVG images存在安全问题，之前的安全修补程序未完全修复了此问题。",
+              "suggestion": "## Remediation\nUpgrade `plone.namedfile` to version 5.6.1, 6.0.3, 6.1.3, 6.2.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-09-21",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.outputfilters",
+          "language": "Python",
+          "id": "57811829317140525",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.outputfilters:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.portlet.collection",
+          "language": "Python",
+          "id": "57811829317140526",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.portlet.collection:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Information Exposure",
+              "id": "XMIRROR-E5B77528-13D6C82B",
+              "cwe_id": "CWE-200",
+              "description": "## Overview\n[plone.portlet.collection](https://pypi.org/project/plone.portlet.collection) is an A portlet that fetches results from a collection\n\nAffected versions of this package are vulnerable to Information Exposure when users without `View` permissions for the collection, are able to view the `Portlet`.\n## Remediation\nUpgrade `plone.portlet.collection` to version 2.0.4 or higher.\n## References\n- [GitHub Commit](https://github.com/plone/plone.portlet.collection/commit/acaef557bdd904aaccc9da71bd3febc2c28c5d19)\n",
+              "suggestion": "## Remediation\nUpgrade `plone.portlet.collection` to version 2.0.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-04-18",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.portlet.static",
+          "language": "Python",
+          "id": "57811829317140527",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.portlet.static:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Cross-site Scripting (XSS)",
+              "id": "XMIRROR-E5B77528-9D28262B",
+              "cwe_id": "CWE-79",
+              "description": "## Overview\n[plone.portlet.static](https://pypi.org/project/plone.portlet.static) is an An editable static HTML portlet for Plone.\n\nAffected versions of this package are vulnerable to Cross-site Scripting (XSS) via `IStaticPortlet`.\n## Details\n\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\n\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser’s Same Origin Policy.\n\nInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\n\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `\u003c` can be coded as  `\u0026lt`; and `\u003e` can be coded as `\u0026gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `\u003c` and `\u003e` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they’ve been correctly escaped in the application code and in this way the attempted attack is diverted.\n \nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware. \n\n### Types of attacks\nThere are a few methods by which XSS can be manipulated:\n\n|Type|Origin|Description|\n|--|--|--|\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user’s browser.| \n|**DOM-based**|Client|The attacker forces the user’s browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\n\n### Affected environments\nThe following environments are susceptible to an XSS attack:\n\n* Web servers\n* Application servers\n* Web application environments\n\n### How to prevent\nThis section describes the top best practices designed to specifically protect your code: \n\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches. \n* Convert special characters such as `?`, `\u0026`, `/`, `\u003c`, `\u003e` and spaces to their respective HTML or URL encoded equivalents. \n* Give users the option to disable client-side scripts.\n* Redirect invalid requests.\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.\n\n## Remediation\nUpgrade `plone.portlet.static` to version 1.2 or higher.\n## References\n- [GitHub Commit](https://github.com/plone/plone.portlet.static/commit/7c6f525a3df2bb71661c43c4f6b058ff25c300aa)\n",
+              "suggestion": "## Remediation\nUpgrade `plone.portlet.static` to version 1.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-05-03",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.portlets",
+          "language": "Python",
+          "id": "57811829317140528",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.portlets:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.protect",
+          "version": "\u003e=3.0.0",
+          "language": "Python",
+          "id": "57811829317140529",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.protect:\u003e=3.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "plone.resource",
+          "language": "Python",
+          "id": "57811829317140530",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.resource:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.rfc822",
+          "language": "Python",
+          "id": "57811829317140531",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.rfc822:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "plone.schema",
+          "language": "Python",
+          "id": "57811829317140532",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.schema:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "plone.session",
+          "language": "Python",
+          "id": "57811829317140533",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.session:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Insufficient Session Expiration",
+              "id": "XMIRROR-E5B77528-81A2482B",
+              "cwe_id": "CWE-613",
+              "description": "## Overview\n[plone.session](https://github.com/plone/plone.session/) is a package that implements secure session management for Zope sites.\n\nAffected versions of this package are vulnerable to Insufficient Session Expiration. The default timeout of session was two hours and allowed for potential attack vectors.\n## Remediation\nUpgrade `plone.session` to version 3.6.2 or higher.\n## References\n- [GitHub Fix Commit](https://github.com/plone/plone.session/commit/0e681e60176633034fffa2418ab130c8b338eb3b)\n",
+              "suggestion": "## Remediation\nUpgrade `plone.session` to version 3.6.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-05-04",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "plone.staticresources",
+          "language": "Python",
+          "id": "57811829317140534",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.staticresources:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.subrequest",
+          "language": "Python",
+          "id": "57811829317140535",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.subrequest:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "plone.theme",
+          "language": "Python",
+          "id": "57811829317140536",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.theme:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "plone.uuid",
+          "language": "Python",
+          "id": "57811829317140537",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plone.uuid:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "plonetheme.barceloneta",
+          "language": "Python",
+          "id": "57811829317140538",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[plonetheme.barceloneta:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-only"
+            }
+          ]
+        },
+        {
+          "name": "Products.CMFEditions",
+          "language": "Python",
+          "id": "57811829317140539",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.CMFEditions:]"
+          ]
+        },
+        {
+          "name": "Products.CMFCore",
+          "language": "Python",
+          "id": "57811829317140540",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.CMFCore:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Zope HTTP Get 请求 跨站脚本攻击漏洞",
+              "id": "XMIRROR-E5B70F61-5F85BF95",
+              "cve_id": "CVE-2007-0240",
+              "cnnvd_id": "CNNVD-200703-571",
+              "cwe_id": "CWE-79",
+              "description": "Zope 2.10.2及之前版本中存在跨站脚本攻击漏洞。远程攻击者可以借助一个HTTP GET请求中的未明参数，注入任意的web脚本或HTML。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2007-03-22",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Zope 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDD3FA95",
+              "cve_id": "CVE-2021-33507",
+              "cnnvd_id": "CNNVD-202105-1395",
+              "cwe_id": "CWE-79",
+              "description": "Zope是Zope（ZOPE）社区的一套使用Python语言编写的、面向对象的开源Web应用服务器。\r\nZope Products.CMFCore2.5.1之前和PluggableAuthService2.6.2之前存在跨站脚本漏洞，该漏洞源于允许反射XSS。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-05-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Zope Products.CMFCore 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88EE4F95",
+              "cve_id": "CVE-2023-36814",
+              "cnnvd_id": "CNNVD-202307-072",
+              "cwe_id": "CWE-770",
+              "description": "Products.CMFCore是Zope内容管理框架 (CMF) 的关键框架服务。\r\nZope Products.CMFCore 3.2之前版本存在安全漏洞，该漏洞源于存在未经检查的输入，可能会导致未经身份验证的拒绝服务和崩溃。",
+              "suggestion": "该代码已在“Products.CMFCore”版本 3.2 中修复。\n官方补丁下载地址：\nhttps://github.com/zopefoundation/Products.CMFCore/releases/tag/3.2",
+              "attack_type": "远程",
+              "release_date": "2023-07-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "Products.DCWorkflow",
+          "language": "Python",
+          "id": "57811829317140541",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.DCWorkflow:]"
+          ]
+        },
+        {
+          "name": "Products.ExtendedPathIndex",
+          "language": "Python",
+          "id": "57811829317140542",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.ExtendedPathIndex:]"
+          ]
+        },
+        {
+          "name": "Products.isurlinportal",
+          "language": "Python",
+          "id": "57811829317140543",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.isurlinportal:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Plone 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-EDD13195",
+              "cve_id": "CVE-2021-32806",
+              "cnnvd_id": "CNNVD-202108-132",
+              "cwe_id": "CWE-601",
+              "description": "Plone是一套基于Zope应用服务器构建的开源内容管理系统（CMS）。\r\nPlone存在输入验证错误漏洞，攻击者可利用该漏洞可能会利用这个将受害者重定向到他们的网站，特别是作为网络钓鱼攻击的一部分。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-08-02",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "Products.MimetypesRegistry",
+          "language": "Python",
+          "id": "57811829317140544",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.MimetypesRegistry:]"
+          ]
+        },
+        {
+          "name": "Products.PlonePAS",
+          "language": "Python",
+          "id": "57811829317140545",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.PlonePAS:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Plone PlonePAS 未明身份认证绕过漏洞",
+              "id": "XMIRROR-E5B70F23-911A3195",
+              "cve_id": "CVE-2009-0662",
+              "cnnvd_id": "CNNVD-200904-447",
+              "cwe_id": "CWE-287",
+              "description": "Plone PlonePAS product 3.9之前的3.x版本和3.2.2之前的3.2.x版本没有正确的处理登录格式，远程认证用户可以借助未明向量，获得任意用户的身份。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2009-04-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "Products.PluggableAuthService",
+          "language": "Python",
+          "id": "57811829317140546",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.PluggableAuthService:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Jens Vagelpohl Products.PluggableAuthService 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-91E83695",
+              "cve_id": "CVE-2021-21337",
+              "cnnvd_id": "CNNVD-202103-555",
+              "cwe_id": "CWE-601",
+              "description": "Jens Vagelpohl Products.PluggableAuthService是  （Jens Vagelpohl）开源的一个应用程序。该产品定义了一个可完全插入的用户文件夹，供所有Zope网站使用。\r\nProducts.PluggableAuthService before version 2.6.0 存在安全漏洞，该漏洞源于一个打开的重定向漏洞。恶意制作的登录表单和登录功能链接可能会将浏览器重定向到另一个网站。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-08",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Cross-site Request Forgery (CSRF)",
+              "id": "XMIRROR-E5B77528-2CD2442B",
+              "cwe_id": "CWE-352",
+              "description": "## Overview\n[Products.PluggableAuthService](https://pypi.org/project/Products.PluggableAuthService) is a Pluggable Zope authentication / authorization framework\n\nAffected versions of this package are vulnerable to Cross-site Request Forgery (CSRF) due to faulty CSRF token acces.\n## Remediation\nUpgrade `Products.PluggableAuthService` to version 2.6.3 or higher.\n## References\n- [GitHub Commit](https://github.com/zopefoundation/Products.PluggableAuthService/commit/6476278d96b82c230a91d72f4e969da6add1a68c)\n- [GitHub Issue](https://github.com/zopefoundation/Products.PluggableAuthService/issues/99)\n",
+              "suggestion": "## Remediation\nUpgrade `Products.PluggableAuthService` to version 2.6.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-07-02",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Access Restriction Bypass",
+              "id": "XMIRROR-E5B77528-4265412B",
+              "cwe_id": "CWE-284",
+              "description": "## Overview\n[Products.PluggableAuthService](https://pypi.org/project/Products.PluggableAuthService) is a Pluggable Zope authentication / authorization framework\n\nAffected versions of this package are vulnerable to Access Restriction Bypass. Multiple login string transformation methods are set to public which could lead to Access Control issues. The vulnerability is likely not exploitable.\n## Remediation\nUpgrade `Products.PluggableAuthService` to version 2.6.2 or higher.\n## References\n- [GitHub Commit](https://github.com/zopefoundation/Products.PluggableAuthService/commit/981f41a0c6404f0ac6c41b107dc83029dd9979ea)\n",
+              "suggestion": "## Remediation\nUpgrade `Products.PluggableAuthService` to version 2.6.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-04-01",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Products.PluggableAuthService 信息泄露漏洞",
+              "id": "XMIRROR-E5B71412-91E8CA95",
+              "cve_id": "CVE-2021-21336",
+              "cnnvd_id": "CNNVD-202103-558",
+              "cwe_id": "CWE-200",
+              "description": "Jens Vagelpohl Products.PluggableAuthService是  （Jens Vagelpohl）开源的一个应用程序。该产品定义了一个可完全插入的用户文件夹，供所有Zope网站使用。\r\nProducts.PluggableAuthService 存在信息泄露漏洞，该漏洞允许任何人列出在该插件中定义的角色名称。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "Products.PortalTransforms",
+          "language": "Python",
+          "id": "57811829317140547",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.PortalTransforms:]"
+          ]
+        },
+        {
+          "name": "Products.SiteErrorLog",
+          "language": "Python",
+          "id": "57811829317140548",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.SiteErrorLog:]"
+          ]
+        },
+        {
+          "name": "Products.statusmessages",
+          "language": "Python",
+          "id": "57811829317140549",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.statusmessages:]"
+          ]
+        },
+        {
+          "name": "Products.ZCatalog",
+          "language": "Python",
+          "id": "57811829317140550",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Products.ZCatalog:]"
+          ]
+        },
+        {
+          "name": "webresource\u003e=1.2",
+          "language": "Python",
+          "id": "57811829317140551",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[webresource\u003e=1.2:]"
+          ]
+        },
+        {
+          "name": "z3c.caching",
+          "language": "Python",
+          "id": "57811829317140552",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[z3c.caching:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-1.0"
+            }
+          ]
+        },
+        {
+          "name": "z3c.form",
+          "language": "Python",
+          "id": "57811829317140553",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[z3c.form:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "z3c.relationfield",
+          "language": "Python",
+          "id": "57811829317140554",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[z3c.relationfield:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zc.relation",
+          "language": "Python",
+          "id": "57811829317140555",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[zc.relation:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "Zope[wsgi",
+          "language": "Python",
+          "id": "57811829317140556",
+          "direct": true,
+          "paths": [
+            "plone_Products.CMFPlone\\setup.py\\[Zope[wsgi:]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 28
+    },
+    {
+      "language": "Python",
+      "id": "57811829317140482",
+      "direct": true,
+      "paths": [
+        "plone_Products.CMFPlone\\src\\Products\\CMFPlone\\tests\\robot\\robot_setup.py"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 28
+}

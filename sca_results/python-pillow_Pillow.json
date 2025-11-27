@@ -1,0 +1,511 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "python-pillow_Pillow",
+    "size": 0,
+    "start_time": "2025-11-27 21:57:09",
+    "end_time": "2025-11-27 21:57:11",
+    "cost_time": 2.0310188
+  },
+  "id": "57811829711503360",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811829711503361",
+      "direct": true,
+      "paths": [
+        "python-pillow_Pillow\\.ci\\requirements-cibw.txt"
+      ],
+      "children": [
+        {
+          "name": "cibuildwheel",
+          "version": "3.3.0",
+          "language": "Python",
+          "id": "57811829711503366",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-cibw.txt\\[cibuildwheel:3.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829711503362",
+      "direct": true,
+      "paths": [
+        "python-pillow_Pillow\\.ci\\requirements-mypy.txt"
+      ],
+      "children": [
+        {
+          "name": "mypy",
+          "version": "1.18.2",
+          "language": "Python",
+          "id": "57811829711503367",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[mypy:1.18.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "arro3-compute",
+          "language": "Python",
+          "id": "57811829711503368",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[arro3-compute:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "arro3-core",
+          "language": "Python",
+          "id": "57811829711503369",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[arro3-core:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "IceSpringPySideStubs-PyQt6",
+          "language": "Python",
+          "id": "57811829711503370",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[IceSpringPySideStubs-PyQt6:]"
+          ]
+        },
+        {
+          "name": "IceSpringPySideStubs-PySide6",
+          "language": "Python",
+          "id": "57811829711503371",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[IceSpringPySideStubs-PySide6:]"
+          ]
+        },
+        {
+          "name": "ipython",
+          "language": "Python",
+          "id": "57811829711503372",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[ipython:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Ipython 跨站脚本漏洞",
+              "id": "XMIRROR-E5B70F63-5A444E95",
+              "cve_id": "CVE-2015-4707",
+              "cnnvd_id": "CNNVD-201709-951",
+              "cnvd_id": "CNVD-2017-35321",
+              "cwe_id": "CWE-79",
+              "description": "IPython是IPython团队开发的一个Python的原生交互式shell的增强版。\r\n\r\nIpython 3.2之前的版本中存在跨站脚本漏洞。远程攻击者可利用该漏洞注入任意的Web脚本或HTML。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://ipython.org/ipython-doc/3/whatsnew/version3.html\n",
+              "attack_type": "远程",
+              "release_date": "2015-06-22",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Ipython 跨站脚本漏洞",
+              "id": "XMIRROR-E5B70F63-5A449495",
+              "cve_id": "CVE-2015-4706",
+              "cnnvd_id": "CNNVD-201709-1019",
+              "cnvd_id": "CNVD-2017-34861",
+              "cwe_id": "CWE-79",
+              "description": "IPython是IPython团队开发的一个Python的原生交互式shell的增强版。\r\nIpython 3.2之前的3.x版本中存在跨站脚本漏洞。远程攻击者可利用该漏洞注入任意的Web脚本或HTML。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://ipython.org/ipython-doc/3/whatsnew/version3.html\n",
+              "attack_type": "远程",
+              "release_date": "2015-06-22",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Interactive Python 安全漏洞",
+              "id": "XMIRROR-E5B714FC-FE2D5A95",
+              "cve_id": "CVE-2022-21699",
+              "cnnvd_id": "CNNVD-202201-1775",
+              "cwe_id": "CWE-250 CWE-279 CWE-269",
+              "description": "Interactive Python（IPython）是一个用于使用多种编程语言进行交互式计算的命令shell，最初是为Python编程语言开发的。\r\nInteractive Python 存在安全漏洞，攻击者可利用该漏洞以另一个用户的身份运行代码。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "本地",
+              "release_date": "2022-01-19",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "IPython 跨站请求伪造漏洞",
+              "id": "XMIRROR-E5B70F63-5AFFBB95",
+              "cve_id": "CVE-2015-5607",
+              "cnnvd_id": "CNNVD-201709-962",
+              "cnvd_id": "CNVD-2017-35376",
+              "cwe_id": "CWE-352",
+              "description": "IPython是IPython团队开发的一个Python的原生交互式shell的增强版。REST API是其中的一个支持轻量级REST风格Web脚本的API。\r\nIPython 2版本和3版本中的REST API存在跨站请求伪造漏洞。远程攻击者可利用该漏洞执行未授权的操作。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://github.com/ipython/ipython/commit/1415a9710407e7c14900531813c15ba6165f0816\n",
+              "attack_type": "远程",
+              "release_date": "2017-09-20",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Interactive Python 操作系统命令注入漏洞",
+              "id": "XMIRROR-E5B7141B-88139895",
+              "cve_id": "CVE-2023-24816",
+              "cnnvd_id": "CNNVD-202302-732",
+              "cwe_id": "CWE-20 CWE-78",
+              "description": "Interactive Python（IPython）是一个用于使用多种编程语言进行交互式计算的命令shell，最初是为Python编程语言开发的。\r\nIPython(Interactive Python) 8.1.0之前版本存在操作系统命令注入漏洞。攻击者利用该漏洞执行命令注入攻击。",
+              "suggestion": "升级到最新版",
+              "attack_type": "本地",
+              "release_date": "2023-02-10",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 5
+        },
+        {
+          "name": "numpy",
+          "language": "Python",
+          "id": "57811829711503373",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[numpy:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "NumPy 代码问题漏洞",
+              "id": "XMIRROR-E5B70FD6-972C5395",
+              "cve_id": "CVE-2019-6446",
+              "cnnvd_id": "CNNVD-201901-600",
+              "cwe_id": "CWE-502",
+              "description": "\u003cp\u003eNumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。 NumPy 1.16.0 版本及之前版本存在代码问题漏洞，该漏洞源于不安全地使用 pickle 模块。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2019-01-16",
+              "security_level_id": 1,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "NumPy 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-ED70AB95",
+              "cve_id": "CVE-2021-33430",
+              "cnnvd_id": "CNNVD-202112-1480",
+              "cnvd_id": "CNVD-2021-101679",
+              "cwe_id": "CWE-120",
+              "description": "NumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.9版本存在缓冲区错误漏洞，该漏洞源于在ctor .c的 PyArray_NewFromDescr_int函数中缺少对于数组长度的限制，导致缓冲区溢出漏洞，当从Python代码指定大维度(超过32)的数组时，这可能会让恶意用户导致拒绝服务。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/numpy/numpy/pull/18989\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "NumPy 代码问题漏洞",
+              "id": "XMIRROR-E5B71412-ED451B95",
+              "cve_id": "CVE-2021-41495",
+              "cnnvd_id": "CNNVD-202112-1488",
+              "cnvd_id": "CNVD-2021-101681",
+              "cwe_id": "CWE-476",
+              "description": "NumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.19存在代码问题漏洞，该漏洞源于。numpy存在空指针解引用漏洞。在软件中的PyArray_DescrNew函数中，由于缺少返回值验证，导致了空指针解引用漏洞、这允许攻击者可利用该漏洞通过重复创建排序数组来进行DoS攻击。",
+              "suggestion": "通用方案： 目前厂商暂未发布修复措施解决此安全问题，建议使用此软件的用户随时关注厂商主页或参考网址以获取解决办法： https://github.com/numpy/numpy\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "NumPy 安全漏洞",
+              "id": "XMIRROR-E5B71412-EDCCA895",
+              "cve_id": "CVE-2021-34141",
+              "cnnvd_id": "CNNVD-202112-1481",
+              "cnvd_id": "CNVD-2021-101680",
+              "cwe_id": "CWE-697",
+              "description": "NumPy是一个Python科学计算包。该产品支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.9存在安全漏洞，该漏洞源于软件中不完整的字符串比较。它允许攻击者可利用该漏洞通过构造特定的字符串对象来破坏api。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/numpy/numpy/pull/19539\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-17",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "NumPy 安全漏洞",
+              "id": "XMIRROR-E5B70F18-48C63895",
+              "cve_id": "CVE-2014-1858",
+              "cnnvd_id": "CNNVD-201406-484",
+              "cnvd_id": "CNVD-2014-01188",
+              "cwe_id": "CWE-20",
+              "description": "NumPy是一个Python科学计算包，它支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\nNumPy 1.8.1之前的版本中的f2py的__init__.py文件存在安全漏洞。本地攻击者可通过对临时文件实施符号链接攻击利用该漏洞覆盖任意文件。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://www.numpy.org/\n",
+              "attack_type": "本地",
+              "release_date": "2014-02-05",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Numpy 安全漏洞",
+              "id": "XMIRROR-E5B7669E-3A6A9295",
+              "cve_id": "CVE-2017-12852",
+              "cnnvd_id": "CNNVD-201708-591",
+              "cnvd_id": "CNVD-2017-28629",
+              "cwe_id": "CWE-835",
+              "description": "NumPy是一个Python科学计算包，它支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\r\nNumpy 1.13.1及之前的版本中的‘numpy.pad’函数存在安全漏洞，该漏洞源于程序缺少输入验证。攻击者可利用该漏洞造成拒绝服务（无限循环）。",
+              "suggestion": "厂商尚未提供漏洞修复方案，请关注厂商主页更新：\r\nhttps://pypi.python.org/pypi/numpy",
+              "attack_type": "远程",
+              "release_date": "2017-08-15",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "NumPy 安全漏洞",
+              "id": "XMIRROR-E5B70F18-48C6F395",
+              "cve_id": "CVE-2014-1859",
+              "cnnvd_id": "CNNVD-201406-485",
+              "cnvd_id": "CNVD-2014-00955",
+              "cwe_id": "CWE-59",
+              "description": "NumPy是一个Python科学计算包，它支持大量的维度数组与矩阵计算，同时针对数据运算提供大量的数学函数库。\r\n\r\nNumPy 1.8.1之前的版本中的core/tests/test_memmap.py、core/tests/test_multiarray.py、f2py/f2py2e.py和lib/tests/test_io.py文件存在安全漏洞。本地攻击者可通过对临时文件实施符号链接攻击利用该漏洞覆盖任意文件。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://www.oschina.net/p/numpy\n",
+              "attack_type": "本地",
+              "release_date": "2014-02-05",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 7
+        },
+        {
+          "name": "packaging",
+          "language": "Python",
+          "id": "57811829711503374",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[packaging:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pyarrow-stubs",
+          "language": "Python",
+          "id": "57811829711503375",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[pyarrow-stubs:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pybind11",
+          "language": "Python",
+          "id": "57811829711503376",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[pybind11:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pytest",
+          "language": "Python",
+          "id": "57811829711503377",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[pytest:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "sphinx",
+          "language": "Python",
+          "id": "57811829711503378",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[sphinx:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "types-atheris",
+          "language": "Python",
+          "id": "57811829711503379",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[types-atheris:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-defusedxml",
+          "language": "Python",
+          "id": "57811829711503380",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[types-defusedxml:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-olefile",
+          "language": "Python",
+          "id": "57811829711503381",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[types-olefile:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-setuptools",
+          "language": "Python",
+          "id": "57811829711503382",
+          "direct": true,
+          "paths": [
+            "python-pillow_Pillow\\.ci\\requirements-mypy.txt\\[types-setuptools:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 16
+    },
+    {
+      "language": "Python",
+      "id": "57811829711503363",
+      "direct": true,
+      "paths": [
+        "python-pillow_Pillow\\setup.py"
+      ]
+    },
+    {
+      "id": "57811829711503364",
+      "direct": true,
+      "paths": [
+        "python-pillow_Pillow\\.github\\problem-matchers\\gcc.json"
+      ]
+    },
+    {
+      "id": "57811829711503365",
+      "direct": true,
+      "paths": [
+        "python-pillow_Pillow\\.github\\renovate.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 16
+}

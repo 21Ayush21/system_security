@@ -1,0 +1,1254 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "zopefoundation_Zope",
+    "size": 0,
+    "start_time": "2025-11-27 21:59:23",
+    "end_time": "2025-11-27 21:59:26",
+    "cost_time": 2.3519575
+  },
+  "id": "57811834112638976",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811834112638977",
+      "direct": true,
+      "paths": [
+        "zopefoundation_Zope\\docs\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "Sphinx",
+          "language": "Python",
+          "id": "57811834112638980",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\docs\\requirements.txt\\[Sphinx:]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "furo",
+          "language": "Python",
+          "id": "57811834112638981",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\docs\\requirements.txt\\[furo:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "ZConfig",
+          "language": "Python",
+          "id": "57811834112638982",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\docs\\requirements.txt\\[ZConfig:]"
+          ]
+        },
+        {
+          "name": "tempstorage",
+          "language": "Python",
+          "id": "57811834112638983",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\docs\\requirements.txt\\[tempstorage:]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811834112638978",
+      "direct": true,
+      "paths": [
+        "zopefoundation_Zope\\requirements-full.txt"
+      ],
+      "children": [
+        {
+          "name": "-e git+https://github.com/zopefoundation/Zope.git@master",
+          "language": "Python",
+          "id": "57811834112638984",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[-e git+https:\\github.com\\zopefoundation\\Zope.git@master:]"
+          ]
+        },
+        {
+          "name": "AccessControl",
+          "version": "7.3",
+          "language": "Python",
+          "id": "57811834112638985",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[AccessControl:7.3]"
+          ]
+        },
+        {
+          "name": "Acquisition",
+          "version": "6.2",
+          "language": "Python",
+          "id": "57811834112638986",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[Acquisition:6.2]"
+          ]
+        },
+        {
+          "name": "AuthEncoding",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112638987",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[AuthEncoding:6.0]"
+          ]
+        },
+        {
+          "name": "BTrees",
+          "version": "6.3",
+          "language": "Python",
+          "id": "57811834112638988",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[BTrees:6.3]"
+          ]
+        },
+        {
+          "name": "Chameleon",
+          "version": "4.6.0",
+          "language": "Python",
+          "id": "57811834112638989",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[Chameleon:4.6.0]"
+          ]
+        },
+        {
+          "name": "DateTime",
+          "version": "5.5",
+          "language": "Python",
+          "id": "57811834112638990",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[DateTime:5.5]"
+          ]
+        },
+        {
+          "name": "DocumentTemplate",
+          "version": "4.6",
+          "language": "Python",
+          "id": "57811834112638991",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[DocumentTemplate:4.6]"
+          ]
+        },
+        {
+          "name": "ExtensionClass",
+          "version": "6.2",
+          "language": "Python",
+          "id": "57811834112638992",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[ExtensionClass:6.2]"
+          ]
+        },
+        {
+          "name": "MultiMapping",
+          "version": "5.0",
+          "language": "Python",
+          "id": "57811834112638993",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[MultiMapping:5.0]"
+          ]
+        },
+        {
+          "name": "Paste",
+          "version": "3.10.1",
+          "language": "Python",
+          "id": "57811834112638994",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[Paste:3.10.1]"
+          ]
+        },
+        {
+          "name": "PasteDeploy",
+          "version": "3.1.0",
+          "language": "Python",
+          "id": "57811834112638995",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[PasteDeploy:3.1.0]"
+          ]
+        },
+        {
+          "name": "Persistence",
+          "version": "5.4",
+          "language": "Python",
+          "id": "57811834112638996",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[Persistence:5.4]"
+          ]
+        },
+        {
+          "name": "RestrictedPython",
+          "version": "8.1",
+          "language": "Python",
+          "id": "57811834112638997",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[RestrictedPython:8.1]"
+          ]
+        },
+        {
+          "name": "WSGIProxy2",
+          "version": "0.5.1",
+          "language": "Python",
+          "id": "57811834112638998",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[WSGIProxy2:0.5.1]"
+          ]
+        },
+        {
+          "name": "WebOb",
+          "version": "1.8.9",
+          "language": "Python",
+          "id": "57811834112638999",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[WebOb:1.8.9]"
+          ]
+        },
+        {
+          "name": "WebTest",
+          "version": "3.0.7",
+          "language": "Python",
+          "id": "57811834112639000",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[WebTest:3.0.7]"
+          ]
+        },
+        {
+          "name": "ZConfig",
+          "version": "4.3",
+          "language": "Python",
+          "id": "57811834112639001",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[ZConfig:4.3]"
+          ]
+        },
+        {
+          "name": "ZODB",
+          "version": "6.1",
+          "language": "Python",
+          "id": "57811834112639002",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[ZODB:6.1]"
+          ]
+        },
+        {
+          "name": "Zope2",
+          "version": "4.0",
+          "language": "Python",
+          "id": "57811834112639003",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[Zope2:4.0]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Zope 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CDD2995",
+              "cve_id": "CVE-2023-42458",
+              "cnnvd_id": "CNNVD-202309-2058",
+              "cwe_id": "CWE-79 CWE-80",
+              "description": "Zope是Zope社区的一套使用Python语言编写的、面向对象的开源Web应用服务器。\r\nZope存在安全漏洞，该漏洞源于SVG图像存在存储型跨站脚本漏洞（XSS）漏洞。攻击者可利用该漏洞通过上传图像，诱骗用户访问特制的链接从而执行恶意代码。受影响的产品和版本：Zope 4.8.9及之前版本，5.8.4及之前版本。",
+              "suggestion": "## Remediation\nUpgrade `plone.restapi` to version 8.43.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-09-21",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Zope 路径遍历漏洞",
+              "id": "XMIRROR-E5B71412-EDFF6395",
+              "cve_id": "CVE-2021-32633",
+              "cnnvd_id": "CNNVD-202105-1369",
+              "cwe_id": "CWE-22",
+              "description": "Zope是Zope（ZOPE）社区的一套使用Python语言编写的、面向对象的开源Web应用服务器。\r\nZope 在4.6之前版本和5.2版本存在安全漏洞，该漏洞允许不受信任的用户通过web添加编辑Zope页面模板的站点，从而触发该漏洞。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-05-21",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "beautifulsoup4",
+          "version": "4.14.2",
+          "language": "Python",
+          "id": "57811834112639004",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[beautifulsoup4:4.14.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "cffi",
+          "version": "2.0.0",
+          "language": "Python",
+          "id": "57811834112639005",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[cffi:2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "multipart",
+          "version": "1.3.0",
+          "language": "Python",
+          "id": "57811834112639006",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[multipart:1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "persistent",
+          "version": "6.5",
+          "language": "Python",
+          "id": "57811834112639007",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[persistent:6.5]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "pycparser",
+          "version": "2.23",
+          "language": "Python",
+          "id": "57811834112639008",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[pycparser:2.23]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "python-gettext",
+          "version": "5.0",
+          "language": "Python",
+          "id": "57811834112639009",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[python-gettext:5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pytz",
+          "version": "2025.2",
+          "language": "Python",
+          "id": "57811834112639010",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[pytz:2025.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "roman",
+          "version": "5.2",
+          "language": "Python",
+          "id": "57811834112639011",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[roman:5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "unknown"
+            }
+          ]
+        },
+        {
+          "name": "six",
+          "version": "1.17.0",
+          "language": "Python",
+          "id": "57811834112639012",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[six:1.17.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "soupsieve",
+          "version": "2.8",
+          "language": "Python",
+          "id": "57811834112639013",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[soupsieve:2.8]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "transaction",
+          "version": "5.0",
+          "language": "Python",
+          "id": "57811834112639014",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[transaction:5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "waitress",
+          "version": "3.0.2",
+          "language": "Python",
+          "id": "57811834112639015",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[waitress:3.0.2]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "z3c.pt",
+          "version": "5.1",
+          "language": "Python",
+          "id": "57811834112639016",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[z3c.pt:5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-1.0"
+            }
+          ]
+        },
+        {
+          "name": "zExceptions",
+          "version": "5.0",
+          "language": "Python",
+          "id": "57811834112639017",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zExceptions:5.0]"
+          ]
+        },
+        {
+          "name": "zc.lockfile",
+          "version": "4.0",
+          "language": "Python",
+          "id": "57811834112639018",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zc.lockfile:4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zc.recipe.egg",
+          "version": "4.0.0",
+          "language": "Python",
+          "id": "57811834112639019",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zc.recipe.egg:4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zodbpickle",
+          "version": "4.3",
+          "language": "Python",
+          "id": "57811834112639020",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zodbpickle:4.3]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            },
+            {
+              "name": "Python-2.0.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.annotation",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639021",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.annotation:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.browser",
+          "version": "4.0",
+          "language": "Python",
+          "id": "57811834112639022",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.browser:4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.browsermenu",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639023",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.browsermenu:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.browserpage",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639024",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.browserpage:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.browserresource",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639025",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.browserresource:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.cachedescriptors",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639026",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.cachedescriptors:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.component",
+          "version": "7.0",
+          "language": "Python",
+          "id": "57811834112639027",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.component:7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.configuration",
+          "version": "7.0",
+          "language": "Python",
+          "id": "57811834112639028",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.configuration:7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.container",
+          "version": "7.2",
+          "language": "Python",
+          "id": "57811834112639029",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.container:7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.contentprovider",
+          "version": "7.0",
+          "language": "Python",
+          "id": "57811834112639030",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.contentprovider:7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.contenttype",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639031",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.contenttype:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.datetime",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639032",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.datetime:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.deferredimport",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639033",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.deferredimport:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.deprecation",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639034",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.deprecation:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.dottedname",
+          "version": "7.0",
+          "language": "Python",
+          "id": "57811834112639035",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.dottedname:7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.event",
+          "version": "6.1",
+          "language": "Python",
+          "id": "57811834112639036",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.event:6.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.exceptions",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639037",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.exceptions:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.filerepresentation",
+          "version": "7.0",
+          "language": "Python",
+          "id": "57811834112639038",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.filerepresentation:7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.globalrequest",
+          "version": "3.0",
+          "language": "Python",
+          "id": "57811834112639039",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.globalrequest:3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-1.0"
+            }
+          ]
+        },
+        {
+          "name": "zope.hookable",
+          "version": "8.2",
+          "language": "Python",
+          "id": "57811834112639040",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.hookable:8.2]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.i18n",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639041",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.i18n:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.i18nmessageid",
+          "version": "8.2",
+          "language": "Python",
+          "id": "57811834112639042",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.i18nmessageid:8.2]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.interface",
+          "version": "8.1.1",
+          "language": "Python",
+          "id": "57811834112639043",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.interface:8.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.lifecycleevent",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639044",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.lifecycleevent:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.location",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639045",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.location:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.pagetemplate",
+          "version": "6.1",
+          "language": "Python",
+          "id": "57811834112639046",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.pagetemplate:6.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.processlifetime",
+          "version": "4.0",
+          "language": "Python",
+          "id": "57811834112639047",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.processlifetime:4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.proxy",
+          "version": "7.1",
+          "language": "Python",
+          "id": "57811834112639048",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.proxy:7.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.ptresource",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639049",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.ptresource:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.publisher",
+          "version": "8.0",
+          "language": "Python",
+          "id": "57811834112639050",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.publisher:8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.schema",
+          "version": "8.1",
+          "language": "Python",
+          "id": "57811834112639051",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.schema:8.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.security",
+          "version": "8.3",
+          "language": "Python",
+          "id": "57811834112639052",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.security:8.3]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.sequencesort",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639053",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.sequencesort:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.site",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639054",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.site:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.size",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639055",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.size:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.structuredtext",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639056",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.structuredtext:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.tal",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639057",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.tal:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.tales",
+          "version": "7.0",
+          "language": "Python",
+          "id": "57811834112639058",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.tales:7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.testbrowser",
+          "version": "8.0",
+          "language": "Python",
+          "id": "57811834112639059",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.testbrowser:8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.testing",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639060",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.testing:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.traversing",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639061",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.traversing:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        },
+        {
+          "name": "zope.viewlet",
+          "version": "6.0",
+          "language": "Python",
+          "id": "57811834112639062",
+          "direct": true,
+          "paths": [
+            "zopefoundation_Zope\\requirements-full.txt\\[zope.viewlet:6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ZPL-2.1"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 2
+    },
+    {
+      "language": "Python",
+      "id": "57811834112638979",
+      "direct": true,
+      "paths": [
+        "zopefoundation_Zope\\setup.py"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 6
+}

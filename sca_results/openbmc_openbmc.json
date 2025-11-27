@@ -1,0 +1,1638 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openbmc_openbmc",
+    "size": 0,
+    "start_time": "2025-11-27 21:55:20",
+    "end_time": "2025-11-27 21:55:26",
+    "cost_time": 5.3558581
+  },
+  "id": "57811826273026048",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811826273026049",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-arm\\meta-arm-bsp\\documentation\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "jinja2",
+          "version": "3.1.1",
+          "language": "Python",
+          "id": "57811826273026262",
+          "direct": true,
+          "paths": [
+            "openbmc_openbmc\\meta-arm\\meta-arm-bsp\\documentation\\requirements.txt\\[jinja2:3.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-1432B895",
+              "cve_id": "CVE-2024-22195",
+              "cnnvd_id": "CNNVD-202401-963",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nJinja 3.1.3之前版本存在安全漏洞，该漏洞源于存在跨站脚本（XSS）漏洞。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-11",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pallets Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-145CB795",
+              "cve_id": "CVE-2024-34064",
+              "cnnvd_id": "CNNVD-202405-1436",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 3.1.4之前版本存在安全漏洞，该漏洞源于将用户输入作为键传递给 xmlattr 过滤器时，Jinja 容易受到 HTML 属性注入。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-05-06",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja 模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EAF90D95",
+              "cve_id": "CVE-2024-56326",
+              "cnnvd_id": "CNNVD-202412-2665",
+              "cwe_id": "CWE-693 CWE-1336",
+              "description": "Jinja 是由 Pallets 开源的一个快速、富有表现力并可扩展的模板引擎。该漏洞存在于 Jinja 版本 3.1.5 之前，由于在沙箱环境中对 str.format 调用的检测存在不当，攻击者可以控制模板的内容并执行任意 Python 代码。攻击者可以通过创建包含恶意字符串的模板并利用自定义过滤器实现攻击，这可能导致系统安全性严重受损。",
+              "suggestion": "建议立即升级到 Jinja 版本 3.1.5 或更高版本，以修复此漏洞。如果无法立即升级，建议限制对受影响模板内容的访问权限，并定期审计和监控应用程序的模板使用情况，以防出现不安全的自定义过滤器。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EA6B2B95",
+              "cve_id": "CVE-2024-56201",
+              "cnnvd_id": "CNNVD-202412-2662",
+              "cwe_id": "CWE-150",
+              "description": "Jinja是Pallets开源的一个快速、富有表现力且可扩展的模板引擎。版本3.1.5之前的Jinja存在安全漏洞，该漏洞源于编译器的一个错误，允许同时控制模板内容和文件名的攻击者执行任意Python代码，无论Jinja的沙箱是否被使用。当应用程序执行不可信的模板时，攻击者需要能够控制模板的文件名和内容，才能有效利用此漏洞。",
+              "suggestion": "立即升级到Jinja版本3.1.5或更高版本，以修复此漏洞。建议对用户提供的模板进行严格的验证，并限制攻击者对模板文件名和内容的控制，以防止类似漏洞的再次发生。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2 任意代码执行漏洞",
+              "id": "XMIRROR-E5B714FA-9AF4BE95",
+              "cve_id": "CVE-2025-27516",
+              "cnnvd_id": "CNNVD-202503-672",
+              "cwe_id": "CWE-1336",
+              "description": "Jinja2 是一个广泛用于Web应用程序的模板引擎，用于渲染模板。该漏洞源于 Jinja2 沙盒环境与 `|attr` 过滤器交互时的一个疏忽。特别是，当攻击者能够控制模板的内容时，就可以利用此缺陷执行任意 Python 代码。这意味着，如果某个应用程序处理不可信的模板，就可能受到威胁，从而导致未经授权的系统访问或操作。",
+              "suggestion": "强烈建议开发人员和系统管理员立即将 Jinja2 升级到 3.1.6 及以上版本，以修复此漏洞。同时，实施严格的用户生成内容控制和验证，避免允许用户提交模板，必要时应对输入进行清理。此外，监控与 Jinja2 及其他应用程序组件相关的安全公告和更新。",
+              "attack_type": "本地",
+              "release_date": "2025-03-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 5
+        },
+        {
+          "name": "sphinx",
+          "version": "7.1.2",
+          "language": "Python",
+          "id": "57811826273026263",
+          "direct": true,
+          "paths": [
+            "openbmc_openbmc\\meta-arm\\meta-arm-bsp\\documentation\\requirements.txt\\[sphinx:7.1.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx_rtd_theme",
+          "version": "~=3.0.0",
+          "language": "Python",
+          "id": "57811826273026264",
+          "direct": true,
+          "paths": [
+            "openbmc_openbmc\\meta-arm\\meta-arm-bsp\\documentation\\requirements.txt\\[sphinx_rtd_theme:~=3.0.0]"
+          ]
+        },
+        {
+          "name": "docutils",
+          "version": "~=0.18.1",
+          "language": "Python",
+          "id": "57811826273026265",
+          "direct": true,
+          "paths": [
+            "openbmc_openbmc\\meta-arm\\meta-arm-bsp\\documentation\\requirements.txt\\[docutils:~=0.18.1]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            },
+            {
+              "name": "Public-Domain"
+            },
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 5
+    },
+    {
+      "id": "57811826273026050",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\.eslintrc.json"
+      ]
+    },
+    {
+      "id": "57811826273026051",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-common\\recipes-x86\\chassis\\x86-power-control\\daytonax\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026052",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-common\\recipes-x86\\chassis\\x86-power-control\\ethanolx\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026053",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-daytonax\\recipes-phosphor\\configuration\\entity-manager\\blocklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026054",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-daytonax\\recipes-phosphor\\configuration\\entity-manager\\daytonax-baseboard.json"
+      ]
+    },
+    {
+      "id": "57811826273026055",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-daytonax\\recipes-phosphor\\configuration\\entity-manager\\daytonax-chassis.json"
+      ]
+    },
+    {
+      "id": "57811826273026056",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-daytonax\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\channel_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026057",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-daytonax\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dcmi_sensors.json"
+      ]
+    },
+    {
+      "id": "57811826273026058",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-ethanolx\\recipes-phosphor\\configuration\\entity-manager\\blocklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026059",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-ethanolx\\recipes-phosphor\\configuration\\entity-manager\\ethanolx-baseboard.json"
+      ]
+    },
+    {
+      "id": "57811826273026060",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-ethanolx\\recipes-phosphor\\configuration\\entity-manager\\ethanolx-chassis.json"
+      ]
+    },
+    {
+      "id": "57811826273026061",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-ethanolx\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\channel_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026062",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-amd\\meta-ethanolx\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dcmi_sensors.json"
+      ]
+    },
+    {
+      "id": "57811826273026063",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-common\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\channel_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026064",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-common\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\power_reading.json"
+      ]
+    },
+    {
+      "id": "57811826273026065",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026066",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\fans\\phosphor-fan\\events.json"
+      ]
+    },
+    {
+      "id": "57811826273026067",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\fans\\phosphor-fan\\fans.json"
+      ]
+    },
+    {
+      "id": "57811826273026068",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\fans\\phosphor-fan\\groups.json"
+      ]
+    },
+    {
+      "id": "57811826273026069",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\fans\\phosphor-fan\\monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026070",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\fans\\phosphor-fan\\presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026071",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\fans\\phosphor-fan\\zones.json"
+      ]
+    },
+    {
+      "id": "57811826273026072",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026073",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026074",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\inventory\\phosphor-inventory-manager\\associations.json"
+      ]
+    },
+    {
+      "id": "57811826273026075",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dcmi_sensors.json"
+      ]
+    },
+    {
+      "id": "57811826273026076",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026077",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\leds\\phosphor-led-manager\\com.ampere.Hardware.Chassis.Model.MtJade.json"
+      ]
+    },
+    {
+      "id": "57811826273026078",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\network\\phosphor-network\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026079",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026080",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jade\\recipes-phosphor\\skeleton\\obmc-libobmc-intf\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026081",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026082",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\fans\\phosphor-fan\\events.json"
+      ]
+    },
+    {
+      "id": "57811826273026083",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\fans\\phosphor-fan\\fans.json"
+      ]
+    },
+    {
+      "id": "57811826273026084",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\fans\\phosphor-fan\\groups.json"
+      ]
+    },
+    {
+      "id": "57811826273026085",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\fans\\phosphor-fan\\monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026086",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\fans\\phosphor-fan\\presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026087",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\fans\\phosphor-fan\\zones.json"
+      ]
+    },
+    {
+      "id": "57811826273026088",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026089",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026090",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\inventory\\phosphor-inventory-manager\\associations.json"
+      ]
+    },
+    {
+      "id": "57811826273026091",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026092",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\fru_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026093",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\sensor_filter.json"
+      ]
+    },
+    {
+      "id": "57811826273026094",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\leds\\phosphor-led-manager\\com.ampere.Hardware.Chassis.Model.MtJefferson.json"
+      ]
+    },
+    {
+      "id": "57811826273026095",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\network\\phosphor-network\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026096",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026097",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-jefferson\\recipes-phosphor\\skeleton\\obmc-libobmc-intf\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026098",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026099",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\events.json"
+      ]
+    },
+    {
+      "id": "57811826273026100",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\fans.json"
+      ]
+    },
+    {
+      "id": "57811826273026101",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\groups_1p.json"
+      ]
+    },
+    {
+      "id": "57811826273026102",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\groups_2p.json"
+      ]
+    },
+    {
+      "id": "57811826273026103",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026104",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026105",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\fans\\phosphor-fan\\zones.json"
+      ]
+    },
+    {
+      "id": "57811826273026106",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026107",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026108",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\inventory\\phosphor-inventory-manager\\associations.json"
+      ]
+    },
+    {
+      "id": "57811826273026109",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dcmi_sensors.json"
+      ]
+    },
+    {
+      "id": "57811826273026110",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026111",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\leds\\phosphor-led-manager\\com.ampere.Hardware.Chassis.Model.MtMitchell.json"
+      ]
+    },
+    {
+      "id": "57811826273026112",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\network\\phosphor-network\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026113",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\mtmitchell_virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026114",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ampere\\meta-mitchell\\recipes-phosphor\\skeleton\\obmc-libobmc-intf\\mtmitchell_gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026115",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-arm\\meta-arm\\lib\\oeqa\\selftest\\cases\\tests\\auto-basic.json"
+      ]
+    },
+    {
+      "id": "57811826273026116",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-arm\\meta-arm\\lib\\oeqa\\selftest\\cases\\tests\\auto-parameters.json"
+      ]
+    },
+    {
+      "id": "57811826273026117",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-arm\\meta-arm\\lib\\oeqa\\selftest\\cases\\tests\\test-environment.json"
+      ]
+    },
+    {
+      "id": "57811826273026118",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-arm\\meta-arm\\lib\\oeqa\\selftest\\cases\\tests\\test-parameter.json"
+      ]
+    },
+    {
+      "id": "57811826273026119",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-arm\\meta-arm-bsp\\recipes-security\\optee\\files\\optee-os\\tc\\sp_layout.json"
+      ]
+    },
+    {
+      "id": "57811826273026120",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-aspeed\\recipes-bsp\\u-boot\\files\\evbA3_emmc_patch.json"
+      ]
+    },
+    {
+      "id": "57811826273026121",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-e3c246d4i\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026122",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-e3c246d4i\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026123",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-e3c246d4i\\recipes-x86\\chassis\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026124",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-e3c256d4i\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026125",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-e3c256d4i\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026126",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-e3c256d4i\\recipes-x86\\chassis\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026127",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-romed8hm3\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026128",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-romed8hm3\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026129",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-romed8hm3\\recipes-phosphor\\power\\phosphor-power\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026130",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-romed8hm3\\recipes-x86\\chassis\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026131",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-spc621d8hm3\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026132",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-spc621d8hm3\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026133",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-spc621d8hm3\\recipes-x86\\chassis\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026134",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-asrock\\meta-x570d4u\\recipes-x86\\chassis\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026135",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-bytedance\\meta-g220a\\recipes-phosphor\\chassis\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026136",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-bytedance\\meta-g220a\\recipes-phosphor\\configuration\\entity-manager\\g220a_baseboard.json"
+      ]
+    },
+    {
+      "id": "57811826273026137",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-bytedance\\meta-g220a\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\channel_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026138",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-bytedance\\meta-g220a\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026139",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-bytedance\\meta-g220a\\recipes-phosphor\\ipmi\\phosphor-ipmi-ipmb\\ipmb-channels.json"
+      ]
+    },
+    {
+      "id": "57811826273026140",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-bytedance\\meta-g220a\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026141",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-evb\\meta-evb-arm\\meta-evb-fvp-base\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\channel_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026142",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-anacapa\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026143",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-anacapa\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026144",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-anacapa\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\plat-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026145",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-anacapa\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026146",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-anacapa\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026147",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\bletchley\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026148",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\bletchley15\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026149",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026150",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\fans\\phosphor-pid-control\\bletchley15\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026151",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\leds\\phosphor-led-manager\\bletchley\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026152",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\leds\\phosphor-led-manager\\bletchley15\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026153",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\network\\phosphor-network\\bletchley\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026154",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\network\\phosphor-network\\bletchley15\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026155",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\sensors\\phosphor-nvme\\bletchley\\nvme_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026156",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\sensors\\phosphor-nvme\\bletchley15\\nvme_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026157",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config_hdc1080.json"
+      ]
+    },
+    {
+      "id": "57811826273026158",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-bletchley\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config_si7021.json"
+      ]
+    },
+    {
+      "id": "57811826273026159",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026160",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\configuration\\entity-manager\\catalina\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026161",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\configuration\\entity-manager\\clemente\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026162",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\fans\\phosphor-fan\\catalina\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026163",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\fans\\phosphor-fan\\clemente\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026164",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\fans\\phosphor-pid-control\\catalina\\config-pdb-brick.json"
+      ]
+    },
+    {
+      "id": "57811826273026165",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\fans\\phosphor-pid-control\\catalina\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026166",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\fans\\phosphor-pid-control\\clemente\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026167",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\catalina\\phosphor-multi-gpio-monitor-evt.json"
+      ]
+    },
+    {
+      "id": "57811826273026168",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\catalina\\phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026169",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\catalina\\phosphor-multi-gpio-presence-evt.json"
+      ]
+    },
+    {
+      "id": "57811826273026170",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\catalina\\phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026171",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\clemente\\phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026172",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\clemente\\phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026173",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026174",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\catalina\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026175",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\clemente\\no-cable-tsense.json"
+      ]
+    },
+    {
+      "id": "57811826273026176",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-catalina\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\clemente\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026177",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-fbdarwin\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026178",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-fbdarwin\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026179",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-harma\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026180",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-harma\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026181",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-harma\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\plat-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026182",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-harma\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\plat-phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026183",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-harma\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026184",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-harma\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026185",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026186",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026187",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\fans\\phosphor-pid-control\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026188",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\minerva-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026189",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026190",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\network\\phosphor-network\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026191",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-minerva\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026192",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-santabarbara\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026193",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-santabarbara\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\plat-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026194",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-santabarbara\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026195",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-santabarbara\\recipes-phosphor\\sensors\\dbus-sensors\\cable-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026196",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-santabarbara\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026197",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-tiogapass\\recipes-phosphor\\sensors\\phosphor-nvme\\nvme_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026198",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-tiogapass\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026199",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026200",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\fans\\phosphor-pid-control\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026201",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\ventura-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026202",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026203",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\network\\phosphor-network\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026204",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\sensors\\dbus-sensors\\cable-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026205",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-ventura\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026206",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite4\\meta-yosemite4n\\recipes-bsp\\images\\file\\settings.json"
+      ]
+    },
+    {
+      "id": "57811826273026207",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite4\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026208",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite4\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026209",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite4\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\yosemite4-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026210",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite4\\recipes-phosphor\\pldm\\files\\boot_config_setting_attrs.json"
+      ]
+    },
+    {
+      "id": "57811826273026211",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite4\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026212",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite5\\recipes-phosphor\\chassis\\obmc-phosphor-buttons\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026213",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite5\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026214",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite5\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\yosemite5-phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026215",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite5\\recipes-phosphor\\leds\\phosphor-led-manager\\led-group-config.json"
+      ]
+    },
+    {
+      "id": "57811826273026216",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\meta-yosemite5\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026217",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\fb-compute-multihost\\phosphor-multi-gpio-monitor.json"
+      ]
+    },
+    {
+      "id": "57811826273026218",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\recipes-phosphor\\health\\files\\bmc_health_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026219",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\channel_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026220",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026221",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-facebook\\recipes-phosphor\\state\\phosphor-post-code-manager\\amd-post-code-handlers.json"
+      ]
+    },
+    {
+      "id": "57811826273026222",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-fw-utility\\kudo-bios-update\\config-bios.json"
+      ]
+    },
+    {
+      "id": "57811826273026223",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-fw-utility\\kudo-bmc-update\\config-bmc.json"
+      ]
+    },
+    {
+      "id": "57811826273026224",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-fw-utility\\kudo-cpld-update\\config-bmccpld.json"
+      ]
+    },
+    {
+      "id": "57811826273026225",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-fw-utility\\kudo-cpld-update\\config-mbcpld.json"
+      ]
+    },
+    {
+      "id": "57811826273026226",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-fw-utility\\kudo-scp-update\\config-scp.json"
+      ]
+    },
+    {
+      "id": "57811826273026227",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-fw-utility\\kudo-scp-update\\config-scpback.json"
+      ]
+    },
+    {
+      "id": "57811826273026228",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-kudo\\kudo-system\\kudo-entity-association-map\\kudo_entity_association_map.json"
+      ]
+    },
+    {
+      "id": "57811826273026229",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026230",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-phosphor\\ipmi\\phosphor-ipmi-blobs-binarystore\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026231",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026232",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-phosphor\\sensors\\phosphor-virtual-sensor\\virtual_sensor_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026233",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-kudo\\recipes-phosphor\\skeleton\\obmc-libobmc-intf\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026234",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\ipmi\\phosphor-ipmi-blobs-binarystore\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026235",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    },
+    {
+      "id": "57811826273026236",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\ipmi\\phosphor-ipmi-flash\\bios-update\\config-bios.json"
+      ]
+    },
+    {
+      "id": "57811826273026237",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\ipmi\\phosphor-ipmi-flash\\bmc-update\\config-bmc.json"
+      ]
+    },
+    {
+      "id": "57811826273026238",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\ipmi\\phosphor-ipmi-flash\\cpld-update\\config-bmccpld.json"
+      ]
+    },
+    {
+      "id": "57811826273026239",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\ipmi\\phosphor-ipmi-flash\\cpld-update\\config-mbcpld.json"
+      ]
+    },
+    {
+      "id": "57811826273026240",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-fii\\meta-mori\\recipes-phosphor\\skeleton\\obmc-libobmc-intf\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026241",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-google\\recipes-phosphor\\flash\\dummy-gbmc-update\\config-dummy.json"
+      ]
+    },
+    {
+      "id": "57811826273026242",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-google\\recipes-phosphor\\flash\\inplace-gbmc-update\\config-bmc.json"
+      ]
+    },
+    {
+      "id": "57811826273026243",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-google\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\cipher_list.json"
+      ]
+    },
+    {
+      "id": "57811826273026244",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-google\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\gbmc_eth_access.json"
+      ]
+    },
+    {
+      "id": "57811826273026245",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-google\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\gbmc_eth_config.json"
+      ]
+    },
+    {
+      "id": "57811826273026246",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-dl360-g11\\recipes-hpe\\power-sequencing\\files\\test.json"
+      ]
+    },
+    {
+      "id": "57811826273026247",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-dl360-g11\\recipes-hpe\\power-supplies-monitoring\\files\\psu1.json"
+      ]
+    },
+    {
+      "id": "57811826273026248",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-dl360-g11\\recipes-hpe\\power-supplies-monitoring\\files\\psu2.json"
+      ]
+    },
+    {
+      "id": "57811826273026249",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-dl385-g11\\recipes-hpe\\power-supplies-monitoring\\files\\psu1.json"
+      ]
+    },
+    {
+      "id": "57811826273026250",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-dl385-g11\\recipes-hpe\\power-supplies-monitoring\\files\\psu2.json"
+      ]
+    },
+    {
+      "id": "57811826273026251",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-dl385-g11\\recipes-phosphor\\fans\\phosphor-pid-control\\config.json"
+      ]
+    },
+    {
+      "id": "57811826273026252",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-rl300-g11\\recipes-hpe\\power-sequencing\\files\\test.json"
+      ]
+    },
+    {
+      "id": "57811826273026253",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-rl300-g11\\recipes-hpe\\power-supplies-monitoring\\files\\psu1.json"
+      ]
+    },
+    {
+      "id": "57811826273026254",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-rl300-g11\\recipes-hpe\\power-supplies-monitoring\\files\\psu2.json"
+      ]
+    },
+    {
+      "id": "57811826273026255",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-hpe\\meta-rl300-g11\\recipes-x86\\x86-power-control\\x86-power-control\\power-config-host0.json"
+      ]
+    },
+    {
+      "id": "57811826273026256",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ibm\\meta-genesis3\\recipes-phosphor\\configuration\\entity-manager\\blacklist.json"
+      ]
+    },
+    {
+      "id": "57811826273026257",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ibm\\meta-genesis3\\recipes-phosphor\\gpio\\phosphor-gpio-monitor\\phosphor-multi-gpio-presence.json"
+      ]
+    },
+    {
+      "id": "57811826273026258",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ibm\\meta-palmetto\\recipes-phosphor\\skeleton\\obmc-libobmc-intf\\gpio_defs.json"
+      ]
+    },
+    {
+      "id": "57811826273026259",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ibm\\meta-romulus\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dcmi_cap.json"
+      ]
+    },
+    {
+      "id": "57811826273026260",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ibm\\meta-romulus\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dcmi_sensors.json"
+      ]
+    },
+    {
+      "id": "57811826273026261",
+      "direct": true,
+      "paths": [
+        "openbmc_openbmc\\meta-ibm\\meta-romulus\\recipes-phosphor\\ipmi\\phosphor-ipmi-config\\dev_id.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 5
+}

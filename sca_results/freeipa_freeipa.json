@@ -1,0 +1,3699 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "freeipa_freeipa",
+    "size": 0,
+    "start_time": "2025-11-27 21:32:16",
+    "end_time": "2025-11-27 21:32:23",
+    "cost_time": 6.409093
+  },
+  "id": "57811780908515328",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811780908515329",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\contrib\\lite-setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515330",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "wheel",
+          "language": "Python",
+          "id": "57811780908515359",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[wheel:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python 安全漏洞",
+              "id": "XMIRROR-E5B714FC-31AACB95",
+              "cve_id": "CVE-2022-40898",
+              "cnnvd_id": "CNNVD-202212-3795",
+              "cwe_id": "CWE-20",
+              "description": "Python是Python基金会的一套开源的、面向对象的程序设计语言。该语言具有可扩展、支持模块和包、支持多种平台等特点。\r\nPython Packaging Authority (PyPA) Wheel 0.37.1版本及之前版本存在安全漏洞。攻击者利用该漏洞通过控制Wheel cli输入导致拒绝服务。",
+              "suggestion": "目前官方已有可更新版本，建议受影响用户升级至最新版本",
+              "attack_type": "远程",
+              "release_date": "2022-12-22",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "sphinx ",
+          "version": "\u003e 3.0",
+          "language": "Python",
+          "id": "57811780908515360",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[sphinx :\u003e 3.0]"
+          ]
+        },
+        {
+          "name": "sphinx-book-theme",
+          "language": "Python",
+          "id": "57811780908515361",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[sphinx-book-theme:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "m2r2",
+          "language": "Python",
+          "id": "57811780908515362",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[m2r2:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "dnspython",
+          "language": "Python",
+          "id": "57811780908515363",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[dnspython:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "jwcrypto",
+          "language": "Python",
+          "id": "57811780908515364",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[jwcrypto:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-3.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jwcrypto JWT授权绕过漏洞",
+              "id": "XMIRROR-E5B70F5B-1DC14695",
+              "cve_id": "CVE-2022-3102",
+              "cwe_id": "CWE-287",
+              "description": "jwcrypto 是一个支持 JSON Web Token (JWT) 的加密库，专门用于处理和操作 JWT 令牌中的加密和签名功能。该漏洞的根本原因在于 JWT 自动检测令牌类型的特性。在处理 JSON Web Encryption (JWE) 令牌时，攻击者可以将使用公钥加密的 JWE 令牌替换为已签名的 JSON Web Signature (JWS) 令牌，从而绕过系统的授权机制，导致不当的访问权限被授予。",
+              "suggestion": "建议开发团队立即修复漏洞，确保在验证 JWT 令牌时，将 JWE 和 JWS 的验证逻辑分开。项目维护者应参考最新的安全编码实践，并定期进行安全审计。此外，尽快升级到含有本漏洞修复的新版本库（如果已发布）。",
+              "attack_type": "远程",
+              "release_date": "2022-09-22",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "JWCrypto 安全漏洞",
+              "id": "XMIRROR-E5B70F55-9AA81095",
+              "cve_id": "CVE-2023-6681",
+              "cnnvd_id": "CNNVD-202402-894",
+              "cwe_id": "CWE-400",
+              "description": "JWCrypto是JWCrypto开源的一个 Javascript 对象签名和加密 (JOSE) Web 标准的实现。\r\nJWCrypto存在安全漏洞，该漏洞源于允许攻击者发起拒绝服务(DoS)攻击以及可能的密码暴力破解和字典攻击。",
+              "suggestion": "## Remediation\nUpgrade `jwcrypto` to version 1.5.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "JWCrypto 安全漏洞",
+              "id": "XMIRROR-E5B714EF-147BE095",
+              "cve_id": "CVE-2024-28102",
+              "cnnvd_id": "CNNVD-202403-765",
+              "cwe_id": "CWE-770",
+              "description": "JWCrypto是JWCrypto开源的一个 Javascript 对象签名和加密 (JOSE) Web 标准的实现。\r\nJWCrypto 1.5.5及之前版本存在安全漏洞，该漏洞源于允许攻击者通过传入高压缩比的恶意 JWE Token 来引发 DoS 攻击。",
+              "suggestion": "## Remediation\nUpgrade `jwcrypto` to version 1.5.6 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-03-06",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "jwcrypto 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B944895",
+              "cve_id": "CVE-2016-6298",
+              "cnnvd_id": "CNNVD-201609-001",
+              "cnvd_id": "CNVD-2016-07105",
+              "cwe_id": "CWE-200",
+              "description": "jwcrypto是一套使用Python开发并实现JavaScript对象签名和加密的标准。\r\njwcrypto 0.3.2之前的版本中的jwa.py中的RSA 1.5版本的算法实现过程中的_Rsa15类存在安全漏洞，该漏洞源于程序缺少Random Filling保护机制。远程攻击者可借助Million Message Attack利用该漏洞获取明文数据。",
+              "suggestion": "通用方案： 目前厂商已经发布了补丁升级程序，请广大用户联系官网及时下载： http://jwcrypto.readthedocs.io/en/stable/\n",
+              "attack_type": "远程",
+              "release_date": "2016-08-31",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "ifaddr",
+          "language": "Python",
+          "id": "57811780908515365",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[ifaddr:]"
+          ]
+        },
+        {
+          "name": "netaddr",
+          "language": "Python",
+          "id": "57811780908515366",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[netaddr:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "qrcode",
+          "language": "Python",
+          "id": "57811780908515367",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[qrcode:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515368",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pyasn1",
+          "language": "Python",
+          "id": "57811780908515369",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[pyasn1:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyasn1-modules",
+          "language": "Python",
+          "id": "57811780908515370",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[pyasn1-modules:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "language": "Python",
+          "id": "57811780908515371",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[requests:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C64195",
+              "cve_id": "CVE-2014-1829",
+              "cnnvd_id": "CNNVD-201410-320",
+              "cnvd_id": "CNVD-2014-07159",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Authorization头利用该漏洞获取‘netrc’密码。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://python-requests.org/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FF1AD95",
+              "cve_id": "CVE-2018-18074",
+              "cnnvd_id": "CNNVD-201810-457",
+              "cnvd_id": "CNVD-2018-26002",
+              "cwe_id": "CWE-522",
+              "description": "Requests package for Python是一款基于Python的开源HTTP库。\r\r\nRequests package for Python 2.19.1及之前版本（2018-09-14之前发布）中存在安全漏洞，该漏洞源于程序在接收到从https转换到http的重定向请求（带有相同主机名）时，会将HTTP Authorization包头发送到http URI。远程攻击者可通过嗅探网络利用该漏洞获取凭证。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "attack_type": "远程",
+              "release_date": "2018-10-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3EF9B02B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\r\n[`requests`](https://pypi.python.org/pypi/requests) is a Python HTTP for Humans.\r\n\r\nAffected versions of this package are vulnerable to Denial of Service (DoS) attacks. When sending a digest with an incorrect password, it will retry the request for infinity. An attacker can send many of these requests, causing a denial of service.\r\n\r\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## References\r\n- [GitHub Issue](https://github.com/requests/requests/issues/541)\r\n- [GitHub PR](https://github.com/requests/requests/pull/547)\r\n- [GitHub Commit](https://github.com/requests/requests/pull/547/commits/c3e6c41fc164d4348f8ce197bd0075aff05637af)\r\n",
+              "attack_type": "远程",
+              "release_date": "2012-04-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C62C95",
+              "cve_id": "CVE-2014-1830",
+              "cnnvd_id": "CNNVD-201410-321",
+              "cnvd_id": "CNVD-2014-06355",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Proxy-Authorizatio头利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://github.com/kennethreitz/requests/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-5F34502B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to incorrect password used in conjunction with digest authentication. This can lead to an infinite request retry cycle\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `requests` to version 0.12.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/f3ad56f103e364671504bb0d960a0ed69c2eafbc)\n",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 0.12.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "cffi",
+          "language": "Python",
+          "id": "57811780908515372",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[cffi:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "language": "Python",
+          "id": "57811780908515373",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[cryptography:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 12
+        },
+        {
+          "name": "lxml",
+          "language": "Python",
+          "id": "57811780908515374",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[lxml:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "lxml 和 libxml2 代码问题漏洞",
+              "id": "XMIRROR-E5B70F5B-1DE97195",
+              "cve_id": "CVE-2022-2309",
+              "cnnvd_id": "CNNVD-202207-382",
+              "cwe_id": "CWE-476",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。\r\nlxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "lxml‘clean_html’函数安全绕过漏洞",
+              "id": "XMIRROR-E5B70F18-489E2995",
+              "cve_id": "CVE-2014-3146",
+              "cnnvd_id": "CNNVD-201405-128",
+              "cnvd_id": "CNVD-2014-02756",
+              "cwe_id": "CWE-79",
+              "description": "lxml是一个使用Python语言编写的用于处理XML和HTML的库。\r\r\nlxml 3.3.4及之前版本的lxml.html.clean模块中存在不完整黑名单漏洞，该漏洞源于程序没有正确过滤link scheme中的控制字符。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： Python lxml Module 3.3.5已经修复该漏洞，建议用户下载更新： http://lxml.de\n",
+              "attack_type": "远程",
+              "release_date": "2014-04-15",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDADDF95",
+              "cve_id": "CVE-2021-28957",
+              "cnnvd_id": "CNNVD-202103-1229",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Arbitrary File Write",
+              "id": "XMIRROR-E5B77528-E19D382B",
+              "cwe_id": "CWE-22",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Arbitrary File Write. When writing to file paths that contain the URL escape character '%', the file path could wrongly be mangled by URL unescaping and thus write to a different file or directory.\n## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/0245aba002f069a0b157282707bdf77418d1b5be)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-AF96AE95",
+              "cve_id": "CVE-2020-27783",
+              "cnnvd_id": "CNNVD-202011-1920",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nLxml 存在跨站脚本漏洞，该漏洞源于javascript通过noscript和style组合进行转义。以下产品及版本会受到影响：Debian stretch, Debian stretch (security), Debian buster, Debian bullseye, sid; Red Hat Software Collections, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8 , Red Hat OpenStack Platform 10 (Newton), Red Hat OpenStack Platform 13 (Queens)",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://lists.debian.org/debian-lts-announce/2020/11/msg00044.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-11-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714B5-4F4D4595",
+              "cve_id": "CVE-2018-19787",
+              "cnnvd_id": "CNNVD-201812-001",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.2.5之前版本中存在跨站脚本漏洞，该漏洞源于lxml.html.clean模块的lxml/html/clean.py文件没有移除使用转义的javascript: URLs。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "lxml 注入漏洞",
+              "id": "XMIRROR-E5B71412-EDA94895",
+              "cve_id": "CVE-2021-43818",
+              "cnnvd_id": "CNNVD-202112-1050",
+              "cnvd_id": "CNVD-2021-100235",
+              "cwe_id": "CWE-74 CWE-79",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.5之前版本存在注入漏洞，该漏洞源于HTML Cleaner允许某些精心制作的脚本内容以及使用数据URI嵌入的SVG文件中的脚本内容通过。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-8455A22B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to race conditions when errors or user messages occur during threaded XSLT processing.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `lxml` to version 2.3.4 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/26ae51c60462ba1567a123bc9701ff18f9c10789)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 2.3.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-01",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "sphinxcontrib-plantuml",
+          "language": "Python",
+          "id": "57811780908515375",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[sphinxcontrib-plantuml:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pillow",
+          "language": "Python",
+          "id": "57811780908515376",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\doc\\requirements.txt\\[pillow:]"
+          ],
+          "licenses": [
+            {
+              "name": "Secret-Labs-2011"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Duplicate Advisory: Bundled libwebp in Pillow vulnerable",
+              "id": "XMIRROR-C9431C71-6E109FA5",
+              "description": "## Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-56pw-mpj4-fxww. This link is maintained to preserve external references.\n\n## Original Description\nPillow versions before v10.0.1 bundled libwebp binaries in wheels that are vulnerable to CVE-2023-5129 (previously CVE-2023-4863). Pillow v10.0.1 upgrades the bundled libwebp binary to v1.3.2.",
+              "release_date": "2023-10-05",
+              "security_level_id": 2,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "Uncontrolled Resource Consumption in pillow",
+              "id": "XMIRROR-C9431C71-CB160D55",
+              "cwe_id": "CWE-400",
+              "description": "### Impact\n_Pillow before 8.1.1 allows attackers to cause a denial of service (memory consumption) because the reported size of a contained image is not properly checked for a BLP container, and thus an attempted memory allocation can be very large._\n\n### Patches\n_An issue was discovered in Pillow before 6.2.0. When reading specially crafted invalid image files, the library can either allocate very large amounts of memory or take an extremely long period of time to process the image._\n\n### Workarounds\n_An issue was discovered in Pillow before 6.2.0. When reading specially crafted invalid image files, the library can either allocate very large amounts of memory or take an extremely long period of time to process the image._\n\n### References\nhttps://nvd.nist.gov/vuln/detail/CVE-2021-27921\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [example link to repo](http://example.com)\n* Email us at [example email address](mailto:example@example.com)",
+              "attack_type": "远程",
+              "release_date": "2021-04-24",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Infinite loop in Pillow",
+              "id": "XMIRROR-C9431C71-881DCBE8",
+              "cwe_id": "CWE-400",
+              "description": "JpegImagePlugin may append an EOF marker to the end of a truncated file, so that the last segment of the data will still be processed by the decoder.\n\nIf the EOF marker is not detected as such however, this could lead to an infinite loop where JpegImagePlugin keeps trying to end the file.",
+              "release_date": "2022-03-12",
+              "security_level_id": 4,
+              "exploit_level_id": -2
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B714FC-311C7A95",
+              "cve_id": "CVE-2022-45198",
+              "cnnvd_id": "CNNVD-202211-2678",
+              "cwe_id": "CWE-409",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.2.0之前版本存在安全漏洞，该漏洞源于对高度压缩的GIF数据处理不当。",
+              "suggestion": "## Remediation\nUpgrade `Amazon-Linux:2023` `python3-pillow` to version 0:9.4.0-2.amzn2023.0.1 or higher.  \nThis issue was patched in `ALAS2023-2023-146`.",
+              "attack_type": "远程",
+              "release_date": "2022-11-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-47939495",
+              "cve_id": "CVE-2020-10994",
+              "cnnvd_id": "CNNVD-202006-1727",
+              "cnvd_id": "CNVD-2021-21942",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/Jpeg2KDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4538\n",
+              "attack_type": "本地",
+              "release_date": "2020-06-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow‘ImagingResampleHorizontal’函数整数溢出漏洞",
+              "id": "XMIRROR-E5B70F1C-8BE9A495",
+              "cve_id": "CVE-2016-4009",
+              "cnnvd_id": "CNNVD-201604-281",
+              "cnvd_id": "CNVD-2016-02300",
+              "cwe_id": "CWE-119",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\r\nPillow 3.1.1之前版本的libImaging/Resample.c文件中的‘ImagingResampleHorizontal’函数存在整数溢出漏洞。远程攻击者可借助负的‘new’的大小值利用该漏洞造成拒绝服务（基于堆的缓冲区溢出）。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+              "attack_type": "远程",
+              "release_date": "2016-04-13",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-4797EA95",
+              "cve_id": "CVE-2020-11538",
+              "cnnvd_id": "CNNVD-202006-1728",
+              "cnvd_id": "CNVD-2021-21943",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.0.0及之前版本中的libImaging/SgiRleDecode.c文件的SGI图像文件的处理存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4504\n",
+              "attack_type": "远程",
+              "release_date": "2020-06-25",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-ED0D3295",
+              "cve_id": "CVE-2021-27923",
+              "cnnvd_id": "CNNVD-202103-238",
+              "cnvd_id": "CNVD-2021-14766",
+              "cwe_id": "CWE-20",
+              "description": "Pillow是Pillow开源的一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本 存在输入验证错误漏洞，该漏洞允许攻击者导致拒绝服务。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-ED0DEA95",
+              "cve_id": "CVE-2021-27922",
+              "cnnvd_id": "CNNVD-202103-239",
+              "cnvd_id": "CNVD-2021-14763",
+              "cwe_id": "CWE-20",
+              "description": "Pillow是Pillow开源的一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本 存在输入验证错误漏洞，该漏洞允许攻击者导致拒绝服务。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-ED0D4495",
+              "cve_id": "CVE-2021-27921",
+              "cnnvd_id": "CNNVD-202103-240",
+              "cnvd_id": "CNVD-2021-14762",
+              "cwe_id": "CWE-20",
+              "description": "Pillow是Pillow开源的一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本 存在输入验证错误漏洞，该漏洞允许攻击者导致拒绝服务。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/8.1.1.html\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-EDC05795",
+              "cve_id": "CVE-2021-25290",
+              "cnnvd_id": "CNNVD-202103-809",
+              "cnvd_id": "CNVD-2021-54033",
+              "cwe_id": "CWE-787",
+              "description": "\u003cp\u003ePillow是一款基于Python的图像处理库。 Pillow 8.1.1之前版本存在安全漏洞。该漏洞源于在TiffDecode.c中存在一个大小无效的负偏移memcpy。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2021-03-11",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-EDC05C95",
+              "cve_id": "CVE-2021-25293",
+              "cnnvd_id": "CNNVD-202103-813",
+              "cnvd_id": "CNVD-2021-54037",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.1版本之前存在安全漏洞。该漏洞源于SGIRleDecode.c中存在越界读取。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-11",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-EDC04595",
+              "cve_id": "CVE-2021-25291",
+              "cnnvd_id": "CNNVD-202103-810",
+              "cnvd_id": "CNVD-2021-54036",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本中存在安全漏洞。该漏洞源于TiffDecode.c在TiffreadRGBATile中通过无效的title越界读取。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-11",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-AF4D5095",
+              "cve_id": "CVE-2020-35653",
+              "cnnvd_id": "CNNVD-202101-496",
+              "cnvd_id": "CNVD-2021-54038",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.0之前版本中存在缓冲区错误漏洞，当解码一个精心制作的PCX文件时，PoxDecode有一个缓冲区过读，因为缓冲区计算信任用户提供的stride值。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-01-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Command Injection",
+              "id": "XMIRROR-E5B77528-E123BF2B",
+              "cwe_id": "CWE-78",
+              "description": "## Overview\n[Pillow](https://python-pillow.org/) is a PIL (Python Imaging Library) fork.\n\nAffected versions of this package are vulnerable to Command Injection in filenames that contain single quotes via `load_djpeg`.\n## Remediation\nUpgrade `Pillow` to version 2.5.0 or higher.\n## References\n- [GitHub PR](https://github.com/python-pillow/Pillow/pull/748)\n- [Pillow Changelog](https://github.com/python-pillow/Pillow/blob/master/CHANGES.rst#250-2014-07-01)\n",
+              "suggestion": "## Remediation\nUpgrade `Pillow` to version 2.5.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-11-02",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-47ACA695",
+              "cve_id": "CVE-2020-10378",
+              "cnnvd_id": "CNNVD-202006-1726",
+              "cnvd_id": "CNVD-2021-21941",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/PcxDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4538\n",
+              "attack_type": "本地",
+              "release_date": "2020-06-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-47ED0095",
+              "cve_id": "CVE-2020-10177",
+              "cnnvd_id": "CNNVD-202006-1725",
+              "cnvd_id": "CNVD-2021-21940",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/FliDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/python-pillow/Pillow/pull/4538 ",
+              "attack_type": "本地",
+              "release_date": "2020-06-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70FBE-53644C95",
+              "cve_id": "CVE-2020-5312",
+              "cnnvd_id": "CNNVD-202001-055",
+              "cnvd_id": "CNVD-2020-43130",
+              "cwe_id": "CWE-120",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/PcxDecode.c文件存在缓冲区错误漏洞，该漏洞源于程序没有正确检查边界。远程攻击者可借助特制PCX文件利用该漏洞在系统上执行任意代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-01-02",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70FBE-53644095",
+              "cve_id": "CVE-2020-5311",
+              "cnnvd_id": "CNNVD-202001-051",
+              "cnvd_id": "CNVD-2020-03288",
+              "cwe_id": "CWE-120",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/SgiRleDecode.c文件存在缓冲区错误漏洞，该漏洞源于程序没有正确检查边界。远程攻击者可借助特制SGI文件利用该漏洞在系统上执行任意代码，或者导致应用程序崩溃。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html",
+              "attack_type": "远程",
+              "release_date": "2020-01-02",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70FBE-53643095",
+              "cve_id": "CVE-2020-5313",
+              "cnnvd_id": "CNNVD-202001-052",
+              "cnvd_id": "CNVD-2020-03505",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/FliDecode.c文件存在缓冲区错误漏洞，该漏洞源于程序没有正确检查边界。远程攻击者可借助特制FLI文件利用该漏洞在系统上执行任意代码，或者导致应用程序崩溃。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-01-02",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B7140E-B071A295",
+              "cve_id": "CVE-2019-16865",
+              "cnnvd_id": "CNNVD-201910-194",
+              "cnvd_id": "CNVD-2021-54039",
+              "cwe_id": "CWE-770",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.0之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-10-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8BB2E395",
+              "cve_id": "CVE-2016-9189",
+              "cnnvd_id": "CNNVD-201611-077",
+              "cnvd_id": "CNVD-2016-11325",
+              "cwe_id": "CWE-190",
+              "description": "Pillow是美国软件开发者Alex Clark所研发的一个对PIL（Python图像处理库）一些BUG修正后的编译版。\r\n\r\nPillow 3.3.2之前的版本中存在安全漏洞。上下文相关的攻击者可利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 用户可联系供应商获得补丁信息： https://github.com/python-pillow/\n",
+              "attack_type": "本地",
+              "release_date": "2016-11-04",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8BB20795",
+              "cve_id": "CVE-2016-9190",
+              "cnnvd_id": "CNNVD-201611-076",
+              "cnvd_id": "CNVD-2016-10739",
+              "cwe_id": "CWE-284",
+              "description": "Pillow是美国软件开发者Alex Clark所研发的一个对PIL（Python图像处理库）一些BUG修正后的编译版。\r\n\r\nPillow 3.3.2之前的版本中存在安全漏洞。上下文相关的攻击者可通过使用‘crafted image file’方法利用该漏洞执行任意代码。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： http://pillow.readthedocs.io/en/3.4.x/releasenotes/3.3.2.html\n",
+              "attack_type": "本地",
+              "release_date": "2016-11-04",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70F1C-8BD31B95",
+              "cve_id": "CVE-2016-0775",
+              "cnnvd_id": "CNNVD-201604-278",
+              "cnvd_id": "CNVD-2016-02295",
+              "cwe_id": "CWE-119",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 3.1.1之前版本的libImaging/FliDecode.c文件中的‘ImagingFliDecode’函数存在缓冲区错误漏洞。远程攻击者可借助特制的FLI文件利用该漏洞造成拒绝服务（崩溃）。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+              "attack_type": "远程",
+              "release_date": "2016-04-13",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow和Python Imaging Library 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B70F1C-8BFAE395",
+              "cve_id": "CVE-2016-2533",
+              "cnnvd_id": "CNNVD-201604-280",
+              "cnvd_id": "CNVD-2016-02299",
+              "cwe_id": "CWE-119",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\r\nPillow 3.1.1之前版本和PIL 1.1.7及之前版本的PcdDecode.c文件中的‘ImagingPcdDecode’函数存在缓冲区溢出漏洞。远程攻击者可借助特制的PhotoCD文件利用该漏洞造成拒绝服务（崩溃）。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+              "attack_type": "远程",
+              "release_date": "2016-04-13",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Python Image Library和Pillow 后置链接漏洞",
+              "id": "XMIRROR-E5B70F18-48C68095",
+              "cve_id": "CVE-2014-1932",
+              "cnnvd_id": "CNNVD-201404-363",
+              "cwe_id": "CWE-59",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。Pillow是对PIL的一些BUG修正后的编译版。\r\nPIL 1.1.7及之前的版本和Pillow 2.3.0及之前的版本中的JpegImagePlugin.py文件的‘load_djpeg’函数；EpsImagePlugin.py文件的‘Ghostscript’函数；IptcImagePlugin.py文件的‘load’函数；Image.py文件的‘_copy’函数存在安全漏洞，该漏洞源于程序没有正确创建临时文件。本地攻击者可通过对临时文件的符号链接攻击利用该漏洞覆盖任意文件，获取敏感信息。",
+              "suggestion": "通用方案： 目前没有详细解决方案提供： http://www.pythonware.com/products/pil/\n",
+              "attack_type": "本地",
+              "release_date": "2014-04-17",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Python Image Library和Pillow 权限许可和访问控制漏洞",
+              "id": "XMIRROR-E5B70F18-48C6DF95",
+              "cve_id": "CVE-2014-1933",
+              "cnnvd_id": "CNNVD-201404-364",
+              "cwe_id": "CWE-264",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。Pillow是对PIL的一些BUG修正后的编译版。\r\nPIL 1.1.7及之前的版本和Pillow 2.3.0及之前的版本中的JpegImagePlugin.py和EpsImagePlugin.py脚本存在安全漏洞，该漏洞源于程序在命令行上使用临时文件名。本地攻击者可利用该漏洞实施符号链接攻击。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://www.pythonware.com/products/pil/\n",
+              "attack_type": "本地",
+              "release_date": "2014-04-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow‘ImagingLibTiffDecode’函数缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F1C-8BD33395",
+              "cve_id": "CVE-2016-0740",
+              "cnnvd_id": "CNNVD-201604-277",
+              "cnvd_id": "CNVD-2016-02296",
+              "cwe_id": "CWE-119",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPillow 3.1.1之前版本的libImaging/TiffDecode.c文件中的‘ImagingLibTiffDecode’函数存在缓冲区溢出漏洞。远程攻击者可借助特制的TIFF文件利用该漏洞覆盖内存。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，补丁获取链接： https://github.com/python-pillow/Pillow/blob/c3cb690fed5d4bf0c45576759de55d054916c165/CHANGES.rst\n",
+              "attack_type": "远程",
+              "release_date": "2016-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-47AC9F95",
+              "cve_id": "CVE-2020-10379",
+              "cnnvd_id": "CNNVD-202006-1729",
+              "cnvd_id": "CNVD-2021-37065",
+              "cwe_id": "CWE-120",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 7.1.0之前版本中的libImaging/TiffDecode.c文件存在缓冲区错误漏洞。该漏洞源于网络系统或产品在内存上执行操作时，未正确验证数据边界，导致向关联的其他内存位置上执行了错误的读写操作。攻击者可利用该漏洞导致缓冲区溢出或堆溢出等。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://github.com/python-pillow/Pillow/pull/4507\n",
+              "attack_type": "本地",
+              "release_date": "2020-06-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B714FC-FEB11D95",
+              "cve_id": "CVE-2022-24303",
+              "cnnvd_id": "CNNVD-202202-1204",
+              "cnvd_id": "CNVD-2022-28799",
+              "cwe_id": "CWE-22",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.1之前版本存在输入验证错误漏洞，该漏洞源于产品的remove操作未验证用户输入数据。攻击者可通过该漏洞利用输入命令来修改或删除预期的命令。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://pillow.readthedocs.io/en/stable/releasenotes/9.0.1.html#security",
+              "attack_type": "远程",
+              "release_date": "2022-02-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B714FC-FEF3E795",
+              "cve_id": "CVE-2022-22815",
+              "cnnvd_id": "CNNVD-202201-632",
+              "cwe_id": "CWE-665",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.0 之前存在安全漏洞，该漏洞源于 path.c 中的 path_getbbox 不正确地初始化 ImagePath.Path。",
+              "suggestion": "## Remediation\nUpgrade `AlmaLinux:8` `python3-pillow` to version 0:5.1.1-18.el8_5 or higher.  \nThis issue was patched in `ALSA-2022:0643`.",
+              "attack_type": "远程",
+              "release_date": "2022-01-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B714FC-FE49F095",
+              "cve_id": "CVE-2022-22816",
+              "cnnvd_id": "CNNVD-202201-633",
+              "cnvd_id": "CNVD-2022-05433",
+              "cwe_id": "CWE-125",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.0 之前存在安全漏洞，该漏洞源于 path.c 中的 path_getbbox 在 ImagePath.Path 初始化期间有一个缓冲区过度读取。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#fixed-imagepath-path-array-handling\n",
+              "attack_type": "远程",
+              "release_date": "2022-01-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B714FC-FE499795",
+              "cve_id": "CVE-2022-22817",
+              "cnnvd_id": "CNNVD-202201-634",
+              "cnvd_id": "CNVD-2022-05434",
+              "cwe_id": "CWE-94",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 9.0.0 之前存在安全漏洞，该漏洞源于 PIL.ImageMath.eval 允许评估任意表达式，例如使用 Python exec 方法的表达式。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#restrict-builtins-available-to-imagemath-eval\n",
+              "attack_type": "远程",
+              "release_date": "2022-01-07",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-95BF402B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n[Pillow](https://python-pillow.org/) is a PIL (Python Imaging Library) fork.\n\nAffected versions of this package are vulnerable to Denial of Service (DoS). The `JpegImagePlugin` may append an EOF marker to the end of a truncated file, so that the last segment of the data will still be processed by the decoder. If the EOF marker is not detected as such, this can lead to an infinite loop where `JpegImagePlugin` keeps trying to end the file.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `Pillow` to version 9.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/python-pillow/Pillow/pull/5921/commits/1059eb537639925c96d3245dcd73c106d4266c83)\n- [GitHub Issue](https://github.com/python-pillow/Pillow/issues/5864#issuecomment-1003788821)\n- [GitHub PR](https://github.com/python-pillow/Pillow/pull/5921)\n- [Release Notes](https://pillow.readthedocs.io/en/stable/releasenotes/9.0.0.html#ensure-jpegimageplugin-stops-at-the-end-of-a-truncated-file)\n",
+              "suggestion": "## Remediation\nUpgrade `Pillow` to version 9.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2022-01-04",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-ED6F1195",
+              "cve_id": "CVE-2021-34552",
+              "cnnvd_id": "CNNVD-202107-960",
+              "cnvd_id": "CNVD-2021-54028",
+              "cwe_id": "CWE-120",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 中存在缓冲区错误漏洞，该漏洞源于产品的convert .c未能验证参数的安全性，攻击者可通过该漏洞引发缓冲区溢出。以下产品及版本受到影响：Pillow 8.2.0 之前版本、PIL 1.1.7 之前版本。",
+              "suggestion": "补丁方案： \u003cp\u003e\u003cbr/\u003e目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\u003c/p\u003e\u003cp\u003e\u003ca target=\"_Blank\" href=\"https://pillow.readthedocs.io/en/stable/releasenotes/8.3.0.html#buffer-overflow\"\u003ehttps://pillow.readthedocs.io/en/stable/releasenotes/8.3.0.html#buffer-overflow\u003c/a\u003e\u003c/p\u003e\n",
+              "attack_type": "远程",
+              "release_date": "2021-07-13",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B71412-ED212195",
+              "cve_id": "CVE-2021-28677",
+              "cnnvd_id": "CNNVD-202104-966",
+              "cnvd_id": "CNVD-2021-54031",
+              "cwe_id": "CWE-20",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在输入验证错误漏洞，该漏洞由于在处理换行符（例如在打开文件时使用“  r”，“  n”）时对用户提供的输入的验证不足而存在的。远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-04-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-ED21D995",
+              "cve_id": "CVE-2021-28675",
+              "cnnvd_id": "CNNVD-202104-968",
+              "cnvd_id": "CNVD-2021-54030",
+              "cwe_id": "CWE-252",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在资源管理错误漏洞，该漏洞由于对PsdImagePlugin.PsdImageFile方法中的内部资源管理不当，远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "本地",
+              "release_date": "2021-04-13",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 数据伪造问题漏洞",
+              "id": "XMIRROR-E5B71412-ED210D95",
+              "cve_id": "CVE-2021-28678",
+              "cnnvd_id": "CNNVD-202104-965",
+              "cnvd_id": "CNVD-2021-54029",
+              "cwe_id": "CWE-345",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在数据伪造问题漏洞，该漏洞由于对PsdImagePlugin.PsdImageFile方法中的内部资源管理不当，远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "本地",
+              "release_date": "2021-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B71412-ED216495",
+              "cve_id": "CVE-2021-28676",
+              "cnnvd_id": "CNNVD-202104-967",
+              "cnvd_id": "CNVD-2021-54032",
+              "cwe_id": "CWE-835",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow存在安全漏洞，该漏洞由于对PsdImagePlugin.PsdImageFile方法中的内部资源管理不当，远程攻击者可以将特制文件传递给应用程序，并执行拒绝服务（DoS）攻击。以下产品及版本受到影响：Pillow 1.0、Pillow 1.2、Pillow 1.7.6、Pillow 1.7.7、Pillow 1.7.8、Pillow 2.0.0、Pillow 2.1.0、Pillow 2.2.0、Pillow 2.2.1、Pillow 2.2.2、Pillow 2.3.0、Pillow 2.3.1、Pillow 2.3.2、Pillow 2.4.0、Pillow 2.5.0、Pillow 2.5.1、Pillow 2.5.2、Pillow 2.5.3、Pillow 2.6.0、Pillow 2.6.1、Pillow 2.6.2、Pillow 2.7.0、Pillow 2.8.0、Pillow 2.8.1、Pillow 2.8.2、Pillow 2.9.0、Pillow 3.0.0、Pillow 3.1.0、Pillow 3.1.1、Pillow 3.1.2、Pillow 3.2.0、Pillow 3.3.0、Pillow 3.3.1、Pillow 3.3.2、Pillow 3.3.3、Pillow 3.4.0、Pillow 3.4.1、Pillow 3.4.2、Pillow 4.0.0、Pillow 4.1.0、Pillow 4.1.1、Pillow 4.2.0、Pillow 4.2.1、Pillow 4.3.0、Pillow 5.0.0、Pillow 5.1.0、Pillow 5.2.0、Pillow 5.3.0、Pillow 5.4.0、Pillow 5.4.1、Pillow 6.0.0、Pillow 6.1.0、Pillow 6.2.0、Pillow 6.2.1、Pillow 6.2.2、Pillow 6.2.3、Pillow 7.0.0、Pillow 7.0.1、Pillow 7.1.0、Pillow 7.1.1、Pillow 7.1.2、Pillow 7.2.0、Pillow 8.0.0、Pillow 8.0.1、Pillow 8.1.0、Pillow 8.1.1、Pillow 8.1.2。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-04-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7C6FEB95",
+              "cve_id": "CVE-2023-50447",
+              "cnnvd_id": "CNNVD-202401-1886",
+              "cwe_id": "CWE-94 CWE-95",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 10.1.0及之前版本存在安全漏洞，该漏洞源于可以通过PIL.ImageMath.eval中的environment 参数执行任意代码。",
+              "suggestion": "## Remediation\nUpgrade `pillow` to version 10.2.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-19",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7C641D95",
+              "cve_id": "CVE-2023-44271",
+              "cnnvd_id": "CNNVD-202311-282",
+              "cwe_id": "CWE-770",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 10.0.0之前版本存在安全漏洞，该漏洞源于不受控制地分配内存，从而导致服务崩溃。",
+              "suggestion": "## Remediation\nUpgrade `pillow` to version 10.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-03",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Image Library和Pillow 安全漏洞",
+              "id": "XMIRROR-E5B70F18-81A67195",
+              "cve_id": "CVE-2014-3589",
+              "cnnvd_id": "CNNVD-201408-305",
+              "cwe_id": "CWE-20",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPIL和Pillow 2.3.2之前版本和2.5.2版本之前2.5.x版本的PIL/IcnsImagePlugin.py文件中存在安全漏洞。远程攻击者可通过特制的块数据利用该漏洞造成拒绝服务。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://pypi.python.org/pypi/Pillow/2.3.2\n",
+              "attack_type": "远程",
+              "release_date": "2014-08-20",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Image Library和Pillow 操作系统命令注入漏洞",
+              "id": "XMIRROR-E5B70F18-48924095",
+              "cve_id": "CVE-2014-3007",
+              "cnnvd_id": "CNNVD-201404-533",
+              "cwe_id": "CWE-78",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPIL 1.1.7及之前的版本和Pillow 2.3版本中存在安全漏洞。远程攻击者可借助shell元字符利用该漏洞执行任意命令。",
+              "suggestion": "通用方案： 目前没有详细解决方案提供： http://www.pythonware.com/products/pil/\n",
+              "attack_type": "远程",
+              "release_date": "2014-04-27",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71403-AF4DE095",
+              "cve_id": "CVE-2020-35654",
+              "cnnvd_id": "CNNVD-202101-497",
+              "cnvd_id": "CNVD-2021-02806",
+              "cwe_id": "CWE-787",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.0之前版本中存在缓冲区错误漏洞，当解码制作好的YCbCr文件时，由于在RGBA模式下与LibTIFF的某些解释冲突，TiffDecode会出现基于堆的缓冲区溢出。",
+              "suggestion": "通用方案： 厂商已发布了漏洞修复程序，请及时关注更新： https://security.gentoo.org/glsa/202101-08\n",
+              "attack_type": "远程",
+              "release_date": "2021-01-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B7140E-B0A26095",
+              "cve_id": "CVE-2019-19911",
+              "cnnvd_id": "CNNVD-202001-097",
+              "cnvd_id": "CNVD-2020-03157",
+              "cwe_id": "CWE-190",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中存在输入验证错误漏洞。攻击者可利用该漏洞造成拒绝服务（进程终止）。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-01-05",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F18-81274495",
+              "cve_id": "CVE-2014-9601",
+              "cnnvd_id": "CNNVD-201501-361",
+              "cnvd_id": "CNVD-2015-00535",
+              "cwe_id": "CWE-20",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。\r\nPillow 2.7.0之前版本中存在安全漏洞。远程攻击者可借助特制的PNG图像中压缩的文本块利用该漏洞造成拒绝服务。",
+              "suggestion": "通用方案： 用户可参考如下供应商提供的安全公告获得补丁信息： http://pillow.readthedocs.org/releasenotes/2.7.0.html\n",
+              "attack_type": "远程",
+              "release_date": "2015-01-16",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 缓冲区错误漏洞",
+              "id": "XMIRROR-E5B71412-EDC0B295",
+              "cve_id": "CVE-2021-25289",
+              "cnnvd_id": "CNNVD-202103-811",
+              "cnvd_id": "CNVD-2021-54035",
+              "cwe_id": "CWE-787",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 8.1.1之前版本中存在安全漏洞。该漏洞源于在解码精心编制的YCbCr文件时，TiffDecode会出现基于堆的缓冲区溢出。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-11",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 输入验证错误漏洞",
+              "id": "XMIRROR-E5B70FBE-53644F95",
+              "cve_id": "CVE-2020-5310",
+              "cnnvd_id": "CNNVD-202001-053",
+              "cnvd_id": "CNVD-2020-43131",
+              "cwe_id": "CWE-190",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow 6.2.2之前版本中的libImaging/TiffDecode.c文件存在输入验证错误漏洞，该漏洞源于程序没有正确分配内存。远程攻击者可借助特制TIFF图像利用该漏洞导致应用程序崩溃。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://pillow.readthedocs.io/en/stable/releasenotes/6.2.2.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-01-02",
+              "security_level_id": 1,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Python Image Library Jpeg2KImagePlugin插件资源管理错误漏洞",
+              "id": "XMIRROR-E5B70F18-81A6D495",
+              "cve_id": "CVE-2014-3598",
+              "cnnvd_id": "CNNVD-201505-006",
+              "cnvd_id": "CNVD-2015-02861",
+              "cwe_id": "CWE-399",
+              "description": "Python Image Library（PIL）是瑞士软件开发者Fredrik Lundh所研发的一个Python图像处理库。Jpeg2KImage是其中的一个图像处理插件。\r\nPIL 2.5.3之前版本的Jpeg2KImagePlugin插件中存在安全漏洞。远程攻击者可借助特制的图像利用该漏洞造成拒绝服务。",
+              "suggestion": "通用方案： 用户可参考如下厂商提供的安全公告获取补丁以修复该漏洞： https://pypi.python.org/pypi/Pillow/2.5.3\n",
+              "attack_type": "远程",
+              "release_date": "2015-05-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pillow 安全漏洞",
+              "id": "XMIRROR-E5B714EF-141CEE95",
+              "cve_id": "CVE-2024-28219",
+              "cnnvd_id": "CNNVD-202404-098",
+              "cwe_id": "CWE-680",
+              "description": "Pillow是一款基于Python的图像处理库。\r\nPillow(PIL Fork)存在安全漏洞，该漏洞源于_imagingcms.c中存在缓冲区溢出漏洞。",
+              "suggestion": "## Remediation\nUpgrade `pillow` to version 10.3.0 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-04-01",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 50
+        }
+      ],
+      "indirect_vulnerabilities": 84
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515331",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipaclient\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "cryptography",
+          "language": "Python",
+          "id": "57811780908515377",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaclient\\setup.py\\[cryptography:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 12
+        },
+        {
+          "name": "ipalib",
+          "language": "Python",
+          "id": "57811780908515378",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaclient\\setup.py\\[ipalib:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipapython",
+          "language": "Python",
+          "id": "57811780908515379",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaclient\\setup.py\\[ipapython:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "qrcode",
+          "language": "Python",
+          "id": "57811780908515380",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaclient\\setup.py\\[qrcode:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515381",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaclient\\setup.py\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 12
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515332",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipalib\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "ipaplatform",
+          "language": "Python",
+          "id": "57811780908515382",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[ipaplatform:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipapython",
+          "language": "Python",
+          "id": "57811780908515383",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[ipapython:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "netaddr",
+          "language": "Python",
+          "id": "57811780908515384",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[netaddr:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyasn1",
+          "language": "Python",
+          "id": "57811780908515385",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[pyasn1:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyasn1-modules",
+          "language": "Python",
+          "id": "57811780908515386",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[pyasn1-modules:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515387",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "urllib3",
+          "language": "Python",
+          "id": "57811780908515388",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipalib\\setup.py\\[urllib3:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Insecure Defaults",
+              "id": "XMIRROR-E5B77528-E19D572B",
+              "cwe_id": "CWE-453",
+              "description": "## Overview\n[urllib3](https://pypi.org/project/urllib3/) is a HTTP library with thread-safe connection pooling, file post, and more.\n\nAffected versions of this package are vulnerable to Insecure Defaults. The default SSL/TLS settings were insecure.\n## Remediation\nUpgrade `urllib3` to version 1.8 or higher.\n## References\n- [GitHub Commit](https://github.com/urllib3/urllib3/commit/2088570a293df42b1623dd74fcff0174d0565af5)\n",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 注入漏洞",
+              "id": "XMIRROR-E5B71403-AF51FD95",
+              "cve_id": "CVE-2020-26137",
+              "cnnvd_id": "CNNVD-202009-1751",
+              "cwe_id": "CWE-74",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3 1.25.9之前版本存在注入漏洞。该漏洞源于可以在putrequest()的第一个参数中插入CR和LF控制字符。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2020-09-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7140E-B0678295",
+              "cve_id": "CVE-2019-11324",
+              "cnnvd_id": "CNNVD-201904-910",
+              "cwe_id": "CWE-295",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3 1.24.2之前版本中存在信任管理问题漏洞。该漏洞源于网络系统或产品中缺乏有效的信任管理机制。攻击者可利用默认密码或者硬编码密码、硬编码证书等攻击受影响组件。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-18",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 注入漏洞",
+              "id": "XMIRROR-E5B7140E-B0D96195",
+              "cve_id": "CVE-2019-11236",
+              "cnnvd_id": "CNNVD-201904-630",
+              "cwe_id": "CWE-93",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3 1.24.1及之前版本版本中存在注入漏洞，该漏洞源于用户输入构造命令、数据结构或记录的操作过程中，网络系统或产品缺乏对用户输入数据的正确验证，未过滤或未正确过滤掉其中的特殊元素，导致系统或产品产生解析或解释方式错误。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2019-04-15",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FA95895",
+              "cve_id": "CVE-2018-20060",
+              "cnnvd_id": "CNNVD-201812-491",
+              "cwe_id": "CWE-288",
+              "description": "urllib3是一个基于Python的HTTP库，它具有线程安全连接池和文件后期支持等功能。\r\r\nurllib3 1.23之前版本中存在安全漏洞，该漏洞源于程序在进行跨源重定向时，没有移除Authorization HTTP报头，导致授权报头中的凭证暴露给其他主机或以明文的形式传输。攻击者可利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-12-11",
+              "security_level_id": 1,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-EDD32D95",
+              "cve_id": "CVE-2021-33503",
+              "cnnvd_id": "CNNVD-202106-1204",
+              "cwe_id": "CWE-400",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 Urllib3 存在资源管理错误漏洞，该漏洞源于在鉴权模块的URL中添加@参数导致，攻击者可利用该漏洞引起资源冲突导致拒绝服务。以下产品及型号会受到影响：Urllib3 0.3, 0.3.1, 0.4, 0.4.1, 1.0, 1.0.1, 1.0.2, 1.1, 1.2, 1.2.1, 1.3, 1.4, 1.5, 1.6, 1.7, 1.7.1, 1.8, 1.8.1, 1.8.2, 1.8.3, 1.9, 1.9.1, 1.10, 1.10.1, 1.10.2, 1.10.3, 1.10.4, 1.11, 1.12, 1.13, 1.13.1, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.18.1, 1.19, 1.19.1, 1.20, 1.21, 1.21.1, 1.22, 1.23, 1.24, 1.24.1, 1.24.2, 1.24.3, 1.25, 1.25.1, 1.25.2, 1.25.3, 1.25.4, 1.25.5, 1.25.6, 1.25.7, 1.25.8, 1.25.9, 1.25.10, 1.25.11, 1.26.0, 1.26.1, 1.26.2, 1.26.3, 1.26.4。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2021-06-02",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 信息泄露漏洞",
+              "id": "XMIRROR-E5B7141B-7CD4C795",
+              "cve_id": "CVE-2023-45803",
+              "cnnvd_id": "CNNVD-202310-1359",
+              "cwe_id": "CWE-200",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3存在安全漏洞，该漏洞源于从303状态更改请求方法重定向到GET后不会删除请求正文。受影响的产品和版本：urllib3 2至2.0.6版本，1.26.17及之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `urllib3` to version 1.26.18, 2.0.7 or higher.\u003c/p\u003e",
+              "attack_type": "邻近网络",
+              "release_date": "2023-10-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 输入验证错误漏洞",
+              "id": "XMIRROR-E5B714B5-4F3AD995",
+              "cve_id": "CVE-2018-25091",
+              "cnnvd_id": "CNNVD-202310-1119",
+              "cwe_id": "CWE-601",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3 1.24.2之前版本存在安全漏洞，该漏洞源于允许攻击者获取授权标头中的凭据或以明文形式传输凭据。",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.24.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-10-15",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 信息泄露漏洞(CVE-2023-43804)",
+              "id": "XMIRROR-E5B7141B-7C0D8095",
+              "cve_id": "CVE-2023-43804",
+              "cnnvd_id": "CNNVD-202310-281",
+              "cwe_id": "CWE-200",
+              "description": "\u003cp\u003eurllib3 是一个支持线程安全连接池及文件上传等功能的 HTTP 客户端库。该库不对 `Cookie` HTTP 标头进行特殊处理，用户在发送请求时需自行管理。在未显式禁用重定向的情况下，用户可能会意外地通过 HTTP 重定向将信息泄露至其他源。攻击者可利用此漏洞，获取用户的 Cookie 信息，从而进行账户劫持。受影响的版本包括 1.26.16 及之前版本，以及 2.0.5 之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户立即升级 urllib3 至版本 1.26.17、2.0.6 或更高版本；如无法立即更新，加快禁用 HTTP 重定向，发送请求时使用 `redirects=False`；同时，建议不要在请求中使用 `Cookie` 头。\u003c/p\u003e",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "urllib3 安全漏洞",
+              "id": "XMIRROR-E5B714EF-1458D995",
+              "cve_id": "CVE-2024-37891",
+              "cnnvd_id": "CNNVD-202406-1954",
+              "cwe_id": "CWE-669",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3存在安全漏洞，该漏洞源于跨域重定向期间不会剥离代理授权请求标头。",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.26.19, 2.2.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-06-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 重定向未在 PoolManager 实例化时禁用漏洞",
+              "id": "XMIRROR-E5B714FA-9A3D2195",
+              "cve_id": "CVE-2025-50181",
+              "cnnvd_id": "CNNVD-202506-2561",
+              "cwe_id": "CWE-601",
+              "description": "\u003cp\u003eurllib3 是一个常用的 HTTP 客户端库，广泛用于处理 HTTP 请求和响应，包括重定向和重试机制。此漏洞涉及 urllib3 对重定向和重试的处理机制，其中 `Retry` 对象用于控制两者设置。在实例化 `PoolManager` 时设置 `retries` 参数以尝试禁用重定向，然而由于 `retries` 参数被忽略，导致不能正确禁用重定向。该问题会影响依赖于禁用重定向功能的应用程序，可能因此暴露于服务端请求伪造（SSRF）或开放重定向漏洞中。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e升级到修复版本的 urllib3，以确保 `retries` 参数在 PoolManager 实例化时能够正确禁用重定向。同时，可以在每次请求中使用 `request()` 方法禁用重定向，作为临时缓解方案。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-06-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 11
+        }
+      ],
+      "indirect_vulnerabilities": 11
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515333",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipaplatform\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "cffi",
+          "language": "Python",
+          "id": "57811780908515389",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaplatform\\setup.py\\[cffi:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "ipapython",
+          "language": "Python",
+          "id": "57811780908515390",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaplatform\\setup.py\\[ipapython:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "pyasn1",
+          "language": "Python",
+          "id": "57811780908515391",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaplatform\\setup.py\\[pyasn1:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515392",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaplatform\\setup.py\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515334",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipapython\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "cffi",
+          "language": "Python",
+          "id": "57811780908515393",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[cffi:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "language": "Python",
+          "id": "57811780908515394",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[cryptography:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 12
+        },
+        {
+          "name": "dnspython",
+          "language": "Python",
+          "id": "57811780908515395",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[dnspython:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "gssapi",
+          "language": "Python",
+          "id": "57811780908515396",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[gssapi:]"
+          ],
+          "licenses": [
+            {
+              "name": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "name": "ipaplatform",
+          "language": "Python",
+          "id": "57811780908515397",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[ipaplatform:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "netaddr",
+          "language": "Python",
+          "id": "57811780908515398",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[netaddr:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515399",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipapython\\setup.py\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 13
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515335",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipaserver\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "cryptography",
+          "language": "Python",
+          "id": "57811780908515400",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[cryptography:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 12
+        },
+        {
+          "name": "dbus-python",
+          "language": "Python",
+          "id": "57811780908515401",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[dbus-python:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "dnspython",
+          "language": "Python",
+          "id": "57811780908515402",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[dnspython:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "ipaclient",
+          "language": "Python",
+          "id": "57811780908515403",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[ipaclient:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipalib",
+          "language": "Python",
+          "id": "57811780908515404",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[ipalib:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipaplatform",
+          "language": "Python",
+          "id": "57811780908515405",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[ipaplatform:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipapython",
+          "language": "Python",
+          "id": "57811780908515406",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[ipapython:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "jwcrypto",
+          "language": "Python",
+          "id": "57811780908515407",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[jwcrypto:]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-3.0-or-later"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jwcrypto JWT授权绕过漏洞",
+              "id": "XMIRROR-E5B70F5B-1DC14695",
+              "cve_id": "CVE-2022-3102",
+              "cwe_id": "CWE-287",
+              "description": "jwcrypto 是一个支持 JSON Web Token (JWT) 的加密库，专门用于处理和操作 JWT 令牌中的加密和签名功能。该漏洞的根本原因在于 JWT 自动检测令牌类型的特性。在处理 JSON Web Encryption (JWE) 令牌时，攻击者可以将使用公钥加密的 JWE 令牌替换为已签名的 JSON Web Signature (JWS) 令牌，从而绕过系统的授权机制，导致不当的访问权限被授予。",
+              "suggestion": "建议开发团队立即修复漏洞，确保在验证 JWT 令牌时，将 JWE 和 JWS 的验证逻辑分开。项目维护者应参考最新的安全编码实践，并定期进行安全审计。此外，尽快升级到含有本漏洞修复的新版本库（如果已发布）。",
+              "attack_type": "远程",
+              "release_date": "2022-09-22",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "JWCrypto 安全漏洞",
+              "id": "XMIRROR-E5B70F55-9AA81095",
+              "cve_id": "CVE-2023-6681",
+              "cnnvd_id": "CNNVD-202402-894",
+              "cwe_id": "CWE-400",
+              "description": "JWCrypto是JWCrypto开源的一个 Javascript 对象签名和加密 (JOSE) Web 标准的实现。\r\nJWCrypto存在安全漏洞，该漏洞源于允许攻击者发起拒绝服务(DoS)攻击以及可能的密码暴力破解和字典攻击。",
+              "suggestion": "## Remediation\nUpgrade `jwcrypto` to version 1.5.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-29",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "JWCrypto 安全漏洞",
+              "id": "XMIRROR-E5B714EF-147BE095",
+              "cve_id": "CVE-2024-28102",
+              "cnnvd_id": "CNNVD-202403-765",
+              "cwe_id": "CWE-770",
+              "description": "JWCrypto是JWCrypto开源的一个 Javascript 对象签名和加密 (JOSE) Web 标准的实现。\r\nJWCrypto 1.5.5及之前版本存在安全漏洞，该漏洞源于允许攻击者通过传入高压缩比的恶意 JWE Token 来引发 DoS 攻击。",
+              "suggestion": "## Remediation\nUpgrade `jwcrypto` to version 1.5.6 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-03-06",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "jwcrypto 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B944895",
+              "cve_id": "CVE-2016-6298",
+              "cnnvd_id": "CNNVD-201609-001",
+              "cnvd_id": "CNVD-2016-07105",
+              "cwe_id": "CWE-200",
+              "description": "jwcrypto是一套使用Python开发并实现JavaScript对象签名和加密的标准。\r\njwcrypto 0.3.2之前的版本中的jwa.py中的RSA 1.5版本的算法实现过程中的_Rsa15类存在安全漏洞，该漏洞源于程序缺少Random Filling保护机制。远程攻击者可借助Million Message Attack利用该漏洞获取明文数据。",
+              "suggestion": "通用方案： 目前厂商已经发布了补丁升级程序，请广大用户联系官网及时下载： http://jwcrypto.readthedocs.io/en/stable/\n",
+              "attack_type": "远程",
+              "release_date": "2016-08-31",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "lxml",
+          "language": "Python",
+          "id": "57811780908515408",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[lxml:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "lxml 和 libxml2 代码问题漏洞",
+              "id": "XMIRROR-E5B70F5B-1DE97195",
+              "cve_id": "CVE-2022-2309",
+              "cnnvd_id": "CNNVD-202207-382",
+              "cwe_id": "CWE-476",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。libxml2是开源的一个用来解析XML文档的函数库。它用C语言写成，并且能为多种语言所调用，例如C语言，C++，XSH。\r\nlxml和libxml2 2.9.10版本至2.9.14版本存在代码问题漏洞。攻击者利用该漏洞通过伪造的输入数据触发崩溃。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2022-07-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "lxml‘clean_html’函数安全绕过漏洞",
+              "id": "XMIRROR-E5B70F18-489E2995",
+              "cve_id": "CVE-2014-3146",
+              "cnnvd_id": "CNNVD-201405-128",
+              "cnvd_id": "CNVD-2014-02756",
+              "cwe_id": "CWE-79",
+              "description": "lxml是一个使用Python语言编写的用于处理XML和HTML的库。\r\r\nlxml 3.3.4及之前版本的lxml.html.clean模块中存在不完整黑名单漏洞，该漏洞源于程序没有正确过滤link scheme中的控制字符。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： Python lxml Module 3.3.5已经修复该漏洞，建议用户下载更新： http://lxml.de\n",
+              "attack_type": "远程",
+              "release_date": "2014-04-15",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71412-EDADDF95",
+              "cve_id": "CVE-2021-28957",
+              "cnnvd_id": "CNNVD-202103-1229",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.2 存在跨站脚本漏洞，该漏洞源于HTML5的formaction属性。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-03-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Arbitrary File Write",
+              "id": "XMIRROR-E5B77528-E19D382B",
+              "cwe_id": "CWE-22",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Arbitrary File Write. When writing to file paths that contain the URL escape character '%', the file path could wrongly be mangled by URL unescaping and thus write to a different file or directory.\n## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/0245aba002f069a0b157282707bdf77418d1b5be)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 4.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-AF96AE95",
+              "cve_id": "CVE-2020-27783",
+              "cnnvd_id": "CNNVD-202011-1920",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nLxml 存在跨站脚本漏洞，该漏洞源于javascript通过noscript和style组合进行转义。以下产品及版本会受到影响：Debian stretch, Debian stretch (security), Debian buster, Debian bullseye, sid; Red Hat Software Collections, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 8, Red Hat Enterprise Linux 5, Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7,Red Hat Enterprise Linux 8 , Red Hat OpenStack Platform 10 (Newton), Red Hat OpenStack Platform 13 (Queens)",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://lists.debian.org/debian-lts-announce/2020/11/msg00044.html\n",
+              "attack_type": "远程",
+              "release_date": "2020-11-27",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Lxml 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714B5-4F4D4595",
+              "cve_id": "CVE-2018-19787",
+              "cnnvd_id": "CNNVD-201812-001",
+              "cwe_id": "CWE-79",
+              "description": "Lxml是Lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.2.5之前版本中存在跨站脚本漏洞，该漏洞源于lxml.html.clean模块的lxml/html/clean.py文件没有移除使用转义的javascript: URLs。远程攻击者可利用该漏洞实施跨站脚本攻击。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2018-12-02",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "lxml 注入漏洞",
+              "id": "XMIRROR-E5B71412-EDA94895",
+              "cve_id": "CVE-2021-43818",
+              "cnnvd_id": "CNNVD-202112-1050",
+              "cnvd_id": "CNVD-2021-100235",
+              "cwe_id": "CWE-74 CWE-79",
+              "description": "lxml是lxml个人开发者的一个可与Python交互用于定位Html中元素的软件。\r\nlxml 4.6.5之前版本存在注入漏洞，该漏洞源于HTML Cleaner允许某些精心制作的脚本内容以及使用数据URI嵌入的SVG文件中的脚本内容通过。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-12-13",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-8455A22B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to race conditions when errors or user messages occur during threaded XSLT processing.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `lxml` to version 2.3.4 or higher.\n## References\n- [GitHub Commit](https://github.com/lxml/lxml/commit/26ae51c60462ba1567a123bc9701ff18f9c10789)\n",
+              "suggestion": "## Remediation\nUpgrade `lxml` to version 2.3.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-01",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "netaddr",
+          "language": "Python",
+          "id": "57811780908515409",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[netaddr:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "psutil",
+          "language": "Python",
+          "id": "57811780908515410",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[psutil:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "psutil 资源管理错误漏洞",
+              "id": "XMIRROR-E5B7140E-B0EFAF95",
+              "cve_id": "CVE-2019-18874",
+              "cnnvd_id": "CNNVD-201911-511",
+              "cwe_id": "CWE-415",
+              "description": "psutil是一款基于Python的进程和系统监视库。\r\npsutil 5.65及之前版本中存在资源管理错误漏洞。远程攻击者可借助特制数据利用该漏洞导致应用程序崩溃（拒绝服务）。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-11-11",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Race Condition",
+              "id": "XMIRROR-E5B77528-5F34602B",
+              "cwe_id": "CWE-362",
+              "description": "## Overview\n[psutil](https://github.com/giampaolo/psutil) is a cross-platform lib for process and system monitoring in Python\n\nAffected versions of this package are vulnerable to Race Condition in the `files/threads/connections` process.\n## Remediation\nUpgrade `psutil` to version 0.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/giampaolo/psutil/commit/163f29d25f4c5d573fbd436e658829afe95bc1d9)\n",
+              "suggestion": "## Remediation\nUpgrade `psutil` to version 0.5.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-01",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "pyasn1",
+          "language": "Python",
+          "id": "57811780908515411",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[pyasn1:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "language": "Python",
+          "id": "57811780908515412",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[requests:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C64195",
+              "cve_id": "CVE-2014-1829",
+              "cnnvd_id": "CNNVD-201410-320",
+              "cnvd_id": "CNVD-2014-07159",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Authorization头利用该漏洞获取‘netrc’密码。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： http://python-requests.org/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FF1AD95",
+              "cve_id": "CVE-2018-18074",
+              "cnnvd_id": "CNNVD-201810-457",
+              "cnvd_id": "CNVD-2018-26002",
+              "cwe_id": "CWE-522",
+              "description": "Requests package for Python是一款基于Python的开源HTTP库。\r\r\nRequests package for Python 2.19.1及之前版本（2018-09-14之前发布）中存在安全漏洞，该漏洞源于程序在接收到从https转换到http的重定向请求（带有相同主机名）时，会将HTTP Authorization包头发送到http URI。远程攻击者可通过嗅探网络利用该漏洞获取凭证。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "attack_type": "远程",
+              "release_date": "2018-10-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3EF9B02B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\r\n[`requests`](https://pypi.python.org/pypi/requests) is a Python HTTP for Humans.\r\n\r\nAffected versions of this package are vulnerable to Denial of Service (DoS) attacks. When sending a digest with an incorrect password, it will retry the request for infinity. An attacker can send many of these requests, causing a denial of service.\r\n\r\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## References\r\n- [GitHub Issue](https://github.com/requests/requests/issues/541)\r\n- [GitHub PR](https://github.com/requests/requests/pull/547)\r\n- [GitHub Commit](https://github.com/requests/requests/pull/547/commits/c3e6c41fc164d4348f8ce197bd0075aff05637af)\r\n",
+              "attack_type": "远程",
+              "release_date": "2012-04-07",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 信息泄露漏洞",
+              "id": "XMIRROR-E5B70F18-48C62C95",
+              "cve_id": "CVE-2014-1830",
+              "cnnvd_id": "CNNVD-201410-321",
+              "cnvd_id": "CNVD-2014-06355",
+              "cwe_id": "CWE-200",
+              "description": "Requests（也称python-requests）是软件开发者Kenneth Reitz和其他维护贡献者共同开发的一个采用Python语言编写的HTTP客户端库。\r\r\nRequests 2.3.0之前版本中存在安全漏洞。远程攻击者可通过读取重定向请求中的Proxy-Authorizatio头利用该漏洞获取敏感信息。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载： https://github.com/kennethreitz/requests/\n",
+              "attack_type": "远程",
+              "release_date": "2013-12-25",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-5F34502B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Denial of Service (DoS) due to incorrect password used in conjunction with digest authentication. This can lead to an infinite request retry cycle\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `requests` to version 0.12.0 or higher.\n## References\n- [GitHub Commit](https://github.com/psf/requests/commit/f3ad56f103e364671504bb0d960a0ed69c2eafbc)\n",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 0.12.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 8
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515413",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "python-augeas",
+          "language": "Python",
+          "id": "57811780908515414",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[python-augeas:]"
+          ]
+        },
+        {
+          "name": "python-ldap",
+          "language": "Python",
+          "id": "57811780908515415",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipaserver\\setup.py\\[python-ldap:]"
+          ],
+          "licenses": [
+            {
+              "name": "unknown"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "ReDoS in LDAP schema parser",
+              "id": "XMIRROR-C9431C71-2682AB31",
+              "cwe_id": "CWE-1333",
+              "description": "https://github.com/python-ldap/python-ldap/issues/424\n\n### Impact\nThe LDAP schema parser of python-ldap 3.3.1 and earlier are vulnerable to a regular expression denial-of-service attack. The issue affects clients that use ``ldap.schema`` package to parse LDAP schema definitions from an untrusted source.\n\n### Patches\nThe upcoming release of python-ldap 3.4.0 will contain a workaround to prevent ReDoS attacks. The schema parser refuses schema definitions with an excessive amount of backslashes.\n\n### Workarounds\nAs a workaround, users can check input for excessive amount of backslashes in schemas. More than a dozen backslashes per line are atypical.\n\n### References\n[CWE-1333](https://cwe.mitre.org/data/definitions/1333.html)\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [python-ldap](https://github.com/python-ldap/python-ldap) tracker\n",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B71412-ED58E595",
+              "cve_id": "CVE-2021-46823",
+              "cnnvd_id": "CNNVD-202206-1978",
+              "cwe_id": "CWE-1333",
+              "description": "python-ldap是python-ldap开源的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.0之前版本存在安全漏洞，该漏洞源于 LDAP 模式解析器中存在正则表达式拒绝服务 (ReDoS) 缺陷。攻击者利用该漏洞通过发送特制的正则表达式输入导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `python-ldap` to version 3.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E7CA95",
+              "cve_id": "CVE-2025-61912",
+              "cnnvd_id": "CNNVD-202510-1398",
+              "cwe_id": "CWE-116 CWE-170",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.dn.escape_dn_chars函数对x00转义不正确，可能导致客户端拒绝服务。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E70895",
+              "cve_id": "CVE-2025-61911",
+              "cnnvd_id": "CNNVD-202510-1400",
+              "cwe_id": "CWE-75 CWE-843",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.filter.escape_filter_chars方法在escape_mode=1模式下未正确处理list或dict类型的assertion_value参数，可能导致LDAP注入攻击。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        }
+      ],
+      "indirect_vulnerabilities": 39
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515336",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipasphinx\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "ipaserver\",",
+          "version": "\"ipalib\",\"sphinx\u003e3.0\",\"m2r2",
+          "language": "Python",
+          "id": "57811780908515416",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipasphinx\\setup.py\\[ipaserver\",:\"ipalib\",\"sphinx\u003e3.0\",\"m2r2]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515337",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipatests\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "cryptography",
+          "language": "Python",
+          "id": "57811780908515417",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[cryptography:]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35C295",
+              "cve_id": "CVE-2023-0217",
+              "cnnvd_id": "CNNVD-202302-516",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。在3.0.0到3.0.7版本的OpenSSL中，应用程序使用EVP_postgresql_public_check()函数检查格式错误的DSA公钥时，可能触发无效指针解引用漏洞，导致拒绝服务。",
+              "suggestion": "建议升级到OpenSSL 3.0.8或更高版本，或者安装官方补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Cryptography HKDF 安全漏洞",
+              "id": "XMIRROR-E5B70F1C-8B3B2695",
+              "cve_id": "CVE-2016-9243",
+              "cnnvd_id": "CNNVD-201611-329",
+              "cnvd_id": "CNVD-2016-11173",
+              "cwe_id": "CWE-20",
+              "description": "Cryptography是一个用于Python开发的加密工具包。HKDF是其中的一个基于HMAC的密钥导出函数。\r\nCryptography 1.5.2之前的版本中的HKDF存在安全漏洞。攻击者可利用该漏洞获取敏感信息的访问权限或绕过安全限制，执行未授权的操作。",
+              "suggestion": "通用方案： 目前厂商已经发布了升级补丁以修复此安全问题，详情请关注厂商主页： http://www.python.org/\n",
+              "attack_type": "远程",
+              "release_date": "2016-11-01",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL PKCS7签名数据空指针解引用漏洞",
+              "id": "XMIRROR-E5B70F55-9A6E9795",
+              "cve_id": "CVE-2023-0401",
+              "cnnvd_id": "CNNVD-202302-518",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的通用加密库，支持SSL和TLS协议。该漏洞出现在3.0.0到3.0.7版本，当验证PKCS7签名数据时，缺少对初始化函数返回值的检查，可能导致空指针解引用，从而引发程序崩溃。",
+              "suggestion": "建议升级到OpenSSL 3.0.8版本或安装相关补丁，以解决该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B71403-AF65EE95",
+              "cve_id": "CVE-2020-25659",
+              "cnnvd_id": "CNNVD-202010-1459",
+              "cwe_id": "CWE-385",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 存在安全漏洞，该漏洞源于定时oracle攻击进行RSA解密。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2020-10-25",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71562B",
+              "cwe_id": "CWE-415",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nDouble free vulnerability in the dsa_priv_decode function in crypto/dsa/dsa_ameth.c in OpenSSL 1.0.1 before 1.0.1s and 1.0.2 before 1.0.2g allows remote attackers to cause a denial of service (memory corruption) or possibly have unspecified other impact via a malformed DSA private key. (related to CVE-2016-0705)\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#091---2015-06-06)\n- [Github PR](https://github.com/pyca/cryptography/pull/2013)\n- [Gtihub Commit](https://github.com/pyca/cryptography/commit/87c99a503a699f5c0296636237a9208fc161cc9e)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 0.9.1 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71692B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`cryptography`](https://pypi.python.org/pypi/cryptography) are vulnerable to Denial of Service (DoS).\n\nThe OpenSSL backend beffore 1.0.2 made use of assertions to check response where the tests could not trigger a failure. If a user ran Python with this -O flag and got an invalid response code this could lead to a crash.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n\n## References\n- [GitHub Changelog](https://github.com/pyca/cryptography/blob/master/CHANGELOG.rst#102---2015-09-27)\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id=1267548)\n",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 1.0.2 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "TLS Truncation Attack",
+              "id": "XMIRROR-E5B77528-3EF9532B",
+              "cwe_id": "CWE-222",
+              "description": "## Overview\n[`cryptography`](https://pypi.python.org/pypi/cryptography) provides cryptographic recipes and primitives to Python developers.\n\nAffected versions of this package are vulnerable to TLS Truncation. A malicious user can prevent a user from fetching the parts of a message by inserting TCP code into a message indicating the message has completed.\n\n## References\n- [GitHub PR](https://github.com/pyca/cryptography/pull/2334)\n- [GitHub Commit](https://github.com/pyca/cryptography/commit/41aabcbd2326ae154a16a1a050ee01fb9a54bd19)\n",
+              "attack_type": "远程",
+              "release_date": "2015-09-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A5CAA95",
+              "cve_id": "CVE-2023-2650",
+              "cnnvd_id": "CNNVD-202305-2503",
+              "cwe_id": "CWE-770",
+              "description": "OpenSSL是OpenSSL团队的一个开源的能够实现安全套接层（SSLv2/v3）和安全传输层（TLSv1）协议的通用加密库。该产品支持多种加密算法，包括对称密码、哈希算法、安全散列算法等。该漏洞源于处理特制的ASN.1对象标识符时可能非常慢，导致系统拒绝服务。",
+              "suggestion": "建议受影响用户升级至最新版本的OpenSSL以修复该漏洞。",
+              "attack_type": "远程",
+              "release_date": "2023-05-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-cryptography 安全漏洞",
+              "id": "XMIRROR-E5B7141B-7CA35D95",
+              "cve_id": "CVE-2023-50782",
+              "cnnvd_id": "CNNVD-202312-1318",
+              "cwe_id": "CWE-208 CWE-203",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography存在安全漏洞。攻击者利用该漏洞可以获取敏感信息。",
+              "suggestion": "## Remediation\nUpgrade `cryptography` to version 42.0.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-12-13",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "OpenSSL X.509证书验证缓冲区溢出漏洞",
+              "id": "XMIRROR-E5B70F5B-1DD61995",
+              "cve_id": "CVE-2022-4203",
+              "cnnvd_id": "CNNVD-202302-506",
+              "cwe_id": "CWE-125",
+              "description": "OpenSSL是一个开源的能够实现SSL和TLS协议的通用加密库，支持多种加密算法。该漏洞源于在X.509证书验证中，尤其是在名称约束检查阶段，可以触发读缓冲区溢出。",
+              "suggestion": "升级至安全版本OpenSSL 3.0.8或更高版本，或安装相关补丁进行修复。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "OpenSSL 拒绝服务漏洞",
+              "id": "XMIRROR-E5B70F55-9A35D395",
+              "cve_id": "CVE-2023-0216",
+              "cnnvd_id": "CNNVD-202302-512",
+              "cwe_id": "CWE-476",
+              "description": "OpenSSL是一个开源的能够实现安全套接层和安全传输层协议的通用加密库，支持多种加密算法。存在无效指针解引用漏洞。当应用程序尝试使用 d2i_PKCS7()、d2i_PKCS7_bio() 或 d2i_PKCS7_fp() 函数加载格式错误的 PKCS7 数据时，可能会导致程序崩溃。",
+              "suggestion": "建议将OpenSSL升级至版本3.0.8或更高版本，或者安装提供的安全补丁。",
+              "attack_type": "远程",
+              "release_date": "2023-02-07",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-cryptography 信任管理问题漏洞",
+              "id": "XMIRROR-E5B7141B-88F64195",
+              "cve_id": "CVE-2023-38325",
+              "cnnvd_id": "CNNVD-202307-1332",
+              "cwe_id": "CWE-295",
+              "description": "python-cryptography是Cryptographic团队的一个应用于加密的 Python 代码库。\r\npython-cryptography 41.0.2之前版本存在安全漏洞，该漏洞源于会错误地处理具有关键选项的 SSH 证书。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\nhttps://github.com/pyca/cryptography/pull/9208",
+              "attack_type": "远程",
+              "release_date": "2023-07-14",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 12
+        },
+        {
+          "name": "dnspython",
+          "language": "Python",
+          "id": "57811780908515418",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[dnspython:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Eventlet 安全漏洞",
+              "id": "XMIRROR-E5B7141B-88592695",
+              "cve_id": "CVE-2023-29483",
+              "cnnvd_id": "CNNVD-202404-1742",
+              "cwe_id": "CWE-292",
+              "description": "Eventlet是Python的一个并发网络库。\r\nEventlet 0.35.2之前版本存在安全漏洞，该漏洞源于允许远程攻击者通过从预期的IP地址和源端口快速发送无效数据包来干扰DNS名称解析。",
+              "suggestion": "## Remediation\nUpgrade `dnspython` to version 2.6.1 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-02-11",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "gssapi",
+          "language": "Python",
+          "id": "57811780908515419",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[gssapi:]"
+          ],
+          "licenses": [
+            {
+              "name": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "name": "ipaclient",
+          "language": "Python",
+          "id": "57811780908515420",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[ipaclient:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipalib",
+          "language": "Python",
+          "id": "57811780908515421",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[ipalib:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipaplatform",
+          "language": "Python",
+          "id": "57811780908515422",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[ipaplatform:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "ipapython",
+          "language": "Python",
+          "id": "57811780908515423",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[ipapython:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "polib",
+          "language": "Python",
+          "id": "57811780908515424",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[polib:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytest",
+          "language": "Python",
+          "id": "57811780908515425",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[pytest:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pytest_multihost",
+          "language": "Python",
+          "id": "57811780908515426",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[pytest_multihost:]"
+          ]
+        },
+        {
+          "name": "python-ldap",
+          "language": "Python",
+          "id": "57811780908515427",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[python-ldap:]"
+          ],
+          "licenses": [
+            {
+              "name": "unknown"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "ReDoS in LDAP schema parser",
+              "id": "XMIRROR-C9431C71-2682AB31",
+              "cwe_id": "CWE-1333",
+              "description": "https://github.com/python-ldap/python-ldap/issues/424\n\n### Impact\nThe LDAP schema parser of python-ldap 3.3.1 and earlier are vulnerable to a regular expression denial-of-service attack. The issue affects clients that use ``ldap.schema`` package to parse LDAP schema definitions from an untrusted source.\n\n### Patches\nThe upcoming release of python-ldap 3.4.0 will contain a workaround to prevent ReDoS attacks. The schema parser refuses schema definitions with an excessive amount of backslashes.\n\n### Workarounds\nAs a workaround, users can check input for excessive amount of backslashes in schemas. More than a dozen backslashes per line are atypical.\n\n### References\n[CWE-1333](https://cwe.mitre.org/data/definitions/1333.html)\n\n### For more information\nIf you have any questions or comments about this advisory:\n* Open an issue in [python-ldap](https://github.com/python-ldap/python-ldap) tracker\n",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B71412-ED58E595",
+              "cve_id": "CVE-2021-46823",
+              "cnnvd_id": "CNNVD-202206-1978",
+              "cwe_id": "CWE-1333",
+              "description": "python-ldap是python-ldap开源的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.0之前版本存在安全漏洞，该漏洞源于 LDAP 模式解析器中存在正则表达式拒绝服务 (ReDoS) 缺陷。攻击者利用该漏洞通过发送特制的正则表达式输入导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `python-ldap` to version 3.4.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2021-11-30",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E7CA95",
+              "cve_id": "CVE-2025-61912",
+              "cnnvd_id": "CNNVD-202510-1398",
+              "cwe_id": "CWE-116 CWE-170",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.dn.escape_dn_chars函数对x00转义不正确，可能导致客户端拒绝服务。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "python-ldap 安全漏洞",
+              "id": "XMIRROR-E5B714FA-64E70895",
+              "cve_id": "CVE-2025-61911",
+              "cnnvd_id": "CNNVD-202510-1400",
+              "cwe_id": "CWE-75 CWE-843",
+              "description": "python-ldap是python基金会的一个用于 Python 的 LDAP 客户端 API。\r\npython-ldap 3.4.5之前版本存在安全漏洞，该漏洞源于ldap.filter.escape_filter_chars方法在escape_mode=1模式下未正确处理list或dict类型的assertion_value参数，可能导致LDAP注入攻击。",
+              "suggestion": "补丁方案： None\n",
+              "attack_type": "远程",
+              "release_date": "2025-10-10",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "six",
+          "language": "Python",
+          "id": "57811780908515428",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[six:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pexpect",
+          "language": "Python",
+          "id": "57811780908515429",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\ipatests\\setup.py\\[pexpect:]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 17
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515338",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\pypi\\freeipa\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "ipaclient",
+          "language": "Python",
+          "id": "57811780908515430",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\pypi\\freeipa\\setup.py\\[ipaclient:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515339",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\pypi\\ipa\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "ipaclient",
+          "language": "Python",
+          "id": "57811780908515431",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\pypi\\ipa\\setup.py\\[ipaclient:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515340",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\pypi\\ipaserver\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "ipaclient",
+          "language": "Python",
+          "id": "57811780908515432",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\pypi\\ipaserver\\setup.py\\[ipaclient:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811780908515341",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\pypi\\ipatests\\setup.py"
+      ],
+      "children": [
+        {
+          "name": "ipaclient",
+          "language": "Python",
+          "id": "57811780908515433",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\pypi\\ipatests\\setup.py\\[ipaclient:]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "freeipa",
+      "version": "4.6.90",
+      "language": "JavaScript",
+      "id": "57811780908515342",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\src\\freeipa\\package.json\\[freeipa:4.6.90]"
+      ],
+      "children": [
+        {
+          "name": "grunt",
+          "language": "JavaScript",
+          "id": "57811780908515434",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\install\\ui\\src\\freeipa\\package.json\\[freeipa:4.6.90]\\[grunt:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Grunt 路径遍历漏洞",
+              "id": "XMIRROR-E5B70F5B-1D7D1595",
+              "cve_id": "CVE-2022-0436",
+              "cnnvd_id": "CNNVD-202204-3257",
+              "cwe_id": "CWE-22",
+              "description": "Grunt是一个 JavaScript 任务运行器。\r\nGrunt 1.5.2 之前存在路径遍历漏洞，目前尚无此漏洞的相关信息，请随时关注CNNVD或厂商公告。",
+              "suggestion": "## Remediation\nUpgrade `grunt` to version 1.5.0 or higher.",
+              "attack_type": "本地",
+              "release_date": "2022-04-12",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Grunt 安全漏洞",
+              "id": "XMIRROR-E5B70F5B-1D0F4495",
+              "cve_id": "CVE-2022-1537",
+              "cnnvd_id": "CNNVD-202205-2827",
+              "cwe_id": "CWE-367",
+              "description": "Grunt是一个 JavaScript 任务运行器。\r\nGrunt 1.5.3之前版本存在安全漏洞，该漏洞源于file.copy容易受到TOCTOU的影响攻击者利用该漏洞执行任意文件写入。",
+              "suggestion": "## Remediation\nUpgrade `grunt` to version 1.5.3 or higher.",
+              "attack_type": "本地",
+              "release_date": "2022-05-10",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "grunt-contrib-qunit",
+          "language": "JavaScript",
+          "id": "57811780908515435",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\install\\ui\\src\\freeipa\\package.json\\[freeipa:4.6.90]\\[grunt-contrib-qunit:]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "grunt-qunit-junit",
+          "language": "JavaScript",
+          "id": "57811780908515436",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\install\\ui\\src\\freeipa\\package.json\\[freeipa:4.6.90]\\[grunt-qunit-junit:]"
+          ]
+        },
+        {
+          "name": "dojo",
+          "version": "1.16.5",
+          "language": "JavaScript",
+          "id": "57811780908515437",
+          "direct": true,
+          "paths": [
+            "freeipa_freeipa\\install\\ui\\src\\freeipa\\package.json\\[freeipa:4.6.90]\\[dojo:1.16.5]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            },
+            {
+              "name": "AFL-2.1"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 2
+    },
+    {
+      "id": "57811780908515343",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\doc\\workshop\\packer-template-fedora.json"
+      ]
+    },
+    {
+      "id": "57811780908515344",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\doc\\categories.json"
+      ]
+    },
+    {
+      "id": "57811780908515345",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\doc\\config.json"
+      ]
+    },
+    {
+      "id": "57811780908515346",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\doc\\guides.json"
+      ]
+    },
+    {
+      "id": "57811780908515347",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\package.json"
+      ]
+    },
+    {
+      "id": "57811780908515348",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\src\\freeipa\\package.json"
+      ]
+    },
+    {
+      "id": "57811780908515349",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\group_show.json"
+      ]
+    },
+    {
+      "id": "57811780908515350",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\i18n_messages.json"
+      ]
+    },
+    {
+      "id": "57811780908515351",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\ipa_init.json"
+      ]
+    },
+    {
+      "id": "57811780908515352",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\ipa_init_commands.json"
+      ]
+    },
+    {
+      "id": "57811780908515353",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\ipa_init_objects.json"
+      ]
+    },
+    {
+      "id": "57811780908515354",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\user_find.json"
+      ]
+    },
+    {
+      "id": "57811780908515355",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\user_mod.json"
+      ]
+    },
+    {
+      "id": "57811780908515356",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\user_show\\1.json"
+      ]
+    },
+    {
+      "id": "57811780908515357",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\install\\ui\\test\\data\\user_show.json"
+      ]
+    },
+    {
+      "id": "57811780908515358",
+      "direct": true,
+      "paths": [
+        "freeipa_freeipa\\ipatests\\azure\\Dockerfiles\\seccomp.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 103
+}

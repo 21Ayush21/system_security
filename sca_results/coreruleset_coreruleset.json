@@ -1,0 +1,95 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "coreruleset_coreruleset",
+    "size": 0,
+    "start_time": "2025-11-27 21:31:18",
+    "end_time": "2025-11-27 21:31:20",
+    "cost_time": 1.6262427000000002
+  },
+  "id": "57811778898329600",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811778898329601",
+      "direct": true,
+      "paths": [
+        "coreruleset_coreruleset\\tests\\integration\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pytest",
+          "version": "\u003e=6.2.5",
+          "language": "Python",
+          "id": "57811778898329605",
+          "direct": true,
+          "paths": [
+            "coreruleset_coreruleset\\tests\\integration\\requirements.txt\\[pytest:\u003e=6.2.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811778898329602",
+      "direct": true,
+      "paths": [
+        "coreruleset_coreruleset\\tests\\regression\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "ftw",
+          "version": "1.3.0",
+          "language": "Python",
+          "id": "57811778898329606",
+          "direct": true,
+          "paths": [
+            "coreruleset_coreruleset\\tests\\regression\\requirements.txt\\[ftw:1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811778898329603",
+      "direct": true,
+      "paths": [
+        "coreruleset_coreruleset\\util\\crs-rules-check\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "msc-pyparser",
+          "version": "\u003e=1.2.1",
+          "language": "Python",
+          "id": "57811778898329607",
+          "direct": true,
+          "paths": [
+            "coreruleset_coreruleset\\util\\crs-rules-check\\requirements.txt\\[msc-pyparser:\u003e=1.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811778898329604",
+      "direct": true,
+      "paths": [
+        "coreruleset_coreruleset\\renovate.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5010 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "pgadmin-org_pgadmin4",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:42",
+    "end_time": "2025-11-27 21:56:52",
+    "cost_time": 9.4333816
+  },
+  "id": "57811829053685760",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811829053685761",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "Authlib",
+          "version": "1.6.5",
+          "language": "Python",
+          "id": "57811829053685998",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Authlib:1.6.5]"
+          ]
+        },
+        {
+          "name": "azure-identity",
+          "version": "1.25.1",
+          "language": "Python",
+          "id": "57811829053685999",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[azure-identity:1.25.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "azure-mgmt-rdbms",
+          "version": "10.1.0",
+          "language": "Python",
+          "id": "57811829053686000",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[azure-mgmt-rdbms:10.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "azure-mgmt-resource",
+          "version": "24.0.0",
+          "language": "Python",
+          "id": "57811829053686001",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[azure-mgmt-resource:24.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "azure-mgmt-subscription",
+          "version": "3.1.1",
+          "language": "Python",
+          "id": "57811829053686002",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[azure-mgmt-subscription:3.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "bcrypt",
+          "version": "5.0.*",
+          "language": "Python",
+          "id": "57811829053686003",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[bcrypt:5.0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "boto3",
+          "version": "1.41.*",
+          "language": "Python",
+          "id": "57811829053686004",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[boto3:1.41.*]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "cryptography",
+          "version": "46.0.*",
+          "language": "Python",
+          "id": "57811829053686005",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[cryptography:46.0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "Flask-Babel",
+          "version": "4.0.*",
+          "language": "Python",
+          "id": "57811829053686006",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Babel:4.0.*]"
+          ]
+        },
+        {
+          "name": "Flask-Compress",
+          "version": "1.*",
+          "language": "Python",
+          "id": "57811829053686007",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Compress:1.*]"
+          ]
+        },
+        {
+          "name": "Flask-Login",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811829053686008",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Login:0.*]"
+          ]
+        },
+        {
+          "name": "Flask-Mail",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811829053686009",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Mail:0.*]"
+          ]
+        },
+        {
+          "name": "Flask-Migrate",
+          "version": "4.*",
+          "language": "Python",
+          "id": "57811829053686010",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Migrate:4.*]"
+          ]
+        },
+        {
+          "name": "Flask-Paranoid",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811829053686011",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Paranoid:0.*]"
+          ]
+        },
+        {
+          "name": "Flask-Security-Too",
+          "version": "5.4.*",
+          "language": "Python",
+          "id": "57811829053686012",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Security-Too:5.4.*]"
+          ]
+        },
+        {
+          "name": "Flask-Security-Too",
+          "version": "5.7.*",
+          "language": "Python",
+          "id": "57811829053686013",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-Security-Too:5.7.*]"
+          ]
+        },
+        {
+          "name": "Flask-SocketIO",
+          "version": "5.5.*",
+          "language": "Python",
+          "id": "57811829053686014",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-SocketIO:5.5.*]"
+          ]
+        },
+        {
+          "name": "Flask-SQLAlchemy",
+          "version": "3.1.*",
+          "language": "Python",
+          "id": "57811829053686015",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-SQLAlchemy:3.1.*]"
+          ]
+        },
+        {
+          "name": "Flask-WTF",
+          "version": "1.2.*",
+          "language": "Python",
+          "id": "57811829053686016",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask-WTF:1.2.*]"
+          ]
+        },
+        {
+          "name": "Flask",
+          "version": "3.1.*",
+          "language": "Python",
+          "id": "57811829053686017",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Flask:3.1.*]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Flask 安全漏洞",
+              "id": "XMIRROR-E5B714FA-9ABA4695",
+              "cve_id": "CVE-2025-47278",
+              "cnnvd_id": "CNNVD-202505-1803",
+              "cwe_id": "CWE-683",
+              "description": "Flask是Pallets开源的一个用于构建web应用程序的Python微框架。\r\nFlask 3.1.0版本存在安全漏洞，该漏洞源于密钥回退配置处理不当，可能导致使用过期的密钥进行会话签名。",
+              "suggestion": "## Remediation\nUpgrade `flask` to version 3.1.1 or higher.",
+              "attack_type": "本地",
+              "release_date": "2025-05-13",
+              "security_level_id": 4,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "google-api-python-client",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811829053686018",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[google-api-python-client:2.*]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "google-auth-oauthlib",
+          "version": "1.2.3",
+          "language": "Python",
+          "id": "57811829053686019",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[google-auth-oauthlib:1.2.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "gssapi",
+          "version": "1.10.*",
+          "language": "Python",
+          "id": "57811829053686020",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[gssapi:1.10.*]"
+          ],
+          "licenses": [
+            {
+              "name": "UNKNOWN"
+            }
+          ]
+        },
+        {
+          "name": "jsonformatter",
+          "version": "~=0.3.4",
+          "language": "Python",
+          "id": "57811829053686021",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[jsonformatter:~=0.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "keyring",
+          "version": "25.*",
+          "language": "Python",
+          "id": "57811829053686022",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[keyring:25.*]"
+          ],
+          "licenses": [
+            {
+              "name": "PSF-2.0"
+            }
+          ]
+        },
+        {
+          "name": "ldap3",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811829053686023",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[ldap3:2.*]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-3.0-only"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Authentication Bypass",
+              "id": "XMIRROR-E5B77528-3E51582B",
+              "cwe_id": "CWE-592",
+              "description": "## Overview\n[`ldap3`](http://pypi.python.org/pypi/ldap3) is a strictly RFC 4510 conforming LDAP V3 pure Python client library.\n\nAffected versions of this package are vulnerable to Authentication Bypass via the rebind() method of the Connection object. It is performing the following comparison to validate input data:\n\n```py\nif password:\n    self.password = password\n````\n\nThat condition is false in case of password = '', so the old value of the object will be keep in that case, including case where the bind was correct.\n\nThis is a potential security hole, since a correct bind followed by a rebind with empty password will complete the binding correctly.\n## References\n- [GitHub Issue](https://github.com/cannatag/ldap3/issues/393)\n",
+              "attack_type": "远程",
+              "release_date": "2018-01-22",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "libgravatar",
+          "version": "1.0.*",
+          "language": "Python",
+          "id": "57811829053686024",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[libgravatar:1.0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "paramiko",
+          "version": "3.5.1",
+          "language": "Python",
+          "id": "57811829053686025",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[paramiko:3.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "passlib",
+          "version": "1.*",
+          "language": "Python",
+          "id": "57811829053686026",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[passlib:1.*]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Cryptographic Weakness",
+              "id": "XMIRROR-E5B77528-8119932B",
+              "cwe_id": "CWE-521",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Cryptographic Weakness. The `SHA-256` prehash is unsalted, meaning the resulting `bcrypt` digest is vulnerable to breach correlation attacks.\n## Remediation\nUpgrade `passlib` to version 1.7.3 or higher.\n## References\n- [1.7.3 Release Changelog](https://passlib.readthedocs.io/en/stable/history/1.7.html#id1)\n- [BitBucket Commit](https://bitbucket.org/ecollins/passlib/commits/bd0da1bdf0fd17b886212649184f2ce3eb8c8329)\n- [BitBucket Issue](https://bitbucket.org/ecollins/passlib/issues/114/bcrypt_sha256-is-vulnerable-to-breach)\n",
+              "suggestion": "## Remediation\nUpgrade `passlib` to version 1.7.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-05-19",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Denial of Service (DoS)",
+              "id": "XMIRROR-E5B77528-3E71362B",
+              "cwe_id": "CWE-400",
+              "description": "## Overview\nAffected versions of [`passlib`](https://pypi.python.org/pypi/passlib) are vulnerable to Denial of Service (DoS) attack.\n\n`passlib` is enable `wildcard password` by default, which allows remote attackers to cause a denial of service (CPU consumption) via multiple wildcard characters in the common name in a certificate.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\nUpgrade `passlib` to version 1.4 or higher.\n\n## References\n- [Readthedocs Passlib ChangeLog](http://passlib.readthedocs.io/en/stable/history/ancient.html#hashes)\n- [BitBucket Commit](https://bitbucket.org/ecollins/passlib/commits/aca22d57fc1d110be722d71180185f411a3374b7?at=1.4)\n",
+              "suggestion": "## Remediation\nUpgrade `passlib` to version 1.4 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2017-12-04",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "psutil",
+          "version": "7.1.*",
+          "language": "Python",
+          "id": "57811829053686027",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[psutil:7.1.*]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "psycopg[c]",
+          "version": "3.2.13",
+          "language": "Python",
+          "id": "57811829053686028",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[psycopg[c]:3.2.13]"
+          ]
+        },
+        {
+          "name": "pyotp",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811829053686029",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[pyotp:2.*]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "python-dateutil",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811829053686030",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[python-dateutil:2.*]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pytz",
+          "version": "2025.*",
+          "language": "Python",
+          "id": "57811829053686031",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[pytz:2025.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "pywinpty",
+          "version": "2.0.*",
+          "language": "Python",
+          "id": "57811829053686032",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[pywinpty:2.0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "qrcode[pil]",
+          "version": "8.*",
+          "language": "Python",
+          "id": "57811829053686033",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[qrcode[pil]:8.*]"
+          ]
+        },
+        {
+          "name": "setuptools",
+          "version": "80.*",
+          "language": "Python",
+          "id": "57811829053686034",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[setuptools:80.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "SQLAlchemy",
+          "version": "2.*",
+          "language": "Python",
+          "id": "57811829053686035",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[SQLAlchemy:2.*]"
+          ]
+        },
+        {
+          "name": "sqlparse",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811829053686036",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[sqlparse:0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "sqlparse 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-EDD16095",
+              "cve_id": "CVE-2021-32839",
+              "cnnvd_id": "CNNVD-202109-1459",
+              "cwe_id": "CWE-400",
+              "description": "sqlparse是 Python 的非验证 SQL 解析器。它提供对 SQL 语句的解析、拆分和格式化的支持。\r\nsqlparse 0.4.0 和 0.4.1 版本中存在资源管理错误漏洞，该漏洞允许攻击者进行ReDoS（正则表达式拒绝服务）的攻击。",
+              "suggestion": "通用方案： 下载相关补丁\n",
+              "attack_type": "远程",
+              "release_date": "2021-09-11",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "sqlparse 安全漏洞",
+              "id": "XMIRROR-E5B70F5F-80466495",
+              "cve_id": "CVE-2024-4340",
+              "cnnvd_id": "CNNVD-202404-3659",
+              "cwe_id": "CWE-674",
+              "description": "sqlparse是 Python 的非验证 SQL 解析器。它提供对 SQL 语句的解析、拆分和格式化的支持。\r\nsqlparse 存在安全漏洞，该漏洞源于应用将嵌套的列表传递给 sqlparse.parse()，导致拒绝服务。",
+              "suggestion": "## Remediation\nUpgrade `sqlparse` to version 0.5.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-04-16",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "sshtunnel",
+          "version": "0.*",
+          "language": "Python",
+          "id": "57811829053686037",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[sshtunnel:0.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "typer[all]",
+          "version": "0.20.*",
+          "language": "Python",
+          "id": "57811829053686038",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[typer[all]:0.20.*]"
+          ]
+        },
+        {
+          "name": "urllib3",
+          "version": "1.26.*",
+          "language": "Python",
+          "id": "57811829053686039",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[urllib3:1.26.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "urllib3 信任管理问题漏洞",
+              "id": "XMIRROR-E5B71412-ED644595",
+              "cve_id": "CVE-2021-28363",
+              "cnnvd_id": "CNNVD-202103-938",
+              "cwe_id": "CWE-295",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3 library 1.26.x before 1.26.4 存在信任管理问题漏洞，该漏洞源于SSLContext正确验证的其他服务器的证书将被静默接受。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2021-03-15",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71412-EDD32D95",
+              "cve_id": "CVE-2021-33503",
+              "cnnvd_id": "CNNVD-202106-1204",
+              "cwe_id": "CWE-400",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 Urllib3 存在资源管理错误漏洞，该漏洞源于在鉴权模块的URL中添加@参数导致，攻击者可利用该漏洞引起资源冲突导致拒绝服务。以下产品及型号会受到影响：Urllib3 0.3, 0.3.1, 0.4, 0.4.1, 1.0, 1.0.1, 1.0.2, 1.1, 1.2, 1.2.1, 1.3, 1.4, 1.5, 1.6, 1.7, 1.7.1, 1.8, 1.8.1, 1.8.2, 1.8.3, 1.9, 1.9.1, 1.10, 1.10.1, 1.10.2, 1.10.3, 1.10.4, 1.11, 1.12, 1.13, 1.13.1, 1.14, 1.15, 1.15.1, 1.16, 1.17, 1.18, 1.18.1, 1.19, 1.19.1, 1.20, 1.21, 1.21.1, 1.22, 1.23, 1.24, 1.24.1, 1.24.2, 1.24.3, 1.25, 1.25.1, 1.25.2, 1.25.3, 1.25.4, 1.25.5, 1.25.6, 1.25.7, 1.25.8, 1.25.9, 1.25.10, 1.25.11, 1.26.0, 1.26.1, 1.26.2, 1.26.3, 1.26.4。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2021-06-02",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "urllib3 信息泄露漏洞",
+              "id": "XMIRROR-E5B7141B-7CD4C795",
+              "cve_id": "CVE-2023-45803",
+              "cnnvd_id": "CNNVD-202310-1359",
+              "cwe_id": "CWE-200",
+              "description": "\u003cp\u003eurllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。 urllib3存在安全漏洞，该漏洞源于从303状态更改请求方法重定向到GET后不会删除请求正文。受影响的产品和版本：urllib3 2至2.0.6版本，1.26.17及之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e## Remediation Upgrade `urllib3` to version 1.26.18, 2.0.7 or higher.\u003c/p\u003e",
+              "attack_type": "邻近网络",
+              "release_date": "2023-10-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 信息泄露漏洞(CVE-2023-43804)",
+              "id": "XMIRROR-E5B7141B-7C0D8095",
+              "cve_id": "CVE-2023-43804",
+              "cnnvd_id": "CNNVD-202310-281",
+              "cwe_id": "CWE-200",
+              "description": "\u003cp\u003eurllib3 是一个支持线程安全连接池及文件上传等功能的 HTTP 客户端库。该库不对 `Cookie` HTTP 标头进行特殊处理，用户在发送请求时需自行管理。在未显式禁用重定向的情况下，用户可能会意外地通过 HTTP 重定向将信息泄露至其他源。攻击者可利用此漏洞，获取用户的 Cookie 信息，从而进行账户劫持。受影响的版本包括 1.26.16 及之前版本，以及 2.0.5 之前版本。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e建议用户立即升级 urllib3 至版本 1.26.17、2.0.6 或更高版本；如无法立即更新，加快禁用 HTTP 重定向，发送请求时使用 `redirects=False`；同时，建议不要在请求中使用 `Cookie` 头。\u003c/p\u003e",
+              "attack_type": "远程",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "urllib3 安全漏洞",
+              "id": "XMIRROR-E5B714EF-1458D995",
+              "cve_id": "CVE-2024-37891",
+              "cnnvd_id": "CNNVD-202406-1954",
+              "cwe_id": "CWE-669",
+              "description": "urllib3是一款Python HTTP库。该产品具有线程安全连接池、文件发布支持等。\r\nurllib3存在安全漏洞，该漏洞源于跨域重定向期间不会剥离代理授权请求标头。",
+              "suggestion": "## Remediation\nUpgrade `urllib3` to version 1.26.19, 2.2.2 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-06-17",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "urllib3 重定向未在 PoolManager 实例化时禁用漏洞",
+              "id": "XMIRROR-E5B714FA-9A3D2195",
+              "cve_id": "CVE-2025-50181",
+              "cnnvd_id": "CNNVD-202506-2561",
+              "cwe_id": "CWE-601",
+              "description": "\u003cp\u003eurllib3 是一个常用的 HTTP 客户端库，广泛用于处理 HTTP 请求和响应，包括重定向和重试机制。此漏洞涉及 urllib3 对重定向和重试的处理机制，其中 `Retry` 对象用于控制两者设置。在实例化 `PoolManager` 时设置 `retries` 参数以尝试禁用重定向，然而由于 `retries` 参数被忽略，导致不能正确禁用重定向。该问题会影响依赖于禁用重定向功能的应用程序，可能因此暴露于服务端请求伪造（SSRF）或开放重定向漏洞中。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e升级到修复版本的 urllib3，以确保 `retries` 参数在 PoolManager 实例化时能够正确禁用重定向。同时，可以在每次请求中使用 `request()` 方法禁用重定向，作为临时缓解方案。\u003c/p\u003e",
+              "attack_type": "远程",
+              "release_date": "2025-06-19",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 6
+        },
+        {
+          "name": "urllib3",
+          "version": "2.5.*",
+          "language": "Python",
+          "id": "57811829053686040",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[urllib3:2.5.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "user-agents",
+          "version": "2.2.0",
+          "language": "Python",
+          "id": "57811829053686041",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[user-agents:2.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "Werkzeug",
+          "version": "3.1.*",
+          "language": "Python",
+          "id": "57811829053686042",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[Werkzeug:3.1.*]"
+          ]
+        },
+        {
+          "name": "WTForms",
+          "version": "3.1.*",
+          "language": "Python",
+          "id": "57811829053686043",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[WTForms:3.1.*]"
+          ]
+        },
+        {
+          "name": "WTForms",
+          "version": "3.2.*",
+          "language": "Python",
+          "id": "57811829053686044",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\requirements.txt\\[WTForms:3.2.*]"
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 12
+    },
+    {
+      "language": "Python",
+      "id": "57811829053685762",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\tools\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "requests",
+          "version": "\u003e=2.21.0",
+          "language": "Python",
+          "id": "57811829053686045",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\tools\\requirements.txt\\[requests:\u003e=2.21.0]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 3
+        },
+        {
+          "name": "requests[security]",
+          "version": "\u003e=2.21.0",
+          "language": "Python",
+          "id": "57811829053686046",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\tools\\requirements.txt\\[requests[security]:\u003e=2.21.0]"
+          ]
+        },
+        {
+          "name": "safety",
+          "version": "\u003e=1.9.0",
+          "language": "Python",
+          "id": "57811829053686047",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\tools\\requirements.txt\\[safety:\u003e=1.9.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "Sphinx",
+          "version": "7.4.7",
+          "language": "Python",
+          "id": "57811829053686048",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\tools\\requirements.txt\\[Sphinx:7.4.7]"
+          ]
+        },
+        {
+          "name": "sphinxcontrib-youtube",
+          "version": "1.4.1",
+          "language": "Python",
+          "id": "57811829053686049",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\tools\\requirements.txt\\[sphinxcontrib-youtube:1.4.1]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 3
+    },
+    {
+      "language": "Python",
+      "id": "57811829053685763",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "extras",
+          "version": "1.0.0",
+          "language": "Python",
+          "id": "57811829053686050",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[extras:1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "fixtures",
+          "version": "4.2.6",
+          "language": "Python",
+          "id": "57811829053686051",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[fixtures:4.2.6]"
+          ]
+        },
+        {
+          "name": "linecache2",
+          "version": "1.0.0",
+          "language": "Python",
+          "id": "57811829053686052",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[linecache2:1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pbr",
+          "version": "7.0.3",
+          "language": "Python",
+          "id": "57811829053686053",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[pbr:7.0.3]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "pycodestyle",
+          "version": "\u003e=2.5.0",
+          "language": "Python",
+          "id": "57811829053686054",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[pycodestyle:\u003e=2.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Expat"
+            }
+          ]
+        },
+        {
+          "name": "python-mimeparse",
+          "version": "2.0.0",
+          "language": "Python",
+          "id": "57811829053686055",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[python-mimeparse:2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "selenium",
+          "version": "4.38.0",
+          "language": "Python",
+          "id": "57811829053686056",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[selenium:4.38.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "testscenarios",
+          "version": "0.5.0",
+          "language": "Python",
+          "id": "57811829053686057",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[testscenarios:0.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "unknown"
+            },
+            {
+              "name": "apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "testtools",
+          "version": "2.8.0",
+          "language": "Python",
+          "id": "57811829053686058",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[testtools:2.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "traceback2",
+          "version": "1.4.0",
+          "language": "Python",
+          "id": "57811829053686059",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\regression\\requirements.txt\\[traceback2:1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829053685764",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\regression\\test_setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811829053685765",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\setup.py"
+      ]
+    },
+    {
+      "name": "pgadmin4",
+      "language": "JavaScript",
+      "id": "57811829053685766",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]"
+      ],
+      "children": [
+        {
+          "name": "axios",
+          "version": "^1.13.2",
+          "language": "JavaScript",
+          "id": "57811829053686060",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]\\[axios:^1.13.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "electron-context-menu",
+          "version": "^4.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686061",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]\\[electron-context-menu:^4.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "electron-store",
+          "version": "^11.0.2",
+          "language": "JavaScript",
+          "id": "57811829053686062",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]\\[electron-store:^11.0.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "eslint-plugin-unused-imports",
+          "version": "^4.2.0",
+          "language": "JavaScript",
+          "id": "57811829053686063",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]\\[eslint-plugin-unused-imports:^4.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "electron",
+          "version": "39.2.3",
+          "language": "JavaScript",
+          "id": "57811829053686064",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]\\[electron:39.2.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "eslint",
+          "version": "^9.39.1",
+          "language": "JavaScript",
+          "id": "57811829053686065",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\runtime\\package.json\\[pgadmin4:]\\[eslint:^9.39.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "JavaScript",
+      "id": "57811829053685767",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\package.json"
+      ],
+      "children": [
+        {
+          "name": "json-bignumber",
+          "version": "^1.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686066",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[json-bignumber:^1.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@emotion/sheet",
+          "version": "^1.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686067",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@emotion\\sheet:^1.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@types/react-dom",
+          "version": "^19.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686068",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@types\\react-dom:^19.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@xterm/xterm",
+          "version": "^5.5.0",
+          "language": "JavaScript",
+          "id": "57811829053686069",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@xterm\\xterm:^5.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "codemirror",
+          "version": "^6.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686070",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[codemirror:^6.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "leaflet",
+          "version": "^1.9.4",
+          "language": "JavaScript",
+          "id": "57811829053686071",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[leaflet:^1.9.4]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-2-Clause"
+            }
+          ]
+        },
+        {
+          "name": "react-resize-detector",
+          "version": "^12.3.0",
+          "language": "JavaScript",
+          "id": "57811829053686072",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-resize-detector:^12.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "use-resize-observer",
+          "version": "^9.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686073",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[use-resize-observer:^9.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "wkx",
+          "version": "^0.5.0",
+          "language": "JavaScript",
+          "id": "57811829053686074",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[wkx:^0.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@simonwep/pickr",
+          "version": "^1.5.1",
+          "language": "JavaScript",
+          "id": "57811829053686075",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@simonwep\\pickr:^1.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@xterm/addon-search",
+          "version": "^0.15.0",
+          "language": "JavaScript",
+          "id": "57811829053686076",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@xterm\\addon-search:^0.15.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "hotkeys-js",
+          "version": "^3.13.15",
+          "language": "JavaScript",
+          "id": "57811829053686077",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[hotkeys-js:^3.13.15]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-frame-component",
+          "version": "^5.2.6",
+          "language": "JavaScript",
+          "id": "57811829053686078",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-frame-component:^5.2.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-virtualized-auto-sizer",
+          "version": "^1.0.6",
+          "language": "JavaScript",
+          "id": "57811829053686079",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-virtualized-auto-sizer:^1.0.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@types/classnames",
+          "version": "^2.3.4",
+          "language": "JavaScript",
+          "id": "57811829053686080",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@types\\classnames:^2.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@xterm/addon-web-links",
+          "version": "^0.11.0",
+          "language": "JavaScript",
+          "id": "57811829053686081",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@xterm\\addon-web-links:^0.11.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@szhsin/react-menu",
+          "version": "^4.5.1",
+          "language": "JavaScript",
+          "id": "57811829053686082",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@szhsin\\react-menu:^4.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "convert-units",
+          "version": "^2.3.4",
+          "language": "JavaScript",
+          "id": "57811829053686083",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[convert-units:^2.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-dropzone",
+          "version": "^14.2.1",
+          "language": "JavaScript",
+          "id": "57811829053686084",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-dropzone:^14.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "anti-trojan-source",
+          "version": "^1.4.0",
+          "language": "JavaScript",
+          "id": "57811829053686085",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[anti-trojan-source:^1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "date-fns",
+          "version": "^4.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686086",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[date-fns:^4.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "moment",
+          "version": "^2.29.4",
+          "language": "JavaScript",
+          "id": "57811829053686087",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[moment:^2.29.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "moment-timezone",
+          "version": "^0.6.0",
+          "language": "JavaScript",
+          "id": "57811829053686088",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[moment-timezone:^0.6.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-aspen",
+          "version": "^1.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686089",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-aspen:^1.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-timer-hook",
+          "version": "^4.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686090",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-timer-hook:^4.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ]
+        },
+        {
+          "name": "@mui/material",
+          "version": "^7.3.4",
+          "language": "JavaScript",
+          "id": "57811829053686091",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@mui\\material:^7.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@tanstack/react-table",
+          "version": "^8.16.0",
+          "language": "JavaScript",
+          "id": "57811829053686092",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@tanstack\\react-table:^8.16.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "html-to-image",
+          "version": "1.11.11",
+          "language": "JavaScript",
+          "id": "57811829053686093",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[html-to-image:1.11.11]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-arborist",
+          "version": "^3.2.0",
+          "language": "JavaScript",
+          "id": "57811829053686094",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-arborist:^3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-leaflet",
+          "version": "^4.2.1",
+          "language": "JavaScript",
+          "id": "57811829053686095",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-leaflet:^4.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-new-window",
+          "version": "^1.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686096",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-new-window:^1.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "split.js",
+          "version": "^1.5.10",
+          "language": "JavaScript",
+          "id": "57811829053686097",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[split.js:^1.5.10]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "vanilla-jsoneditor",
+          "version": "^3.3.1",
+          "language": "JavaScript",
+          "id": "57811829053686098",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[vanilla-jsoneditor:^3.3.1]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ]
+        },
+        {
+          "name": "bignumber.js",
+          "version": "^9.2.0",
+          "language": "JavaScript",
+          "id": "57811829053686099",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[bignumber.js:^9.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "insert-if",
+          "version": "^1.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686100",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[insert-if:^1.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@tanstack/react-virtual",
+          "version": "^3.13.6",
+          "language": "JavaScript",
+          "id": "57811829053686101",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@tanstack\\react-virtual:^3.13.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-checkbox-tree",
+          "version": "^1.7.2",
+          "language": "JavaScript",
+          "id": "57811829053686102",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-checkbox-tree:^1.7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-rnd",
+          "version": "^10.5.1",
+          "language": "JavaScript",
+          "id": "57811829053686103",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-rnd:^10.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-select",
+          "version": "^5.7.2",
+          "language": "JavaScript",
+          "id": "57811829053686104",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-select:^5.7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/preset-react",
+          "version": "^7.27.1",
+          "language": "JavaScript",
+          "id": "57811829053686105",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\preset-react:^7.27.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@nozbe/microfuzz",
+          "version": "^1.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686106",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@nozbe\\microfuzz:^1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@types/react",
+          "version": "^19.2.7",
+          "language": "JavaScript",
+          "id": "57811829053686107",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@types\\react:^19.2.7]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@xterm/addon-fit",
+          "version": "^0.10.0",
+          "language": "JavaScript",
+          "id": "57811829053686108",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@xterm\\addon-fit:^0.10.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "diff-arrays-of-objects",
+          "version": "^1.1.8",
+          "language": "JavaScript",
+          "id": "57811829053686109",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[diff-arrays-of-objects:^1.1.8]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-dnd-html5-backend",
+          "version": "^16.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686110",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-dnd-html5-backend:^16.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "snapsvg-cjs",
+          "version": "^0.0.6",
+          "language": "JavaScript",
+          "id": "57811829053686111",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[snapsvg-cjs:^0.0.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "sql-formatter",
+          "version": "^15.6.10",
+          "language": "JavaScript",
+          "id": "57811829053686112",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[sql-formatter:^15.6.10]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@fluentui/keyboard-key",
+          "version": "^0.4.23",
+          "language": "JavaScript",
+          "id": "57811829053686113",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@fluentui\\keyboard-key:^0.4.23]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "ajv",
+          "version": "^8.8.2",
+          "language": "JavaScript",
+          "id": "57811829053686114",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[ajv:^8.8.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "axios",
+          "version": "^1.13.2",
+          "language": "JavaScript",
+          "id": "57811829053686115",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[axios:^1.13.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/plugin-proposal-class-properties",
+          "version": "^7.10.4",
+          "language": "JavaScript",
+          "id": "57811829053686116",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\plugin-proposal-class-properties:^7.10.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@projectstorm/react-diagrams",
+          "version": "^7.0.4",
+          "language": "JavaScript",
+          "id": "57811829053686117",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@projectstorm\\react-diagrams:^7.0.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "uplot",
+          "version": "^1.6.32",
+          "language": "JavaScript",
+          "id": "57811829053686118",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[uplot:^1.6.32]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "uplot-react",
+          "version": "^1.1.4",
+          "language": "JavaScript",
+          "id": "57811829053686119",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[uplot-react:^1.1.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "zustand",
+          "version": "^5.0.7",
+          "language": "JavaScript",
+          "id": "57811829053686120",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[zustand:^5.0.7]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@date-io/date-fns",
+          "version": "3.x",
+          "language": "JavaScript",
+          "id": "57811829053686121",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@date-io\\date-fns:3.x]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "brace",
+          "version": "^0.11.1",
+          "language": "JavaScript",
+          "id": "57811829053686122",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[brace:^0.11.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "chartjs-plugin-zoom",
+          "version": "^2.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686123",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[chartjs-plugin-zoom:^2.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "ip-address",
+          "version": "^10.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686124",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[ip-address:^10.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "lodash",
+          "version": "4.*",
+          "language": "JavaScript",
+          "id": "57811829053686125",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[lodash:4.*]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Prototype Pollution",
+              "id": "XMIRROR-E5B77528-265C072B",
+              "cwe_id": "CWE-1321",
+              "description": "## Overview\n[lodash](https://www.npmjs.com/package/lodash) is a modern JavaScript utility library delivering modularity, performance, \u0026 extras.\n\nAffected versions of this package are vulnerable to Prototype Pollution via the `setWith` and `set` functions.\r\n\r\n## PoC by awarau\r\n* Create a JS file with this contents:\r\n```\r\nlod = require('lodash')\r\nlod.setWith({}, \"__proto__[test]\", \"123\")\r\nlod.set({}, \"__proto__[test2]\", \"456\")\r\nconsole.log(Object.prototype)\r\n```\r\n* Execute it with `node`\r\n* Observe that `test` and `test2` is now in the `Object.prototype`.\n\n## Details\n\nPrototype Pollution is a vulnerability affecting JavaScript. Prototype Pollution refers to the ability to inject properties into existing JavaScript language construct prototypes, such as objects. JavaScript allows all Object attributes to be altered, including their magical attributes such as `__proto__`, `constructor` and `prototype`. An attacker manipulates these attributes to overwrite, or pollute, a JavaScript application object prototype of the base object by injecting other values.  Properties on the `Object.prototype` are then inherited by all the JavaScript objects through the prototype chain. When that happens, this leads to either denial of service by triggering JavaScript exceptions, or it tampers with the application source code to force the code path that the attacker injects, thereby leading to remote code execution.\n\nThere are two main ways in which the pollution of prototypes occurs:\n\n-   Unsafe `Object` recursive merge\n    \n-   Property definition by path\n    \n\n### Unsafe Object recursive merge\n\nThe logic of a vulnerable recursive merge function follows the following high-level model:\n```\nmerge (target, source)\n\n  foreach property of source\n\n    if property exists and is an object on both the target and the source\n\n      merge(target[property], source[property])\n\n    else\n\n      target[property] = source[property]\n```\n\u003cbr\u003e  \n\nWhen the source object contains a property named `__proto__` defined with `Object.defineProperty()` , the condition that checks if the property exists and is an object on both the target and the source passes and the merge recurses with the target, being the prototype of `Object` and the source of `Object` as defined by the attacker. Properties are then copied on the `Object` prototype.\n\nClone operations are a special sub-class of unsafe recursive merges, which occur when a recursive merge is conducted on an empty object: `merge({},source)`.\n\n`lodash` and `Hoek` are examples of libraries susceptible to recursive merge attacks.\n\n### Property definition by path\n\nThere are a few JavaScript libraries that use an API to define property values on an object based on a given path. The function that is generally affected contains this signature: `theFunction(object, path, value)`\n\nIf the attacker can control the value of “path”, they can set this value to `__proto__.myValue`. `myValue` is then assigned to the prototype of the class of the object.\n\n## Types of attacks\n\nThere are a few methods by which Prototype Pollution can be manipulated:\n\n| Type |Origin  |Short description |\n|--|--|--|\n| **Denial of service (DoS)**|Client  |This is the most likely attack. \u003cbr\u003eDoS occurs when `Object` holds generic functions that are implicitly called for various operations (for example, `toString` and `valueOf`). \u003cbr\u003e The attacker pollutes `Object.prototype.someattr` and alters its state to an unexpected value such as `Int` or `Object`. In this case, the code fails and is likely to cause a denial of service.  \u003cbr\u003e**For example:** if an attacker pollutes `Object.prototype.toString` by defining it as an integer, if the codebase at any point was reliant on `someobject.toString()` it would fail. |\n |**Remote Code Execution**|Client|Remote code execution is generally only possible in cases where the codebase evaluates a specific attribute of an object, and then executes that evaluation.\u003cbr\u003e**For example:** `eval(someobject.someattr)`. In this case, if the attacker pollutes `Object.prototype.someattr` they are likely to be able to leverage this in order to execute code.|\n|**Property Injection**|Client|The attacker pollutes properties that the codebase relies on for their informative value, including security properties such as cookies or tokens.\u003cbr\u003e  **For example:** if a codebase checks privileges for `someuser.isAdmin`, then when the attacker pollutes `Object.prototype.isAdmin` and sets it to equal `true`, they can then achieve admin privileges.|\n\n## Affected environments\n\nThe following environments are susceptible to a Prototype Pollution attack:\n\n-   Application server\n    \n-   Web server\n\n-   Web browser\n    \n\n## How to prevent\n\n1.  Freeze the prototype— use `Object.freeze (Object.prototype)`.\n    \n2.  Require schema validation of JSON input.\n    \n3.  Avoid using unsafe recursive merge functions.\n    \n4.  Consider using objects without prototypes (for example, `Object.create(null)`), breaking the prototype chain and preventing pollution.\n    \n5.  As a best practice use `Map` instead of `Object`.\n\n### For more information on this vulnerability type:\n\n[Arteau, Oliver. “JavaScript prototype pollution attack in NodeJS application.” GitHub, 26 May 2018](https://github.com/HoLyVieR/prototype-pollution-nsec18/blob/master/paper/JavaScript_prototype_pollution_attack_in_NodeJS.pdf)\n\n## Remediation\nUpgrade `lodash` to version 4.17.17 or higher.\n## References\n- [HackerOne Report](https://hackerone.com/reports/864701)\n",
+              "suggestion": "## Remediation\nUpgrade `lodash` to version 4.17.17 or higher.",
+              "attack_type": "远程",
+              "release_date": "2020-08-21",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "react",
+          "version": "^19.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686126",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react:^19.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-draggable",
+          "version": "^4.4.6",
+          "language": "JavaScript",
+          "id": "57811829053686127",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-draggable:^4.4.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "socket.io-client",
+          "version": "^4.5.0",
+          "language": "JavaScript",
+          "id": "57811829053686128",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[socket.io-client:^4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@date-io/core",
+          "version": "^3.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686129",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@date-io\\core:^3.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@mui/icons-material",
+          "version": "^7.3.4",
+          "language": "JavaScript",
+          "id": "57811829053686130",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@mui\\icons-material:^7.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "aspen-decorations",
+          "version": "^1.0.2",
+          "language": "JavaScript",
+          "id": "57811829053686131",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[aspen-decorations:^1.0.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "papaparse",
+          "version": "^5.5.2",
+          "language": "JavaScript",
+          "id": "57811829053686132",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[papaparse:^5.5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-dnd",
+          "version": "^16.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686133",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-dnd:^16.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "react-dom",
+          "version": "^19.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686134",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-dom:^19.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@fortawesome/fontawesome-free",
+          "version": "latest",
+          "language": "JavaScript",
+          "id": "57811829053686135",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@fortawesome\\fontawesome-free:latest]"
+          ],
+          "licenses": [
+            {
+              "name": "CC-BY-4.0"
+            },
+            {
+              "name": "OFL-1.1"
+            }
+          ]
+        },
+        {
+          "name": "babelify",
+          "version": "~10.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686136",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[babelify:~10.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "immutability-helper",
+          "version": "^3.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686137",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[immutability-helper:^3.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "notistack",
+          "version": "^3.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686138",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[notistack:^3.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "path-fx",
+          "version": "^2.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686139",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[path-fx:^2.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "postcss",
+          "version": "^8.5.6",
+          "language": "JavaScript",
+          "id": "57811829053686140",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[postcss:^8.5.6]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "rc-dock",
+          "version": "^4.0.0-alpha.2",
+          "language": "JavaScript",
+          "id": "57811829053686141",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[rc-dock:^4.0.0-alpha.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "react-data-grid",
+          "version": ": 7.0.0-beta.58",
+          "language": "JavaScript",
+          "id": "57811829053686142",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[react-data-grid:: 7.0.0-beta.58]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@codemirror/lang-json",
+          "version": "^6.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686143",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@codemirror\\lang-json:^6.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@codemirror/lang-sql",
+          "version": "^6.10.0",
+          "language": "JavaScript",
+          "id": "57811829053686144",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@codemirror\\lang-sql:^6.10.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@tanstack/react-query",
+          "version": "^5.90.10",
+          "language": "JavaScript",
+          "id": "57811829053686145",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@tanstack\\react-query:^5.90.10]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "notificar",
+          "version": "^1.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686146",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[notificar:^1.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "valid-filename",
+          "version": "^4.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686147",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[valid-filename:^4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@mui/x-date-pickers",
+          "version": "^8.19.0",
+          "language": "JavaScript",
+          "id": "57811829053686148",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@mui\\x-date-pickers:^8.19.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "chart.js",
+          "version": "^4.4.7",
+          "language": "JavaScript",
+          "id": "57811829053686149",
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[chart.js:^4.4.7]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@testing-library/user-event",
+          "version": "^14.5.2",
+          "language": "JavaScript",
+          "id": "57811829053686150",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@testing-library\\user-event:^14.5.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "eslint-plugin-react",
+          "version": "^7.37.5",
+          "language": "JavaScript",
+          "id": "57811829053686151",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[eslint-plugin-react:^7.37.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "svgo-loader",
+          "version": "^4.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686152",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[svgo-loader:^4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "webfonts-loader",
+          "version": "^8.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686153",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[webfonts-loader:^8.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Unlicense"
+            }
+          ]
+        },
+        {
+          "name": "yarn-audit-html",
+          "version": "7.3.2",
+          "language": "JavaScript",
+          "id": "57811829053686154",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[yarn-audit-html:7.3.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "eslint-plugin-unused-imports",
+          "version": "^4.2.0",
+          "language": "JavaScript",
+          "id": "57811829053686155",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[eslint-plugin-unused-imports:^4.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "terser-webpack-plugin",
+          "version": "^5.3.12",
+          "language": "JavaScript",
+          "id": "57811829053686156",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[terser-webpack-plugin:^5.3.12]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "url-loader",
+          "version": "^4.1.1",
+          "language": "JavaScript",
+          "id": "57811829053686157",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[url-loader:^4.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/eslint-parser",
+          "version": "^7.26.5",
+          "language": "JavaScript",
+          "id": "57811829053686158",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\eslint-parser:^7.26.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@testing-library/dom",
+          "version": "10.4.1",
+          "language": "JavaScript",
+          "id": "57811829053686159",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@testing-library\\dom:10.4.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@types/jest",
+          "version": "^30.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686160",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@types\\jest:^30.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "webpack",
+          "version": "^5.103.0",
+          "language": "JavaScript",
+          "id": "57811829053686161",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[webpack:^5.103.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/preset-env",
+          "version": "^7.28.0",
+          "language": "JavaScript",
+          "id": "57811829053686162",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\preset-env:^7.28.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@emotion/utils",
+          "version": "^1.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686163",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@emotion\\utils:^1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "mini-css-extract-plugin",
+          "version": "^2.9.2",
+          "language": "JavaScript",
+          "id": "57811829053686164",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[mini-css-extract-plugin:^2.9.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "resize-observer-polyfill",
+          "version": "^1.5.1",
+          "language": "JavaScript",
+          "id": "57811829053686165",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[resize-observer-polyfill:^1.5.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "shim-loader",
+          "version": "^1.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686166",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[shim-loader:^1.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@emotion/react",
+          "version": "^11.14.0",
+          "language": "JavaScript",
+          "id": "57811829053686167",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@emotion\\react:^11.14.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@emotion/styled",
+          "version": "^11.14.1",
+          "language": "JavaScript",
+          "id": "57811829053686168",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@emotion\\styled:^11.14.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "eslint",
+          "version": "^9.39.1",
+          "language": "JavaScript",
+          "id": "57811829053686169",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[eslint:^9.39.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "jest-environment-jsdom",
+          "version": "^30.2.0",
+          "language": "JavaScript",
+          "id": "57811829053686170",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[jest-environment-jsdom:^30.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "typescript",
+          "version": "^5.9.2",
+          "language": "JavaScript",
+          "id": "57811829053686171",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[typescript:^5.9.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "axios-mock-adapter",
+          "version": "^2.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686172",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[axios-mock-adapter:^2.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "style-loader",
+          "version": "^4.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686173",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[style-loader:^4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "browserify",
+          "version": "^17.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686174",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[browserify:^17.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "copy-webpack-plugin",
+          "version": "^13.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686175",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[copy-webpack-plugin:^13.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "css-minimizer-webpack-plugin",
+          "version": "^7.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686176",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[css-minimizer-webpack-plugin:^7.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "loader-utils",
+          "version": "^3.2.1",
+          "language": "JavaScript",
+          "id": "57811829053686177",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[loader-utils:^3.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@emotion/memoize",
+          "version": "^0.9.0",
+          "language": "JavaScript",
+          "id": "57811829053686178",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@emotion\\memoize:^0.9.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@testing-library/react",
+          "version": "16.3.0",
+          "language": "JavaScript",
+          "id": "57811829053686179",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@testing-library\\react:16.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "autoprefixer",
+          "version": "^10.4.21",
+          "language": "JavaScript",
+          "id": "57811829053686180",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[autoprefixer:^10.4.21]"
+          ],
+          "licenses": [
+            {
+              "name": "LGPL-3.0-only"
+            }
+          ]
+        },
+        {
+          "name": "svgo",
+          "version": "^4.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686181",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[svgo:^4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/plugin-syntax-jsx",
+          "version": "^7.16.0",
+          "language": "JavaScript",
+          "id": "57811829053686182",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\plugin-syntax-jsx:^7.16.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/plugin-transform-runtime",
+          "version": "^7.28.3",
+          "language": "JavaScript",
+          "id": "57811829053686183",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\plugin-transform-runtime:^7.28.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "exports-loader",
+          "version": "^5.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686184",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[exports-loader:^5.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "jest",
+          "version": "^30.2.0",
+          "language": "JavaScript",
+          "id": "57811829053686185",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[jest:^30.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "typescript-eslint",
+          "version": "^8.44.0",
+          "language": "JavaScript",
+          "id": "57811829053686186",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[typescript-eslint:^8.44.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "cross-env",
+          "version": "^10.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686187",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[cross-env:^10.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "globals",
+          "version": "^16.5.0",
+          "language": "JavaScript",
+          "id": "57811829053686188",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[globals:^16.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "image-minimizer-webpack-plugin",
+          "version": "^4.1.4",
+          "language": "JavaScript",
+          "id": "57811829053686189",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[image-minimizer-webpack-plugin:^4.1.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "postcss-loader",
+          "version": "^8.1.1",
+          "language": "JavaScript",
+          "id": "57811829053686190",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[postcss-loader:^8.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "process",
+          "version": "^0.11.10",
+          "language": "JavaScript",
+          "id": "57811829053686191",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[process:^0.11.10]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "prop-types",
+          "version": "^15.7.2",
+          "language": "JavaScript",
+          "id": "57811829053686192",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[prop-types:^15.7.2]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "stylis",
+          "version": "^4.3.4",
+          "language": "JavaScript",
+          "id": "57811829053686193",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[stylis:^4.3.4]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/core",
+          "version": "^7.28.3",
+          "language": "JavaScript",
+          "id": "57811829053686194",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\core:^7.28.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/preset-typescript",
+          "version": "^7.24.7",
+          "language": "JavaScript",
+          "id": "57811829053686195",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\preset-typescript:^7.24.7]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@svgr/webpack",
+          "version": "^8.1.0",
+          "language": "JavaScript",
+          "id": "57811829053686196",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@svgr\\webpack:^8.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "imports-loader",
+          "version": "^5.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686197",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[imports-loader:^5.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "webpack-bundle-analyzer",
+          "version": "^4.8.0",
+          "language": "JavaScript",
+          "id": "57811829053686198",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[webpack-bundle-analyzer:^4.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "babel-loader",
+          "version": "^10.0.0",
+          "language": "JavaScript",
+          "id": "57811829053686199",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[babel-loader:^10.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "eslint-plugin-jest",
+          "version": "^29.2.1",
+          "language": "JavaScript",
+          "id": "57811829053686200",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[eslint-plugin-jest:^29.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "css-loader",
+          "version": "^7.1.2",
+          "language": "JavaScript",
+          "id": "57811829053686201",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[css-loader:^7.1.2]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "html-react-parser",
+          "version": "^5.2.10",
+          "language": "JavaScript",
+          "id": "57811829053686202",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[html-react-parser:^5.2.10]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@testing-library/jest-dom",
+          "version": "^6.7.0",
+          "language": "JavaScript",
+          "id": "57811829053686203",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@testing-library\\jest-dom:^6.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/plugin-proposal-object-rest-spread",
+          "version": "^7.10.1",
+          "language": "JavaScript",
+          "id": "57811829053686204",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\plugin-proposal-object-rest-spread:^7.10.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "buffer",
+          "version": "^6.0.3",
+          "language": "JavaScript",
+          "id": "57811829053686205",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[buffer:^6.0.3]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "webpack-cli",
+          "version": "^6.0.1",
+          "language": "JavaScript",
+          "id": "57811829053686206",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[webpack-cli:^6.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "@babel/eslint-plugin",
+          "version": "^7.26.10",
+          "language": "JavaScript",
+          "id": "57811829053686207",
+          "dev": true,
+          "direct": true,
+          "paths": [
+            "pgadmin-org_pgadmin4\\web\\package.json\\[@babel\\eslint-plugin:^7.26.10]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "id": "57811829053685768",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\runtime\\package.json"
+      ]
+    },
+    {
+      "id": "57811829053685769",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\babel.config.json"
+      ]
+    },
+    {
+      "id": "57811829053685770",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\package.json"
+      ]
+    },
+    {
+      "id": "57811829053685771",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\casts\\tests\\cast_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685772",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\casts\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685773",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\dbms_job_scheduler\\dbms_jobs\\tests\\dbms_jobs_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685774",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\dbms_job_scheduler\\dbms_programs\\tests\\dbms_programs_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685775",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\dbms_job_scheduler\\dbms_programs\\tests\\ppas\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685776",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\dbms_job_scheduler\\dbms_schedules\\tests\\dbms_schedules_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685777",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\dbms_job_scheduler\\dbms_schedules\\tests\\ppas\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685778",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\event_triggers\\tests\\event_triggers_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685779",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\extensions\\tests\\default\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685780",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\foreign_servers\\tests\\foreign_servers_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685781",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\foreign_servers\\tests\\pg\\default\\test_foreign_servers.json"
+      ]
+    },
+    {
+      "id": "57811829053685782",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\foreign_servers\\tests\\ppas\\default\\test_foreign_servers.json"
+      ]
+    },
+    {
+      "id": "57811829053685783",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\foreign_servers\\user_mappings\\tests\\pg\\default\\test_user_mappings.json"
+      ]
+    },
+    {
+      "id": "57811829053685784",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\foreign_servers\\user_mappings\\tests\\ppas\\default\\test_user_mappings.json"
+      ]
+    },
+    {
+      "id": "57811829053685785",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\foreign_servers\\user_mappings\\tests\\user_mapping_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685786",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\tests\\fdw_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685787",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685788",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\foreign_data_wrappers\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685789",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\languages\\tests\\language_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685790",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\languages\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685791",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\languages\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685792",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\publications\\tests\\13_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685793",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\publications\\tests\\15_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685794",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\publications\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685795",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\publications\\tests\\publication_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685796",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\collations\\tests\\collations_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685797",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\collations\\tests\\pg\\13_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685798",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\collations\\tests\\pg\\17_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685799",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\domains\\domain_constraints\\tests\\domain_constraints_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685800",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\domains\\tests\\domain_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685801",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\domains\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685802",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\domains\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685803",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\foreign_table_columns\\tests\\column_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685804",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\foreign_table_columns\\tests\\pg\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685805",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\foreign_table_columns\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685806",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\foreign_table_columns\\tests\\ppas\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685807",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\foreign_table_columns\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685808",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\tests\\foreign_tables_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685809",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\tests\\pg\\17_plus\\test_foreign_table.json"
+      ]
+    },
+    {
+      "id": "57811829053685810",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\tests\\pg\\default\\test_foreign_table.json"
+      ]
+    },
+    {
+      "id": "57811829053685811",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\tests\\ppas\\17_plus\\test_foreign_table.json"
+      ]
+    },
+    {
+      "id": "57811829053685812",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\foreign_tables\\tests\\ppas\\default\\test_foreign_table.json"
+      ]
+    },
+    {
+      "id": "57811829053685813",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_configurations\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685814",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_configurations\\tests\\fts_configurations_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685815",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_dictionaries\\tests\\default\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685816",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_dictionaries\\tests\\fts_dictionaries_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685817",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_parsers\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685818",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_parsers\\tests\\fts_parsers_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685819",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_templates\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685820",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\fts_templates\\tests\\fts_templates_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685821",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\11_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685822",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\11_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685823",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\11_plus\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685824",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\12_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685825",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\12_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685826",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\12_plus\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685827",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\13_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685828",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\13_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685829",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\14_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685830",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\14_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685831",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\14_plus\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685832",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\default\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685833",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\pg\\default\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685834",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\11_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685835",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\11_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685836",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\11_plus\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685837",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\12_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685838",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\12_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685839",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\12_plus\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685840",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\13_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685841",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\13_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685842",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\14_plus\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685843",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\14_plus\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685844",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\14_plus\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685845",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\default\\test_function.json"
+      ]
+    },
+    {
+      "id": "57811829053685846",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\default\\test_procedures.json"
+      ]
+    },
+    {
+      "id": "57811829053685847",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\functions\\tests\\ppas\\default\\test_trigger_functions.json"
+      ]
+    },
+    {
+      "id": "57811829053685848",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\packages\\tests\\ppas\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685849",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\packages\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685850",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\sequences\\tests\\pg\\15_plus\\test_sequences_pg.json"
+      ]
+    },
+    {
+      "id": "57811829053685851",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\sequences\\tests\\pg\\default\\test_sequences_pg.json"
+      ]
+    },
+    {
+      "id": "57811829053685852",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\sequences\\tests\\ppas\\15_plus\\test_sequences_ppas.json"
+      ]
+    },
+    {
+      "id": "57811829053685853",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\sequences\\tests\\ppas\\default\\test_sequences_ppas.json"
+      ]
+    },
+    {
+      "id": "57811829053685854",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\synonyms\\tests\\ppas\\default\\test_public_synonyms.json"
+      ]
+    },
+    {
+      "id": "57811829053685855",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\synonyms\\tests\\ppas\\default\\test_synonyms.json"
+      ]
+    },
+    {
+      "id": "57811829053685856",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\column_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685857",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\pg\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685858",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\pg\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685859",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\pg\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685860",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685861",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\ppas\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685862",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\ppas\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685863",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\ppas\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685864",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\columns\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685865",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\compound_triggers\\tests\\compound_trigger_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685866",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\compound_triggers\\tests\\ppas\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685867",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\check_constraint\\tests\\Default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685868",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\check_constraint\\tests\\check_constraint_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685869",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\exclusion_constraint\\tests\\11_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685870",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\exclusion_constraint\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685871",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\exclusion_constraint\\tests\\exclusion_constraint_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685872",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\foreign_key\\tests\\default\\test_foreign_keys.json"
+      ]
+    },
+    {
+      "id": "57811829053685873",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\foreign_key\\tests\\foreign_key_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685874",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\11_plus\\test_primary_key.json"
+      ]
+    },
+    {
+      "id": "57811829053685875",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\11_plus\\test_unique_constraint.json"
+      ]
+    },
+    {
+      "id": "57811829053685876",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\15_plus\\test_primary_key.json"
+      ]
+    },
+    {
+      "id": "57811829053685877",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\15_plus\\test_unique_constraint.json"
+      ]
+    },
+    {
+      "id": "57811829053685878",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\default\\test_primary_key.json"
+      ]
+    },
+    {
+      "id": "57811829053685879",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\default\\test_unique_constraint.json"
+      ]
+    },
+    {
+      "id": "57811829053685880",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\index_constraint\\tests\\index_constraint_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685881",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\constraints\\tests\\constraints_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685882",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\indexes\\tests\\11_plus\\test_indexes.json"
+      ]
+    },
+    {
+      "id": "57811829053685883",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\indexes\\tests\\13_plus\\test_indexes.json"
+      ]
+    },
+    {
+      "id": "57811829053685884",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\indexes\\tests\\15_plus\\test_indexes.json"
+      ]
+    },
+    {
+      "id": "57811829053685885",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\indexes\\tests\\default\\test_indexes.json"
+      ]
+    },
+    {
+      "id": "57811829053685886",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\indexes\\tests\\index_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685887",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\partitions\\tests\\pg\\12_plus\\test_partitions.json"
+      ]
+    },
+    {
+      "id": "57811829053685888",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\partitions\\tests\\pg\\default\\test_partitions.json"
+      ]
+    },
+    {
+      "id": "57811829053685889",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\partitions\\tests\\ppas\\12_plus\\test_partitions.json"
+      ]
+    },
+    {
+      "id": "57811829053685890",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\partitions\\tests\\ppas\\default\\test_partitions.json"
+      ]
+    },
+    {
+      "id": "57811829053685891",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\row_security_policies\\tests\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685892",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\row_security_policies\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685893",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\row_security_policies\\tests\\rls_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685894",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\rules\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685895",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\rules\\tests\\rules_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685896",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\pg\\11_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685897",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\pg\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685898",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\pg\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685899",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\pg\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685900",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685901",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\ppas\\11_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685902",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\ppas\\12_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685903",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\ppas\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685904",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\ppas\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685905",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685906",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\tests\\table_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685907",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\pg\\11_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685908",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\pg\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685909",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\pg\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685910",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\ppas\\11_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685911",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\ppas\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685912",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685913",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tables\\triggers\\tests\\triggers_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685914",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\catalog\\pg\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685915",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\catalog\\pg\\default\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685916",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\catalog\\ppas\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685917",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\catalog\\ppas\\default\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685918",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\schemas\\pg\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685919",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\schemas\\pg\\default\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685920",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\schemas\\ppas\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685921",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\schemas\\ppas\\default\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685922",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\templates\\vacuum_settings\\vacuum_fields.json"
+      ]
+    },
+    {
+      "id": "57811829053685923",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tests\\pg\\17_plus\\test_schema.json"
+      ]
+    },
+    {
+      "id": "57811829053685924",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tests\\pg\\default\\test_schema.json"
+      ]
+    },
+    {
+      "id": "57811829053685925",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tests\\ppas\\17_plus\\test_schema.json"
+      ]
+    },
+    {
+      "id": "57811829053685926",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tests\\ppas\\default\\test_schema.json"
+      ]
+    },
+    {
+      "id": "57811829053685927",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\tests\\schema_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685928",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\types\\tests\\pg\\14_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685929",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\types\\tests\\pg\\default\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685930",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\types\\tests\\ppas\\14_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685931",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\types\\tests\\ppas\\default\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685932",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\types\\tests\\types_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685933",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\mviews\\pg\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685934",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\mviews\\pg\\default\\sql\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685935",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\mviews\\ppas\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685936",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\mviews\\ppas\\default\\sql\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685937",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\views\\pg\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685938",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\views\\pg\\default\\sql\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685939",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\views\\ppas\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685940",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\templates\\views\\ppas\\default\\sql\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685941",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\12_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685942",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\12_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685943",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\13_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685944",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\15_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685945",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\15_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685946",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\16_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685947",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\16_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685948",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\default\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685949",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\pg\\default\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685950",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\12_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685951",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\12_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685952",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\13_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685953",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\15_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685954",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\15_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685955",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\16_plus\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685956",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\16_plus\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685957",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\default\\test_mview.json"
+      ]
+    },
+    {
+      "id": "57811829053685958",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\ppas\\default\\tests.json"
+      ]
+    },
+    {
+      "id": "57811829053685959",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\schemas\\views\\tests\\view_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685960",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\14_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685961",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\15_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685962",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\16_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685963",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\17_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685964",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\18_plus\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685965",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685966",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\subscriptions\\tests\\subscription_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685967",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\templates\\databases\\sql\\17_plus\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685968",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\templates\\databases\\sql\\default\\allowed_privs.json"
+      ]
+    },
+    {
+      "id": "57811829053685969",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\pg\\15_plus\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685970",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\pg\\16_plus\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685971",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\pg\\17_plus\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685972",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\pg\\default\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685973",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\ppas\\15_plus\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685974",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\ppas\\16_plus\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685975",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\ppas\\17_plus\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685976",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\databases\\tests\\ppas\\default\\test_database.json"
+      ]
+    },
+    {
+      "id": "57811829053685977",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\directories\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685978",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\pgagent\\schedules\\tests\\schedules_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685979",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\pgagent\\steps\\tests\\steps_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685980",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\pgagent\\tests\\default\\test_pgagent.json"
+      ]
+    },
+    {
+      "id": "57811829053685981",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\pgagent\\tests\\pgagent_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685982",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\resource_groups\\tests\\ppas\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685983",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\roles\\tests\\default\\test.json"
+      ]
+    },
+    {
+      "id": "57811829053685984",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\roles\\tests\\role_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685985",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\servers\\tests\\servers_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685986",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\browser\\server_groups\\tests\\servers_group_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685987",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\misc\\file_manager\\templates\\file_manager\\js\\file_manager_config.json"
+      ]
+    },
+    {
+      "id": "57811829053685988",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\preferences\\tests\\preferences_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685989",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\setup\\tests\\servers.json"
+      ]
+    },
+    {
+      "id": "57811829053685990",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\tools\\debugger\\tests\\debugger_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685991",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\tools\\erd\\tests\\test_sql_input_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685992",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\tools\\grant_wizard\\templates\\grant_wizard\\pg\\default\\acl.json"
+      ]
+    },
+    {
+      "id": "57811829053685993",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\tools\\grant_wizard\\templates\\grant_wizard\\ppas\\default\\acl.json"
+      ]
+    },
+    {
+      "id": "57811829053685994",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\tools\\grant_wizard\\tests\\grant_wizard_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685995",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\pgadmin\\tools\\psql\\tests\\psql_test_data.json"
+      ]
+    },
+    {
+      "id": "57811829053685996",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\regression\\feature_tests\\datatype_test.json"
+      ]
+    },
+    {
+      "id": "57811829053685997",
+      "direct": true,
+      "paths": [
+        "pgadmin-org_pgadmin4\\web\\regression\\feature_tests\\test_data.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 16
+}

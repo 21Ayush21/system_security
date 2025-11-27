@@ -1,0 +1,1235 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "openstack_neutron",
+    "size": 0,
+    "start_time": "2025-11-27 21:56:18",
+    "end_time": "2025-11-27 21:56:20",
+    "cost_time": 2.3410973999999998
+  },
+  "id": "57811828027883520",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811828027883521",
+      "direct": true,
+      "paths": [
+        "openstack_neutron\\doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "sphinx",
+          "version": "\u003e=2.2.0",
+          "language": "Python",
+          "id": "57811828027883526",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[sphinx:\u003e=2.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-47937A95",
+              "cve_id": "CVE-2020-11022",
+              "cnnvd_id": "CNNVD-202004-2429",
+              "cnvd_id": "CNVD-2021-26411",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.2版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "通用方案： 目前厂商已发布升级补丁以修复漏洞，补丁获取链接： https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n",
+              "attack_type": "远程",
+              "release_date": "2020-04-29",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "jQuery 跨站脚本漏洞",
+              "id": "XMIRROR-E5B71403-4793EB95",
+              "cve_id": "CVE-2020-11023",
+              "cnnvd_id": "CNNVD-202004-2420",
+              "cnvd_id": "CNVD-2020-27491",
+              "cwe_id": "CWE-79",
+              "description": "jQuery是美国John Resig个人开发者的一套开源、跨浏览器的JavaScript库。该库简化了HTML与JavaScript之间的操作，并具有模块化、插件扩展等特点。\r\njQuery 1.0.3版本至3.5.0之前版本中存在跨站脚本漏洞。该漏洞源于WEB应用缺少对客户端数据的正确验证。攻击者可利用该漏洞执行客户端代码。",
+              "suggestion": "厂商已发布了漏洞修复程序，请及时关注更新：\r\nhttps://jquery.com/upgrade-guide/3.5/",
+              "attack_type": "远程",
+              "release_date": "2020-04-13",
+              "security_level_id": 3,
+              "exploit_level_id": 1
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C0AA42B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) due to the usage of an insecure regular expression in the function `load_v2` of `inventory.py`.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f7b872e673f9b359a61fd287a7338a28077840d2)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8175)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Regular Expression Denial of Service (ReDoS)",
+              "id": "XMIRROR-E5B77528-1C343D2B",
+              "cwe_id": "CWE-1333",
+              "description": "## Overview\n\nAffected versions of this package are vulnerable to Regular Expression Denial of Service (ReDoS) in google style docs, due to using an inefficient regex pattern with quantified overlapping adjacency.\n## PoC\n```\r\n\" \" * 5000 + \"!\"\r\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its original and legitimate users. There are many types of DoS attacks, ranging from trying to clog the network pipes to the system by generating a large volume of traffic from many machines (a Distributed Denial of Service - DDoS - attack) to sending crafted requests that cause a system to crash or take a disproportional amount of time to process.\n\nThe Regular expression Denial of Service (ReDoS) is a type of Denial of Service attack. Regular expressions are incredibly powerful, but they aren't very intuitive and can ultimately end up making it easy for attackers to take your site down.\n\nLet’s take the following regular expression as an example:\n```js\nregex = /A(B|C+)+D/\n```\n\nThis regular expression accomplishes the following:\n- `A` The string must start with the letter 'A'\n- `(B|C+)+` The string must then follow the letter A with either the letter 'B' or some number of occurrences of the letter 'C' (the `+` matches one or more times). The `+` at the end of this section states that we can look for one or more matches of this section.\n- `D` Finally, we ensure this section of the string ends with a 'D'\n\nThe expression would match inputs such as `ABBD`, `ABCCCCD`, `ABCBCCCD` and `ACCCCCD`\n\nIt most cases, it doesn't take very long for a regex engine to find a match:\n\n```bash\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCD\")'\n0.04s user 0.01s system 95% cpu 0.052 total\n\n$ time node -e '/A(B|C+)+D/.test(\"ACCCCCCCCCCCCCCCCCCCCCCCCCCCCX\")'\n1.79s user 0.02s system 99% cpu 1.812 total\n```\n\nThe entire process of testing it against a 30 characters long string takes around ~52ms. But when given an invalid string, it takes nearly two seconds to complete the test, over ten times as long as it took to test a valid string. The dramatic difference is due to the way regular expressions get evaluated.\n\nMost Regex engines will work very similarly (with minor differences). The engine will match the first possible way to accept the current character and proceed to the next one. If it then fails to match the next one, it will backtrack and see if there was another way to digest the previous character. If it goes too far down the rabbit hole only to find out the string doesn’t match in the end, and if many characters have multiple valid regex paths, the number of backtracking steps can become very large, resulting in what is known as _catastrophic backtracking_.\n\nLet's look at how our expression runs into this problem, using a shorter string: \"ACCCX\". While it seems fairly straightforward, there are still four different ways that the engine could match those three C's:\n1. CCC\n2. CC+C\n3. C+CC\n4. C+C+C.\n\nThe engine has to try each of those combinations to see if any of them potentially match against the expression. When you combine that with the other steps the engine must take, we can use [RegEx 101 debugger](https://regex101.com/debugger) to see the engine has to take a total of 38 steps before it can determine the string doesn't match.\n\nFrom there, the number of steps the engine must use to validate a string just continues to grow.\n\n| String | Number of C's | Number of steps |\n| -------|-------------:| -----:|\n| ACCCX | 3 | 38\n| ACCCCX | 4 | 71\n| ACCCCCX | 5 | 136\n| ACCCCCCCCCCCCCCX | 14 | 65,553\n\n\nBy the time the string includes 14 C's, the engine has to take over 65,000 steps just to see if the string is valid. These extreme situations can cause them to work very slowly (exponentially related to input size, as shown above), allowing an attacker to exploit this and can cause the service to excessively consume CPU, resulting in a Denial of Service.\n\n## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.\n## References\n- [GitHub Commit](https://github.com/sphinx-doc/sphinx/commit/f00e75278c5999f40b214d8934357fbf0e705417)\n- [GitHub Issue](https://github.com/sphinx-doc/sphinx/issues/8172)\n- [Vulnerable Code](https://github.com/sphinx-doc/sphinx/blob/31f26a0bbf5e4e53b340e10464fc7c4cca96f12a/sphinx/ext/napoleon/docstring.py#L34)\n",
+              "suggestion": "## Remediation\nUpgrade `sphinx` to version 3.3.0 or higher.",
+              "attack_type": "远程",
+              "release_date": "2023-08-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        },
+        {
+          "name": "sphinx-feature-classification",
+          "version": "\u003e=1.0.0",
+          "language": "Python",
+          "id": "57811828027883527",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[sphinx-feature-classification:\u003e=1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "openstackdocstheme",
+          "version": "\u003e=2.2.1",
+          "language": "Python",
+          "id": "57811828027883528",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[openstackdocstheme:\u003e=2.2.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslotest",
+          "version": "\u003e=3.2.0",
+          "language": "Python",
+          "id": "57811828027883529",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[oslotest:\u003e=3.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "reno",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811828027883530",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[reno:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "WebTest",
+          "version": "\u003e=2.0.27",
+          "language": "Python",
+          "id": "57811828027883531",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[WebTest:\u003e=2.0.27]"
+          ]
+        },
+        {
+          "name": "pyroute2",
+          "version": "\u003e=0.6.4",
+          "language": "Python",
+          "id": "57811828027883532",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\doc\\requirements.txt\\[pyroute2:\u003e=0.6.4]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-or-later"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    },
+    {
+      "language": "Python",
+      "id": "57811828027883522",
+      "direct": true,
+      "paths": [
+        "openstack_neutron\\neutron\\tests\\functional\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "PyMySQL",
+          "version": "\u003e=0.6.2",
+          "language": "Python",
+          "id": "57811828027883533",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\neutron\\tests\\functional\\requirements.txt\\[PyMySQL:\u003e=0.6.2]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "PyMySQL JSON输入 SQL注入",
+              "id": "XMIRROR-E5B714EF-14506095",
+              "cve_id": "CVE-2024-36039",
+              "cnnvd_id": "CNNVD-202405-3860",
+              "cwe_id": "CWE-89",
+              "description": "当PyMySQL 1.1.0及以下版本与未受信任的JSON输入一起使用时，由于escape_dict未能对键进行转义，导致存在SQL注入漏洞。攻击者通过构造恶意的JSON输入，可以在数据库层面执行任意SQL命令。",
+              "suggestion": "用户应立即升级到最新版本的PyMySQL。如果无法立即升级，可以通过以下方法进行临时修复：1. 确保使用PyMySQL处理的所有JSON输入都来自可信来源。2. 应用适当的输入验证机制，过滤掉恶意的JSON输入。3. 限制数据库账号权限，降低被攻击时的潜在风险。",
+              "attack_type": "远程",
+              "release_date": "2024-05-21",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "language": "Python",
+      "id": "57811828027883523",
+      "direct": true,
+      "paths": [
+        "openstack_neutron\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "pbr",
+          "version": "\u003e=6.0.0",
+          "language": "Python",
+          "id": "57811828027883534",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[pbr:\u003e=6.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "Paste",
+          "version": "\u003e=2.0.2",
+          "language": "Python",
+          "id": "57811828027883535",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[Paste:\u003e=2.0.2]"
+          ]
+        },
+        {
+          "name": "PasteDeploy",
+          "version": "\u003e=1.5.0",
+          "language": "Python",
+          "id": "57811828027883536",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[PasteDeploy:\u003e=1.5.0]"
+          ]
+        },
+        {
+          "name": "Routes",
+          "version": "\u003e=2.3.1",
+          "language": "Python",
+          "id": "57811828027883537",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[Routes:\u003e=2.3.1]"
+          ]
+        },
+        {
+          "name": "debtcollector",
+          "version": "\u003e=1.19.0",
+          "language": "Python",
+          "id": "57811828027883538",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[debtcollector:\u003e=1.19.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "decorator",
+          "version": "\u003e=4.1.0",
+          "language": "Python",
+          "id": "57811828027883539",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[decorator:\u003e=4.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pecan",
+          "version": "\u003e=1.4.0",
+          "language": "Python",
+          "id": "57811828027883540",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[pecan:\u003e=1.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "httplib2",
+          "version": "\u003e=0.22.0",
+          "language": "Python",
+          "id": "57811828027883541",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[httplib2:\u003e=0.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "version": "\u003e=2.32.3",
+          "language": "Python",
+          "id": "57811828027883542",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[requests:\u003e=2.32.3]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "Jinja2",
+          "version": "\u003e=2.10",
+          "language": "Python",
+          "id": "57811828027883543",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[Jinja2:\u003e=2.10]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Jinja2 资源管理错误漏洞",
+              "id": "XMIRROR-E5B71403-AFD55C95",
+              "cve_id": "CVE-2020-28493",
+              "cnnvd_id": "CNNVD-202102-010",
+              "cwe_id": "CWE-400",
+              "description": "Jinja2是一款基于Python的模板引擎。该产品具有完整的Unicode支持，并提供了可选的沙箱模板执行环境。\r\njinja2 from 0.0.0 and before 2.11.3 存在资源管理错误漏洞，该漏洞源于regex的ReDOS漏洞。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2021-02-01",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Pallets Jinja 权限许可和访问控制问题漏洞",
+              "id": "XMIRROR-E5B7140E-B014AD95",
+              "cve_id": "CVE-2019-10906",
+              "cnnvd_id": "CNNVD-201904-294",
+              "cwe_id": "CWE-693",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 2.10.1之前版本中存在权限许可和访问控制问题漏洞。攻击者可利用该漏洞绕过沙盒保护。",
+              "suggestion": "通用方案： 建议您更新当前系统或软件至最新版，完成漏洞的修复。\n",
+              "attack_type": "远程",
+              "release_date": "2019-04-06",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-1432B895",
+              "cve_id": "CVE-2024-22195",
+              "cnnvd_id": "CNNVD-202401-963",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nJinja 3.1.3之前版本存在安全漏洞，该漏洞源于存在跨站脚本（XSS）漏洞。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.3 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-01-11",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Pallets Jinja 跨站脚本漏洞",
+              "id": "XMIRROR-E5B714EF-145CB795",
+              "cve_id": "CVE-2024-34064",
+              "cnnvd_id": "CNNVD-202405-1436",
+              "cwe_id": "CWE-79",
+              "description": "Pallets Jinja是一款使用Python语言编写的模板引擎。\r\nPallets Jinja 3.1.4之前版本存在安全漏洞，该漏洞源于将用户输入作为键传递给 xmlattr 过滤器时，Jinja 容易受到 HTML 属性注入。",
+              "suggestion": "## Remediation\nUpgrade `Jinja2` to version 3.1.4 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-05-06",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja 模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EAF90D95",
+              "cve_id": "CVE-2024-56326",
+              "cnnvd_id": "CNNVD-202412-2665",
+              "cwe_id": "CWE-693 CWE-1336",
+              "description": "Jinja 是由 Pallets 开源的一个快速、富有表现力并可扩展的模板引擎。该漏洞存在于 Jinja 版本 3.1.5 之前，由于在沙箱环境中对 str.format 调用的检测存在不当，攻击者可以控制模板的内容并执行任意 Python 代码。攻击者可以通过创建包含恶意字符串的模板并利用自定义过滤器实现攻击，这可能导致系统安全性严重受损。",
+              "suggestion": "建议立即升级到 Jinja 版本 3.1.5 或更高版本，以修复此漏洞。如果无法立即升级，建议限制对受影响模板内容的访问权限，并定期审计和监控应用程序的模板使用情况，以防出现不安全的自定义过滤器。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja模板引擎任意代码执行漏洞",
+              "id": "XMIRROR-E5B714EF-EA6B2B95",
+              "cve_id": "CVE-2024-56201",
+              "cnnvd_id": "CNNVD-202412-2662",
+              "cwe_id": "CWE-150",
+              "description": "Jinja是Pallets开源的一个快速、富有表现力且可扩展的模板引擎。版本3.1.5之前的Jinja存在安全漏洞，该漏洞源于编译器的一个错误，允许同时控制模板内容和文件名的攻击者执行任意Python代码，无论Jinja的沙箱是否被使用。当应用程序执行不可信的模板时，攻击者需要能够控制模板的文件名和内容，才能有效利用此漏洞。",
+              "suggestion": "立即升级到Jinja版本3.1.5或更高版本，以修复此漏洞。建议对用户提供的模板进行严格的验证，并限制攻击者对模板文件名和内容的控制，以防止类似漏洞的再次发生。",
+              "attack_type": "本地",
+              "release_date": "2024-12-23",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Jinja2 任意代码执行漏洞",
+              "id": "XMIRROR-E5B714FA-9AF4BE95",
+              "cve_id": "CVE-2025-27516",
+              "cnnvd_id": "CNNVD-202503-672",
+              "cwe_id": "CWE-1336",
+              "description": "Jinja2 是一个广泛用于Web应用程序的模板引擎，用于渲染模板。该漏洞源于 Jinja2 沙盒环境与 `|attr` 过滤器交互时的一个疏忽。特别是，当攻击者能够控制模板的内容时，就可以利用此缺陷执行任意 Python 代码。这意味着，如果某个应用程序处理不可信的模板，就可能受到威胁，从而导致未经授权的系统访问或操作。",
+              "suggestion": "强烈建议开发人员和系统管理员立即将 Jinja2 升级到 3.1.6 及以上版本，以修复此漏洞。同时，实施严格的用户生成内容控制和验证，避免允许用户提交模板，必要时应对输入进行清理。此外，监控与 Jinja2 及其他应用程序组件相关的安全公告和更新。",
+              "attack_type": "本地",
+              "release_date": "2025-03-05",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            }
+          ],
+          "indirect_vulnerabilities": 7
+        },
+        {
+          "name": "keystonemiddleware",
+          "version": "\u003e=5.1.0",
+          "language": "Python",
+          "id": "57811828027883544",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[keystonemiddleware:\u003e=5.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "netaddr",
+          "version": "\u003e=0.7.18",
+          "language": "Python",
+          "id": "57811828027883545",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[netaddr:\u003e=0.7.18]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ]
+        },
+        {
+          "name": "neutron-lib",
+          "version": "\u003e=3.22.0",
+          "language": "Python",
+          "id": "57811828027883546",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[neutron-lib:\u003e=3.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-neutronclient",
+          "version": "\u003e=7.8.0",
+          "language": "Python",
+          "id": "57811828027883547",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[python-neutronclient:\u003e=7.8.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tenacity",
+          "version": "\u003e=6.0.0",
+          "language": "Python",
+          "id": "57811828027883548",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[tenacity:\u003e=6.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "SQLAlchemy",
+          "version": "\u003e=1.4.23",
+          "language": "Python",
+          "id": "57811828027883549",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[SQLAlchemy:\u003e=1.4.23]"
+          ]
+        },
+        {
+          "name": "WebOb",
+          "version": "\u003e=1.8.2",
+          "language": "Python",
+          "id": "57811828027883550",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[WebOb:\u003e=1.8.2]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "WebOb 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14E1B695",
+              "cve_id": "CVE-2024-42353",
+              "cnnvd_id": "CNNVD-202408-1345",
+              "cwe_id": "CWE-601",
+              "description": "WebOb是Pylons开源的一个 WSGI 请求和响应对象。\r\nWebOb 1.8.8之前版本存在安全漏洞，该漏洞源于存在打开重定向。",
+              "suggestion": "## Remediation\nUpgrade `WebOb` to version 1.8.8 or higher.",
+              "attack_type": "远程",
+              "release_date": "2024-08-14",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        },
+        {
+          "name": "keystoneauth1",
+          "version": "\u003e=3.14.0",
+          "language": "Python",
+          "id": "57811828027883551",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[keystoneauth1:\u003e=3.14.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "alembic",
+          "version": "\u003e=1.6.5",
+          "language": "Python",
+          "id": "57811828027883552",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[alembic:\u003e=1.6.5]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "stevedore",
+          "version": "\u003e=2.0.1",
+          "language": "Python",
+          "id": "57811828027883553",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[stevedore:\u003e=2.0.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.cache",
+          "version": "\u003e=1.26.0",
+          "language": "Python",
+          "id": "57811828027883554",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.cache:\u003e=1.26.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.concurrency",
+          "version": "\u003e=3.26.0",
+          "language": "Python",
+          "id": "57811828027883555",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.concurrency:\u003e=3.26.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.config",
+          "version": "\u003e=9.4.0",
+          "language": "Python",
+          "id": "57811828027883556",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.config:\u003e=9.4.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.context",
+          "version": "\u003e=2.22.0",
+          "language": "Python",
+          "id": "57811828027883557",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.context:\u003e=2.22.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.db",
+          "version": "\u003e=4.44.0",
+          "language": "Python",
+          "id": "57811828027883558",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.db:\u003e=4.44.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.i18n",
+          "version": "\u003e=3.20.0",
+          "language": "Python",
+          "id": "57811828027883559",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.i18n:\u003e=3.20.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.log",
+          "version": "\u003e=5.3.0",
+          "language": "Python",
+          "id": "57811828027883560",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.log:\u003e=5.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.messaging",
+          "version": "\u003e=7.0.0",
+          "language": "Python",
+          "id": "57811828027883561",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.messaging:\u003e=7.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.middleware",
+          "version": "\u003e=3.31.0",
+          "language": "Python",
+          "id": "57811828027883562",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.middleware:\u003e=3.31.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.policy",
+          "version": "\u003e=4.5.0",
+          "language": "Python",
+          "id": "57811828027883563",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.policy:\u003e=4.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.privsep",
+          "version": "\u003e=2.3.0",
+          "language": "Python",
+          "id": "57811828027883564",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.privsep:\u003e=2.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.reports",
+          "version": "\u003e=1.18.0",
+          "language": "Python",
+          "id": "57811828027883565",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.reports:\u003e=1.18.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.rootwrap",
+          "version": "\u003e=5.15.0",
+          "language": "Python",
+          "id": "57811828027883566",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.rootwrap:\u003e=5.15.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.serialization",
+          "version": "\u003e=5.5.0",
+          "language": "Python",
+          "id": "57811828027883567",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.serialization:\u003e=5.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.service[threading]",
+          "version": "\u003e=4.2.1",
+          "language": "Python",
+          "id": "57811828027883568",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.service[threading]:\u003e=4.2.1]"
+          ]
+        },
+        {
+          "name": "oslo.upgradecheck",
+          "version": "\u003e=1.3.0",
+          "language": "Python",
+          "id": "57811828027883569",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.upgradecheck:\u003e=1.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.utils",
+          "version": "\u003e=7.3.0",
+          "language": "Python",
+          "id": "57811828027883570",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.utils:\u003e=7.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "oslo.versionedobjects",
+          "version": "\u003e=1.35.1",
+          "language": "Python",
+          "id": "57811828027883571",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[oslo.versionedobjects:\u003e=1.35.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "osprofiler",
+          "version": "\u003e=2.3.0",
+          "language": "Python",
+          "id": "57811828027883572",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[osprofiler:\u003e=2.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-ken",
+          "version": "\u003e=4.0.0",
+          "language": "Python",
+          "id": "57811828027883573",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[os-ken:\u003e=4.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-resource-classes",
+          "version": "\u003e=1.1.0",
+          "language": "Python",
+          "id": "57811828027883574",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[os-resource-classes:\u003e=1.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "ovs",
+          "version": "\u003e3.3.0",
+          "language": "Python",
+          "id": "57811828027883575",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[ovs:\u003e3.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "ovsdbapp",
+          "version": "\u003e=2.14.1",
+          "language": "Python",
+          "id": "57811828027883576",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[ovsdbapp:\u003e=2.14.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "psutil",
+          "version": "\u003e=6.1.0",
+          "language": "Python",
+          "id": "57811828027883577",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[psutil:\u003e=6.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "pyroute2",
+          "version": "\u003e=0.7.3",
+          "language": "Python",
+          "id": "57811828027883578",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[pyroute2:\u003e=0.7.3]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-2.0-or-later"
+            }
+          ]
+        },
+        {
+          "name": "pyOpenSSL",
+          "version": "\u003e=17.1.0",
+          "language": "Python",
+          "id": "57811828027883579",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[pyOpenSSL:\u003e=17.1.0]"
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python Cryptographic Authority pyopenssl 安全漏洞",
+              "id": "XMIRROR-E5F7537E-8516AE95",
+              "cve_id": "CVE-2018-1000807",
+              "cnnvd_id": "CNNVD-201810-249",
+              "cwe_id": "CWE-416",
+              "description": "Python Cryptographic Authority pyopenssl是一款基于Python的OpenSSL库。\r\n\r\nPython Cryptographic Authority pyopenssl 17.5.0之前版本中对X509对象的处理方法存在释放后重用漏洞。远程攻击者可利用该漏洞造成拒绝服务或执行代码。",
+              "attack_type": "远程",
+              "release_date": "2018-10-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Python Cryptographic Authority pyopenssl 安全漏洞",
+              "id": "XMIRROR-E5F7537E-8516C095",
+              "cve_id": "CVE-2018-1000808",
+              "cnnvd_id": "CNNVD-201810-250",
+              "cwe_id": "CWE-404",
+              "description": "Python Cryptographic Authority pyopenssl是一款基于Python的OpenSSL库。\r\n\r\nPython Cryptographic Authority pyopenssl 17.5.0之前版本中存在安全漏洞。攻击者可利用该漏洞造成拒绝服务。",
+              "suggestion": "## Remediation\r\nUpgrade `pyopenssl` to version 17.5.0 or higher.\n",
+              "attack_type": "远程",
+              "release_date": "2018-10-08",
+              "security_level_id": 2,
+              "exploit_level_id": 0
+            }
+          ],
+          "indirect_vulnerabilities": 2
+        },
+        {
+          "name": "python-novaclient",
+          "version": "\u003e=9.1.0",
+          "language": "Python",
+          "id": "57811828027883580",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[python-novaclient:\u003e=9.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "openstacksdk",
+          "version": "\u003e=0.31.2",
+          "language": "Python",
+          "id": "57811828027883581",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[openstacksdk:\u003e=0.31.2]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "python-designateclient",
+          "version": "\u003e=2.7.0",
+          "language": "Python",
+          "id": "57811828027883582",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[python-designateclient:\u003e=2.7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "os-vif",
+          "version": "\u003e=3.1.0",
+          "language": "Python",
+          "id": "57811828027883583",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[os-vif:\u003e=3.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "futurist",
+          "version": "\u003e=1.2.0",
+          "language": "Python",
+          "id": "57811828027883584",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[futurist:\u003e=1.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "tooz",
+          "version": "\u003e=1.58.0",
+          "language": "Python",
+          "id": "57811828027883585",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\requirements.txt\\[tooz:\u003e=1.58.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ],
+      "indirect_vulnerabilities": 11
+    },
+    {
+      "language": "Python",
+      "id": "57811828027883524",
+      "direct": true,
+      "paths": [
+        "openstack_neutron\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811828027883525",
+      "direct": true,
+      "paths": [
+        "openstack_neutron\\tools\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "click",
+          "version": "\u003e=7.0",
+          "language": "Python",
+          "id": "57811828027883586",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\tools\\requirements.txt\\[click:\u003e=7.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "cliff",
+          "version": "\u003e=3.10.1",
+          "language": "Python",
+          "id": "57811828027883587",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\tools\\requirements.txt\\[cliff:\u003e=3.10.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "requests",
+          "version": "\u003e=2.14.2",
+          "language": "Python",
+          "id": "57811828027883588",
+          "direct": true,
+          "paths": [
+            "openstack_neutron\\tools\\requirements.txt\\[requests:\u003e=2.14.2]"
+          ],
+          "licenses": [
+            {
+              "name": "ISC"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "name": "Python 信任管理问题漏洞",
+              "id": "XMIRROR-E5B714B5-4FF1AD95",
+              "cve_id": "CVE-2018-18074",
+              "cnnvd_id": "CNNVD-201810-457",
+              "cnvd_id": "CNVD-2018-26002",
+              "cwe_id": "CWE-522",
+              "description": "Requests package for Python是一款基于Python的开源HTTP库。\r\r\nRequests package for Python 2.19.1及之前版本（2018-09-14之前发布）中存在安全漏洞，该漏洞源于程序在接收到从https转换到http的重定向请求（带有相同主机名）时，会将HTTP Authorization包头发送到http URI。远程攻击者可通过嗅探网络利用该漏洞获取凭证。",
+              "suggestion": "目前厂商已发布升级补丁以修复漏洞，补丁获取链接：\r\nhttps://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff",
+              "attack_type": "远程",
+              "release_date": "2018-10-09",
+              "security_level_id": 2,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Requests 安全漏洞",
+              "id": "XMIRROR-E5B714EF-14951995",
+              "cve_id": "CVE-2024-35195",
+              "cnnvd_id": "CNNVD-202405-3594",
+              "cwe_id": "CWE-670",
+              "description": "Requests是Python基金会的一个优雅而简单的HTTP库。通过请求，您可以非常轻松地发送HTTP / 1.1请求。无需将查询字符串手动添加到您的URL，也无需对POST数据进行表单编码。\r\nRequests 2.32.0之前版本存在安全漏洞，该漏洞源于禁用证书验证后在连接的生命周期中持续存在，后续所有请求都将被忽略。",
+              "suggestion": "## Remediation\nUpgrade `requests` to version 2.32.2 or higher.",
+              "attack_type": "本地",
+              "release_date": "2024-05-20",
+              "security_level_id": 3,
+              "exploit_level_id": 0
+            },
+            {
+              "name": "Requests库敏感信息泄漏漏洞",
+              "id": "XMIRROR-E5B714EF-1456C295",
+              "cve_id": "CVE-2024-47081",
+              "cnnvd_id": "CNNVD-202506-1031",
+              "cwe_id": "CWE-522",
+              "description": "Requests库用于发送HTTP请求的Python库。该漏洞涉及Netrc凭证泄漏，可能导致敏感信息泄露。",
+              "suggestion": "建议升级Requests库至最新版，避免使用不安全的URL调用。此外，定期审查和更改凭证。",
+              "attack_type": "远程",
+              "release_date": "2025-06-06",
+              "security_level_id": 3,
+              "exploit_level_id": 2
+            },
+            {
+              "name": "Python Requests 公共后缀域的 Cookie 漏洞",
+              "id": "XMIRROR-E5F5415F-6B273D1D",
+              "description": "\u003cp\u003ePython Requests 是一个用于发送 HTTP 请求的开源库，广泛用于 Web 应用程序中。当请求涉及到公共后缀域的 Set-Cookie 头时，可能会导致 Cookie 被错误地发送到所有公共后缀域。此漏洞的根本原因在于 Python Requests 在处理包含公共后缀的 Cookie 域时，未能正确限制 Cookie 的发送。攻击者可以利用这个漏洞，诱使用户访问特定 URL，从而在请求过程中窃取敏感信息。\u003c/p\u003e",
+              "suggestion": "\u003cp\u003e修复此漏洞的永久方法是升级 Python Requests 库至最新版本，确保其内置的 Cookie 处理逻辑已修复。临时缓解方法可以包括避免使用公共后缀域的 Cookie，或在可能的情况下，根据业务需求调整 Cookie 设置。为了防止类似漏洞的发生，应实现安全编码实践，例如限制 Cookie 的域，并进行充分的输入验证。\u003c/p\u003e",
+              "security_level_id": 2,
+              "exploit_level_id": 1
+            }
+          ],
+          "indirect_vulnerabilities": 4
+        }
+      ],
+      "indirect_vulnerabilities": 4
+    }
+  ],
+  "indirect_vulnerabilities": 19
+}

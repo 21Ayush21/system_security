@@ -1,0 +1,109 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "moinwiki_moin",
+    "size": 0,
+    "start_time": "2025-11-27 21:52:03",
+    "end_time": "2025-11-27 21:52:05",
+    "cost_time": 1.639415
+  },
+  "id": "57811819692785664",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811819692785665",
+      "direct": true,
+      "paths": [
+        "moinwiki_moin\\docs\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "docutils",
+          "version": "\u003e=0.18.1",
+          "language": "Python",
+          "id": "57811819692785671",
+          "direct": true,
+          "paths": [
+            "moinwiki_moin\\docs\\requirements.txt\\[docutils:\u003e=0.18.1]"
+          ],
+          "licenses": [
+            {
+              "name": "GPL-1.0-or-later"
+            },
+            {
+              "name": "Public-Domain"
+            },
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx",
+          "version": "\u003e=5.3.0",
+          "language": "Python",
+          "id": "57811819692785672",
+          "direct": true,
+          "paths": [
+            "moinwiki_moin\\docs\\requirements.txt\\[sphinx:\u003e=5.3.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-rtd-theme",
+          "version": "\u003e=1.2.0",
+          "language": "Python",
+          "id": "57811819692785673",
+          "direct": true,
+          "paths": [
+            "moinwiki_moin\\docs\\requirements.txt\\[sphinx-rtd-theme:\u003e=1.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811819692785666",
+      "direct": true,
+      "paths": [
+        "moinwiki_moin\\src\\moin\\themes\\basic\\info.json"
+      ]
+    },
+    {
+      "id": "57811819692785667",
+      "direct": true,
+      "paths": [
+        "moinwiki_moin\\src\\moin\\themes\\focus\\info.json"
+      ]
+    },
+    {
+      "id": "57811819692785668",
+      "direct": true,
+      "paths": [
+        "moinwiki_moin\\src\\moin\\themes\\modernized\\info.json"
+      ]
+    },
+    {
+      "id": "57811819692785669",
+      "direct": true,
+      "paths": [
+        "moinwiki_moin\\src\\moin\\themes\\topside\\info.json"
+      ]
+    },
+    {
+      "id": "57811819692785670",
+      "direct": true,
+      "paths": [
+        "moinwiki_moin\\src\\moin\\themes\\topside_cms\\info.json"
+      ]
+    }
+  ]
+}

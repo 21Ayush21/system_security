@@ -1,0 +1,1504 @@
+{
+  "task_info": {
+    "tool_version": "v3.0.8",
+    "app_name": "python_cpython",
+    "size": 0,
+    "start_time": "2025-11-27 21:57:11",
+    "end_time": "2025-11-27 21:57:21",
+    "cost_time": 10.2801425
+  },
+  "id": "57811830068772864",
+  "children": [
+    {
+      "language": "Python",
+      "id": "57811830068772865",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Doc\\includes\\newtypes\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772866",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Doc\\requirements.txt"
+      ],
+      "children": [
+        {
+          "name": "sphinx",
+          "version": "~=8.2.0",
+          "language": "Python",
+          "id": "57811830068772913",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Doc\\requirements.txt\\[sphinx:~=8.2.0]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "blurb",
+          "language": "Python",
+          "id": "57811830068772914",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Doc\\requirements.txt\\[blurb:]"
+          ],
+          "licenses": [
+            {
+              "name": "BSD-1-Clause"
+            }
+          ]
+        },
+        {
+          "name": "sphinxext-opengraph",
+          "version": "~=0.13.0",
+          "language": "Python",
+          "id": "57811830068772915",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Doc\\requirements.txt\\[sphinxext-opengraph:~=0.13.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "sphinx-notfound-page",
+          "version": "~=1.0.0",
+          "language": "Python",
+          "id": "57811830068772916",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Doc\\requirements.txt\\[sphinx-notfound-page:~=1.0.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "python-docs-theme",
+          "version": "\u003e=2023.3.1,!=2023.7",
+          "language": "Python",
+          "id": "57811830068772917",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Doc\\requirements.txt\\[python-docs-theme:\u003e=2023.3.1,!=2023.7]"
+          ],
+          "licenses": [
+            {
+              "name": "Python-2.0"
+            }
+          ]
+        },
+        {
+          "name": "-c constraints.txt",
+          "language": "Python",
+          "id": "57811830068772918",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Doc\\requirements.txt\\[-c constraints.txt:]"
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772867",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\libregrtest\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772868",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_cext\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772869",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_cppext\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772870",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_importlib\\metadata\\data\\sources\\example\\setup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772871",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Tools\\freeze\\parsesetup.py"
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772872",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Tools\\requirements-dev.txt"
+      ],
+      "children": [
+        {
+          "name": "mypy",
+          "version": "1.17.1",
+          "language": "Python",
+          "id": "57811830068772919",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\requirements-dev.txt\\[mypy:1.17.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "types-psutil",
+          "version": "7.0.0.20250801",
+          "language": "Python",
+          "id": "57811830068772920",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\requirements-dev.txt\\[types-psutil:7.0.0.20250801]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "types-setuptools",
+          "version": "80.9.0.20250801",
+          "language": "Python",
+          "id": "57811830068772921",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\requirements-dev.txt\\[types-setuptools:80.9.0.20250801]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Python",
+      "id": "57811830068772873",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Tools\\requirements-hypothesis.txt"
+      ],
+      "children": [
+        {
+          "name": "hypothesis",
+          "version": "6.135.26",
+          "language": "Python",
+          "id": "57811830068772922",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\requirements-hypothesis.txt\\[hypothesis:6.135.26]"
+          ],
+          "licenses": [
+            {
+              "name": "MPL-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "browser_test",
+      "version": "1.0.0",
+      "language": "JavaScript",
+      "id": "57811830068772874",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]"
+      ],
+      "children": [
+        {
+          "name": "@playwright/test",
+          "version": "1.54.1",
+          "language": "JavaScript",
+          "id": "57811830068772923",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[@playwright\\test:1.54.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "name": "@types/node",
+          "version": "24.1.0",
+          "language": "JavaScript",
+          "id": "57811830068772924",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[@types\\node:24.1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "undici-types",
+              "version": "7.8.0",
+              "language": "JavaScript",
+              "id": "57811830068772946",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[@types\\node:24.1.0]\\[undici-types:7.8.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "http-server",
+          "version": "14.1.1",
+          "language": "JavaScript",
+          "id": "57811830068772925",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "children": [
+            {
+              "name": "basic-auth",
+              "version": "2.0.1",
+              "language": "JavaScript",
+              "id": "57811830068772947",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[basic-auth:2.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "safe-buffer",
+                  "version": "5.1.2",
+                  "language": "JavaScript",
+                  "id": "57811830068772962",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[basic-auth:2.0.1]\\[safe-buffer:5.1.2]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "chalk",
+              "version": "4.1.2",
+              "language": "JavaScript",
+              "id": "57811830068772948",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[chalk:4.1.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "ansi-styles",
+                  "version": "4.3.0",
+                  "language": "JavaScript",
+                  "id": "57811830068772963",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[chalk:4.1.2]\\[ansi-styles:4.3.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "color-convert",
+                      "version": "2.0.1",
+                      "language": "JavaScript",
+                      "id": "57811830068805634",
+                      "paths": [
+                        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[chalk:4.1.2]\\[ansi-styles:4.3.0]\\[color-convert:2.0.1]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "color-name",
+                          "version": "1.1.4",
+                          "language": "JavaScript",
+                          "id": "57811830068805639",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[chalk:4.1.2]\\[ansi-styles:4.3.0]\\[color-convert:2.0.1]\\[color-name:1.1.4]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "UNKNOWN"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "supports-color",
+                  "version": "7.2.0",
+                  "language": "JavaScript",
+                  "id": "57811830068772964",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[chalk:4.1.2]\\[supports-color:7.2.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "has-flag",
+                      "version": "4.0.0",
+                      "language": "JavaScript",
+                      "id": "57811830068805635",
+                      "paths": [
+                        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[chalk:4.1.2]\\[supports-color:7.2.0]\\[has-flag:4.0.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "he",
+              "version": "1.2.0",
+              "language": "JavaScript",
+              "id": "57811830068772949",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[he:1.2.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "http-proxy",
+              "version": "1.18.1",
+              "language": "JavaScript",
+              "id": "57811830068772950",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[http-proxy:1.18.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "eventemitter3",
+                  "version": "4.0.7",
+                  "language": "JavaScript",
+                  "id": "57811830068772965",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[http-proxy:1.18.1]\\[eventemitter3:4.0.7]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "follow-redirects",
+                  "version": "1.15.9",
+                  "language": "JavaScript",
+                  "id": "57811830068772966",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[http-proxy:1.18.1]\\[follow-redirects:1.15.9]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "requires-port",
+                  "version": "1.0.0",
+                  "language": "JavaScript",
+                  "id": "57811830068772967",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[http-proxy:1.18.1]\\[requires-port:1.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "mime",
+              "version": "1.6.0",
+              "language": "JavaScript",
+              "id": "57811830068772951",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[mime:1.6.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "portfinder",
+              "version": "1.0.37",
+              "language": "JavaScript",
+              "id": "57811830068772952",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[portfinder:1.0.37]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ],
+              "children": [
+                {
+                  "name": "async",
+                  "version": "3.2.6",
+                  "language": "JavaScript",
+                  "id": "57811830068772968",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[portfinder:1.0.37]\\[async:3.2.6]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ]
+                },
+                {
+                  "name": "debug",
+                  "version": "4.4.1",
+                  "language": "JavaScript",
+                  "id": "57811830068772969",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[portfinder:1.0.37]\\[debug:4.4.1]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "ms",
+                      "version": "2.1.3",
+                      "language": "JavaScript",
+                      "id": "57811830068805636",
+                      "paths": [
+                        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[portfinder:1.0.37]\\[debug:4.4.1]\\[ms:2.1.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "union",
+              "version": "0.5.0",
+              "language": "JavaScript",
+              "id": "57811830068772953",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]"
+              ],
+              "children": [
+                {
+                  "name": "qs",
+                  "version": "6.14.0",
+                  "language": "JavaScript",
+                  "id": "57811830068805632",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "BSD-3-Clause"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "side-channel",
+                      "version": "1.1.0",
+                      "language": "JavaScript",
+                      "id": "57811830068805637",
+                      "paths": [
+                        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "side-channel-weakmap",
+                          "version": "1.0.2",
+                          "language": "JavaScript",
+                          "id": "57811830068805640",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]"
+                          ],
+                          "children": [
+                            {
+                              "name": "call-bound",
+                              "version": "1.0.4",
+                              "language": "JavaScript",
+                              "id": "57811830068805646",
+                              "paths": [
+                                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[call-bound:1.0.4]"
+                              ],
+                              "children": [
+                                {
+                                  "name": "call-bind-apply-helpers",
+                                  "version": "1.0.2",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805648",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[call-bound:1.0.4]\\[call-bind-apply-helpers:1.0.2]"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "get-intrinsic",
+                              "version": "1.3.0",
+                              "language": "JavaScript",
+                              "id": "57811830068805647",
+                              "paths": [
+                                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]"
+                              ],
+                              "licenses": [
+                                {
+                                  "name": "MIT"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "name": "gopd",
+                                  "version": "1.2.0",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805649",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[gopd:1.2.0]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "has-symbols",
+                                  "version": "1.1.0",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805650",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[has-symbols:1.1.0]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "hasown",
+                                  "version": "2.0.2",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805651",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[hasown:2.0.2]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "math-intrinsics",
+                                  "version": "1.1.0",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805652",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[math-intrinsics:1.1.0]"
+                                  ]
+                                },
+                                {
+                                  "name": "function-bind",
+                                  "version": "1.1.2",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805653",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[function-bind:1.1.2]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "get-proto",
+                                  "version": "1.0.1",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805654",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[get-proto:1.0.1]"
+                                  ],
+                                  "children": [
+                                    {
+                                      "name": "dunder-proto",
+                                      "version": "1.0.1",
+                                      "language": "JavaScript",
+                                      "id": "57811830068805657",
+                                      "paths": [
+                                        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[get-proto:1.0.1]\\[dunder-proto:1.0.1]"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "es-define-property",
+                                  "version": "1.0.1",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805655",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[es-define-property:1.0.1]"
+                                  ],
+                                  "licenses": [
+                                    {
+                                      "name": "MIT"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "es-object-atoms",
+                                  "version": "1.1.1",
+                                  "language": "JavaScript",
+                                  "id": "57811830068805656",
+                                  "paths": [
+                                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-weakmap:1.0.2]\\[get-intrinsic:1.3.0]\\[es-object-atoms:1.1.1]"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "es-errors",
+                          "version": "1.3.0",
+                          "language": "JavaScript",
+                          "id": "57811830068805641",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[es-errors:1.3.0]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "object-inspect",
+                          "version": "1.13.4",
+                          "language": "JavaScript",
+                          "id": "57811830068805642",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[object-inspect:1.13.4]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "side-channel-list",
+                          "version": "1.0.0",
+                          "language": "JavaScript",
+                          "id": "57811830068805643",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-list:1.0.0]"
+                          ]
+                        },
+                        {
+                          "name": "side-channel-map",
+                          "version": "1.0.1",
+                          "language": "JavaScript",
+                          "id": "57811830068805644",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[union:0.5.0]\\[qs:6.14.0]\\[side-channel:1.1.0]\\[side-channel-map:1.0.1]"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "corser",
+              "version": "2.0.1",
+              "language": "JavaScript",
+              "id": "57811830068772954",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[corser:2.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "html-encoding-sniffer",
+              "version": "3.0.0",
+              "language": "JavaScript",
+              "id": "57811830068772955",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[html-encoding-sniffer:3.0.0]"
+              ],
+              "licenses": [
+                {
+                  "name": "WTFPL"
+                }
+              ],
+              "children": [
+                {
+                  "name": "whatwg-encoding",
+                  "version": "2.0.0",
+                  "language": "JavaScript",
+                  "id": "57811830068805633",
+                  "paths": [
+                    "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[html-encoding-sniffer:3.0.0]\\[whatwg-encoding:2.0.0]"
+                  ],
+                  "licenses": [
+                    {
+                      "name": "MIT"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "name": "iconv-lite",
+                      "version": "0.6.3",
+                      "language": "JavaScript",
+                      "id": "57811830068805638",
+                      "paths": [
+                        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[html-encoding-sniffer:3.0.0]\\[whatwg-encoding:2.0.0]\\[iconv-lite:0.6.3]"
+                      ],
+                      "licenses": [
+                        {
+                          "name": "MIT"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "name": "safer-buffer",
+                          "version": "2.1.2",
+                          "language": "JavaScript",
+                          "id": "57811830068805645",
+                          "paths": [
+                            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[html-encoding-sniffer:3.0.0]\\[whatwg-encoding:2.0.0]\\[iconv-lite:0.6.3]\\[safer-buffer:2.1.2]"
+                          ],
+                          "licenses": [
+                            {
+                              "name": "MIT"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "minimist",
+              "version": "1.2.8",
+              "language": "JavaScript",
+              "id": "57811830068772956",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[minimist:1.2.8]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "opener",
+              "version": "1.5.2",
+              "language": "JavaScript",
+              "id": "57811830068772957",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[opener:1.5.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "WTFPL"
+                }
+              ]
+            },
+            {
+              "name": "secure-compare",
+              "version": "3.0.1",
+              "language": "JavaScript",
+              "id": "57811830068772958",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[secure-compare:3.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            },
+            {
+              "name": "url-join",
+              "version": "4.0.1",
+              "language": "JavaScript",
+              "id": "57811830068772959",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[http-server:14.1.1]\\[url-join:4.0.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "playwright",
+          "version": "1.54.1",
+          "language": "JavaScript",
+          "id": "57811830068772926",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[playwright:1.54.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ],
+          "children": [
+            {
+              "name": "playwright-core",
+              "version": "1.54.1",
+              "language": "JavaScript",
+              "id": "57811830068772960",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[playwright:1.54.1]\\[playwright-core:1.54.1]"
+              ],
+              "licenses": [
+                {
+                  "name": "Apache-2.0"
+                }
+              ],
+              "vulnerabilities": [
+                {
+                  "name": "GitHub 加密签名验证不足漏洞",
+                  "id": "XMIRROR-E5B714FA-640E7C95",
+                  "cve_id": "CVE-2025-59288",
+                  "cnnvd_id": "CNNVD-202510-1790",
+                  "cwe_id": "CWE-347",
+                  "description": "GitHub 是一个广泛使用的版本控制和协作开发平台，主要用于托管和管理代码仓库、版本控制以及团队协作等功能。此漏洞是由于 GitHub 在处理加密签名时存在验证不足的问题。具体来说，加密签名的验证过程存在缺陷，导致攻击者可以通过邻近网络伪造身份。",
+                  "suggestion": "建议用户尽快升级到包含修复的最新版本。此外，可以通过启用多因素认证（MFA）增强身份验证安全性，定期审查和更新访问控制策略，并确保系统中所有安全补丁和更新已应用。建议企业对网络边界进行严格的访问控制，防止未经授权的邻近网络攻击者接入。",
+                  "attack_type": "邻近网络",
+                  "release_date": "2025-10-14",
+                  "security_level_id": 3,
+                  "exploit_level_id": 2
+                }
+              ],
+              "indirect_vulnerabilities": 1
+            },
+            {
+              "name": "fsevents",
+              "version": "2.3.2",
+              "language": "JavaScript",
+              "id": "57811830068772961",
+              "paths": [
+                "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json\\[browser_test:1.0.0]\\[playwright:1.54.1]\\[fsevents:2.3.2]"
+              ],
+              "licenses": [
+                {
+                  "name": "MIT"
+                }
+              ]
+            }
+          ],
+          "indirect_vulnerabilities": 1
+        }
+      ],
+      "indirect_vulnerabilities": 1
+    },
+    {
+      "language": "Java",
+      "id": "57811830068772875",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Android\\testbed\\app\\build.gradle.kts"
+      ],
+      "children": [
+        {
+          "vendor": "androidx.appcompat",
+          "name": "appcompat",
+          "version": "1.6.1",
+          "language": "Java",
+          "id": "57811830068772927",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Android\\testbed\\app\\build.gradle.kts\\[androidx.appcompat:appcompat:1.6.1]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "vendor": "com.google.android.material",
+          "name": "material",
+          "version": "1.11.0",
+          "language": "Java",
+          "id": "57811830068772928",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Android\\testbed\\app\\build.gradle.kts\\[com.google.android.material:material:1.11.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "vendor": "androidx.constraintlayout",
+          "name": "constraintlayout",
+          "version": "2.1.4",
+          "language": "Java",
+          "id": "57811830068772929",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Android\\testbed\\app\\build.gradle.kts\\[androidx.constraintlayout:constraintlayout:2.1.4]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "vendor": "androidx.test.ext",
+          "name": "junit",
+          "version": "1.1.5",
+          "language": "Java",
+          "id": "57811830068772930",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Android\\testbed\\app\\build.gradle.kts\\[androidx.test.ext:junit:1.1.5]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        },
+        {
+          "vendor": "androidx.test",
+          "name": "rules",
+          "version": "1.5.0",
+          "language": "Java",
+          "id": "57811830068772931",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Android\\testbed\\app\\build.gradle.kts\\[androidx.test:rules:1.5.0]"
+          ],
+          "licenses": [
+            {
+              "name": "Apache-2.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "language": "Java",
+      "id": "57811830068772876",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Android\\testbed\\build.gradle.kts"
+      ]
+    },
+    {
+      "language": "Java",
+      "id": "57811830068772877",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Android\\testbed\\settings.gradle.kts"
+      ]
+    },
+    {
+      "id": "57811830068772878",
+      "direct": true,
+      "paths": [
+        "python_cpython\\.devcontainer\\devcontainer.json"
+      ]
+    },
+    {
+      "id": "57811830068772879",
+      "direct": true,
+      "paths": [
+        "python_cpython\\.devcontainer\\wasi\\devcontainer.json"
+      ]
+    },
+    {
+      "id": "57811830068772880",
+      "direct": true,
+      "paths": [
+        "python_cpython\\.github\\problem-matchers\\gcc.json"
+      ]
+    },
+    {
+      "id": "57811830068772881",
+      "direct": true,
+      "paths": [
+        "python_cpython\\.github\\problem-matchers\\msvc.json"
+      ]
+    },
+    {
+      "id": "57811830068772882",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Apple\\testbed\\iOSTestbed\\Assets.xcassets\\AccentColor.colorset\\Contents.json"
+      ]
+    },
+    {
+      "id": "57811830068772883",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Apple\\testbed\\iOSTestbed\\Assets.xcassets\\AppIcon.appiconset\\Contents.json"
+      ]
+    },
+    {
+      "id": "57811830068772884",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Apple\\testbed\\iOSTestbed\\Assets.xcassets\\Contents.json"
+      ]
+    },
+    {
+      "id": "57811830068772885",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\levenshtein_examples.json"
+      ]
+    },
+    {
+      "id": "57811830068772886",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\apostrophes-in-literal-string.json"
+      ]
+    },
+    {
+      "id": "57811830068772887",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\array\\array-subtables.json"
+      ]
+    },
+    {
+      "id": "57811830068772888",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\array\\open-parent-table.json"
+      ]
+    },
+    {
+      "id": "57811830068772889",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\boolean.json"
+      ]
+    },
+    {
+      "id": "57811830068772890",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\dates-and-times\\datetimes.json"
+      ]
+    },
+    {
+      "id": "57811830068772891",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\dates-and-times\\localtime.json"
+      ]
+    },
+    {
+      "id": "57811830068772892",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\empty-inline-table.json"
+      ]
+    },
+    {
+      "id": "57811830068772893",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\five-quotes.json"
+      ]
+    },
+    {
+      "id": "57811830068772894",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\hex-char.json"
+      ]
+    },
+    {
+      "id": "57811830068772895",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\multiline-basic-str\\ends-in-whitespace-escape.json"
+      ]
+    },
+    {
+      "id": "57811830068772896",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\no-newlines.json"
+      ]
+    },
+    {
+      "id": "57811830068772897",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tomllib\\data\\valid\\trailing-comma.json"
+      ]
+    },
+    {
+      "id": "57811830068772898",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tools\\msgfmt_data\\fuzzy.json"
+      ]
+    },
+    {
+      "id": "57811830068772899",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_tools\\msgfmt_data\\general.json"
+      ]
+    },
+    {
+      "id": "57811830068772900",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Lib\\test\\test_zoneinfo\\data\\zoneinfo_data.json"
+      ]
+    },
+    {
+      "id": "57811830068772901",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Misc\\externals.spdx.json"
+      ],
+      "children": [
+        {
+          "name": "bzip2",
+          "version": "1.0.8",
+          "id": "57811830068772932",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[bzip2:1.0.8]"
+          ]
+        },
+        {
+          "name": "mpdecimal",
+          "version": "4.0.0",
+          "id": "57811830068772933",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[mpdecimal:4.0.0]"
+          ]
+        },
+        {
+          "name": "sqlite",
+          "version": "3.50.4.0",
+          "id": "57811830068772934",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[sqlite:3.50.4.0]"
+          ]
+        },
+        {
+          "name": "tk",
+          "version": "8.6.15.0",
+          "id": "57811830068772935",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[tk:8.6.15.0]"
+          ]
+        },
+        {
+          "name": "xz",
+          "version": "5.8.1.1",
+          "id": "57811830068772936",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[xz:5.8.1.1]"
+          ]
+        },
+        {
+          "name": "zlib-ng",
+          "version": "2.2.4",
+          "id": "57811830068772937",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[zlib-ng:2.2.4]"
+          ]
+        },
+        {
+          "name": "zstd",
+          "version": "1.5.7",
+          "id": "57811830068772938",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[zstd:1.5.7]"
+          ]
+        },
+        {
+          "name": "libffi",
+          "version": "3.4.4",
+          "id": "57811830068772939",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[libffi:3.4.4]"
+          ]
+        },
+        {
+          "name": "openssl",
+          "version": "3.0.18",
+          "id": "57811830068772940",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[openssl:3.0.18]"
+          ]
+        },
+        {
+          "name": "tcl-core",
+          "version": "8.6.15.0",
+          "id": "57811830068772941",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\externals.spdx.json\\[tcl-core:8.6.15.0]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811830068772902",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Misc\\externals.spdx.json"
+      ]
+    },
+    {
+      "id": "57811830068772903",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Misc\\sbom.spdx.json"
+      ],
+      "children": [
+        {
+          "name": "expat",
+          "version": "2.7.3",
+          "id": "57811830068772942",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\sbom.spdx.json\\[expat:2.7.3]"
+          ]
+        },
+        {
+          "name": "hacl-star",
+          "version": "8ba599b2f6c9701b3dc961db895b0856a2210f76",
+          "id": "57811830068772943",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\sbom.spdx.json\\[hacl-star:8ba599b2f6c9701b3dc961db895b0856a2210f76]"
+          ]
+        },
+        {
+          "name": "macholib",
+          "version": "1.0",
+          "language": "Python",
+          "id": "57811830068772944",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\sbom.spdx.json\\[macholib:1.0]"
+          ],
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ]
+        },
+        {
+          "name": "mpdecimal",
+          "version": "2.5.1",
+          "id": "57811830068772945",
+          "direct": true,
+          "paths": [
+            "python_cpython\\Misc\\sbom.spdx.json\\[mpdecimal:2.5.1]"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57811830068772904",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Misc\\sbom.spdx.json"
+      ]
+    },
+    {
+      "id": "57811830068772905",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Modules\\_xxtestfuzz\\fuzz_json_loads_corpus\\empty_array.json"
+      ]
+    },
+    {
+      "id": "57811830068772906",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Modules\\_xxtestfuzz\\fuzz_json_loads_corpus\\empty_object.json"
+      ]
+    },
+    {
+      "id": "57811830068772907",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Modules\\_xxtestfuzz\\fuzz_json_loads_corpus\\pass1.json"
+      ]
+    },
+    {
+      "id": "57811830068772908",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Modules\\_xxtestfuzz\\fuzz_json_loads_corpus\\pass2.json"
+      ]
+    },
+    {
+      "id": "57811830068772909",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Modules\\_xxtestfuzz\\fuzz_json_loads_corpus\\pass3.json"
+      ]
+    },
+    {
+      "id": "57811830068772910",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Modules\\_xxtestfuzz\\fuzz_json_loads_corpus\\simple_array.json"
+      ]
+    },
+    {
+      "id": "57811830068772911",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package-lock.json"
+      ]
+    },
+    {
+      "id": "57811830068772912",
+      "direct": true,
+      "paths": [
+        "python_cpython\\Tools\\wasm\\emscripten\\browser_test\\package.json"
+      ]
+    }
+  ],
+  "indirect_vulnerabilities": 1
+}
