@@ -11,4 +11,18 @@
     JOIN cve c ON c.cve_id = f.cve_id
     WHERE f.score >= 65
       AND r.repo_language = 'Python'
-) TO 'python_cves_component1.csv' CSV HEADER;
+) TO 'python_cves_component1_new.csv' CSV HEADER;
+
+ \copy (
+    SELECT
+        f.cve_id,
+        to_timestamp(c.published_date, 'YYYY-MM-DD"T"HH24:MI"Z"') AS published_ts,
+        c.cvss3_base_score,
+        c.problemtype_json,
+        r.repo_url,
+        r.repo_name
+    FROM fixes f
+    JOIN repository r ON r.repo_url = f.repo_url
+    JOIN cve c ON c.cve_id = f.cve_id
+    WHERE r.repo_language = 'Python'
+) TO 'python_cves_component1_new.csv' CSV HEADER;
